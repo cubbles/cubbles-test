@@ -38,7 +38,7 @@ module.exports = function(grunt) {
                     'branch': 'master'
                 }
             };
-            grunt.file.write(subtreesFilename, subtreesFileContent, null, 2);
+            grunt.file.write(subtreesFilename, JSON.stringify(subtreesFileContent, null, 2));
 
             // show usage notes
             grunt.log.writeln('\nSubtreeConfig saved to ' + workDirectory + '/' + subtreesFilename + '.');
