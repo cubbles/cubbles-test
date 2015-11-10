@@ -20,6 +20,8 @@ module.exports = function(grunt) {
     var manifestFileAsJSON;
     if (grunt.file.isFile(manifestFile)) {
         manifestFileAsJSON = grunt.file.readJSON(manifestFile);
+    } else {
+        manifestFileAsJSON = {};
     }
     var options = {
         devtools: grunt.file.readJSON('package.json'),
