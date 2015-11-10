@@ -1,18 +1,99 @@
 {
-  "name": "cif-init-test",
-  "groupId": "com.incowia.cif-test",
-  "version": "0.1.0-SNAPSHOT",
-  "modelVersion": "8.0.0",
-  "docType": "webpackage",
-  "author": {
-    "name": "Judit Ross",
-    "email": "judit.ross@incowia.com"
-  },
-  "license": "MIT",
-  "keywords": [],
-  "man": [],
-  "runnables": [],
-  "artifacts": {
-    "apps": []
-  }
+    "name": "cif-init-test",
+    "groupId": "com.incowia.cif-test",
+    "version": "0.1.0-SNAPSHOT",
+    "modelVersion": "8.0.0",
+    "docType": "webpackage",
+    "author": {
+        "name": "Judit Ross",
+        "email": "judit.ross@incowia.com"
+    },
+    "license": "MIT",
+    "keywords": [],
+    "man": [],
+    "runnables": [],
+    "artifacts": {
+        "apps": [
+            {
+                "artifactId": "demo",
+                "description": "This compound demonstrates ...",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "description": "Elementary component with 4 input fields for 4 slots",
+                        "resources": [
+                            "index.html"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "compoundComponents": [],
+        "elementaryComponents": [
+            {
+                "artifactId": "cif-test-a",
+                "description": "This compound demonstrates ...",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "description": "Elementary component with 4 input fields for 4 slots",
+                        "resources": [
+                            "component/cif-test-a.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@0.1.0-SNAPSHOT/cubxpolymer/html-import"
+                        ]
+                    },
+                    {
+                        "endpointId": "html-import",
+                        "description": "Elementary component with 4 input fields for 4 slots",
+                        "resources": [
+                            "component/cif-test-a.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@0.1.0-SNAPSHOT/cubxpolymer/html-import"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "a",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": 10
+                    },
+                    {
+                        "slotId": "b",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": "20"
+                    },
+                    {
+                        "slotId": "c",
+                        "type": "string",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": "c-value"
+                    },
+                    {
+                        "slotId": "d",
+                        "type": "string",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": "d-value"
+                    }
+                ]
+            }
+        ]
+    }
 }
