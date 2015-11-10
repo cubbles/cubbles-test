@@ -1,0 +1,18 @@
+{
+  "name": "cif-init-test",
+  "groupId": "com.incowia.cif-test",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "8.0.0",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "runnables": [],
+  "artifacts": {
+    "apps": []
+  }
+}
