@@ -1,3 +1,11 @@
 {
-  "activeWebPackage": "com.incowia.cif-test.cif-init-test"
+  "activeWebPackage": "com.incowia.cif-test.cif-init-test",
+  "webpackageUpload": {
+    "source": "<%= param.src %>",
+    "target": {
+      "url": "http://boot2docker.me",
+      "proxy": ""
+    },
+    "debug": false
+  }
 }

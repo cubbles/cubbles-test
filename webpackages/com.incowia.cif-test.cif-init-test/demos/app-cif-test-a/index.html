@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <title>cif-test-a</title>
     <script>
-        console.log('hallo')
         window.cubx = {
             "CRCInit": {
                 "rootDependencies": [
@@ -14,23 +13,18 @@
                 ]
             }
         }
-        console.log(window.cubx.CRCInit);
     </script>
-    <script src="http://boot2docker.me/cubx.core.rte@0.1.0-SNAPSHOT/webcomponents/vendor/webcomponentsjs/webcomponents-lite.js" data-crc-baseUrl="http://boot2docker.me"></script>
-    <!-- build:css style/app.min.css -->
+    <script src="/cubx.core.rte@0.1.0-SNAPSHOT/webcomponents/webcomponents-lite.js" ></script>
+
     <link rel="stylesheet" href="style/main.css">
     <link rel="import" href="../style/main-style.html">
-    <!-- endbuild -->
-
-    <!-- build:js js/app.min.js -->
-    <!-- endbuild -->
 
     <!-- include crc-loader webresource from base
         1) Want to add a main script?
         Add the following attribute: data-crc-main="js/main.js"
     -->
 
-     <script src="http://boot2docker.me/cubx.core.rte@0.1.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+     <script src="/cubx.core.rte@0.1.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true" ></script>
 
 </head>
 <body>
@@ -41,11 +35,6 @@
 <div cubx-core-crc>
     <cif-test-a></cif-test-a>
 </div>
-<script>
-    console.log(document.querySelector('[cubx-core-crc]'));
-
-
-</script>
 
 </body>
 </html>

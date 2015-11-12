@@ -1,0 +1,34 @@
+<!-- -->
+<link rel="import" href="cif-test-obj-b-style.html">
+<dom-module id="cif-test-obj-b">
+
+    <template>
+        <style include="cif-test-obj-b-style"></style>
+        <header>Komponente B (Object test)</header>
+        <section>
+            <article>
+                <label for="slota">{{model.a.label}}</label>
+
+                <p id="slota">{{model.a.value}}</p>
+            </article>
+            <article>
+                <label for="slotb">{{model.b.label}}</label>
+
+                <p id="slotb">{{model.b.value}}</p>
+            </article>
+            <article>
+                <label for="slotc">{{model.c.label}}</label>
+
+                <p id="slotc">{{model.c.value}}</p>
+            </article>
+            <article>
+                <label for="slotd">{{model.d.label}}</label>
+
+                <p id="slotd">{{model.d.value}}</p>
+            </article>
+        </section>
+    </template>
+
+    <script src="cif-test-obj-b.js"></script>
+
+</dom-module>

@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 
                     // Proxies all requests which can't be resolved locally to the given url
                     // Note this this will disable 'showDir'
-                    proxy: 'https://webblebase.net',
+                    proxy: 'http://boot2docker.me',
 
                     // open browser after start
                     openBrowser: true
