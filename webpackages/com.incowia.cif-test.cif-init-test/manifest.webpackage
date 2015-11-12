@@ -12,6 +12,11 @@
     "keywords": [],
     "man": [],
     "runnables": [
+        {
+           "name": "test cases",
+           "path": "/tests/index.html",
+           "description": "Read this ..."
+        }
     ],
     "artifacts": {
         "apps": [
