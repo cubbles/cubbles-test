@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
     'use strict';
-    grunt.registerTask('+workspace-createWebPackage', 'Create a new WebPackage.', [
+    grunt.registerTask('+createWebpackage', 'Create a new WebPackage.', [
         'prompt:createWebPackage','default'
     ]);
 };

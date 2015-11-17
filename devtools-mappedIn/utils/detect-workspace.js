@@ -1,13 +1,13 @@
 'use strict';
 module.exports = function(grunt, workspaceName) {
-    var workspacePath = '../' + workspaceName + '/';
+    var defaultWorkspacePath = '../' + workspaceName + '/';
     var alternativeWorkspacePath = './' + workspaceName + '/';
 
-    if (grunt.file.isDir(workspacePath)) {
-        return workspacePath;
+    if (grunt.file.isDir(defaultWorkspacePath)) {
+        return defaultWorkspacePath;
     } else if (grunt.file.isDir(alternativeWorkspacePath)) {
         return alternativeWorkspacePath;
-    } else {
-        grunt.fail.fatal('Workspace \'' + workspacePath + '\' not found.');
     }
+    // also if it does not exist, return the default path
+    return defaultWorkspacePath;
 };

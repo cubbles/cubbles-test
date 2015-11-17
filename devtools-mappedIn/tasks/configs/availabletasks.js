@@ -8,10 +8,10 @@ module.exports.tasks = {
             options: {
                 filter: 'include',
                 tasks: [
-                    '+httpServer-start',
+                    '+createWebpackage',
+                    '+startWebserver',
                     '+webpackage-upload',
-                    '+webpackage-validateManifestFile',
-                    '+workspace-createWebPackage'],
+                    '+webpackage-validateManifestFile'],
                 sort: true
             }
         }
