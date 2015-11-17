@@ -105,10 +105,11 @@ module.exports = function(grunt) {
                                 grunt.file.write(manifestFilePath, JSON.stringify(manifestJSON, null, 2));
 
                                 // update workspace-config
-                                var workspaceConfigJSON = grunt.config.get('workspaceConfig');
+                                //var workspaceConfigJSON = grunt.config.get('workspaceConfig');
+                                var workspaceConfigPath = grunt.config.get('workspaceConfigPath');
+                                var workspaceConfigJSON = grunt.file.readJSON(workspaceConfigPath);
                                 workspaceConfigJSON.activeWebPackage = wpCommonName;
-                                grunt.file.write(grunt.config.get('workspaceConfigPath'),
-                                    JSON.stringify(workspaceConfigJSON, null, 2));
+                                grunt.file.write(workspaceConfigPath, JSON.stringify(workspaceConfigJSON, null, 2));
 
                                 // now signal done
                                 done();
