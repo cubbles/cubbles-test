@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>copy-value-test-compound-obj</title>
+    <!--[if IE]>
+    <script src="js/polyfill_ie.js"></script>
+    <![endif]-->
+
+    <script>
+        window.cubx = {
+            "CRCInit": {
+                "rootDependencies": [
+                    "this/copy-value-test-compound-obj/main"
+                ]
+            }
+        }
+    </script>
+    <script src="/cubx.core.rte@0.1.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="import" href="../style/main-style.html">
+
+
+    <script src="/cubx.core.rte@0.1.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+</head>
+<body>
+<h2>Testpage for the Cubixx-Component <code>copy-value-test-compound-obj</code></h2>
+
+
+<p>For the following connections is the "copyValue" attribute false
+<ul>
+    <li>copy-value-test-obj-a/c -> copy-value-test-obj-b/c</li>
+    <li>copy-value-test-obj-a/c -> copy-value-test-compound-obj/cc</li>
+    <li>copy-value-test-compound-obj/cc -> copy-value-test-obj-a/c</li>
+</ul>
+for the following connections is the "copyValue" attribute explicitly true
+<ul>
+    <li>copy-value-test-obj-a/b -> copy-value-test-obj-b/b</li>
+    <li>copy-value-test-obj-a/b -> copy-value-test-compound-obj/bb</li>
+    <li>copy-value-test-compound-obj/bb -> copy-value-test-obj-a/b</li>
+</ul>
+for all other connections is the "copyValue" attribute implicitly true (copyValue attribute missed)
+
+</p>
+<hr>
+<!-- The cubixx client-runtime-container is bound to the next div -->
+<div cubx-core-crc>
+    <!-- Change this to your element name ... -->
+    <copy-value-test-compound-obj></copy-value-test-compound-obj>
+</div>
+
+</body>
+</html>

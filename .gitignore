@@ -22,3 +22,4 @@ webpackages/*_dist/
 **/.tmp/
 
 webpackages/**/test-results
+.workspace

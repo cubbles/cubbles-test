@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>copy-value-test-compound-obj</title>
+    <!--[if IE]>
+    <script src="js/polyfill_ie.js"></script>
+    <![endif]-->
+
+    <script>
+        window.cubx = {
+            "CRCInit": {
+                "rootDependencies": [
+                    "this/copy-value-test-compound-obj/main"
+                ]
+            }
+        }
+    </script>
+
+    <script src="/cubx.core.rte@0.1.0-SNAPSHOT/webcomponents/webcomponents-lite.js" ></script>
+    <script src="./vendor/web-component-tester/browser.js"></script>
+    <script src="./vendor/chai/chai.js"></script>
+    <script src="mocha-config.js"></script>
+
+
+    <script src="/cubx.core.rte@0.1.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true" ></script>
+
+
+</head>
+<body>
+<hr>
+<!-- The cubixx client-runtime-container is bound to the next div -->
+<div cubx-core-crc>
+    <!-- Change this to your element name ... -->
+    <copy-value-test-compound-obj></copy-value-test-compound-obj>
+</div>
+<script>
+    console.log('hallo');
+    console.log('document.body',document.body)
+    console.time('cifReady');
+    console.log('egal was');
+
+    document.querySelector('[cubx-core-crc]').addEventListener('cifReady', function(){
+            console.timeEnd('cifReady');
+    });
+
+</script>
+
+<script src="copy-value-test-compound-obj-test.js"></script>
+</body>
+</html>

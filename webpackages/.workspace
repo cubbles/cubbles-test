@@ -1,5 +1,5 @@
 {
-  "activeWebPackage": "com.incowia.cif-test.cif-init-test",
+  "activeWebPackage": "com.incowia.cif-test.cif-copy-value-test",
   "webpackageUpload": {
     "source": "<%= param.src %>",
     "target": {
