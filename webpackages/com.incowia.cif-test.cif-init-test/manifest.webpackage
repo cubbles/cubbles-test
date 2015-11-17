@@ -21,14 +21,12 @@
     "artifacts": {
         "apps": [
             {
-                "artifactId": "demo",
-                "description": "Demo Applikation for the test",
+                "artifactId": "tests",
+                "description": "Test Applikation",
                 "endpoints": [
                     {
                         "endpointId": "main",
-                        "resources": [
-                            "index.html"
-                        ]
+                        "resources": [ ]
                     }
                 ]
             }
