@@ -20,6 +20,9 @@ webpackages/*_build/
 webpackages/*_pack/
 webpackages/*_dist/
 **/.tmp/
+**/test/vendor/
 
 webpackages/**/test-results
 .workspace
+
+.bower.json
