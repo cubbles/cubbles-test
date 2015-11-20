@@ -3,7 +3,7 @@
   "webpackageUpload": {
     "source": "<%= param.src %>",
     "target": {
-      "url": "https://webblebase.net",
+      "url": "http://boot2docker.me",
       "proxy": ""
     },
     "debug": false

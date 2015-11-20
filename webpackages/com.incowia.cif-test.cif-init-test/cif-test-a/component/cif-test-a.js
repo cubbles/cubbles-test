@@ -10,7 +10,6 @@
         },
         changeAHandler: function(event) {
             this.setA(event.target.value);
-            this.set('model.a', event.target.value);
         },
         changeBHandler: function(event) {
             this.setB(event.target.value);
