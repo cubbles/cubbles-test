@@ -1,3 +1,4 @@
+/*global process*/
 'use strict';
 var path = require('path');
 var _ = require('lodash');
@@ -14,7 +15,7 @@ module.exports = function(grunt) {
      * In case of starting the default-task, ignore the rest of this file.
      */
     var taskFromCmd = process.argv[2];
-    if(!taskFromCmd || taskFromCmd == 'default'){
+    if (!taskFromCmd || taskFromCmd == 'default') {
         return;
     }
 
