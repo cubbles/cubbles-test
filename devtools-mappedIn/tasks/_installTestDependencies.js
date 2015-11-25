@@ -17,7 +17,8 @@ module.exports = function(grunt) {
             'chai@~3.4.0',
             'mocha@^2.1.0',
             'phantomjs@^1.9.17',
-            'sinon@~1.17.2'
+            'sinon@~1.17.2',
+            'git+https://pmt.incowia.de/webble/r/client/utilities/cubx-karma-requirejs.git#1.0.5'
         ];
         grunt.log.writeln('\n');
         grunt.log.writeln('Going to install the following (dev-)dependencies:');
