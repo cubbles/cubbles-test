@@ -29,16 +29,8 @@
         "apps": [
             {
                 "artifactId": "demo",
-                "description": "",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                        ],
-                        "dependencies": [
-                        ]
-                    }
-                ]
+                "description": ""
+
             }
         ],
         "elementaryComponents": [

@@ -1,4 +1,3 @@
-/*global process*/
 'use strict';
 var path = require('path');
 var _ = require('lodash');
