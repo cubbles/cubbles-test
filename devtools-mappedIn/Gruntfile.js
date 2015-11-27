@@ -50,14 +50,17 @@ module.exports = function(grunt) {
      */
     var activeWebpackage = grunt.file.readJSON(workspaceConfigPath).activeWebpackage;
     if (activeWebpackage && activeWebpackage.length > 0) {
-        var manifestWebpackagePath = workspacePath + activeWebpackage + '/manifest.webpackage';
+        var activeWebpackageConfigPath = path.join(workspacePath, activeWebpackage, '.webpackage');
+        var manifestWebpackagePath = path.join(workspacePath, activeWebpackage, 'manifest.webpackage');
         // If manifestFile exist, define webpackage-related options and merge them into the default-options
-        if (grunt.file.isFile(manifestWebpackagePath)) {
+        if (grunt.file.isFile(manifestWebpackagePath) && grunt.file.isFile(activeWebpackageConfigPath)) {
             var manifestFileAsJSON = grunt.file.readJSON(manifestWebpackagePath);
             (function() {
                 // Webpackage related grunt options
                 var webpackageRelatedOptions = {
                     activeWebpackage: activeWebpackage,
+                    activeWebpackageConfigPath: activeWebpackageConfigPath,
+                    activeWebpackageConfig: grunt.file.readJSON(activeWebpackageConfigPath),
                     manifestWebpackagePath: manifestWebpackagePath,
                     manifestWebpackage: manifestFileAsJSON,
                     param: {
@@ -69,7 +72,10 @@ module.exports = function(grunt) {
                 options = _.merge(options, webpackageRelatedOptions);
             })();
         } else {
-            grunt.fail.fatal('Declared \'activeWebpackage\' NOT found. Please fix ' + workspaceConfigPath);
+            grunt.fail.fatal('Declared \'activeWebpackage\' NOT found or missing one of the expected files\n' +
+                '* manifest.webpackage\n' +
+                '* .webpackage\n' +
+                'Please check ' + workspaceConfigPath + ' and the webpackage-folder.');
         }
     }
 
