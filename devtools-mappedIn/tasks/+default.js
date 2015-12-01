@@ -4,7 +4,6 @@ var _ = require('lodash');
 var chalk = require('chalk');
 
 module.exports = function(grunt) {
-    'use strict';
     grunt.registerTask('default', [], function() {
         require('../lib/cubixx.js')(grunt);
         /**
@@ -24,6 +23,6 @@ module.exports = function(grunt) {
         cubxTasks = _.sortBy(cubxTasks, 'name');
         cubxTasks.forEach(function(cubxTask) {
             grunt.log.writeln(' ' + chalk.green(cubxTask.name) + ' => ' + cubxTask.info);
-        })
+        });
     });
 };
