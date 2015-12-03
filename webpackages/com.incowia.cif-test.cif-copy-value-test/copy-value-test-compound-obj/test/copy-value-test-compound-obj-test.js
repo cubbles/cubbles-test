@@ -1,10 +1,9 @@
 'use strict';
 
 describe('copy-value', function() {
-    this.timeout(5000);
+    this.timeout(7000);
     before(function(done) {
         document.body.addEventListener('cifReady', function() {
-            // console.log('xxxxxxxxxxxxxxxx cif ready');
             done();
         });
     });
@@ -20,8 +19,8 @@ describe('copy-value', function() {
             document.querySelector('copy-value-test-compound-obj').addEventListener('cifModelChange',
                 function(evt) {
                     if (evt.detail.slot === 'aa' && evt.target.tagName === 'COPY-VALUE-TEST-COMPOUND-OBJ' &&
-                        event.detail.payload.value === 9) {
-                        retObj = event.detail.payload;
+                        evt.detail.payload.value === 9) {
+                        retObj = evt.detail.payload;
                         done();
                     }
                 });
@@ -33,7 +32,6 @@ describe('copy-value', function() {
         });
 
         it('change of newObj indicate not a change of component "copy-value-test-obj-a" slot "a"', function() {
-            //console.log('!!!!!!!it', newObj);
             document.querySelector('copy-value-test-obj-a').model.a.should.not.eql(newObj);
         });
         it('change of newObj indicate not a change of component "copy-value-test-obj-b" slot "a"', function() {
@@ -63,8 +61,8 @@ describe('copy-value', function() {
             document.querySelector('copy-value-test-compound-obj').addEventListener('cifModelChange',
                 function(evt) {
                     if (evt.detail.slot === 'bb' && evt.target.tagName === 'COPY-VALUE-TEST-COMPOUND-OBJ' &&
-                        event.detail.payload.value === 9) {
-                        retObj = event.detail.payload;
+                        evt.detail.payload.value === 9) {
+                        retObj = evt.detail.payload;
                         done();
                     }
                 });
@@ -105,8 +103,8 @@ describe('copy-value', function() {
             document.querySelector('copy-value-test-compound-obj').addEventListener('cifModelChange',
                 function(evt) {
                     if (evt.detail.slot === 'cc' && evt.target.tagName === 'COPY-VALUE-TEST-COMPOUND-OBJ' &&
-                        event.detail.payload.value === 9) {
-                        retObj = event.detail.payload;
+                        evt.detail.payload.value === 9) {
+                        retObj = evt.detail.payload;
                         done();
                     }
                 });

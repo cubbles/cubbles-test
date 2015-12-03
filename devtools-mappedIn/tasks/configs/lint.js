@@ -15,7 +15,7 @@ module.exports.tasks = {
         },
         client: {
             options: {
-                jshintrc: '.jshintrc',
+                jshintrc: '<%= param.src %>/.jshintrc',
             },
             src: [
                 '<%= param.src %>/**/*.js',
@@ -25,16 +25,19 @@ module.exports.tasks = {
         }
     },
     jscs: { // exclude list defined in .jscsrc
-        options: {
-            config: '.jscsrc'
-        },
         utils: {
+            options: {
+                config: '.jscsrc'
+            },
             src: [
-                '*.js',
+                '<%= param.src %>*.js',
                 'tasks/**/*.js'
             ]
         },
         client: {
+            options: {
+                config: '<%= param.src %>/.jscsrc'
+            },
             src: [
                 '<%= param.src %>/**/*.js'
             ]

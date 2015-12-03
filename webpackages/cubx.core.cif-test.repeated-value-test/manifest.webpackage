@@ -1,0 +1,768 @@
+{
+    "name": "repeated-value-test",
+    "groupId": "cubx.core.cif-test",
+    "version": "0.1.0-SNAPSHOT",
+    "modelVersion": "8.1.0",
+    "docType": "webpackage",
+    "author": {
+        "name": "Judit Ross",
+        "email": "judit.ross@incowia.com"
+    },
+    "license": "MIT",
+    "keywords": [],
+    "man": [],
+    "runnables": [
+        {
+            "name": "demo",
+            "path": "/cubx.core.cif-test.repeated-value-test/demo//index.html"
+        }
+    ],
+    "artifacts": {
+        "apps": [
+            {
+                "artifactId": "demo",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "dependencies": [
+                        ]
+                    }
+                ]
+            }
+        ],
+        "elementaryComponents": [
+            {
+                "artifactId": "repeated-value-elementary-a",
+                "description": "This is an elementary-component based on Polymer.",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "description": "This is recommended for you use with webcomponents.",
+                        "resources": [
+                            "repeated-value-elementary-a.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "a",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": 10
+                    },
+                    {
+                        "slotId": "b",
+                        "type": "string",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": "a string"
+                    },
+                    {
+                        "slotId": "c",
+                        "type": "boolean",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": true
+                    },
+                    {
+                        "slotId": "d",
+                        "type": "object",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": {
+                            "label": "d value",
+                            "value": "object value d"
+                        }
+                    }
+                ]
+            }
+        ],
+        "compoundComponents": [
+            {
+                "artifactId": "repeated-value-false-compound-b",
+                "description": "This is a cubixx-compound-component.",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "css/repeated-value-false-compound-b.css"
+                        ],
+                        "dependencies": [
+                            "this/repeated-value-elementary-a/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "aa",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": 19
+                    },
+                    {
+                        "slotId": "bb",
+                        "type": "string",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": "bb string"
+                    },
+                    {
+                        "slotId": "cc",
+                        "type": "boolean",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": true
+                    },
+                    {
+                        "slotId": "dd",
+                        "type": "boolean",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": {
+                            "label": "dd value",
+                            "value": "object value"
+                        }
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "innerElementary",
+                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-elementary-a"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "aa-a",
+                        "source": {
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "innerElementary",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "bb-b",
+                        "source": {
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "innerElementary",
+                            "slot": "b"
+                        }
+                    },
+                    {
+                        "connectionId": "cc-c",
+                        "source": {
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "innerElementary",
+                            "slot": "c"
+                        }
+                    },
+                    {
+                        "connectionId": "dd-d",
+                        "source": {
+                            "slot": "dd"
+                        },
+                        "destination": {
+                            "memberIdRef": "innerElementary",
+                            "slot": "d"
+                        }
+                    },
+                    {
+                        "connectionId": "a-aa",
+                        "source": {
+                            "memberIdRef": "innerElementary",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "b-bb",
+                        "source": {
+                            "memberIdRef": "innerElementary",
+                            "slot": "b"
+                        },
+                        "destination": {
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "c-cc",
+                        "source": {
+                            "memberIdRef": "innerElementary",
+                            "slot": "c"
+                        },
+                        "destination": {
+                            "slot": "cc"
+                        }
+                    },
+                    {
+                        "connectionId": "d-dd",
+                        "source": {
+                            "memberIdRef": "innerElementary",
+                            "slot": "d"
+                        },
+                        "destination": {
+                            "slot": "dd"
+                        }
+                    }
+                ],
+                "inits": []
+            },
+            {
+                "artifactId": "repeated-value-false-compound-c",
+                "description": "This is a cubixx-compound-component.",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "css/repeated-value-false-compound-c.css"
+                        ],
+                        "dependencies": [
+                            "this/repeated-value-elementary-a/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "aa",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    },
+                    {
+                        "slotId": "bb",
+                        "type": "string",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    },
+                    {
+                        "slotId": "cc",
+                        "type": "boolean",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    },
+                    {
+                        "slotId": "dd",
+                        "type": "object",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "firstInnerElementary",
+                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-elementary-a"
+                    },
+                    {
+                        "memberId": "secondInnerElementary",
+                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-elementary-a"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "aa-firstInnerElementary:a",
+                        "source": {
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "bb-firstInnerElementary:b",
+                        "source": {
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "b"
+                        }
+                    },
+                    {
+                        "connectionId": "cc-firstInnerElementary:c",
+                        "source": {
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "c"
+                        }
+                    },
+                    {
+                        "connectionId": "dd-firstInnerElementary:d",
+                        "source": {
+                            "slot": "dd"
+                        },
+                        "destination": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "d"
+                        }
+                    },
+                    {
+                        "connectionId": "firstInnerElementary:a-secondInnerElementary:a",
+                        "source": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "firstInnerElementary:b-secondInnerElementary:b",
+                        "source": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "b"
+                        },
+                        "destination": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "b"
+                        }
+                    },
+                    {
+                        "connectionId": "firstInnerElementary:c-secondInnerElementary:c",
+                        "source": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "c"
+                        },
+                        "destination": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "c"
+                        }
+                    },
+                    {
+                        "connectionId": "firstInnerElementary:d-secondInnerElementary:d",
+                        "source": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "d"
+                        },
+                        "destination": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "d"
+                        }
+                    },
+                    {
+                        "connectionId": "secondInnerElementary:a-firstInnerElementary:a",
+                        "source": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "secondInnerElementary:b-firstInnerElementary:b",
+                        "source": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "b"
+                        },
+                        "destination": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "b"
+                        }
+                    },
+                    {
+                        "connectionId": "secondInnerElementary:c-firstInnerElementary:c",
+                        "source": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "c"
+                        },
+                        "destination": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "c"
+                        }
+                    },
+                    {
+                        "connectionId": "secondInnerElementary:d-firstInnerElementary:d",
+                        "source": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "d"
+                        },
+                        "destination": {
+                            "memberIdRef": "firstInnerElementary",
+                            "slot": "d"
+                        }
+                    },
+                    {
+                        "connectionId": "secondInnerElementary:a-aa",
+                        "source": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "secondInnerElementary:b-bb",
+                        "source": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "b"
+                        },
+                        "destination": {
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "secondInnerElementary:c-cc",
+                        "source": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "c"
+                        },
+                        "destination": {
+                            "slot": "cc"
+                        }
+                    },
+                    {
+                        "connectionId": "secondInnerElementary:d-dd",
+                        "source": {
+                            "memberIdRef": "secondInnerElementary",
+                            "slot": "d"
+                        },
+                        "destination": {
+                            "slot": "dd"
+                        }
+                    }
+                ],
+                "inits": []
+            },
+            {
+                "artifactId": "repeated-value-false-compound-d",
+                "description": "This is a cubixx-compound-component.",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [],
+                        "dependencies": [
+                            "this/repeated-value-false-compound-b/main",
+                            "this/repeated-value-false-compound-c/main"
+                        ]
+                    }
+                ],
+                "slots": [],
+                "members": [
+                    {
+                        "memberId": "member1",
+                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-false-compound-b"
+                    },
+                    {
+                        "memberId": "member2",
+                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-false-compound-c"
+                    },
+                    {
+                        "memberId": "member3",
+                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-false-compound-b"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "member1:aa-member2:aa",
+                        "source": {
+                            "memberIdRef": "member1",
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member2",
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "member1:bb-member2:bb",
+                        "source": {
+                            "memberIdRef": "member1",
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member2",
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "member1:cc-member2:cc",
+                        "source": {
+                            "memberIdRef": "member1",
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member2",
+                            "slot": "cc"
+                        }
+                    },
+                    {
+                        "connectionId": "member1:dd-member2:dd",
+                        "source": {
+                            "memberIdRef": "member1",
+                            "slot": "dd"
+                        },
+                        "destination": {
+                            "memberIdRef": "member2",
+                            "slot": "dd"
+                        }
+                    },
+                    {
+                        "connectionId": "member2:aa-member1:aa",
+                        "source": {
+                            "memberIdRef": "member2",
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member1",
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "member2:bb-member1:bb",
+                        "source": {
+                            "memberIdRef": "member2",
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member1",
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "member2:cc-member1:cc",
+                        "source": {
+                            "memberIdRef": "member2",
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member1",
+                            "slot": "cc"
+                        }
+                    },
+                    {
+                        "connectionId": "member2:dd-member1:dd",
+                        "source": {
+                            "memberIdRef": "member2",
+                            "slot": "dd"
+                        },
+                        "destination": {
+                            "memberIdRef": "member1",
+                            "slot": "dd"
+                        }
+                    },
+                    {
+                        "connectionId": "member2:aa-member3:aa",
+                        "source": {
+                            "memberIdRef": "member2",
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member3",
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "member2:bb-member3:bb",
+                        "source": {
+                            "memberIdRef": "member2",
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member3",
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "member2:cc-member3:cc",
+                        "source": {
+                            "memberIdRef": "member2",
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member3",
+                            "slot": "cc"
+                        }
+                    },
+                    {
+                        "connectionId": "member2:dd-member3:dd",
+                        "source": {
+                            "memberIdRef": "member2",
+                            "slot": "dd"
+                        },
+                        "destination": {
+                            "memberIdRef": "member3",
+                            "slot": "dd"
+                        }
+                    },
+                    {
+                        "connectionId": "member1:aa-member3:aa",
+                        "source": {
+                            "memberIdRef": "member1",
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member3",
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "member1:bb-member3:bb",
+                        "source": {
+                            "memberIdRef": "member1",
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member3",
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "member1:cc-member3:cc",
+                        "source": {
+                            "memberIdRef": "member1",
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member3",
+                            "slot": "cc"
+                        }
+                    },
+                    {
+                        "connectionId": "member1:dd-member3:dd",
+                        "source": {
+                            "memberIdRef": "member1",
+                            "slot": "dd"
+                        },
+                        "destination": {
+                            "memberIdRef": "member3",
+                            "slot": "dd"
+                        }
+                    },
+                    {
+                        "connectionId": "member3:aa-member1:aa",
+                        "source": {
+                            "memberIdRef": "member3",
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member1",
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "member3:bb-member1:bb",
+                        "source": {
+                            "memberIdRef": "member3",
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member1",
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "member3:cc-member1:cc",
+                        "source": {
+                            "memberIdRef": "member3",
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member1",
+                            "slot": "cc"
+                        }
+                    },
+                    {
+                        "connectionId": "member3:dd-member1:dd",
+                        "source": {
+                            "memberIdRef": "member3",
+                            "slot": "dd"
+                        },
+                        "destination": {
+                            "memberIdRef": "member1",
+                            "slot": "dd"
+                        }
+                    },
+                    {
+                        "connectionId": "member3:aa-member2:aa",
+                        "source": {
+                            "memberIdRef": "member3",
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member2",
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "member3:bb-member2:bb",
+                        "source": {
+                            "memberIdRef": "member3",
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member2",
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "member3:cc-member2:cc",
+                        "source": {
+                            "memberIdRef": "member3",
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member2",
+                            "slot": "cc"
+                        }
+                    },
+                    {
+                        "connectionId": "member3:dd-member2:dd",
+                        "source": {
+                            "memberIdRef": "member3",
+                            "slot": "dd"
+                        },
+                        "destination": {
+                            "memberIdRef": "member2",
+                            "slot": "dd"
+                        }
+                    }
+                ],
+                "inits": [
+                ]
+            }
+        ],
+        "utilities": []
+    }
+}

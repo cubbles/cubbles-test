@@ -1,6 +1,7 @@
-//mocha.setup({ui: 'bdd'});
+/*global mocha,chai*/
+'use strict';
 mocha.setup({ui: 'bdd'});
+/* jshint unused:false */
 var assert = chai.assert;
-var expect = chai.expect;
 // Note that should has to be executed
 var should = chai.should();

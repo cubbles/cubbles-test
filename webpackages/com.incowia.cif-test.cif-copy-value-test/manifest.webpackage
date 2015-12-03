@@ -1,7 +1,7 @@
 {
     "name": "cif-copy-value-test",
     "groupId": "com.incowia.cif-test",
-    "version": "1.0.0",
+    "version": "1.1.0-SNAPSHOT",
     "modelVersion": "8.0.0",
     "docType": "webpackage",
     "author": {

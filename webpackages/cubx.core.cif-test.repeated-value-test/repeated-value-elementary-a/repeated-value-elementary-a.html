@@ -1,0 +1,39 @@
+<link rel="import" href="repeated-value-elementary-a-style.html">
+<dom-module id="repeated-value-elementary-a">
+
+    <template>
+        <style include="main-style"></style>
+        <style include="repeated-value-elementary-a-style"></style>
+        <p>elementary-a</p>
+        <section>
+            <article>
+
+                <label for="slota">slot a</label>
+                <input type="number" id="slota" on-change="inputFieldSlotAChanged">
+
+            </article>
+            <article>
+
+                <label for="slotb">slot b</label>
+                <input type="text" id="slotb" on-change="inputFieldSlotBChanged">
+
+            </article>
+            <article>
+
+                <label for="slotc">slot c</label>
+                <input type="checkbox" id="slotc" on-change="inputFieldSlotCChanged">
+
+            </article>
+            <article>
+
+                <label for="slotd">{{model.d.label}}</label>
+                <input type="text" id="slotd" on-change="inputFieldSlotDChanged">
+
+            </article>
+
+        </section>
+
+    </template>
+
+    <script src="repeated-value-elementary-a.js"></script>
+</dom-module>

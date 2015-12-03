@@ -47,6 +47,8 @@
     "cubx-webpackage-document-api": "git+https://pmt.incowia.de/webble/r/client/utilities/cubx-webpackage-document-api.git#2.2.0"
   },
   "devDependencies": {
+    "http-proxy-middleware": "^0.9.0",
+    "web-component-tester": "^3.4.0"
   },
   "repository": {
     "type": "git"

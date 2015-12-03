@@ -9,6 +9,8 @@
     <![endif]-->
 
     <script>
+        console.time('cifReady');
+        console.time('crcReady');
         window.cubx = {
             "CRCInit": {
                 "rootDependencies": [
@@ -18,13 +20,13 @@
         }
     </script>
 
-    <script src="/cubx.core.rte@0.1.0-SNAPSHOT/webcomponents/webcomponents-lite.js" ></script>
-    <script src="./vendor/web-component-tester/browser.js"></script>
-    <script src="./vendor/chai/chai.js"></script>
+    <script src="../../../cubx.core.rte@1.0.0/webcomponents/webcomponents-lite.js"></script>
+    <script src="./bower_components/web-component-tester/browser.js"></script>
+    <script src="./bower_components/chai/chai.js"></script>
     <script src="mocha-config.js"></script>
 
 
-    <script src="/cubx.core.rte@0.1.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true" ></script>
+    <script src="../../../cubx.core.rte@1.0.0/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
 
 
 </head>
@@ -36,13 +38,12 @@
     <copy-value-test-compound-obj></copy-value-test-compound-obj>
 </div>
 <script>
-    console.log('hallo');
-    console.log('document.body',document.body)
-    console.time('cifReady');
-    console.log('egal was');
 
-    document.querySelector('[cubx-core-crc]').addEventListener('cifReady', function(){
-            console.timeEnd('cifReady');
+    document.querySelector('[cubx-core-crc]').addEventListener('crcReady', function() {
+        console.timeEnd('crcReady');
+    });
+    document.querySelector('[cubx-core-crc]').addEventListener('cifReady', function() {
+        console.timeEnd('cifReady');
     });
 
 </script>
