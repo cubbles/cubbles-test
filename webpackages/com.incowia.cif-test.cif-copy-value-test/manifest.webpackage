@@ -10,7 +10,8 @@
     },
     "license": "MIT",
     "keywords": [
-        "cif-test"
+        "cif-test" ,
+        "test"
     ],
     "man": [],
     "runnables": [

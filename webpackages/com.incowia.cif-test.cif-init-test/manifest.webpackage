@@ -9,7 +9,10 @@
     "email": "judit.ross@incowia.com"
   },
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+      "cif-test",
+      "test"
+  ],
   "man": [],
   "runnables": [
     {

@@ -9,12 +9,16 @@
         "email": "judit.ross@incowia.com"
     },
     "license": "MIT",
-    "keywords": [],
+    "keywords": [
+        "cif-test",
+        "test"
+    ],
     "man": [],
     "runnables": [
         {
             "name": "demo",
-            "path": "/cubx.core.cif-test.repeated-value-test/demo//index.html"
+            "path": "/demo/index.html",
+            "description": "demo app for repeatedValue=false"
         }
     ],
     "artifacts": {
@@ -24,8 +28,8 @@
                 "endpoints": [
                     {
                         "endpointId": "main",
-                        "dependencies": [
-                        ]
+                        "resources": [],
+                        "dependencies": []
                     }
                 ]
             }
@@ -295,7 +299,7 @@
                 ],
                 "connections": [
                     {
-                        "connectionId": "aa-firstInnerElementary:a",
+                        "connectionId": "aa-firstInnerElementarya",
                         "source": {
                             "slot": "aa"
                         },
@@ -305,7 +309,7 @@
                         }
                     },
                     {
-                        "connectionId": "bb-firstInnerElementary:b",
+                        "connectionId": "bb-firstInnerElementaryb",
                         "source": {
                             "slot": "bb"
                         },
@@ -315,7 +319,7 @@
                         }
                     },
                     {
-                        "connectionId": "cc-firstInnerElementary:c",
+                        "connectionId": "cc-firstInnerElementaryc",
                         "source": {
                             "slot": "cc"
                         },
@@ -325,7 +329,7 @@
                         }
                     },
                     {
-                        "connectionId": "dd-firstInnerElementary:d",
+                        "connectionId": "dd-firstInnerElementaryd",
                         "source": {
                             "slot": "dd"
                         },
@@ -335,7 +339,7 @@
                         }
                     },
                     {
-                        "connectionId": "firstInnerElementary:a-secondInnerElementary:a",
+                        "connectionId": "firstInnerElementarya-secondInnerElementarya",
                         "source": {
                             "memberIdRef": "firstInnerElementary",
                             "slot": "a"
@@ -346,7 +350,7 @@
                         }
                     },
                     {
-                        "connectionId": "firstInnerElementary:b-secondInnerElementary:b",
+                        "connectionId": "firstInnerElementaryb-secondInnerElementaryb",
                         "source": {
                             "memberIdRef": "firstInnerElementary",
                             "slot": "b"
@@ -357,7 +361,7 @@
                         }
                     },
                     {
-                        "connectionId": "firstInnerElementary:c-secondInnerElementary:c",
+                        "connectionId": "firstInnerElementaryc-secondInnerElementaryc",
                         "source": {
                             "memberIdRef": "firstInnerElementary",
                             "slot": "c"
@@ -368,7 +372,7 @@
                         }
                     },
                     {
-                        "connectionId": "firstInnerElementary:d-secondInnerElementary:d",
+                        "connectionId": "firstInnerElementaryd-secondInnerElementaryd",
                         "source": {
                             "memberIdRef": "firstInnerElementary",
                             "slot": "d"
@@ -379,7 +383,7 @@
                         }
                     },
                     {
-                        "connectionId": "secondInnerElementary:a-firstInnerElementary:a",
+                        "connectionId": "secondInnerElementarya-firstInnerElementarya",
                         "source": {
                             "memberIdRef": "secondInnerElementary",
                             "slot": "a"
@@ -390,7 +394,7 @@
                         }
                     },
                     {
-                        "connectionId": "secondInnerElementary:b-firstInnerElementary:b",
+                        "connectionId": "secondInnerElementaryb-firstInnerElementaryb",
                         "source": {
                             "memberIdRef": "secondInnerElementary",
                             "slot": "b"
@@ -401,7 +405,7 @@
                         }
                     },
                     {
-                        "connectionId": "secondInnerElementary:c-firstInnerElementary:c",
+                        "connectionId": "secondInnerElementaryc-firstInnerElementaryc",
                         "source": {
                             "memberIdRef": "secondInnerElementary",
                             "slot": "c"
@@ -412,7 +416,7 @@
                         }
                     },
                     {
-                        "connectionId": "secondInnerElementary:d-firstInnerElementary:d",
+                        "connectionId": "secondInnerElementaryd-firstInnerElementaryd",
                         "source": {
                             "memberIdRef": "secondInnerElementary",
                             "slot": "d"
@@ -423,7 +427,7 @@
                         }
                     },
                     {
-                        "connectionId": "secondInnerElementary:a-aa",
+                        "connectionId": "secondInnerElementarya-aa",
                         "source": {
                             "memberIdRef": "secondInnerElementary",
                             "slot": "a"
@@ -433,7 +437,7 @@
                         }
                     },
                     {
-                        "connectionId": "secondInnerElementary:b-bb",
+                        "connectionId": "secondInnerElementaryb-bb",
                         "source": {
                             "memberIdRef": "secondInnerElementary",
                             "slot": "b"
@@ -443,7 +447,7 @@
                         }
                     },
                     {
-                        "connectionId": "secondInnerElementary:c-cc",
+                        "connectionId": "secondInnerElementaryc-cc",
                         "source": {
                             "memberIdRef": "secondInnerElementary",
                             "slot": "c"
@@ -453,7 +457,7 @@
                         }
                     },
                     {
-                        "connectionId": "secondInnerElementary:d-dd",
+                        "connectionId": "secondInnerElementaryd-dd",
                         "source": {
                             "memberIdRef": "secondInnerElementary",
                             "slot": "d"
@@ -495,7 +499,7 @@
                 ],
                 "connections": [
                     {
-                        "connectionId": "member1:aa-member2:aa",
+                        "connectionId": "member1aa-member2aa",
                         "source": {
                             "memberIdRef": "member1",
                             "slot": "aa"
@@ -506,7 +510,7 @@
                         }
                     },
                     {
-                        "connectionId": "member1:bb-member2:bb",
+                        "connectionId": "member1bb-member2bb",
                         "source": {
                             "memberIdRef": "member1",
                             "slot": "bb"
@@ -517,7 +521,7 @@
                         }
                     },
                     {
-                        "connectionId": "member1:cc-member2:cc",
+                        "connectionId": "member1cc-member2cc",
                         "source": {
                             "memberIdRef": "member1",
                             "slot": "cc"
@@ -528,7 +532,7 @@
                         }
                     },
                     {
-                        "connectionId": "member1:dd-member2:dd",
+                        "connectionId": "member1dd-member2dd",
                         "source": {
                             "memberIdRef": "member1",
                             "slot": "dd"
@@ -539,7 +543,7 @@
                         }
                     },
                     {
-                        "connectionId": "member2:aa-member1:aa",
+                        "connectionId": "member2aa-member1aa",
                         "source": {
                             "memberIdRef": "member2",
                             "slot": "aa"
@@ -550,7 +554,7 @@
                         }
                     },
                     {
-                        "connectionId": "member2:bb-member1:bb",
+                        "connectionId": "member2bb-member1bb",
                         "source": {
                             "memberIdRef": "member2",
                             "slot": "bb"
@@ -561,7 +565,7 @@
                         }
                     },
                     {
-                        "connectionId": "member2:cc-member1:cc",
+                        "connectionId": "member2cc-member1cc",
                         "source": {
                             "memberIdRef": "member2",
                             "slot": "cc"
@@ -572,7 +576,7 @@
                         }
                     },
                     {
-                        "connectionId": "member2:dd-member1:dd",
+                        "connectionId": "member2dd-member1dd",
                         "source": {
                             "memberIdRef": "member2",
                             "slot": "dd"
@@ -583,7 +587,7 @@
                         }
                     },
                     {
-                        "connectionId": "member2:aa-member3:aa",
+                        "connectionId": "member2aa-member3aa",
                         "source": {
                             "memberIdRef": "member2",
                             "slot": "aa"
@@ -594,7 +598,7 @@
                         }
                     },
                     {
-                        "connectionId": "member2:bb-member3:bb",
+                        "connectionId": "member2bb-member3bb",
                         "source": {
                             "memberIdRef": "member2",
                             "slot": "bb"
@@ -605,7 +609,7 @@
                         }
                     },
                     {
-                        "connectionId": "member2:cc-member3:cc",
+                        "connectionId": "member2cc-member3cc",
                         "source": {
                             "memberIdRef": "member2",
                             "slot": "cc"
@@ -616,7 +620,7 @@
                         }
                     },
                     {
-                        "connectionId": "member2:dd-member3:dd",
+                        "connectionId": "member2dd-member3dd",
                         "source": {
                             "memberIdRef": "member2",
                             "slot": "dd"
@@ -627,7 +631,7 @@
                         }
                     },
                     {
-                        "connectionId": "member1:aa-member3:aa",
+                        "connectionId": "member1aa-member3aa",
                         "source": {
                             "memberIdRef": "member1",
                             "slot": "aa"
@@ -638,7 +642,7 @@
                         }
                     },
                     {
-                        "connectionId": "member1:bb-member3:bb",
+                        "connectionId": "member1bb-member3bb",
                         "source": {
                             "memberIdRef": "member1",
                             "slot": "bb"
@@ -649,7 +653,7 @@
                         }
                     },
                     {
-                        "connectionId": "member1:cc-member3:cc",
+                        "connectionId": "member1cc-member3cc",
                         "source": {
                             "memberIdRef": "member1",
                             "slot": "cc"
@@ -660,7 +664,7 @@
                         }
                     },
                     {
-                        "connectionId": "member1:dd-member3:dd",
+                        "connectionId": "member1dd-member3dd",
                         "source": {
                             "memberIdRef": "member1",
                             "slot": "dd"
@@ -671,7 +675,7 @@
                         }
                     },
                     {
-                        "connectionId": "member3:aa-member1:aa",
+                        "connectionId": "member3aa-member1aa",
                         "source": {
                             "memberIdRef": "member3",
                             "slot": "aa"
@@ -682,7 +686,7 @@
                         }
                     },
                     {
-                        "connectionId": "member3:bb-member1:bb",
+                        "connectionId": "member3bb-member1bb",
                         "source": {
                             "memberIdRef": "member3",
                             "slot": "bb"
@@ -693,7 +697,7 @@
                         }
                     },
                     {
-                        "connectionId": "member3:cc-member1:cc",
+                        "connectionId": "member3cc-member1cc",
                         "source": {
                             "memberIdRef": "member3",
                             "slot": "cc"
@@ -704,7 +708,7 @@
                         }
                     },
                     {
-                        "connectionId": "member3:dd-member1:dd",
+                        "connectionId": "member3dd-member1dd",
                         "source": {
                             "memberIdRef": "member3",
                             "slot": "dd"
@@ -715,7 +719,7 @@
                         }
                     },
                     {
-                        "connectionId": "member3:aa-member2:aa",
+                        "connectionId": "member3aa-member2aa",
                         "source": {
                             "memberIdRef": "member3",
                             "slot": "aa"
@@ -726,7 +730,7 @@
                         }
                     },
                     {
-                        "connectionId": "member3:bb-member2:bb",
+                        "connectionId": "member3bb-member2bb",
                         "source": {
                             "memberIdRef": "member3",
                             "slot": "bb"
@@ -737,7 +741,7 @@
                         }
                     },
                     {
-                        "connectionId": "member3:cc-member2:cc",
+                        "connectionId": "member3cc-member2cc",
                         "source": {
                             "memberIdRef": "member3",
                             "slot": "cc"
@@ -748,7 +752,7 @@
                         }
                     },
                     {
-                        "connectionId": "member3:dd-member2:dd",
+                        "connectionId": "member3dd-member2dd",
                         "source": {
                             "memberIdRef": "member3",
                             "slot": "dd"
