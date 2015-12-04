@@ -1,5 +1,5 @@
 {
-  "activeWebpackage": "cubx.core.cif-test.repeated-value-test",
+  "activeWebpackage": "com.incowia.cif-test.cif-init-test",
   "webpackageUpload": {
     "source": "<%= param.src %>",
     "target": {
