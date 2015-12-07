@@ -19,24 +19,13 @@ module.exports = function(grunt) {
                         registerHooks: function(wct) {
                             // Configure proxy for
 
-                            var proxyMiddleware = require(grunt.config.get('devtoolsPath') + '/node_modules/http-proxy-middleware');
+                            var proxyMiddleware = require(grunt.config.get('devtoolsPath') +
+                                '/node_modules/http-proxy-middleware');
 
                             // configure proxy middleware context
-                            //var context = ['/cubx.core.rte@1.0.0/**', '/lodash-3.10.1@1.0.0/**',
-                            // 'polymer-1.2.3@1.0.2/**'];  // requests with this path will be proxied
 
-                            //var context = [
-                            //    '/cubx.core.rte@1.0.0/**',
-                            //    '/lodash-3.10.1@1.0.0/**',
-                            //    '/lodash-3.10.1@0.1.0-SNAPSHOT/**',
-                            //    '/polymer-1.2.3@1.0.2/**',
-                            //    '/polymer-1.1.2@1.0.0/**',
-                            //    '/polymer-1.1.2@0.1.0-SNAPSHOT/**'];  // requests
+                            // with this paths will be proxied
                             var context = ['**', '!/' + grunt.config.get('param.src') + '/**', '!/components/**'];
-                            //var context = '/cubx.core.rte@1.0.0/**';
-                            // with this
-                            // path will
-                            // be proxied
 
                             // configure proxy middleware options
                             var options = {
