@@ -9,8 +9,14 @@ module.exports = function(grunt) {
      *  Load grunt tasks
      */
     grunt.loadTasks('tasks'); //locally defined tasks
-    require('load-grunt-tasks')(grunt, {pattern: ['grunt-*', '@*/grunt-*', 'cubx-grunt-*', '@*/cubx-grunt-*',
-        'web-component-tester']});
+    require('load-grunt-tasks')(grunt, {
+        pattern: [
+            'grunt-*',
+            '@*/grunt-*',
+            'cubx-grunt-*',
+            '@*/cubx-grunt-*',
+            'web-component-tester']
+    });
 
     /**
      * In case of starting the default-task, ignore the rest of this file.
@@ -36,9 +42,9 @@ module.exports = function(grunt) {
     var options = {
         devtools: grunt.file.readJSON('package.json'),
         devtoolsPath: __dirname,
-        workspaceConfigPath: workspaceConfigPath,
         workspaceName: workspaceName,
         workspacePath: workspacePath,
+        workspaceConfigPath: workspaceConfigPath,
         workspaceConfig: grunt.file.readJSON(workspaceConfigPath),
         param: {
             tmp: '.tmp'
