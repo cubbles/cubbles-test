@@ -91,6 +91,55 @@
                         }
                     }
                 ]
+            },
+            {
+                "artifactId": "repeated-value-elementary-e",
+                "description": "This is an elementary-component based on Polymer.",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "repeated-value-elementary-e.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@0.1.0-SNAPSHOT/cubxpolymer/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "clicked",
+                        "type": "boolean",
+                        "direction": [
+                            "output"
+                        ]
+                    }
+                ]
+            },
+            {
+                "artifactId": "repeated-value-elementary-f",
+                "description": "This is an elementary-component based on Polymer.",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "repeated-value-elementary-f.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@0.1.0-SNAPSHOT/cubxpolymer/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "clicked",
+                        "type": "boolean",
+                        "direction": [
+                            "input"
+                        ],
+                        "value": false
+                    }
+                ]
             }
         ],
         "compoundComponents": [
@@ -761,6 +810,49 @@
                             "memberIdRef": "member2",
                             "slot": "dd"
                         }
+                    }
+                ],
+                "inits": []
+            },
+            {
+                "artifactId": "repeated-value-true-compound-g",
+                "description": "This is a cubixx-compound-component.",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "css/repeated-value-true-compound-g.css"
+                        ],
+                        "dependencies": [
+                            "this/repeated-value-elementary-e/main",
+                            "this/repeated-value-elementary-f/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                ],
+                "members": [
+                    {
+                        "memberId": "clicksender",
+                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-elementary-e"
+                    },
+                    {
+                        "memberId": "clickreciver",
+                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-elementary-f"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "click",
+                        "source": {
+                            "memberIdRef": "clicksender",
+                            "slot": "clicked"
+                        },
+                        "destination": {
+                            "memberIdRef": "clickreciver",
+                            "slot": "clicked"
+                        },
+                        "repeatedValues": true
                     }
                 ],
                 "inits": [
