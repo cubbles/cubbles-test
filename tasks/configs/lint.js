@@ -20,6 +20,7 @@ module.exports.tasks = {
             src: [
                 '<%= param.src %>/**/*.js',
                 '!<%= param.src %>/**/vendor/**',
+                '!<%= param.src %>/**/bower_components/**',
                 '!<%= param.src %>/**/test-results/**'
             ]
         }
