@@ -19,7 +19,6 @@
 
         },
 
-
         /**
          *  Observe the Cubixx-Component-Model: If value for slot 'a' has changed ...
          */
@@ -33,7 +32,7 @@
                 weekday: 'long', year: 'numeric', month: 'long',
                 day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'
             };
-            var dateTimeString = dateTime.toLocaleTimeString('de-DE', options)
+            var dateTimeString = dateTime.toLocaleTimeString('de-DE', options);
             var message = 'clicked: ' + dateTimeString;
             var article = document.createElement('article');
             article.innerHTML = message;
