@@ -12,6 +12,7 @@
     "excludeFiles": [
         "node_modules/**",
         "../**/vendor/**",
+        "../**/bower_components/**",
         "../**/test-results/**"
     ]
 }
