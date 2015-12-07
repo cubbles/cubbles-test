@@ -1,4 +1,4 @@
-/*global process*/
+/*global process, __dirname*/
 'use strict';
 var path = require('path');
 var _ = require('lodash');
@@ -35,15 +35,16 @@ module.exports = function(grunt) {
      */
     var options = {
         devtools: grunt.file.readJSON('package.json'),
+        devtoolsPath: __dirname,
+        workspaceConfigPath: workspaceConfigPath,
         workspaceName: workspaceName,
         workspacePath: workspacePath,
-        workspaceConfigPath: workspaceConfigPath,
         workspaceConfig: grunt.file.readJSON(workspaceConfigPath),
         param: {
             tmp: '.tmp'
         },
         config: { // set default configs location
-            src: 'tasks/configs/*.js'
+            src: ['tasks/configs/*.js', workspacePath + '**/grunt-wct*.js']
         }
     };
 
