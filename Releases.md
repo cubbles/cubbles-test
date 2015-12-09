@@ -1,5 +1,20 @@
 # Releases
 
+## 1.7.0
+* modelVersion 8.2
+* dependencies updatet
+** cubx-grunt-webpackage-scaffold to version 1.5.0
+** cubx-grunt-webpackage-upload version 1.5.0
+** cubx-webpackage-document-api version 2.3.0 
+ 
+## 1.6.0
+* Support for Named-Stores
+** reference updated: cubx-grunt-webpackage-scaffold version 1.4.0
+** reference updated: cubx-grunt-webpackage-upload version 1.4.0
+
+## 1.5.0
+* reference updated: cubx-grunt-webpackage-scaffold version 1.4.0
+
 ##1.4.0
 * reference updated: cubx-grunt-webpackage-scaffold version 1.3.0
 
@@ -21,4 +36,3 @@
 ## 1.1.0
 * included cubx-grunt-webpackage-scaffold version 1.0.0
 
-## 1.0.0 Initialversion for modelVersion 8
