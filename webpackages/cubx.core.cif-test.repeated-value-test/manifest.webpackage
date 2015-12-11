@@ -102,7 +102,7 @@
                             "repeated-value-elementary-e.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@0.1.0-SNAPSHOT/cubxpolymer/main"
+                            "cubx.core.rte@1.2.1/cubxpolymer/main"
                         ]
                     }
                 ],
@@ -126,7 +126,7 @@
                             "repeated-value-elementary-f.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@0.1.0-SNAPSHOT/cubxpolymer/main"
+                            "cubx.core.rte@1.2.1/cubxpolymer/main"
                         ]
                     }
                 ],
