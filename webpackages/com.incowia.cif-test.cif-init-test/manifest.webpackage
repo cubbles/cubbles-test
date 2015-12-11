@@ -2,7 +2,7 @@
   "name": "cif-init-test",
   "groupId": "com.incowia.cif-test",
   "version": "1.1.0-SNAPSHOT",
-  "modelVersion": "8.1.0",
+  "modelVersion": "8.2.0",
   "docType": "webpackage",
   "author": {
     "name": "Judit Ross",
@@ -15,17 +15,19 @@
   ],
   "man": [],
   "runnables": [
-    {
-      "name": "test cases",
-      "path": "/tests/index.html",
-      "description": "Read this ..."
-    }
+
   ],
   "artifacts": {
     "apps": [
       {
         "artifactId": "tests",
         "description": "Test Applikation",
+        "runnables": [
+          {
+              "name": "test cases",
+              "path": "/index.html"
+          }
+        ],
         "endpoints": [
           {
             "endpointId": "main",
@@ -86,11 +88,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "2"
           }
         ],
@@ -330,11 +332,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "2"
           }
         ],
@@ -572,11 +574,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "2"
           }
         ],
@@ -807,11 +809,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "2"
           }
         ],
@@ -1026,11 +1028,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "2"
           }
         ],
@@ -1248,11 +1250,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "2"
           }
         ],
@@ -1502,11 +1504,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "2"
           }
         ],
@@ -1781,11 +1783,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "2"
           }
         ],
@@ -2049,11 +2051,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "2"
           }
         ],
@@ -2313,11 +2315,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "2"
           }
         ],
@@ -2543,11 +2545,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "2"
           }
         ],
@@ -2801,11 +2803,11 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "2"
           }
         ],
@@ -3068,15 +3070,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound",
+            "componentId": "this/cif-test-compound",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "3"
           }
         ],
@@ -3264,15 +3266,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-2",
+            "componentId": "this/cif-test-compound-2",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "3"
           }
         ],
@@ -3436,15 +3438,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-3",
+            "componentId": "this/cif-test-compound-3",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "3"
           }
         ],
@@ -3622,15 +3624,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-4",
+            "componentId": "this/cif-test-compound-4",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "3"
           }
         ],
@@ -3774,15 +3776,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-5",
+            "componentId": "this/cif-test-compound-5",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "3"
           }
         ],
@@ -3933,15 +3935,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-a",
+            "componentId": "this/cif-test-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-6",
+            "componentId": "this/cif-test-compound-6",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-b",
+            "componentId": "this/cif-test-b",
             "memberId": "3"
           }
         ],
@@ -4120,15 +4122,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-obj",
+            "componentId": "this/cif-test-compound-obj",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "3"
           }
         ],
@@ -4355,15 +4357,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-obj-2",
+            "componentId": "this/cif-test-compound-obj-2",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "3"
           }
         ],
@@ -4551,15 +4553,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-obj-3",
+            "componentId": "this/cif-test-compound-obj-3",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "3"
           }
         ],
@@ -4770,15 +4772,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-obj-4",
+            "componentId": "this/cif-test-compound-obj-4",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "3"
           }
         ],
@@ -4934,15 +4936,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-obj-5",
+            "componentId": "this/cif-test-compound-obj-5",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "3"
           }
         ],
@@ -5129,15 +5131,15 @@
         ],
         "members": [
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-a",
+            "componentId": "this/cif-test-obj-a",
             "memberId": "1"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-compound-obj-6",
+            "componentId": "this/cif-test-compound-obj-6",
             "memberId": "2"
           },
           {
-            "componentId": "cif-init-test.com.incowia.cif-test@0.1.0-SNAPSHOT/cif-test-obj-b",
+            "componentId": "this/cif-test-obj-b",
             "memberId": "3"
           }
         ],
@@ -5334,7 +5336,7 @@
               "component/cif-test-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/html-import"
+              "cubx.core.rte@1.2.1/cubxpolymer/html-import"
             ]
           },
           {
@@ -5343,7 +5345,7 @@
               "component/cif-test-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/html-import"
+              "cubx.core.rte@1.2.1/cubxpolymer/html-import"
             ]
           }
         ],
@@ -5396,7 +5398,7 @@
               "component/cif-test-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/html-import"
+              "cubx.core.rte@1.2.1/cubxpolymer/html-import"
             ]
           },
           {
@@ -5405,7 +5407,7 @@
               "component/cif-test-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/html-import"
+              "cubx.core.rte@1.2.1/cubxpolymer/html-import"
             ]
           }
         ],
@@ -5458,7 +5460,7 @@
               "component/cif-test-c.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/html-import"
+              "cubx.core.rte@1.2.1/cubxpolymer/html-import"
             ]
           },
           {
@@ -5467,7 +5469,7 @@
               "component/cif-test-c.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/html-import"
+              "cubx.core.rte@1.2.1/cubxpolymer/html-import"
             ]
           }
         ],
@@ -5492,7 +5494,7 @@
               "component/cif-test-obj-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/html-import"
+              "cubx.core.rte@1.2.1/cubxpolymer/html-import"
             ]
           },
           {
@@ -5501,7 +5503,7 @@
               "component/cif-test-obj-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/html-import"
+              "cubx.core.rte@1.2.1/cubxpolymer/html-import"
             ]
           }
         ],
@@ -5566,7 +5568,7 @@
               "component/cif-test-obj-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/html-import"
+              "cubx.core.rte@1.2.1/cubxpolymer/html-import"
             ]
           },
           {
@@ -5575,7 +5577,7 @@
               "component/cif-test-obj-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/html-import"
+              "cubx.core.rte@1.2.1/cubxpolymer/html-import"
             ]
           }
         ],

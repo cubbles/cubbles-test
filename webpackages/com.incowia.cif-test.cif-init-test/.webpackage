@@ -1,1 +1,14 @@
-{}
+{
+  "uploadConfigs": {
+    "dev": {
+      "url": "https://boot2docker/core-test",
+      "proxy": "",
+      "debug": false
+    },
+    "release": {
+      "url": "https://webblebase.net/core-test",
+      "proxy": "",
+      "debug": false
+    }
+  }
+}

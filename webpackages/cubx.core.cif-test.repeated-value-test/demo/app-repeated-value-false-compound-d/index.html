@@ -19,7 +19,7 @@
             }
         }
     </script>
-    <script src="../../../cubx.core.rte@1.1.0-SNAPSHOT/webcomponents/webcomponents-lite.js" ></script>
+    <script src="../../../cubx.core.rte@1.2.1/webcomponents/webcomponents-lite.js" ></script>
 
     <link rel="stylesheet" href="style/main.css">
     <link rel="import" href="../style/main-style.html">
@@ -39,7 +39,7 @@
         Add the following attribute: data-crc-main="js/main.js"
     -->
 
-    <script src="../../../cubx.core.rte@1.1.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true" ></script>
+    <script src="../../../cubx.core.rte@1.2.1/crc-loader/js/main.js" data-CRCInit.loadCIF="true" ></script>
 
 
 
@@ -63,7 +63,6 @@
       console.timeEnd('crcReady');
     });
     document.querySelector('[cubx-core-crc]').addEventListener('cifReady',function(){
-        console.log('CIF IS READY!!!!!');
         console.timeEnd('cifReady');
     });
     document.querySelector('[cubx-core-crc]').addEventListener('cifInitStart',function(){

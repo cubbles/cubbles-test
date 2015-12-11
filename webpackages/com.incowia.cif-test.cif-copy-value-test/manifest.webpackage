@@ -2,7 +2,7 @@
     "name": "cif-copy-value-test",
     "groupId": "com.incowia.cif-test",
     "version": "1.1.0-SNAPSHOT",
-    "modelVersion": "8.0.0",
+    "modelVersion": "8.2.0",
     "docType": "webpackage",
     "author": {
         "name": "Judit Ross",
@@ -15,23 +15,20 @@
     ],
     "man": [],
     "runnables": [
-        {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "Demo application for the copy-value test arrangement"
-        },
-        {
-            "name": "copy-value-test-compound-obj test",
-            "path": "/copy-value-test-compound-obj/test/index.html",
-            "description": "unit test for copy-value-test-compound-obj"
-        }
     ],
     "artifacts": {
         "apps": [
             {
                 "artifactId": "demo",
-                "description": ""
+                "description": "",
 
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/index.html",
+                        "description": "Demo application for the copy-value test arrangement"
+                    }
+                ]
             }
         ],
         "elementaryComponents": [
@@ -45,7 +42,7 @@
                             "component/copy-value-test-a.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.0.0/cubxpolymer/html-import"
+                            "cubx.core.rte@1.2.1/cubxpolymer/html-import"
                         ]
                     },
                     {
@@ -54,7 +51,7 @@
                             "component/copy-value-test-a.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.0.0/cubxpolymer/html-import"
+                            "cubx.core.rte@1.2.1/cubxpolymer/html-import"
                         ]
                     }
                 ],
@@ -107,7 +104,7 @@
                             "component/copy-value-test-b.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.0.0/cubxpolymer/html-import"
+                            "cubx.core.rte@1.1.1-SNAPSHOT/cubxpolymer/html-import"
                         ]
                     },
                     {
@@ -116,7 +113,7 @@
                             "component/copy-value-test-b.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.0.0/cubxpolymer/html-import"
+                            "cubx.core.rte@1.2.1/cubxpolymer/html-import"
                         ]
                     }
                 ],
@@ -169,7 +166,7 @@
                             "component/copy-value-test-obj-a.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.0.0/cubxpolymer/html-import"
+                            "cubx.core.rte@1.2.1/cubxpolymer/html-import"
                         ]
                     },
                     {
@@ -178,7 +175,7 @@
                             "component/copy-value-test-obj-a.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.0.0/cubxpolymer/html-import"
+                            "cubx.core.rte@1.2.1/cubxpolymer/html-import"
                         ]
                     }
                 ],
@@ -243,7 +240,7 @@
                             "component/copy-value-test-obj-b.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.0.0/cubxpolymer/html-import"
+                            "cubx.core.rte@1.2.1/cubxpolymer/html-import"
                         ]
                     },
                     {
@@ -252,7 +249,7 @@
                             "component/copy-value-test-obj-b.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.0.0/cubxpolymer/html-import"
+                            "cubx.core.rte@1.2.1/cubxpolymer/html-import"
                         ]
                     }
                 ],
@@ -360,11 +357,11 @@
                 ],
                 "members": [
                     {
-                        "componentId": "com.incowia.cif-test.cif-copy-value-test@0.1.0-SNAPSHOT/copy-value-test-a",
+                        "componentId": "this/copy-value-test-a",
                         "memberId": "1"
                     },
                     {
-                        "componentId": "com.incowia.cif-test.cif-copy-value-test@0.1.0-SNAPSHOT/copy-value-test-b",
+                        "componentId": "this/copy-value-test-b",
                         "memberId": "2"
                     }
                 ],
@@ -556,6 +553,13 @@
             {
                 "artifactId": "copy-value-test-compound-obj",
                 "description": "",
+                "runnables": [
+                    {
+                        "name": " test",
+                        "path": "/test/index.html",
+                        "description": "unit test for copy-value-test-compound-obj"
+                    }
+                ],
                 "endpoints": [
                     {
                         "endpointId": "main",
@@ -604,11 +608,11 @@
                 ],
                 "members": [
                     {
-                        "componentId": "com.incowia.cif-test.cif-copy-value-test@0.1.0-SNAPSHOT/copy-value-test-obj-a",
+                        "componentId": "this/copy-value-test-obj-a",
                         "memberId": "1"
                     },
                     {
-                        "componentId": "com.incowia.cif-test.cif-copy-value-testa@0.1.0-SNAPSHOT/copy-value-test-obj-b",
+                        "componentId": "this/copy-value-test-obj-b",
                         "memberId": "2"
                     }
                 ],
@@ -867,15 +871,15 @@
                 ],
                 "members": [
                     {
-                        "componentId": "com.incowia.cif-test.cif-copy-value-test@0.1.0-SNAPSHOT/copy-value-test-a",
+                        "componentId": "this/copy-value-test-a",
                         "memberId": "1"
                     },
                     {
-                        "componentId": "com.incowia.cif-test.cif-copy-value-test@0.1.0-SNAPSHOT/copy-value-test-compound",
+                        "componentId": "this/copy-value-test-compound",
                         "memberId": "2"
                     },
                     {
-                        "componentId": "com.incowia.cif-test.cif-copy-value-test@0.1.0-SNAPSHOT/copy-value-test-b",
+                        "componentId": "this/copy-value-test-b",
                         "memberId": "3"
                     }
                 ],
@@ -1064,15 +1068,15 @@
                 ],
                 "members": [
                     {
-                        "componentId": "com.incowia.cif-test.cif-copy-value-test@0.1.0-SNAPSHOT/copy-value-test-obj-a",
+                        "componentId": "this/copy-value-test-obj-a",
                         "memberId": "1"
                     },
                     {
-                        "componentId": "com.incowia.cif-test.cif-copy-value-test@0.1.0-SNAPSHOT/copy-value-test-compound-obj",
+                        "componentId": "this/copy-value-test-compound-obj",
                         "memberId": "2"
                     },
                     {
-                        "componentId": "com.incowia.cif-test.cif-copy-value-test@0.1.0-SNAPSHOT/copy-value-test-obj-b",
+                        "componentId": "this/copy-value-test-obj-b",
                         "memberId": "3"
                     }
                 ],

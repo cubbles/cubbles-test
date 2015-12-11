@@ -2,7 +2,7 @@
     "name": "repeated-value-test",
     "groupId": "cubx.core.cif-test",
     "version": "0.1.0-SNAPSHOT",
-    "modelVersion": "8.1.0",
+    "modelVersion": "8.2.0",
     "docType": "webpackage",
     "author": {
         "name": "Judit Ross",
@@ -46,7 +46,7 @@
                             "repeated-value-elementary-a.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.1.0-SNAPSHOT/cubxpolymer/main"
+                            "cubx.core.rte@1.2.1/cubxpolymer/main"
                         ]
                     }
                 ],
@@ -201,7 +201,7 @@
                 "members": [
                     {
                         "memberId": "innerElementary",
-                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-elementary-a"
+                        "componentId": "this/repeated-value-elementary-a"
                     }
                 ],
                 "connections": [
@@ -339,11 +339,11 @@
                 "members": [
                     {
                         "memberId": "firstInnerElementary",
-                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-elementary-a"
+                        "componentId": "this/repeated-value-elementary-a"
                     },
                     {
                         "memberId": "secondInnerElementary",
-                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-elementary-a"
+                        "componentId": "this/repeated-value-elementary-a"
                     }
                 ],
                 "connections": [
@@ -535,15 +535,15 @@
                 "members": [
                     {
                         "memberId": "member1",
-                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-false-compound-b"
+                        "componentId": "this/repeated-value-false-compound-b"
                     },
                     {
                         "memberId": "member2",
-                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-false-compound-c"
+                        "componentId": "this/repeated-value-false-compound-c"
                     },
                     {
                         "memberId": "member3",
-                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-false-compound-b"
+                        "componentId": "this/repeated-value-false-compound-b"
                     }
                 ],
                 "connections": [
@@ -834,11 +834,11 @@
                 "members": [
                     {
                         "memberId": "clicksender",
-                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-elementary-e"
+                        "componentId": "this/repeated-value-elementary-e"
                     },
                     {
                         "memberId": "clickreciver",
-                        "componentId": "cubx.core.cif-test.repeated-value-test@0.1.0-SNAPSHOT/repeated-value-elementary-f"
+                        "componentId": "this/repeated-value-elementary-f"
                     }
                 ],
                 "connections": [
