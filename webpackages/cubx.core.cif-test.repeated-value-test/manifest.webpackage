@@ -14,22 +14,16 @@
         "test"
     ],
     "man": [],
-    "runnables": [
-        {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "demo app for repeatedValue=false"
-        }
-    ],
+
     "artifacts": {
         "apps": [
             {
                 "artifactId": "demo",
-                "endpoints": [
+                "runnables": [
                     {
-                        "endpointId": "main",
-                        "resources": [],
-                        "dependencies": []
+                        "name": "demo",
+                        "path": "/index.html",
+                        "description": "demo app for repeatedValue=false"
                     }
                 ]
             }

@@ -1,0 +1,48 @@
+<dom-module id="connectionhook-elementary-a-style">
+    <template>
+        <!--
+        Get help: https://www.polymer-project.org/1.0/docs/devguide/styling.html#xscope-styling-details
+        -->
+        <style>
+            :host {
+
+                --base-background-color: ivory;
+                --base-border-color: #febc53;
+                --base-border: solid thin var(--base-border-color);
+                --base-form-padding: 0.3em;
+                display: block;
+                padding: var(--base-form-padding);
+                border: var(--base-border);
+                background: var(--base-background-color);
+            }
+
+            .separator{
+                -moz-border-bottom-colors: none;
+                -moz-border-image: none;
+                -moz-border-left-colors: none;
+                -moz-border-right-colors: none;
+                -moz-border-top-colors: none;
+                border-color: var(--base-border-color);
+                border-style: solid none;
+                border-bottom: none;
+                border-width: 1px 0;
+                margin: 10px 0;
+            }
+            label {
+
+                font-weight: bold;
+                color: #2f6fad;
+            }
+
+
+             #message{
+                 visibility: hidden;
+                 color: #9a0200;
+             }
+            article {
+                padding: 5px;
+            }
+
+        </style>
+    </template>
+</dom-module>
