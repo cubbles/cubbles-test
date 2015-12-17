@@ -1,1281 +1,1279 @@
 {
-    "name": "cif-copy-value-test",
-    "groupId": "com.incowia.cif-test",
-    "version": "1.1.0-SNAPSHOT",
-    "modelVersion": "8.2.0",
-    "docType": "webpackage",
-    "author": {
-        "name": "Judit Ross",
-        "email": "judit.ross@incowia.com"
-    },
-    "license": "MIT",
-    "keywords": [
-        "cif-test" ,
-        "test"
-    ],
-    "man": [],
-    "runnables": [
-    ],
-    "artifacts": {
-        "apps": [
-            {
-                "artifactId": "demo",
-                "description": "",
-
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/index.html",
-                        "description": "Demo application for the copy-value test arrangement"
-                    }
-                ]
-            }
-        ],
-        "elementaryComponents": [
-            {
-                "artifactId": "copy-value-test-a",
-                "description": "",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "component/copy-value-test-a.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.2.1/cubxpolymer/main"
-                        ]
-                    },
-                    {
-                        "endpointId": "html-import",
-                        "resources": [
-                            "component/copy-value-test-a.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.2.1/cubxpolymer/main"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": 10
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "20"
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "c-value"
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "d-value"
-                    }
-                ]
-            },
-            {
-                "artifactId": "copy-value-test-b",
-                "description": "",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "component/copy-value-test-b.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.1.1-SNAPSHOT/cubxpolymer/html-import"
-                        ]
-                    },
-                    {
-                        "endpointId": "html-import",
-                        "resources": [
-                            "component/copy-value-test-b.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.2.1/cubxpolymer/main"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": 10
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "20"
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "c-value"
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "d-value"
-                    }
-                ]
-            },
-            {
-                "artifactId": "copy-value-test-obj-a",
-                "description": "",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "component/copy-value-test-obj-a.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.2.1/cubxpolymer/main"
-                        ]
-                    },
-                    {
-                        "endpointId": "html-import",
-                        "resources": [
-                            "component/copy-value-test-obj-a.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.2.1/cubxpolymer/main"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot a",
-                            "value": 10
-                        }
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot b",
-                            "value": 20
-                        }
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot c",
-                            "value": "c-value"
-                        }
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot d",
-                            "value": "d-value"
-                        }
-                    }
-                ]
-            },
-            {
-                "artifactId": "copy-value-test-obj-b",
-                "description": "",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "component/copy-value-test-obj-b.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.2.1/cubxpolymer/main"
-                        ]
-                    },
-                    {
-                        "endpointId": "html-import",
-                        "resources": [
-                            "component/copy-value-test-obj-b.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.2.1/cubxpolymer/main"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot a",
-                            "value": 10
-                        }
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot b",
-                            "value": 20
-                        }
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot c",
-                            "value": "c-value"
-                        }
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot d",
-                            "value": "d-value"
-                        }
-                    }
-                ]
-            }
-        ],
-        "compoundComponents": [
-            {
-                "artifactId": "copy-value-test-compound",
-                "description": "",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "./component/copy-value-test-compound.css"
-                        ],
-                        "dependencies": [
-                            "this/copy-value-test-a/html-import",
-                            "this/copy-value-test-b/html-import"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "aa",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    },
-                    {
-                        "slotId": "bb",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    },
-                    {
-                        "slotId": "cc",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    },
-                    {
-                        "slotId": "dd",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    }
-                ],
-                "members": [
-                    {
-                        "componentId": "this/copy-value-test-a",
-                        "memberId": "1"
-                    },
-                    {
-                        "componentId": "this/copy-value-test-b",
-                        "memberId": "2"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "1",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "a"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "a"
-                        }
-                    },
-                    {
-                        "connectionId": "2",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "b"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "b"
-                        }
-                    },
-                    {
-                        "connectionId": "3",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "c"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "c"
-                        }
-                    },
-                    {
-                        "connectionId": "4",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "d"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "d"
-                        }
-                    },
-                    {
-                        "connectionId": "5",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "a"
-                        },
-                        "destination": {
-                            "slot": "aa"
-                        }
-                    },
-                    {
-                        "connectionId": "6",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "b"
-                        },
-                        "destination": {
-                            "slot": "bb"
-                        }
-                    },
-                    {
-                        "connectionId": "7",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "c"
-                        },
-                        "destination": {
-                            "slot": "cc"
-                        }
-                    },
-                    {
-                        "connectionId": "8",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "d"
-                        },
-                        "destination": {
-                            "slot": "dd"
-                        }
-                    },
-                    {
-                        "connectionId": "9",
-                        "source": {
-                            "slot": "aa"
-                        },
-                        "destination": {
-                            "memberIdRef": "1",
-                            "slot": "a"
-                        }
-                    },
-                    {
-                        "connectionId": "10",
-                        "source": {
-                            "slot": "bb"
-                        },
-                        "destination": {
-                            "memberIdRef": "1",
-                            "slot": "b"
-                        }
-                    },
-                    {
-                        "connectionId": "11",
-                        "source": {
-                            "slot": "cc"
-                        },
-                        "destination": {
-                            "memberIdRef": "1",
-                            "slot": "c"
-                        }
-                    },
-                    {
-                        "connectionId": "12",
-                        "source": {
-                            "slot": "dd"
-                        },
-                        "destination": {
-                            "memberIdRef": "1",
-                            "slot": "d"
-                        }
-                    }
-                ],
-                "inits": [
-                    {
-                        "slot": "aa",
-                        "value": 111
-                    },
-                    {
-                        "slot": "bb",
-                        "value": 222
-                    },
-                    {
-                        "slot": "cc",
-                        "value": "--- c ---"
-                    },
-                    {
-                        "slot": "dd",
-                        "value": "--- d ---"
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "a",
-                        "value": 9
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "b",
-                        "value": 8
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "c",
-                        "value": "a-c"
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "d",
-                        "value": "a-d"
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "a",
-                        "value": 5
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "b",
-                        "value": 6
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "c",
-                        "value": "b-c"
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "d",
-                        "value": "b-d"
-                    }
-                ]
-            },
-            {
-                "artifactId": "copy-value-test-compound-obj",
-                "description": "",
-                "runnables": [
-                    {
-                        "name": " test",
-                        "path": "/test/index.html",
-                        "description": "unit test for copy-value-test-compound-obj"
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "./component/copy-value-test-compound-obj.css"
-                        ],
-                        "dependencies": [
-                            "this/copy-value-test-obj-a/html-import",
-                            "this/copy-value-test-obj-b/html-import"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "aa",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    },
-                    {
-                        "slotId": "bb",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    },
-                    {
-                        "slotId": "cc",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    },
-                    {
-                        "slotId": "dd",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    }
-                ],
-                "members": [
-                    {
-                        "componentId": "this/copy-value-test-obj-a",
-                        "memberId": "1"
-                    },
-                    {
-                        "componentId": "this/copy-value-test-obj-b",
-                        "memberId": "2"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "1",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "a"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "a"
-                        }
-                    },
-                    {
-                        "connectionId": "2",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "b"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "b"
-                        },
-                        "copyValue": true
-                    },
-                    {
-                        "connectionId": "3",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "c"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "c"
-                        },
-                        "copyValue": false
-                    },
-                    {
-                        "connectionId": "4",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "d"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "d"
-                        }
-                    },
-                    {
-                        "connectionId": "5",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "a"
-                        },
-                        "destination": {
-                            "slot": "aa"
-                        }
-                    },
-                    {
-                        "connectionId": "6",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "b"
-                        },
-                        "destination": {
-                            "slot": "bb"
-                        },
-                        "copyValue": true
-                    },
-                    {
-                        "connectionId": "7",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "c"
-                        },
-                        "destination": {
-                            "slot": "cc"
-                        },
-                        "copyValue": false
-                    },
-                    {
-                        "connectionId": "8",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "d"
-                        },
-                        "destination": {
-                            "slot": "dd"
-                        }
-                    },
-                    {
-                        "connectionId": "9",
-                        "source": {
-                            "slot": "aa"
-                        },
-                        "destination": {
-                            "memberIdRef": "1",
-                            "slot": "a"
-                        }
-                    },
-                    {
-                        "connectionId": "10",
-                        "source": {
-                            "slot": "bb"
-                        },
-                        "destination": {
-                            "memberIdRef": "1",
-                            "slot": "b"
-                        },
-                        "copyValue": true
-                    },
-                    {
-                        "connectionId": "11",
-                        "source": {
-                            "slot": "cc"
-                        },
-                        "destination": {
-                            "memberIdRef": "1",
-                            "slot": "c"
-                        },
-                        "copyValue": false
-                    },
-                    {
-                        "connectionId": "12",
-                        "source": {
-                            "slot": "dd"
-                        },
-                        "destination": {
-                            "memberIdRef": "1",
-                            "slot": "d"
-                        }
-                    }
-                ],
-                "inits": [
-                    {
-                        "slot": "aa",
-                        "value": {
-                            "label": "slot aa",
-                            "value": 111
-                        }
-                    },
-                    {
-                        "slot": "bb",
-                        "value": {
-                            "label": "slot cc",
-                            "value": 222
-                        }
-                    },
-                    {
-                        "slot": "cc",
-                        "value": {
-                            "label": "slot cc",
-                            "value": "--- c ---"
-                        }
-                    },
-                    {
-                        "slot": "dd",
-                        "value": {
-                            "label": "slot dd",
-                            "value": "--- d ---"
-                        }
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "a",
-                        "value": {
-                            "label": "slot a",
-                            "value": 9
-                        }
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "b",
-                        "value": {
-                            "label": "slot b",
-                            "value": 8
-                        }
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "c",
-                        "value": {
-                            "label": "slot c",
-                            "value": "a-c"
-                        }
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "d",
-                        "value": {
-                            "label": "slot d",
-                            "value": "a-d"
-                        }
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "a",
-                        "value": {
-                            "label": "slot a",
-                            "value": 5
-                        }
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "b",
-                        "value": {
-                            "label": "slot b",
-                            "value": 6
-                        }
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "c",
-                        "value": {
-                            "label": "slot a",
-                            "value": "b-c"
-                        }
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "d",
-                        "value": {
-                            "label": "slot d",
-                            "value": "b-d"
-                        }
-                    }
-                ]
-            },
-            {
-                "artifactId": "copy-value-test-compound-outer",
-                "description": "",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "./component/copy-value-test-compound-outer.css"
-                        ],
-                        "dependencies": [
-                            "this/copy-value-test-compound/main",
-                            "this/copy-value-test-a/html-import",
-                            "this/copy-value-test-b/html-import"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "outer",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    }
-                ],
-                "members": [
-                    {
-                        "componentId": "this/copy-value-test-a",
-                        "memberId": "1"
-                    },
-                    {
-                        "componentId": "this/copy-value-test-compound",
-                        "memberId": "2"
-                    },
-                    {
-                        "componentId": "this/copy-value-test-b",
-                        "memberId": "3"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "1",
-                        "source": {
-                            "memberIdRef": "2",
-                            "slot": "aa"
-                        },
-                        "destination": {
-                            "memberIdRef": "3",
-                            "slot": "a"
-                        }
-                    },
-                    {
-                        "connectionId": "2",
-                        "source": {
-                            "memberIdRef": "2",
-                            "slot": "bb"
-                        },
-                        "destination": {
-                            "memberIdRef": "3",
-                            "slot": "b"
-                        }
-                    },
-                    {
-                        "connectionId": "3",
-                        "source": {
-                            "memberIdRef": "2",
-                            "slot": "cc"
-                        },
-                        "destination": {
-                            "memberIdRef": "3",
-                            "slot": "c"
-                        }
-                    },
-                    {
-                        "connectionId": "4",
-                        "source": {
-                            "memberIdRef": "2",
-                            "slot": "dd"
-                        },
-                        "destination": {
-                            "memberIdRef": "3",
-                            "slot": "d"
-                        }
-                    },
-                    {
-                        "connectionId": "5",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "a"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "aa"
-                        }
-                    },
-                    {
-                        "connectionId": "6",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "b"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "bb"
-                        }
-                    },
-                    {
-                        "connectionId": "7",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "c"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "cc"
-                        }
-                    },
-                    {
-                        "connectionId": "8",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "d"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "dd"
-                        }
-                    }
-                ],
-                "inits": [
-                    {
-                        "slot": "outer",
-                        "value": "bbb"
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "a",
-                        "value": 100
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "b",
-                        "value": 200
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "c",
-                        "value": "### c ####"
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "d",
-                        "value": "### d ###"
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "aa",
-                        "value": 999
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "bb",
-                        "value": 888
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "cc",
-                        "value": ";)"
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "dd",
-                        "value": "=:)"
-                    },
-                    {
-                        "memberIdRef": "3",
-                        "slot": "a",
-                        "value": 101
-                    },
-                    {
-                        "memberIdRef": "3",
-                        "slot": "b",
-                        "value": 202
-                    },
-                    {
-                        "memberIdRef": "3",
-                        "slot": "c",
-                        "value": "xxx c xxx"
-                    },
-                    {
-                        "memberIdRef": "3",
-                        "slot": "d",
-                        "value": "xxx d xxx"
-                    }
-                ]
-            },
-            {
-                "artifactId": "copy-value-test-compound-obj-outer",
-                "description": "",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "./component/copy-value-test-compound-obj-outer.css"
-                        ],
-                        "dependencies": [
-                            "this/copy-value-test-compound-obj/main",
-                            "this/copy-value-test-obj-a/html-import",
-                            "this/copy-value-test-obj-b/html-import"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "outer",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    }
-                ],
-                "members": [
-                    {
-                        "componentId": "this/copy-value-test-obj-a",
-                        "memberId": "1"
-                    },
-                    {
-                        "componentId": "this/copy-value-test-compound-obj",
-                        "memberId": "2"
-                    },
-                    {
-                        "componentId": "this/copy-value-test-obj-b",
-                        "memberId": "3"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "1",
-                        "source": {
-                            "memberIdRef": "2",
-                            "slot": "aa"
-                        },
-                        "destination": {
-                            "memberIdRef": "3",
-                            "slot": "a"
-                        }
-                    },
-                    {
-                        "connectionId": "2",
-                        "source": {
-                            "memberIdRef": "2",
-                            "slot": "bb"
-                        },
-                        "destination": {
-                            "memberIdRef": "3",
-                            "slot": "b"
-                        }
-                    },
-                    {
-                        "connectionId": "3",
-                        "source": {
-                            "memberIdRef": "2",
-                            "slot": "cc"
-                        },
-                        "destination": {
-                            "memberIdRef": "3",
-                            "slot": "c"
-                        }
-                    },
-                    {
-                        "connectionId": "4",
-                        "source": {
-                            "memberIdRef": "2",
-                            "slot": "dd"
-                        },
-                        "destination": {
-                            "memberIdRef": "3",
-                            "slot": "d"
-                        }
-                    },
-                    {
-                        "connectionId": "5",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "a"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "aa"
-                        }
-                    },
-                    {
-                        "connectionId": "6",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "b"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "bb"
-                        }
-                    },
-                    {
-                        "connectionId": "7",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "c"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "cc"
-                        }
-                    },
-                    {
-                        "connectionId": "8",
-                        "source": {
-                            "memberIdRef": "1",
-                            "slot": "d"
-                        },
-                        "destination": {
-                            "memberIdRef": "2",
-                            "slot": "dd"
-                        }
-                    }
-                ],
-                "inits": [
-                    {
-                        "slot": "outer",
-                        "value": {
-                            "label": "slot outer",
-                            "value": "bbb"
-                        }
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "a",
-                        "value": {
-                            "label": "slot a",
-                            "value": 100
-                        }
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "b",
-                        "value": {
-                            "label": "slot b",
-                            "value": 200
-                        }
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "c",
-                        "value": {
-                            "label": "slot c",
-                            "value": "### c ####"
-                        }
-                    },
-                    {
-                        "memberIdRef": "1",
-                        "slot": "d",
-                        "value": {
-                            "label": "slot d",
-                            "value": "### d ###"
-                        }
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "aa",
-                        "value": {
-                            "label": "slot aa",
-                            "value": 999
-                        }
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "bb",
-                        "value": {
-                            "label": "slot bb",
-                            "value": 888
-                        }
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "cc",
-                        "value": {
-                            "label": "slot cc",
-                            "value": ";)"
-                        }
-                    },
-                    {
-                        "memberIdRef": "2",
-                        "slot": "dd",
-                        "value": {
-                            "label": "slot dd",
-                            "value": "=:)"
-                        }
-                    },
-                    {
-                        "memberIdRef": "3",
-                        "slot": "a",
-                        "value": {
-                            "label": "slot a",
-                            "value": 101
-                        }
-                    },
-                    {
-                        "memberIdRef": "3",
-                        "slot": "b",
-                        "value": {
-                            "label": "slot b",
-                            "value": 202
-                        }
-                    },
-                    {
-                        "memberIdRef": "3",
-                        "slot": "c",
-                        "value": {
-                            "label": "slot c",
-                            "value": "xxx c xxx"
-                        }
-                    },
-                    {
-                        "memberIdRef": "3",
-                        "slot": "d",
-                        "value": {
-                            "label": "slot d",
-                            "value": "xxx d xxx"
-                        }
-                    }
-                ]
-            }
+  "name": "cif-copy-value-test",
+  "groupId": "com.incowia.cif-test",
+  "version": "1.1.0-SNAPSHOT",
+  "modelVersion": "8.2.0",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cif-test",
+    "test"
+  ],
+  "man": [],
+  "runnables": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "demo",
+        "description": "",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/index.html",
+            "description": "Demo application for the copy-value test arrangement"
+          }
         ]
-    }
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "copy-value-test-a",
+        "description": "",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "component/copy-value-test-a.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+            ]
+          },
+          {
+            "endpointId": "html-import",
+            "resources": [
+              "component/copy-value-test-a.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "a",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": 10
+          },
+          {
+            "slotId": "b",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": "20"
+          },
+          {
+            "slotId": "c",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": "c-value"
+          },
+          {
+            "slotId": "d",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": "d-value"
+          }
+        ]
+      },
+      {
+        "artifactId": "copy-value-test-b",
+        "description": "",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "component/copy-value-test-b.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.1.1-SNAPSHOT/cubxpolymer/html-import"
+            ]
+          },
+          {
+            "endpointId": "html-import",
+            "resources": [
+              "component/copy-value-test-b.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "a",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": 10
+          },
+          {
+            "slotId": "b",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": "20"
+          },
+          {
+            "slotId": "c",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": "c-value"
+          },
+          {
+            "slotId": "d",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": "d-value"
+          }
+        ]
+      },
+      {
+        "artifactId": "copy-value-test-obj-a",
+        "description": "",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "component/copy-value-test-obj-a.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+            ]
+          },
+          {
+            "endpointId": "html-import",
+            "resources": [
+              "component/copy-value-test-obj-a.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "a",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": {
+              "label": "slot a",
+              "value": 10
+            }
+          },
+          {
+            "slotId": "b",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": {
+              "label": "slot b",
+              "value": 20
+            }
+          },
+          {
+            "slotId": "c",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": {
+              "label": "slot c",
+              "value": "c-value"
+            }
+          },
+          {
+            "slotId": "d",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": {
+              "label": "slot d",
+              "value": "d-value"
+            }
+          }
+        ]
+      },
+      {
+        "artifactId": "copy-value-test-obj-b",
+        "description": "",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "component/copy-value-test-obj-b.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+            ]
+          },
+          {
+            "endpointId": "html-import",
+            "resources": [
+              "component/copy-value-test-obj-b.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "a",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": {
+              "label": "slot a",
+              "value": 10
+            }
+          },
+          {
+            "slotId": "b",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": {
+              "label": "slot b",
+              "value": 20
+            }
+          },
+          {
+            "slotId": "c",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": {
+              "label": "slot c",
+              "value": "c-value"
+            }
+          },
+          {
+            "slotId": "d",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": {
+              "label": "slot d",
+              "value": "d-value"
+            }
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "copy-value-test-compound",
+        "description": "",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "./component/copy-value-test-compound.css"
+            ],
+            "dependencies": [
+              "this/copy-value-test-a/html-import",
+              "this/copy-value-test-b/html-import"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "aa",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "bb",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "cc",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "dd",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "componentId": "this/copy-value-test-a",
+            "memberId": "1"
+          },
+          {
+            "componentId": "this/copy-value-test-b",
+            "memberId": "2"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "1",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "a"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "2",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "b"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "b"
+            }
+          },
+          {
+            "connectionId": "3",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "c"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "c"
+            }
+          },
+          {
+            "connectionId": "4",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "d"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "d"
+            }
+          },
+          {
+            "connectionId": "5",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "a"
+            },
+            "destination": {
+              "slot": "aa"
+            }
+          },
+          {
+            "connectionId": "6",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "b"
+            },
+            "destination": {
+              "slot": "bb"
+            }
+          },
+          {
+            "connectionId": "7",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "c"
+            },
+            "destination": {
+              "slot": "cc"
+            }
+          },
+          {
+            "connectionId": "8",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "d"
+            },
+            "destination": {
+              "slot": "dd"
+            }
+          },
+          {
+            "connectionId": "9",
+            "source": {
+              "slot": "aa"
+            },
+            "destination": {
+              "memberIdRef": "1",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "10",
+            "source": {
+              "slot": "bb"
+            },
+            "destination": {
+              "memberIdRef": "1",
+              "slot": "b"
+            }
+          },
+          {
+            "connectionId": "11",
+            "source": {
+              "slot": "cc"
+            },
+            "destination": {
+              "memberIdRef": "1",
+              "slot": "c"
+            }
+          },
+          {
+            "connectionId": "12",
+            "source": {
+              "slot": "dd"
+            },
+            "destination": {
+              "memberIdRef": "1",
+              "slot": "d"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "aa",
+            "value": 111
+          },
+          {
+            "slot": "bb",
+            "value": 222
+          },
+          {
+            "slot": "cc",
+            "value": "--- c ---"
+          },
+          {
+            "slot": "dd",
+            "value": "--- d ---"
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "a",
+            "value": 9
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "b",
+            "value": 8
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "c",
+            "value": "a-c"
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "d",
+            "value": "a-d"
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "a",
+            "value": 5
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "b",
+            "value": 6
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "c",
+            "value": "b-c"
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "d",
+            "value": "b-d"
+          }
+        ]
+      },
+      {
+        "artifactId": "copy-value-test-compound-obj",
+        "description": "",
+        "runnables": [
+          {
+            "name": " test",
+            "path": "/test/index.html",
+            "description": "unit test for copy-value-test-compound-obj"
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "./component/copy-value-test-compound-obj.css"
+            ],
+            "dependencies": [
+              "this/copy-value-test-obj-a/html-import",
+              "this/copy-value-test-obj-b/html-import"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "aa",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "bb",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "cc",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "dd",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "componentId": "this/copy-value-test-obj-a",
+            "memberId": "1"
+          },
+          {
+            "componentId": "this/copy-value-test-obj-b",
+            "memberId": "2"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "1",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "a"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "2",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "b"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "b"
+            },
+            "copyValue": true
+          },
+          {
+            "connectionId": "3",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "c"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "c"
+            },
+            "copyValue": false
+          },
+          {
+            "connectionId": "4",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "d"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "d"
+            }
+          },
+          {
+            "connectionId": "5",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "a"
+            },
+            "destination": {
+              "slot": "aa"
+            }
+          },
+          {
+            "connectionId": "6",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "b"
+            },
+            "destination": {
+              "slot": "bb"
+            },
+            "copyValue": true
+          },
+          {
+            "connectionId": "7",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "c"
+            },
+            "destination": {
+              "slot": "cc"
+            },
+            "copyValue": false
+          },
+          {
+            "connectionId": "8",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "d"
+            },
+            "destination": {
+              "slot": "dd"
+            }
+          },
+          {
+            "connectionId": "9",
+            "source": {
+              "slot": "aa"
+            },
+            "destination": {
+              "memberIdRef": "1",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "10",
+            "source": {
+              "slot": "bb"
+            },
+            "destination": {
+              "memberIdRef": "1",
+              "slot": "b"
+            },
+            "copyValue": true
+          },
+          {
+            "connectionId": "11",
+            "source": {
+              "slot": "cc"
+            },
+            "destination": {
+              "memberIdRef": "1",
+              "slot": "c"
+            },
+            "copyValue": false
+          },
+          {
+            "connectionId": "12",
+            "source": {
+              "slot": "dd"
+            },
+            "destination": {
+              "memberIdRef": "1",
+              "slot": "d"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "aa",
+            "value": {
+              "label": "slot aa",
+              "value": 111
+            }
+          },
+          {
+            "slot": "bb",
+            "value": {
+              "label": "slot cc",
+              "value": 222
+            }
+          },
+          {
+            "slot": "cc",
+            "value": {
+              "label": "slot cc",
+              "value": "--- c ---"
+            }
+          },
+          {
+            "slot": "dd",
+            "value": {
+              "label": "slot dd",
+              "value": "--- d ---"
+            }
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "a",
+            "value": {
+              "label": "slot a",
+              "value": 9
+            }
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "b",
+            "value": {
+              "label": "slot b",
+              "value": 8
+            }
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "c",
+            "value": {
+              "label": "slot c",
+              "value": "a-c"
+            }
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "d",
+            "value": {
+              "label": "slot d",
+              "value": "a-d"
+            }
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "a",
+            "value": {
+              "label": "slot a",
+              "value": 5
+            }
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "b",
+            "value": {
+              "label": "slot b",
+              "value": 6
+            }
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "c",
+            "value": {
+              "label": "slot a",
+              "value": "b-c"
+            }
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "d",
+            "value": {
+              "label": "slot d",
+              "value": "b-d"
+            }
+          }
+        ]
+      },
+      {
+        "artifactId": "copy-value-test-compound-outer",
+        "description": "",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "./component/copy-value-test-compound-outer.css"
+            ],
+            "dependencies": [
+              "this/copy-value-test-compound/main",
+              "this/copy-value-test-a/html-import",
+              "this/copy-value-test-b/html-import"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "outer",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "componentId": "this/copy-value-test-a",
+            "memberId": "1"
+          },
+          {
+            "componentId": "this/copy-value-test-compound",
+            "memberId": "2"
+          },
+          {
+            "componentId": "this/copy-value-test-b",
+            "memberId": "3"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "1",
+            "source": {
+              "memberIdRef": "2",
+              "slot": "aa"
+            },
+            "destination": {
+              "memberIdRef": "3",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "2",
+            "source": {
+              "memberIdRef": "2",
+              "slot": "bb"
+            },
+            "destination": {
+              "memberIdRef": "3",
+              "slot": "b"
+            }
+          },
+          {
+            "connectionId": "3",
+            "source": {
+              "memberIdRef": "2",
+              "slot": "cc"
+            },
+            "destination": {
+              "memberIdRef": "3",
+              "slot": "c"
+            }
+          },
+          {
+            "connectionId": "4",
+            "source": {
+              "memberIdRef": "2",
+              "slot": "dd"
+            },
+            "destination": {
+              "memberIdRef": "3",
+              "slot": "d"
+            }
+          },
+          {
+            "connectionId": "5",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "a"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "aa"
+            }
+          },
+          {
+            "connectionId": "6",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "b"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "bb"
+            }
+          },
+          {
+            "connectionId": "7",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "c"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "cc"
+            }
+          },
+          {
+            "connectionId": "8",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "d"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "dd"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "outer",
+            "value": "bbb"
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "a",
+            "value": 100
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "b",
+            "value": 200
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "c",
+            "value": "### c ####"
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "d",
+            "value": "### d ###"
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "aa",
+            "value": 999
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "bb",
+            "value": 888
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "cc",
+            "value": ";)"
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "dd",
+            "value": "=:)"
+          },
+          {
+            "memberIdRef": "3",
+            "slot": "a",
+            "value": 101
+          },
+          {
+            "memberIdRef": "3",
+            "slot": "b",
+            "value": 202
+          },
+          {
+            "memberIdRef": "3",
+            "slot": "c",
+            "value": "xxx c xxx"
+          },
+          {
+            "memberIdRef": "3",
+            "slot": "d",
+            "value": "xxx d xxx"
+          }
+        ]
+      },
+      {
+        "artifactId": "copy-value-test-compound-obj-outer",
+        "description": "",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "./component/copy-value-test-compound-obj-outer.css"
+            ],
+            "dependencies": [
+              "this/copy-value-test-compound-obj/main",
+              "this/copy-value-test-obj-a/html-import",
+              "this/copy-value-test-obj-b/html-import"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "outer",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "componentId": "this/copy-value-test-obj-a",
+            "memberId": "1"
+          },
+          {
+            "componentId": "this/copy-value-test-compound-obj",
+            "memberId": "2"
+          },
+          {
+            "componentId": "this/copy-value-test-obj-b",
+            "memberId": "3"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "1",
+            "source": {
+              "memberIdRef": "2",
+              "slot": "aa"
+            },
+            "destination": {
+              "memberIdRef": "3",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "2",
+            "source": {
+              "memberIdRef": "2",
+              "slot": "bb"
+            },
+            "destination": {
+              "memberIdRef": "3",
+              "slot": "b"
+            }
+          },
+          {
+            "connectionId": "3",
+            "source": {
+              "memberIdRef": "2",
+              "slot": "cc"
+            },
+            "destination": {
+              "memberIdRef": "3",
+              "slot": "c"
+            }
+          },
+          {
+            "connectionId": "4",
+            "source": {
+              "memberIdRef": "2",
+              "slot": "dd"
+            },
+            "destination": {
+              "memberIdRef": "3",
+              "slot": "d"
+            }
+          },
+          {
+            "connectionId": "5",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "a"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "aa"
+            }
+          },
+          {
+            "connectionId": "6",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "b"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "bb"
+            }
+          },
+          {
+            "connectionId": "7",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "c"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "cc"
+            }
+          },
+          {
+            "connectionId": "8",
+            "source": {
+              "memberIdRef": "1",
+              "slot": "d"
+            },
+            "destination": {
+              "memberIdRef": "2",
+              "slot": "dd"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "outer",
+            "value": {
+              "label": "slot outer",
+              "value": "bbb"
+            }
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "a",
+            "value": {
+              "label": "slot a",
+              "value": 100
+            }
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "b",
+            "value": {
+              "label": "slot b",
+              "value": 200
+            }
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "c",
+            "value": {
+              "label": "slot c",
+              "value": "### c ####"
+            }
+          },
+          {
+            "memberIdRef": "1",
+            "slot": "d",
+            "value": {
+              "label": "slot d",
+              "value": "### d ###"
+            }
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "aa",
+            "value": {
+              "label": "slot aa",
+              "value": 999
+            }
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "bb",
+            "value": {
+              "label": "slot bb",
+              "value": 888
+            }
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "cc",
+            "value": {
+              "label": "slot cc",
+              "value": ";)"
+            }
+          },
+          {
+            "memberIdRef": "2",
+            "slot": "dd",
+            "value": {
+              "label": "slot dd",
+              "value": "=:)"
+            }
+          },
+          {
+            "memberIdRef": "3",
+            "slot": "a",
+            "value": {
+              "label": "slot a",
+              "value": 101
+            }
+          },
+          {
+            "memberIdRef": "3",
+            "slot": "b",
+            "value": {
+              "label": "slot b",
+              "value": 202
+            }
+          },
+          {
+            "memberIdRef": "3",
+            "slot": "c",
+            "value": {
+              "label": "slot c",
+              "value": "xxx c xxx"
+            }
+          },
+          {
+            "memberIdRef": "3",
+            "slot": "d",
+            "value": {
+              "label": "slot d",
+              "value": "xxx d xxx"
+            }
+          }
+        ]
+      }
+    ]
+  }
 }

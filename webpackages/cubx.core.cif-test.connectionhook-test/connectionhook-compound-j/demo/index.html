@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>app</title>
 
-    <script src="../../cubx.core.rte@1.3.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@1.3.0/webcomponents/webcomponents-lite.js"></script>
 
     <!--
         Declare a CRCInit-Object used to initialize the CRC (Client-Runtime-Container):
@@ -16,7 +16,7 @@
         window.cubx = {
             CRCInit: {
                 rootDependencies: [
-                    "this/connectionhook-compound-c/main"
+                    "this/connectionhook-compound-j/main"
                 ]
             }
         }
@@ -29,18 +29,18 @@
         Want to add a 'main' -script to be executed after the dependencies have been loaded?
         If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
-    <script src="../../cubx.core.rte@1.3.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true" data-crc-main="js/main.js"></script>
+    <script src="../../../cubx.core.rte@1.3.0/crc-loader/js/main.js" data-CRCInit.loadCIF="true" data-crc-main="js/main.js"></script>
 
 </head>
 <body>
-<h1>connectionhook-compound-c</h1>
+<h1>connectionhook-compound-j</h1>
 <!--
     The cubixx client-runtime-container is bound to the next element.
     Place Cubixx-Component there as child element.
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
 <div cubx-core-crc class="container">
-    <connectionhook-compound-c></connectionhook-compound-c>
+    <connectionhook-compound-j></connectionhook-compound-j>
 </div>
 
 </body>

@@ -3,18 +3,18 @@
     if (!window.cubx) {
         window.cubx = {};
     }
-
-    window.cubx.multiply10 = function(value, next) {
+    window.cubx.hookFunctions = {};
+    window.cubx.hookFunctions.multiply10 = function(value, next) {
         value = Number(value) * 10;
         next(value);
     };
 
-    window.cubx.halloWebbleWord = function(value, next) {
+    window.cubx.hookFunctions.greeting = function(value, next) {
         value = 'Greeting: ' + value;
         next(value);
     };
 
-    window.cubx.fullName = function(value, next) {
+    window.cubx.hookFunctions.fullName = function(value, next) {
         var newValue = {};
         newValue.name = value.firstname ? value.firstname + ' ' : '';
         newValue.name += value.name;
