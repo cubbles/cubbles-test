@@ -1,7 +1,7 @@
 {
   "name": "cif-copy-value-test",
   "groupId": "com.incowia.cif-test",
-  "version": "1.1.0-SNAPSHOT",
+  "version": "1.1.0",
   "modelVersion": "8.2.0",
   "docType": "webpackage",
   "author": {
@@ -40,7 +40,7 @@
               "component/copy-value-test-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.3.0/cubxpolymer/main"
             ]
           },
           {
@@ -49,7 +49,7 @@
               "component/copy-value-test-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.3.0/cubxpolymer/main"
             ]
           }
         ],
@@ -111,7 +111,7 @@
               "component/copy-value-test-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.3.0/cubxpolymer/main"
             ]
           }
         ],
@@ -164,7 +164,7 @@
               "component/copy-value-test-obj-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.3.0/cubxpolymer/main"
             ]
           },
           {
@@ -173,7 +173,7 @@
               "component/copy-value-test-obj-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.3.0/cubxpolymer/main"
             ]
           }
         ],
@@ -238,7 +238,7 @@
               "component/copy-value-test-obj-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.3.0/cubxpolymer/main"
             ]
           },
           {
@@ -247,7 +247,7 @@
               "component/copy-value-test-obj-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.3.0/cubxpolymer/main"
             ]
           }
         ],
