@@ -1,8 +1,8 @@
 {
   "name": "cif-init-test",
   "groupId": "com.incowia.cif-test",
-  "version": "1.1.0",
-  "modelVersion": "8.2.0",
+  "version": "1.2.0-SNAPSHOT",
+  "modelVersion": "8.3.0",
   "docType": "webpackage",
   "author": {
     "name": "Judit Ross",
@@ -89,62 +89,62 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -152,9 +152,9 @@
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -162,9 +162,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -172,9 +172,9 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -182,42 +182,42 @@
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "11",
+            "connectionId": "con11",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             }
           },
           {
-            "connectionId": "12",
+            "connectionId": "con12",
             "source": {
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           }
@@ -240,42 +240,42 @@
             "value": "--- d ---"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": 9
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": 8
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": "a-c"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": "a-d"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": 5
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": 6
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": "b-c"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": "b-d"
           }
@@ -333,73 +333,73 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -407,9 +407,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -417,9 +417,9 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -427,9 +427,9 @@
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -437,42 +437,42 @@
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "11",
+            "connectionId": "con11",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "12",
+            "connectionId": "con12",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             }
           },
           {
-            "connectionId": "13",
+            "connectionId": "con13",
             "source": {
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           }
@@ -487,37 +487,37 @@
             "value": "--- d ---"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": 8
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": "a-c"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": "a-d"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": 5
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": 6
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": "b-c"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": "b-d"
           }
@@ -575,62 +575,62 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -638,9 +638,9 @@
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -648,9 +648,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -658,9 +658,9 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -668,42 +668,42 @@
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "11",
+            "connectionId": "con11",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             }
           },
           {
-            "connectionId": "12",
+            "connectionId": "con12",
             "source": {
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           }
@@ -722,37 +722,37 @@
             "value": "--- d ---"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": 8
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": "a-c"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": "a-d"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": 5
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": 6
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": "b-c"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": "b-d"
           }
@@ -810,73 +810,73 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -884,9 +884,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -894,9 +894,9 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -904,9 +904,9 @@
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -914,64 +914,64 @@
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "11",
+            "connectionId": "con11",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "12",
+            "connectionId": "con12",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             }
           },
           {
-            "connectionId": "13",
+            "connectionId": "con13",
             "source": {
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           }
         ],
         "inits": [
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": 5
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": 6
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": "b-c"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": "b-d"
           }
@@ -1029,51 +1029,51 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -1081,9 +1081,9 @@
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -1091,9 +1091,9 @@
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -1101,9 +1101,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -1111,32 +1111,32 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             }
           }
@@ -1159,42 +1159,42 @@
             "value": "--- d ---"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": 9
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": 8
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": "a-c"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": "a-d"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": 5
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": 6
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": "b-c"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": "b-d"
           }
@@ -1251,73 +1251,73 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -1325,9 +1325,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -1335,9 +1335,9 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -1345,9 +1345,9 @@
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -1355,42 +1355,42 @@
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "11",
+            "connectionId": "con11",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "12",
+            "connectionId": "con12",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           },
           {
-            "connectionId": "13",
+            "connectionId": "con13",
             "source": {
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           }
@@ -1413,42 +1413,42 @@
             "value": "--- d ---"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": 9
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": 8
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": "a-c"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": "a-d"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": 5
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": 6
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": "b-c"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": "b-d"
           }
@@ -1505,62 +1505,62 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -1568,9 +1568,9 @@
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -1578,9 +1578,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -1588,9 +1588,9 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -1598,42 +1598,42 @@
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "11",
+            "connectionId": "con11",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             }
           },
           {
-            "connectionId": "12",
+            "connectionId": "con12",
             "source": {
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           }
@@ -1668,7 +1668,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -1676,7 +1676,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -1684,7 +1684,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -1692,7 +1692,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -1700,7 +1700,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -1708,7 +1708,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -1716,7 +1716,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": {
               "label": "slot a",
@@ -1724,7 +1724,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -1784,73 +1784,73 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -1858,9 +1858,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -1868,9 +1868,9 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -1878,9 +1878,9 @@
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -1888,42 +1888,42 @@
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "11",
+            "connectionId": "con11",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "12",
+            "connectionId": "con12",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             }
           },
           {
-            "connectionId": "13",
+            "connectionId": "con13",
             "source": {
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           }
@@ -1944,7 +1944,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -1952,7 +1952,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -1960,7 +1960,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -1968,7 +1968,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -1976,7 +1976,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -1984,7 +1984,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -1992,7 +1992,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -2052,62 +2052,62 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -2115,9 +2115,9 @@
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -2125,9 +2125,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -2135,9 +2135,9 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -2145,42 +2145,42 @@
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "11",
+            "connectionId": "con11",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             }
           },
           {
-            "connectionId": "12",
+            "connectionId": "con12",
             "source": {
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           }
@@ -2208,7 +2208,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -2216,7 +2216,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -2224,7 +2224,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -2232,7 +2232,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -2240,7 +2240,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -2248,7 +2248,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -2256,7 +2256,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -2316,73 +2316,73 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -2390,9 +2390,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -2400,9 +2400,9 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -2410,9 +2410,9 @@
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -2420,49 +2420,49 @@
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "11",
+            "connectionId": "con11",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "12",
+            "connectionId": "con12",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             }
           },
           {
-            "connectionId": "13",
+            "connectionId": "con13",
             "source": {
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           }
         ],
         "inits": [
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -2470,7 +2470,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -2478,7 +2478,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -2486,7 +2486,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -2546,51 +2546,51 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -2598,9 +2598,9 @@
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -2608,9 +2608,9 @@
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -2618,9 +2618,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -2628,32 +2628,32 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             }
           }
@@ -2688,7 +2688,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -2696,7 +2696,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -2704,7 +2704,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -2712,7 +2712,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -2720,7 +2720,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -2728,7 +2728,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -2736,7 +2736,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -2744,7 +2744,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -2804,73 +2804,73 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "2"
+            "memberId": "member2"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "d"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
@@ -2878,9 +2878,9 @@
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
@@ -2888,9 +2888,9 @@
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
@@ -2898,9 +2898,9 @@
             }
           },
           {
-            "connectionId": "9",
+            "connectionId": "con9",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
@@ -2908,42 +2908,42 @@
             }
           },
           {
-            "connectionId": "10",
+            "connectionId": "con10",
             "source": {
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "11",
+            "connectionId": "con11",
             "source": {
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             }
           },
           {
-            "connectionId": "12",
+            "connectionId": "con12",
             "source": {
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           },
           {
-            "connectionId": "13",
+            "connectionId": "con13",
             "source": {
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             }
           }
@@ -2978,7 +2978,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -2986,7 +2986,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -2994,7 +2994,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -3002,7 +3002,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -3010,7 +3010,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -3018,7 +3018,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -3026,7 +3026,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -3034,7 +3034,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -3071,103 +3071,103 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
@@ -3178,62 +3178,62 @@
             "value": "bbb"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": 100
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": 200
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": "### c ####"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": "### d ###"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "aa",
             "value": 999
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "bb",
             "value": 888
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "cc",
             "value": ";)"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "dd",
             "value": "=:)"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": 101
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": 202
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": "xxx c xxx"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": "xxx d xxx"
           }
@@ -3267,145 +3267,145 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-2",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
         ],
         "inits": [
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": 100
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "aa",
             "value": 999
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "bb",
             "value": 888
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "cc",
             "value": ";)"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": 101
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": 202
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": "xxx c xxx"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": "xxx d xxx"
           }
@@ -3439,103 +3439,103 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-3",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
@@ -3546,52 +3546,52 @@
             "value": "bbb"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": 200
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": "### c ####"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": "### d ###"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "bb",
             "value": 888
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "cc",
             "value": ";)"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "dd",
             "value": "=:)"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": 101
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": 202
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": "xxx c xxx"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": "xxx d xxx"
           }
@@ -3625,125 +3625,125 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-4",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
         ],
         "inits": [
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": 101
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": 202
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": "xxx c xxx"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": "xxx d xxx"
           }
@@ -3777,132 +3777,132 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-5",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
         ],
         "inits": [
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": 100
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": 200
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": "### c ####"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": "### d ###"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "aa",
             "value": 999
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "bb",
             "value": 888
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "cc",
             "value": ";)"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "dd",
             "value": "=:)"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": 101
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": 202
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": "xxx c xxx"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": "xxx d xxx"
           }
@@ -3936,160 +3936,160 @@
         "members": [
           {
             "componentId": "this/cif-test-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-6",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
         ],
         "inits": [
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": 100
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": 200
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": "### c ####"
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": "### d ###"
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "aa",
             "value": 999
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "bb",
             "value": 888
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "dd",
             "value": "=:)"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": 101
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": 202
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": "xxx c xxx"
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": "xxx d xxx"
           }
@@ -4123,103 +4123,103 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-obj",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
@@ -4233,7 +4233,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -4241,7 +4241,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -4249,7 +4249,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -4257,7 +4257,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -4265,7 +4265,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "aa",
             "value": {
               "label": "slot aa",
@@ -4273,7 +4273,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "bb",
             "value": {
               "label": "slot bb",
@@ -4281,7 +4281,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "cc",
             "value": {
               "label": "slot cc",
@@ -4289,7 +4289,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "dd",
             "value": {
               "label": "slot dd",
@@ -4297,7 +4297,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -4305,7 +4305,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -4313,7 +4313,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -4321,7 +4321,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -4358,110 +4358,110 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-obj-2",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
         ],
         "inits": [
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -4469,7 +4469,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "aa",
             "value": {
               "label": "slot aa",
@@ -4477,7 +4477,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "bb",
             "value": {
               "label": "slot bb",
@@ -4485,7 +4485,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "cc",
             "value": {
               "label": "slot cc",
@@ -4493,7 +4493,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -4501,7 +4501,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -4509,7 +4509,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -4517,7 +4517,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -4554,103 +4554,103 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-obj-3",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
@@ -4664,7 +4664,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -4672,7 +4672,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -4680,7 +4680,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -4688,7 +4688,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "bb",
             "value": {
               "label": "slot bb",
@@ -4696,7 +4696,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "cc",
             "value": {
               "label": "slot cc",
@@ -4704,7 +4704,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "dd",
             "value": {
               "label": "slot dd",
@@ -4712,7 +4712,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -4720,7 +4720,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -4728,7 +4728,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -4736,7 +4736,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -4773,110 +4773,110 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-obj-4",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
         ],
         "inits": [
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -4884,7 +4884,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -4892,7 +4892,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -4900,7 +4900,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -4937,77 +4937,77 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-obj-5",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
         ],
         "inits": [
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -5015,7 +5015,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -5023,7 +5023,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -5031,7 +5031,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -5039,7 +5039,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "aa",
             "value": {
               "label": "slot aa",
@@ -5047,7 +5047,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "bb",
             "value": {
               "label": "slot bba",
@@ -5055,7 +5055,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "cc",
             "value": {
               "label": "slot cc",
@@ -5063,7 +5063,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "dd",
             "value": {
               "label": "slot dd",
@@ -5071,7 +5071,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -5079,7 +5079,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -5087,7 +5087,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -5095,7 +5095,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -5132,110 +5132,110 @@
         "members": [
           {
             "componentId": "this/cif-test-obj-a",
-            "memberId": "1"
+            "memberId": "member1"
           },
           {
             "componentId": "this/cif-test-compound-obj-6",
-            "memberId": "2"
+            "memberId": "member2"
           },
           {
             "componentId": "this/cif-test-obj-b",
-            "memberId": "3"
+            "memberId": "member3"
           }
         ],
         "connections": [
           {
-            "connectionId": "1",
+            "connectionId": "con1",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "a"
             }
           },
           {
-            "connectionId": "2",
+            "connectionId": "con2",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "b"
             }
           },
           {
-            "connectionId": "3",
+            "connectionId": "con3",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "c"
             }
           },
           {
-            "connectionId": "4",
+            "connectionId": "con4",
             "source": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             },
             "destination": {
-              "memberIdRef": "3",
+              "memberIdRef": "member3",
               "slot": "d"
             }
           },
           {
-            "connectionId": "5",
+            "connectionId": "con5",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "a"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "aa"
             }
           },
           {
-            "connectionId": "6",
+            "connectionId": "con6",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "b"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "bb"
             }
           },
           {
-            "connectionId": "7",
+            "connectionId": "con7",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "c"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "cc"
             }
           },
           {
-            "connectionId": "8",
+            "connectionId": "con8",
             "source": {
-              "memberIdRef": "1",
+              "memberIdRef": "member1",
               "slot": "d"
             },
             "destination": {
-              "memberIdRef": "2",
+              "memberIdRef": "member2",
               "slot": "dd"
             }
           }
         ],
         "inits": [
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -5243,7 +5243,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -5251,7 +5251,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "c",
             "value": {
               "label": "slot c",
@@ -5259,7 +5259,7 @@
             }
           },
           {
-            "memberIdRef": "1",
+            "memberIdRef": "member1",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -5267,7 +5267,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "aa",
             "value": {
               "label": "slot aa",
@@ -5275,7 +5275,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "bb",
             "value": {
               "label": "slot bb",
@@ -5283,7 +5283,7 @@
             }
           },
           {
-            "memberIdRef": "2",
+            "memberIdRef": "member2",
             "slot": "dd",
             "value": {
               "label": "slot dd",
@@ -5291,7 +5291,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "a",
             "value": {
               "label": "slot a",
@@ -5299,7 +5299,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "b",
             "value": {
               "label": "slot b",
@@ -5307,7 +5307,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "c",
             "value": {
               "label": "slot ca",
@@ -5315,7 +5315,7 @@
             }
           },
           {
-            "memberIdRef": "3",
+            "memberIdRef": "member3",
             "slot": "d",
             "value": {
               "label": "slot d",
@@ -5336,7 +5336,7 @@
               "component/cif-test-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0/cubxpolymer/main"
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
             ]
           },
           {
@@ -5345,7 +5345,7 @@
               "component/cif-test-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0/cubxpolymer/main"
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -5398,7 +5398,7 @@
               "component/cif-test-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0/cubxpolymer/main"
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
             ]
           },
           {
@@ -5407,7 +5407,7 @@
               "component/cif-test-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0/cubxpolymer/main"
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -5460,7 +5460,7 @@
               "component/cif-test-c.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0/cubxpolymer/main"
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
             ]
           },
           {
@@ -5469,7 +5469,7 @@
               "component/cif-test-c.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0/cubxpolymer/main"
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -5494,7 +5494,7 @@
               "component/cif-test-obj-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0/cubxpolymer/main"
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
             ]
           },
           {
@@ -5503,7 +5503,7 @@
               "component/cif-test-obj-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0/cubxpolymer/main"
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -5568,7 +5568,7 @@
               "component/cif-test-obj-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0/cubxpolymer/main"
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
             ]
           },
           {
@@ -5577,7 +5577,7 @@
               "component/cif-test-obj-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.3.0/cubxpolymer/main"
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
