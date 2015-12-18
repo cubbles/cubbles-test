@@ -1,18 +1,40 @@
 # Releases
 
+## 1.10.2
+**  updated dependency cubx-grunt-webpackage-scaffold to version 1.7.2
+
+## 1.10.1
+* BugFix
+**  updated dependencies: 
+*** cubx-grunt-webpackage-scaffold to version 1.7.1
+*** cubx-grunt-webpackage-upload version 1.6.1   
+*** cubx-webpackage-document-api version 2.4.1 
+ 
+
+## 1.10.0
+* modelVersion 8.3.0
+* updated dependencies:
+** cubx-grunt-webpackage-scaffold to version 1.7.0
+** cubx-grunt-webpackage-upload version 1.6.0
+** cubx-webpackage-document-api version 2.4.0 
+
+
+## 1.9.1
+* updated cubx-grunt-webpackage-scaffold to version 1.6.2
+
 ## 1.9.0
 * Webserver now uses proxy value from '.workspace' property 'remoteStoreUrl' (default 'https://webblebase.net/sandbox')
 
 ## 1.8.1
-* updatet cubx-grunt-webpackage-scaffold to version 1.6.1
+* updated cubx-grunt-webpackage-scaffold to version 1.6.1
 
 
 ## 1.8.0
-* updatet cubx-grunt-webpackage-scaffold to version 1.6.0
+* updated cubx-grunt-webpackage-scaffold to version 1.6.0
 
 ## 1.7.0
 * modelVersion 8.2
-* dependencies updatet
+* updated dependencies:
 ** cubx-grunt-webpackage-scaffold to version 1.5.0
 ** cubx-grunt-webpackage-upload version 1.5.0
 ** cubx-webpackage-document-api version 2.3.0 
