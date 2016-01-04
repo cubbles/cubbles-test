@@ -1,0 +1,9 @@
+{
+  "uploadConfigs": {
+    "release": {
+      "url": "https://webblebase.net/core-test",
+      "proxy": "",
+      "debug": false
+    }
+  }
+}
