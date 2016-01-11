@@ -26,24 +26,16 @@
     <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
 </head>
 <body>
-<h2>Testpage for the Cubixx-Component <code>copy-value-test-compound-obj</code></h2>
+<h2>Demo page for the compound component <code>copy-value-test-compound-obj</code></h2>
 
-
-<p>For the following connections is the "copyValue" attribute false
+<h2>Demo page for the compound component <code>copy-value-test-compound</code></h2>
 <ul>
-    <li>copy-value-test-obj-a/c -> copy-value-test-obj-b/c</li>
-    <li>copy-value-test-obj-a/c -> copy-value-test-compound-obj/cc</li>
-    <li>copy-value-test-compound-obj/cc -> copy-value-test-obj-a/c</li>
+    <li>contains 2 elementary components: copy-value-test-a and copy-value-test-b</li>
+    <li>all output slots (a,b,c,d) from copy-value-test-a is connected to the input slots (a,b,c,d) of copy-value-test-b</li>
+    <li>all input slots from this compound component (aa, bb, cc, dd) is connected to the input slots (a,b,c,d) of copy-value-test-a</li>
+    <li>all output slots (a,b,c,d) of copy-value-test-a is connected to the output slots if  this compound component (aa, bb, cc, dd)</li>
 </ul>
-for the following connections is the "copyValue" attribute explicitly true
-<ul>
-    <li>copy-value-test-obj-a/b -> copy-value-test-obj-b/b</li>
-    <li>copy-value-test-obj-a/b -> copy-value-test-compound-obj/bb</li>
-    <li>copy-value-test-compound-obj/bb -> copy-value-test-obj-a/b</li>
-</ul>
-for all other connections is the "copyValue" attribute implicitly true (copyValue attribute missed)
 
-</p>
 <hr>
 <!-- The cubixx client-runtime-container is bound to the next div -->
 <div cubx-core-crc>

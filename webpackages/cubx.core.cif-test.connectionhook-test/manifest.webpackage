@@ -206,7 +206,7 @@
       },
       {
         "artifactId": "connectionhook-compound-d",
-        "description": "Compound Component with globale connection hooks between members.",
+        "description": "Compound component with globale connection hooks between members.",
         "endpoints": [
           {
             "endpointId": "main",

@@ -33,15 +33,26 @@
 
 </head>
 <body>
-<h1>connectionhook-compound-k</h1>
-<!--
-    The cubixx client-runtime-container is bound to the next element.
-    Place Cubixx-Component there as child element.
-    Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
--->
+<h1>Demo page for compound component <code>connectionhook-compound-k</code></h1>
+Connected connectionhook-compound-g (component without hook function) with connectionhook-compound-h (component with connenction hook
+<p>This compound component demostrate the global hookFunction between two member (<code>connectionhook-compound-g</code> and
+    <code>connectionhook-compound-h</code>)
+    The connection between the members is with hookFunction and the members are compound components.</p>
+<ul>
+    <li><code>connectionhook-compound-g</code> - component with internal connections without hookFunctions.</li>
+    <li><code>connectionhook-compound-h</code> - component with internal connections without hookFunctions.</li>
+</ul>
+
+<p>Connected connectionhook-compound-g with connectionhook-compound-h with connection hook.</p>
+
 <div cubx-core-crc class="container">
     <connectionhook-compound-k></connectionhook-compound-k>
 </div>
-
+<h4>Connections</h4>
+<ul>
+    <li>connection between "member-g" slot "aa" and "member-h" slot "aa"</li>
+    <li>connection between "member-g" slot "bb" and "member-h" slot "bb"</li>
+    <li>connection between "member-g" slot "cc" and "member-h" slot "cc"</li>
+</ul>
 </body>
 </html>

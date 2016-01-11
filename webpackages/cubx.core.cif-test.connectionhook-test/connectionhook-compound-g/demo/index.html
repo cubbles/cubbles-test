@@ -33,7 +33,9 @@
 
 </head>
 <body>
-<h1>connectionhook-compound-g</h1>
+<h1>Demo page for compound component <code>connectionhook-compound-g</code></h1>
+<p>This compound component has connections between member and self, without hookFunctions. The compound hast one member: <code>connectionhook-elementary-a</code></p>
+
 <!--
     The cubixx client-runtime-container is bound to the next element.
     Place Cubixx-Component there as child element.
@@ -42,6 +44,11 @@
 <div cubx-core-crc class="container">
     <connectionhook-compound-g></connectionhook-compound-g>
 </div>
-
+<h4>Connections</h4>
+<ul>
+    <li>connection between slot "aa" and "member-b" slot "a" </li>
+    <li>connection between slot "bb" and "member-b" slot "b"</li>
+    <li>connection between slot "cc" and "member-b" slot "c"</li>
+</ul>
 </body>
 </html>
