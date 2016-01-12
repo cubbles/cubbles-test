@@ -1,10 +1,23 @@
 # Releases
 
+## 1.11.2
+
+* updated dependency cubx-grunt-webpackage-scaffold to version 1.7.4
+
+## 1.11.1
+
+* updated dependency cubx-grunt-webpackage-scaffold to version 1.7.3
+
+## 1.11.0
+
+* PLAT-393: added grunt task "githooks"
+
 ## 1.10.2
-**  updated dependency cubx-grunt-webpackage-scaffold to version 1.7.2
+* updated dependency cubx-grunt-webpackage-scaffold to version 1.7.2
 
 ## 1.10.1
-* BugFix
+
+### BugFix
 **  updated dependencies: 
 *** cubx-grunt-webpackage-scaffold to version 1.7.1
 *** cubx-grunt-webpackage-upload version 1.6.1   

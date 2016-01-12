@@ -40,7 +40,10 @@ module.exports.tasks = {
                 config: '<%= param.src %>/.jscsrc'
             },
             src: [
-                '<%= param.src %>/**/*.js'
+                '<%= param.src %>/**/*.js',
+                '!<%= param.src %>/**/vendor/**',
+                '!<%= param.src %>/**/test-results/**',
+                '!<%= param.src %>/**/bower_components/**'
             ]
         }
     },
@@ -60,9 +63,5 @@ module.exports.tasks = {
             src: ['<%= param.src %>/**/*.css', '!<%= param.src %>/**/vendor/**', '!<%= param.src %>/**/test-results/**']
         }
     }
-    //githooks: {
-    //    all: {
-    //        'pre-commit': '+validateSources'
-    //    }
-    //}
+
 };

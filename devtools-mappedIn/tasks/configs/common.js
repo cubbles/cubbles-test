@@ -115,5 +115,13 @@ module.exports.tasks = {
             '<%= param.build %>/', '<%= param.pack %>/'],
         docs: ['<%= param.doc %>/'],
         tests: ['<%= param.dst %>/test']
+    },
+    githooks: {
+        all: {
+            options: {
+                dest: '../.git/hooks'
+            },
+            'pre-commit': '_validateSources'
+        }
     }
 };
