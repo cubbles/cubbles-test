@@ -6,7 +6,7 @@ module.exports.tasks = {
     jshint: {
         utils: {
             options: {
-                jshintrc: '<%= param.src %>/.jshintrc'
+                jshintrc: '.jshintrc'
             },
             src: [
                 '*.js',
