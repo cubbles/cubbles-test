@@ -15,7 +15,7 @@ module.exports.tasks = {
         },
         client: {
             options: {
-                jshintrc: '.jshintrc',
+                jshintrc: '<%= param.src %>/.jshintrc',
             },
             src: [
                 '<%= param.src %>/**/*.js',
@@ -31,7 +31,7 @@ module.exports.tasks = {
                 config: '.jscsrc'
             },
             src: [
-                '*.js',
+                '<%= param.src %>*.js',
                 'tasks/**/*.js'
             ]
         },
