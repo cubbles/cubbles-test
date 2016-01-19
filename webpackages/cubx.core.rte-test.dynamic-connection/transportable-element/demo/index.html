@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>app</title>
+
+    <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+
+    <script>
+        window.cubx = {
+            "CRCInit": {
+                "rootDependencies": [
+                    "this/transportable-element/main"
+                ]
+            }
+        }
+    </script>
+
+    <!-- include crc-loader webresource from base
+        1) Want to add a main script?
+        Add the following attribute: data-crc-main="js/main.js"
+    -->
+
+    <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+
+</head>
+<body>
+<div class=""cubx-core-crc>
+    <transportable-element></transportable-element>
+</div>
+
+
+</body>
+</html>

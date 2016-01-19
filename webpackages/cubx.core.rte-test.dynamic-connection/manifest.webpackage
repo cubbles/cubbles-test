@@ -1,0 +1,125 @@
+{
+    "name": "dynamic-connection",
+    "groupId": "cubx.core.rte-test",
+    "version": "0.1.0-SNAPSHOT",
+    "modelVersion": "8.3.0",
+    "docType": "webpackage",
+    "author": {
+        "name": "Judit Ross",
+        "email": "judit.ross@incowia.com"
+    },
+    "license": "MIT",
+    "keywords": [],
+    "man": [],
+    "artifacts": {
+        "apps": [],
+        "elementaryComponents": [
+            {
+                "artifactId": "container-element",
+                "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo application ..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "description": "This is recommended for you use with webcomponents.",
+                        "resources": [
+                            "container-element.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main",
+                            "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "message",
+                        "type": "string",
+                        "direction": [
+                            "output"
+                        ]
+                    }
+                ]
+            },
+            {
+                "artifactId": "transportable-element",
+                "description": "This is an elementary-component based on Polymer.",
+                        "runnables": [
+                            {
+                                "name": "demo",
+                                "path": "/demo/index.html",
+                                "description": "Demo application ..."
+                            }
+                        ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "description": "This is recommended for you use with webcomponents.",
+                        "resources": [
+                            "transportable-element.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main",
+                            "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "message",
+                        "type": "string",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "compoundComponents": [
+            {
+                "artifactId": "dynamic-connection-compound",
+                "description": "This is a cubixx-compound-component.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app"
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "css/dynamic-connection-compound.css"
+                        ],
+                        "dependencies": [
+                            "this/container-element/main",
+                            "this/transportable-element/main"
+                        ]
+                    }
+                ],
+                "slots": [],
+                "members": [
+                    {
+                        "memberId": "container",
+                        "componentId": "this/container-element"
+                    },
+                    {
+                        "memberId": "transportable",
+                        "componentId": "this/transportable-element"
+                    }
+                ],
+                "connections": [],
+                "inits": []
+            }
+        ],
+        "utilities": []
+    }
+}
