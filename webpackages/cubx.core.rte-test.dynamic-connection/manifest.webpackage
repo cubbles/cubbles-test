@@ -103,7 +103,8 @@
                         ],
                         "dependencies": [
                             "this/container-element/main",
-                            "this/transportable-element/main"
+                            "this/transportable-element/main",
+                            "this/utils/html-import"
                         ]
                     }
                 ],

@@ -1,0 +1,18 @@
+.layer_over{
+    background-color:#ffe5b3 ;
+
+}
+.layer_not_over{
+    background-color:#fff7e5;
+
+}
+dynamic-connection-compound{
+    display:block;
+    border: solid thin #cc8800;
+    height:auto !important; /* normale Browser */
+    height:100%; /* IE6: setzt dies wie min-height um*/
+    min-height:100%;
+
+    /*background-color: #d9edf7;*/
+    background-color: #fff7e5;
+}

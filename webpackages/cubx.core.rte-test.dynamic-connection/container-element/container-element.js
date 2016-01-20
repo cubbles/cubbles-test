@@ -28,14 +28,17 @@
          *  Observe the Cubixx-Component-Model: If value for slot 'a' has changed ...
          */
         modelAChanged: function(newValue) {
-
+            // do nothing
         },
         handleDragEnter: function(e) {
             //console.log('dragenter', e.target);
             this.classList.add('over');
+            if (this.classList.contains('not_over')) {
+                this.classList.remove('not_over');
+            }
         },
         handleDragOver: function(e) {
-            //console.log('dragover', e.targer);
+            //console.log('dragover', e.target);
             if (e.preventDefault) {
                 e.preventDefault(); // Necessary. Allows us to drop.
             }
@@ -44,11 +47,17 @@
         },
         handleDragLeave: function(e) {
             //console.log('dragleave');
-            this.classList.remove('over');  // this / e.target is previous target element.
+            if (this.classList.contains('over')) {
+                this.classList.remove('over');  // this / e.target is previous target element.
+            }
+            this.classList.add('not_over');
         },
         handleDragEnd: function(e) {
             //console.log('dragend');
-            this.classList.remove('over');  // this / e.target is previous target element.
+            if (this.classList.contains('over')) {
+                this.classList.remove('over');  // this / e.target is previous target element.
+            }
+            this.classList.add('not_over');
         },
         handleDrop: function(e) {
             if (e.stopPropagation) {
@@ -73,9 +82,10 @@
             dynamicConnection.setSourceSlot('message');
             dynamicConnection.setDestinationRuntimeId(draggedElement.getAttribute('runtime-id'));
             dynamicConnection.setDestinationSlot('message');
-            dynamicConnection.setConnectionId('autoconnected')
+            var connectionId = 'autoconnected1';
+            dynamicConnection.setConnectionId(connectionId);
             this.addConnection(dynamicConnection);
-
+            draggedElement.connectedWithId = connectionId;
         }
 
     });
