@@ -69,13 +69,10 @@
         },
         handleDragEnd: function(e) {
             //console.log('dragend');
-            var me = e.target;
-            if (me.id === 'dropzone') {
-                if (this.classList.contains('over')) {
-                    this.classList.remove('over');  // this / e.target is previous target element.
-                }
-                this.classList.add('not_over');
+            if (this.classList.contains('over')) {
+                this.classList.remove('over');  // this / e.target is previous target element.
             }
+            this.classList.add('not_over');
         },
         handleDrop: function(e) {
             var me = e.target;
