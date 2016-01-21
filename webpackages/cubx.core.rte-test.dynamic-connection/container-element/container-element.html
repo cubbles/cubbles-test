@@ -7,10 +7,10 @@
         <div class="container">
             <h2>container-element</h2>
             <div class="panel">
-                <form class="form-horizontal" role="form">
+                <form class="form-horizontal" onkeypress="return event.keyCode != 13;">
                     <div class="form-goup">
                         <label for="message">message:</label>
-                        <input id="message" type="text" class="form-control" value="{{model.message::change}}"/>
+                        <input id="message" class="form-control" type="text" value="{{model.message::change}}" on-keypress="handleEnter"/>
                     </div>
                 </form>
             </div>

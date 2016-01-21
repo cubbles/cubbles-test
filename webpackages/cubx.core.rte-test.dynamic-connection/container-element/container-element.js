@@ -76,7 +76,7 @@
             return false;
         },
 
-        createConnectionTo: function(draggedElement){
+        createConnectionTo: function(draggedElement) {
             var dynamicConnection = new window.cubx.cif.DynamicConnection();
             dynamicConnection.setSourceRuntimeId(this.getAttribute('runtime-id'));
             dynamicConnection.setSourceSlot('message');
@@ -84,8 +84,13 @@
             dynamicConnection.setDestinationSlot('message');
             var connectionId = 'autoconnected1';
             dynamicConnection.setConnectionId(connectionId);
-            this.addConnection(dynamicConnection);
+            this.addDynamicConnection(dynamicConnection);
             draggedElement.connectedWithId = connectionId;
+        },
+        handleEnter: function(event) {
+            if (event.keyCode === 13) {
+                event.target.blur();
+            }
         }
 
     });
