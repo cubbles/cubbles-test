@@ -26,11 +26,11 @@
             //console.log('dragstart');
             this.style.opacity = '0.4';
             var me = e.target;
-            var host = findAncestorElement(me,'transportable-element');
+            var host = findAncestorElement(me, 'transportable-element');
             if (!host) {
                 throw new Error('Parent "transportable-element" not found.');
             }
-            console.log('transportable-element:dragstart:host', host);
+            //console.log('transportable-element:dragstart:host', host);
             var runtimeId = host.getAttribute('runtime-id');
             e.dataTransfer.setData('runtimeId', runtimeId);
             e.dataTransfer.effectAllowed = 'move';
