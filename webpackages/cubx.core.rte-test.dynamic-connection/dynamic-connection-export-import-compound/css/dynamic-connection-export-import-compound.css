@@ -1,0 +1,18 @@
+.layer_over{
+    background-color:#d9d9d9 ;
+
+}
+.layer_not_over{
+    background-color:#f2f2f2;
+
+}
+dynamic-connection-export-import-compound{
+    display:block;
+    border: solid thin #bfbfbf;
+    height:auto !important; /* normale Browser */
+    height:100%; /* IE6: setzt dies wie min-height um*/
+    min-height:100%;
+
+
+    background-color: #f2f2f2;
+}

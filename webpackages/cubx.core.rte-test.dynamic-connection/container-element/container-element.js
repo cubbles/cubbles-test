@@ -27,15 +27,28 @@
 
         cubxReady: function() {
             if (this.parentNode && this.parentNode.isCompoundComponent) {
-                this.makeToDropzoneToParentCompound(this.parentNode);
+                this.makeToDropzoneToParentCompound(this.parentNode, this);
             }
+            this.handleButtonVisibility(this.getButtons());
         },
 
         /**
          *  Observe the Cubixx-Component-Model: If value for slot 'a' has changed ...
          */
-        modelAChanged: function(newValue) {
+        modelMessageChanged: function(newValue) {
             // do nothing
+        },
+        modelButtonsChanged: function(newValue) {
+            this.handleButtonVisibility(newValue);
+        },
+
+        handleButtonVisibility: function(visible) {
+
+            if (visible === true && this.$.buttons.classList.contains('hidden')) {
+                this.$.buttons.classList.remove('hidden');
+            } else if (visible === false && !this.$.buttons.classList.contains('hidden')) {
+                this.$.buttons.classList.add('hidden');
+            }
         },
         handleDragEnter: function(e) {
             //console.log('dragenter', e.target);
@@ -102,10 +115,20 @@
             dynamicConnection.setSourceSlot('message');
             dynamicConnection.setDestinationRuntimeId(draggedElement.getAttribute('runtime-id'));
             dynamicConnection.setDestinationSlot('message');
-            var connectionId = 'autoconnected1';
+            var connectionId = this.getNewConnectionId();
             dynamicConnection.setConnectionId(connectionId);
             this.addDynamicConnection(dynamicConnection);
             draggedElement.connectedWithId = connectionId;
+        },
+        getNewConnectionId: function() {
+            var counter = this.get('connectionIdCounter');
+            if (!counter) {
+                counter = 0;
+            }
+            this.set('connectionIdCounter', ++counter);
+            var connectionId = 'connection' + String(counter);
+            return connectionId;
+
         },
         handleEnter: function(event) {
             if (event.keyCode === 13) {
@@ -113,17 +136,18 @@
             }
         },
 
-        makeToDropzoneToParentCompound: function(elem) {
-            //console.log('makeToDropzone', elem);
-            elem.handleDragEnter = function(e) {
-                if (e.target === elem) {
-                    if (elem.classList.contains('layer_not_over')) {
-                        elem.classList.remove('layer_not_over');
+        makeToDropzoneToParentCompound: function(parentElem, elem) {
+
+            //console.log('makeToDropzone', parentElem);
+            parentElem.handleDragEnter = function(e) {
+                if (e.target === parentElem) {
+                    if (parentElem.classList.contains('layer_not_over')) {
+                        parentElem.classList.remove('layer_not_over');
                     }
-                    elem.classList.add('layer_over');
+                    parentElem.classList.add('layer_over');
                 }
             };
-            elem.handleDragOver = function(e) {
+            parentElem.handleDragOver = function(e) {
                 //console.log('dynamic-connection-compound:dragover', e.target);
                 if (e.preventDefault) {
                     e.preventDefault(); // Necessary. Allows us to drop.
@@ -131,38 +155,56 @@
                 e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
                 return false;
             };
-            elem.handleDragLeave = function(e) {
+            parentElem.handleDragLeave = function(e) {
                 //console.log('---------dynamic-connection-compound:dragleave', e.target);
-                if (e.target === elem) {
-                    if (elem.classList.contains('layer_over')) {
-                        elem.classList.remove('layer_over');
+                if (e.target === parentElem) {
+                    if (parentElem.classList.contains('layer_over')) {
+                        parentElem.classList.remove('layer_over');
                     }
-                    elem.classList.add('layer_not_over');  // this / e.target is previous target element.
+                    parentElem.classList.add('layer_not_over');  // this / e.target is previous target element.
                 }
             };
-            elem.handleDragEnd = function(e) {
+            parentElem.handleDragEnd = function(e) {
                 //console.log('xxxxxxxxxxxxdynamic-connection-compound:dragend', e.target);
 
-                if (elem.classList.contains('layer_over')) {
-                    elem.classList.remove('layer_over');
+                if (parentElem.classList.contains('layer_over')) {
+                    parentElem.classList.remove('layer_over');
                 }
-                elem.classList.add('layer_not_over');  // this / e.target is previous target element.
+                parentElem.classList.add('layer_not_over');  // this / e.target is previous target element.
 
             };
-            elem.handleDrop = function(e) {
+            parentElem.handleDrop = function(e) {
                 //console.log('############drop in compound');
                 if (e.stopPropagation) {
                     e.stopPropagation(); // stops the browser from redirecting.
                     var runtimeId = e.dataTransfer.getData('runtimeId');
                     var me = e.target;
-                    var host = findAncestorElement(me, 'dynamic-connection-compound');
-                    if (!host) {
-                        throw new Error('parent "dynamic-connection-compound" not found.');
-                    }
+                    console.log('handleDrop:me', me);
+                    //var host = findAncestorElement(me, me.parentNode.tagName);
+                    //if (!host) {
+                    //    throw new Error('parent "' + me.parentNode.tagName + '" not found.');
+                    //}
                     //console.log('container-element:drop:host', host);
                     var draggedEl = elementFindByAttributeValue('runtime-id', runtimeId);
                     // console.log('me.contains(draggedEl)', me.contains(draggedEl));
-                    host.appendChild(draggedEl);
+                    //console.log('host',host);
+                    console.log('me.children', me.children);
+
+                    var childElem = me.lastElementChild;
+                    while (childElem !== me.firstElementChild && childElem.tagName !== draggedEl.tagName) {
+                        childElem = childElem.previousElementSibling;
+                    }
+                    console.log('childElem',childElem);
+                    if (childElem.tagName === draggedEl.tagName && childElem !== me.lastElem) {
+
+                        me.insertBefore(draggedEl, childElem.nextElementSibling);
+                    }else if (childElem.tagName === draggedEl.tagName && childElem == me.lastElem)    {
+                        me.appendChild(draggedEl);
+                    } else if (childElem.tagName !== draggedEl.tagName && me.lastChild !== elem) {
+                        me.insertBefore(draggedEl, elem.nextSibling);
+                    } else {
+                        me.appendChild(draggedEl);
+                    }
                     if (draggedEl.connectedWithId) {
                         draggedEl.removeDynamicConnection(draggedEl.connectedWithId);
                     }
@@ -170,11 +212,21 @@
                 }
                 return false;
             };
-            elem.addEventListener('dragenter', elem.handleDragEnter);
-            elem.addEventListener('dragover', elem.handleDragOver);
-            elem.addEventListener('dragleave', elem.handleDragLeave);
-            elem.addEventListener('dragend', elem.handleDragEnd);
-            elem.addEventListener('drop', elem.handleDrop);
+            parentElem.addEventListener('dragenter', parentElem.handleDragEnter);
+            parentElem.addEventListener('dragover', parentElem.handleDragOver);
+            parentElem.addEventListener('dragleave', parentElem.handleDragLeave);
+            parentElem.addEventListener('dragend', parentElem.handleDragEnd);
+            parentElem.addEventListener('drop', parentElem.handleDrop);
+        },
+
+        exportHandler: function() {
+            var exportData = this.exportDynamicConnections();
+            console.log(exportData);
+            this.setConnections(exportData);
+
+        },
+        importHandler: function() {
+            this.setTriggerImport(true);
         }
 
     });
