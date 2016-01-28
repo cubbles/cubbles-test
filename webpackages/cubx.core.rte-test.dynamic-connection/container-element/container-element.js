@@ -44,9 +44,9 @@
 
         handleButtonVisibility: function(visible) {
 
-            if (visible === true && this.$.buttons.classList.contains('hidden')) {
+            if (visible && this.$.buttons.classList.contains('hidden')) {
                 this.$.buttons.classList.remove('hidden');
-            } else if (visible === false && !this.$.buttons.classList.contains('hidden')) {
+            } else if (!visible && !this.$.buttons.classList.contains('hidden')) {
                 this.$.buttons.classList.add('hidden');
             }
         },
@@ -227,6 +227,14 @@
         },
         importHandler: function() {
             this.setTriggerImport(true);
+        },
+        deleteHandler: function() {
+            var exportData = this.exportDynamicConnections();
+            var exportList = JSON.parse(exportData);
+            for (var index in exportList){
+                var item = exportList[index];
+                this.removeDynamicConnection(item.connectionId);
+            }
         }
 
     });

@@ -22,15 +22,26 @@
                 <div class="panel-body bg-info" id="dropzone"></div>
             </div>
             <div class="panel" id="buttons">
-                <button type="button" name="export" class="btn btn-primary" on-click="exportHandler"
-                        title="This button exports the dynamic connections of this element as a json string and propagates to the slot with slotId \"
-                        connections\".">export dynamic connections</button>
-                <button type="button" name="import" class="btn btn-primary pull-right" on-click="importHandler"
-                        title="This button send a import desire on slot \"triggerImport\".">import
-                    dynamic connections
-                </button>
-            </div>
-        </div>
+                <div class="btn-group btn-group-justified" role="group">
+                    <div class="btn-group" role="group">
+                        <button type="button" name="export" class="btn btn-primary" on-click="exportHandler"
+                                title="This button exports the dynamic connections of this element as a json string and
+                        propagates to the slot with slotId \" connections\
+                        ".">export connections</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" name="import" class="btn btn-primary" on-click="deleteHandler"
+                                title="This button delete all dynamic connections on this component.">delete connections
+                        </button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" name="import" class="btn btn-primary" on-click="importHandler"
+                                title="This button send a import desire on slot \" triggerImport\
+                        ".">import connections</button>
+                        <div class="btn-group" role="group">
+                        </div>
+                    </div>
+                </div>
 
     </template>
 
