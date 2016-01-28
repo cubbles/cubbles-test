@@ -100,8 +100,8 @@
                         "slotId": "message",
                         "type": "string",
                         "direction": [
-                            "input",
-                            "output"
+                            "input"
+
                         ]
                     }
                 ]
@@ -141,8 +141,7 @@
                         "slotId": "connections",
                         "type": "string",
                         "direction": [
-                            "input",
-                            "output"
+                            "input"
                         ]
                     }
                 ]
@@ -188,7 +187,7 @@
             },
             {
                 "artifactId": "dynamic-connection-export-import-compound",
-                "description": "This is a cubbles-compound-component.",
+                "description": "Drag and drop example with export and import of the connections.xx",
                 "runnables": [
                     {
                         "name": "demo",
@@ -257,16 +256,6 @@
                         }
                     },
                     {
-                        "connectionId": "import",
-                        "source": {
-                            "slot": "connections"
-                        },
-                        "destination": {
-                            "memberIdRef": "container",
-                            "slot": "connections"
-                        }
-                    },
-                    {
                         "connectionId": "triggerImport",
                         "source": {
                             "memberIdRef": "container",
@@ -288,7 +277,7 @@
             },
             {
                 "artifactId": "frame-compound",
-                "description": "This is a cubbles-compound-component.",
+                "description": "Frame of the example",
                 "runnables": [
                     {
                         "name": "demo",
@@ -335,17 +324,6 @@
                         },
                         "destination": {
                             "memberIdRef": "outputExportImport",
-                            "slot": "connections"
-                        }
-                    },
-                    {
-                        "connectionId": "import",
-                        "source": {
-                            "memberIdRef": "outputExportImport",
-                            "slot": "connections"
-                        },
-                        "destination": {
-                            "memberIdRef": "dragAndDrop",
                             "slot": "connections"
                         }
                     },

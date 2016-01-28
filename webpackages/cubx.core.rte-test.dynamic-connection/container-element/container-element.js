@@ -26,6 +26,7 @@
         },
 
         cubxReady: function() {
+            console.log('container-element: cubxReady');
             if (this.parentNode && this.parentNode.isCompoundComponent) {
                 this.makeToDropzoneToParentCompound(this.parentNode, this);
             }
@@ -43,7 +44,7 @@
         },
 
         handleButtonVisibility: function(visible) {
-
+            console.log('handleButtonVisibility', visible);
             if (visible && this.$.buttons.classList.contains('hidden')) {
                 this.$.buttons.classList.remove('hidden');
             } else if (!visible && !this.$.buttons.classList.contains('hidden')) {
@@ -132,7 +133,8 @@
         },
         handleEnter: function(event) {
             if (event.keyCode === 13) {
-                event.target.blur();
+                var host = findAncestorElement(event.target,'container-element');
+                host.setMessage(event.target.value);
             }
         },
 
@@ -194,11 +196,11 @@
                     while (childElem !== me.firstElementChild && childElem.tagName !== draggedEl.tagName) {
                         childElem = childElem.previousElementSibling;
                     }
-                    console.log('childElem',childElem);
+                    console.log('childElem', childElem);
                     if (childElem.tagName === draggedEl.tagName && childElem !== me.lastElem) {
 
                         me.insertBefore(draggedEl, childElem.nextElementSibling);
-                    }else if (childElem.tagName === draggedEl.tagName && childElem == me.lastElem)    {
+                    } else if (childElem.tagName === draggedEl.tagName && childElem == me.lastElem) {
                         me.appendChild(draggedEl);
                     } else if (childElem.tagName !== draggedEl.tagName && me.lastChild !== elem) {
                         me.insertBefore(draggedEl, elem.nextSibling);
@@ -231,7 +233,7 @@
         deleteHandler: function() {
             var exportData = this.exportDynamicConnections();
             var exportList = JSON.parse(exportData);
-            for (var index in exportList){
+            for (var index in exportList) {
                 var item = exportList[index];
                 this.removeDynamicConnection(item.connectionId);
             }
