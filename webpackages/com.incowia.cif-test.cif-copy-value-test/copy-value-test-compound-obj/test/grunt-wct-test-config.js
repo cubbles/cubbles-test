@@ -27,20 +27,17 @@ module.exports = function(grunt) {
                             // with this paths will be proxied
                             var context = ['**', '!/' + grunt.config.get('param.src') + '/**', '!/components/**'];
 
+                            var remoteStoreUrl = grunt.config.get('workspaceConfig.remoteStoreUrl');
                             // configure proxy middleware options
                             var options = {
                                 target: {// target host
                                     port: 443,
                                     host: 'webblebase.net'
                                 },
-                                changeOrigin: true,
-                                pathRewrite: {
-                                    '^../../../': '/'      // rewrite paths
-                                },
                                 proxyTable: {
-                                    'localhost:2000': 'https://webblebase.net'
+                                    'localhost:2000': remoteStoreUrl
                                 },
-                                logLevel: 'debug'
+                                logLevel: 'error'
                             };
 
                             // create the proxy
