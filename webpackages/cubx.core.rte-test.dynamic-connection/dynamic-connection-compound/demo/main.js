@@ -1,4 +1,3 @@
-/* globals findAncestorElement,elementFindByAttributeValue*/
 (function() {
     'use strict';
     document.addEventListener('cifReady', function() {

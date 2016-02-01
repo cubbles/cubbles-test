@@ -24,7 +24,7 @@
             this.$.output.value = JSON.stringify(JSON.parse(newValue), null, 4);
         },
         modelTriggerImportChanged: function(newValue) {
-            if(newValue) {
+            if (newValue) {
                 this.importDynamicConnections(this.$.output.value);
             }
         }
