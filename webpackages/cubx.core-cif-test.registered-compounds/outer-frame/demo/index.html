@@ -16,12 +16,11 @@
         window.cubx = {
             CRCInit: {
                 rootDependencies: [
-                    "this/frame-compound/main"
+                    "this/outer-frame/main"
                 ]
             }
         }
     </script>
-
 
     <!--
         Refer to the crc-loader artifact from a Cubbles-Base.
@@ -31,6 +30,7 @@
         If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
     <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+
 </head>
 <body>
 <!--
@@ -38,14 +38,20 @@
     Place Cubbles-Component there as child element.
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
+message: <input id="message" name="message" type="text" value="" onChange="changeHandler(this,event)">
 <div cubx-core-crc>
-     <frame-compound custom-attr="test"></frame-compound>
+     <outer-frame></outer-frame>
 </div>
 <script>
-    var compOrig = document.querySelector('frame-compound');
-    document.addEventListener('cifReady',function(event){
-        console.log('elements equals:', document.querySelector('frame-compound') === compOrig) ;
-    })
+    function changeHandler(elem,event){
+        console.log('elem',elem);
+        console.log('event',event);
+        var outerFrame = document.querySelector('outer-frame');
+        outerFrame.setInputSlot('message', {
+            slot: 'message',
+            payload: elem.value
+        })
+    }
 </script>
 </body>
 </html>

@@ -16,12 +16,11 @@
         window.cubx = {
             CRCInit: {
                 rootDependencies: [
-                    "this/frame-compound/main"
+                    "this/basic-elementary/main"
                 ]
             }
         }
     </script>
-
 
     <!--
         Refer to the crc-loader artifact from a Cubbles-Base.
@@ -31,6 +30,7 @@
         If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
     <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+
 </head>
 <body>
 <!--
@@ -39,13 +39,8 @@
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
 <div cubx-core-crc>
-     <frame-compound custom-attr="test"></frame-compound>
+     <basic-elementary></basic-elementary>
 </div>
-<script>
-    var compOrig = document.querySelector('frame-compound');
-    document.addEventListener('cifReady',function(event){
-        console.log('elements equals:', document.querySelector('frame-compound') === compOrig) ;
-    })
-</script>
+
 </body>
 </html>

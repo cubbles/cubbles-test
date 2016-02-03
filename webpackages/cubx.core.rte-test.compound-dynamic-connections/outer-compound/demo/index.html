@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>app</title>
+
+    <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+
+    <!--
+        Declare a CRCInit-Object used to initialize the CRC (Client-Runtime-Container):
+        * rootDependencies //a string array; string pattern: webpackageId/artifactId/endpointId
+        ** to refer to artifacts of this webpackage, use 'this' as webpackageId
+    -->
+    <script>
+        window.cubx = {
+            CRCInit: {
+                rootDependencies: [
+                    "this/outer-compound/main"
+                ]
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style/main.css">
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+
+</head>
+<body>
+<!--
+    The cubbles client-runtime-container is bound to the next element.
+    Place Cubbles-Component there as child element.
+    Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
+-->
+<div cubx-core-crc>
+    <outer-compound></outer-compound>
+</div>
+<br>
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <div class="form-horizontal">
+
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <button class="btn btn-primary" onclick="addHandler()">add connection to</button>
+                </div>
+                <div class="col-md-10">
+                    <label for="runtimeidadd" class="col-sm-1 control-label">runtimeId</label>
+                    <div class="col-md-11">
+                        <input type="text" class="form-control" id="runtimeidadd">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <button class="btn btn-primary" onclick="removeHandler()">remove connection from</button>
+                </div>
+                <div class="col-md-10">
+
+                    <label for="runtimeidremove" class="col-sm-1 control-label">runtimeId</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="runtimeidremove">
+                    </div>
+                    <label for="connectionid" class="col-sm-1 control-label">connectionId</label>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" id="connectionid">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <button class=" btn btn-primary" onclick="exportHandler()">export connections from</button>
+                </div>
+                <div class="col-md-10">
+
+                    <label for="runtimeidexport" class="col-sm-1 control-label">runtimeId</label>
+                    <div class="col-md-11">
+                        <input type="text" id="runtimeidexport" class="form-control">
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <button class=" btn btn-primary" onclick="importHandler()">import connections to</button>
+                </div>
+                <div class="col-md-10">
+                    <label for="runtimeidimport" class="col-sm-1 control-label">runtimeId</label>
+                    <div class="col-md-11">
+                        <input type="text" class="form-control" id="runtimeidimport">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="connection" class="col-md-2 control-label">connection(s)</label>
+                <div class="col-md-10">
+                    <textarea id="connection" class="form-control" rows="20">
+{
+	"connectionId": "",
+	"source": {
+		"runtimeId": "",
+		"slot": "message"
+	},
+	"destination":{
+		"runtimeId": "",
+		"slot": "message"
+	}
+}</textarea>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+
+        function findElementPerRuntimeId(runtimeId) {
+            var elements = document.querySelectorAll('[runtime-id]');
+
+            for (var index = 0; index < elements.length; index++) {
+                var element = elements[index];
+                if (element.getAttribute('runtime-id') === runtimeId) {
+                    return element;
+                }
+            }
+            return null;
+        }
+        function addHandler() {
+            var runtimeId = document.querySelector('#runtimeidadd').value;
+            var connectionJSON = document.querySelector('#connection').value;
+
+            console.log('addHandler: add connection ' + JSON.parse(connectionJSON) + ' to ' + runtimeId);
+
+            var elem = findElementPerRuntimeId(runtimeId);
+            elem.addDynamicConnection(JSON.parse(connectionJSON));
+        }
+        function removeHandler() {
+            var runtimeId = document.querySelector('#runtimeidremove').value;
+            var connectionId = document.querySelector('#connectionid').value;
+
+            console.log('removeHandler: remove connection ' + connectionId + ' from ' + runtimeId);
+            var elem = findElementPerRuntimeId(runtimeId);
+            elem.removeDynamicConnection(connectionId);
+        }
+        function exportHandler() {
+            var runtimeId = document.querySelector('#runtimeidexport').value;
+            var connectionJSON = document.querySelector('#connection');
+
+            console.log('exportHandler: export connections  from ' + runtimeId);
+            var elem = findElementPerRuntimeId(runtimeId);
+            var connectionsJson = elem.exportDynamicConnections();
+            document.querySelector('#connection').value = JSON.stringify(JSON.parse(connectionsJson), null, 4);
+        }
+        function importHandler() {
+            var runtimeId = document.querySelector('#runtimeidimport').value;
+            var connectionJSON = document.querySelector('#connection').value;
+
+            console.log('importHandler: import connections ' + connectionJSON + ' to ' + runtimeId);
+            var elem = findElementPerRuntimeId(runtimeId);
+            elem.importDynamicConnections(connectionJSON);
+        }
+    </script>
+</div>
+</body>
+</html>
