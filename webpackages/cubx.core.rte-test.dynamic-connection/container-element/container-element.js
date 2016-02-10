@@ -116,9 +116,7 @@
             dynamicConnection.setSourceSlot('message');
             dynamicConnection.setDestinationRuntimeId(draggedElement.getAttribute('runtime-id'));
             dynamicConnection.setDestinationSlot('message');
-            var connectionId = this.getNewConnectionId();
-            dynamicConnection.setConnectionId(connectionId);
-            this.addDynamicConnection(dynamicConnection);
+            var connectionId = this.addDynamicConnection(dynamicConnection);
             draggedElement.connectedWithId = connectionId;
         },
         getNewConnectionId: function() {

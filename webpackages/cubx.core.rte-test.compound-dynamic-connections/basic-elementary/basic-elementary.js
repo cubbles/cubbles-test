@@ -19,7 +19,7 @@
             this.scopeSubtree(this.root, true);
 
         },
-        cubxReady: function(){
+        cubxReady: function() {
             this.showRuntimeId();
         },
         showRuntimeId: function() {

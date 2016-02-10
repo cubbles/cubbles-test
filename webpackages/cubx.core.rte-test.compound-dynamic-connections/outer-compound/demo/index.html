@@ -54,11 +54,17 @@
                 </div>
                 <div class="col-md-10">
                     <label for="runtimeidadd" class="col-sm-1 control-label">runtimeId</label>
-                    <div class="col-md-11">
+                    <div class="col-md-4">
                         <input type="text" class="form-control" id="runtimeidadd">
                     </div>
+                    <label class="col-sm-1 control-label">connectionId:</label>
+                    <div class="col-sm-6">
+                        <p class="form-control-static connectionid" id="addedconnectionid"></p>
+                    </div>
                 </div>
+
             </div>
+
             <div class="form-group">
                 <div class="col-md-2 text-right">
                     <button class="btn btn-primary" onclick="removeHandler()">remove connection from</button>
@@ -66,12 +72,27 @@
                 <div class="col-md-10">
 
                     <label for="runtimeidremove" class="col-sm-1 control-label">runtimeId</label>
-                    <div class="col-md-8">
+                    <div class="col-md-4">
                         <input type="text" class="form-control" id="runtimeidremove">
                     </div>
-                    <label for="connectionid" class="col-sm-1 control-label">connectionId</label>
-                    <div class="col-md-2">
+                    <label for="connectionid" class="col-sm-1 control-label">connectionId:</label>
+                    <div class="col-md-6">
                         <input type="text" class="form-control" id="connectionid">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <button class="btn btn-primary" onclick="getConnectionIdHandler()">get connectionId</button>
+                </div>
+                <div class="col-md-10">
+                    <label for="runtimeidgetConnectionId" class="col-sm-1 control-label">runtimeId</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="runtimeidgetConnectionId">
+                    </div>
+                    <label class="col-sm-1 control-label">connectionId:</label>
+                    <div class="col-sm-6">
+                        <p class="form-control-static connectionid" id="getconnectionid"></p>
                     </div>
                 </div>
             </div>
@@ -82,10 +103,15 @@
                 <div class="col-md-10">
 
                     <label for="runtimeidexport" class="col-sm-1 control-label">runtimeId</label>
-                    <div class="col-md-11">
+                    <div class="col-md-4">
                         <input type="text" id="runtimeidexport" class="form-control">
                     </div>
 
+
+                    <label class="col-sm-1 control-label">export:</label>
+                    <div class="col-md-6">
+                        <p class="form-control-static connectionid" id="exportedcontent"></p>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
@@ -97,6 +123,12 @@
                     <div class="col-md-11">
                         <input type="text" class="form-control" id="runtimeidimport">
                     </div>
+                </div>
+            </div>
+            <div class="form-group hidden" id="error">
+                <label class="col-sm-2 control-label text-danger">Error:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static bg-danger" id="errormessage"></p>
                 </div>
             </div>
             <div class="form-group">
@@ -132,39 +164,106 @@
             }
             return null;
         }
+        function resetError() {
+            hideError();
+            document.querySelector('#errormessage').innerHTML = '';
+
+        }
+        function showError() {
+            var clslist = document.querySelector('#error').classList;
+            if (clslist.contains('hidden')) {
+                clslist.remove('hidden');
+            }
+            if (!clslist.contains('show')) {
+                clslist.add('show');
+            }
+        }
+        function hideError() {
+            var clslist = document.querySelector('#error').classList;
+            if (clslist.contains('show')) {
+                clslist.remove('show');
+            }
+            if (!clslist.contains('hidden')) {
+                clslist.add('hidden');
+            }
+        }
         function addHandler() {
-            var runtimeId = document.querySelector('#runtimeidadd').value;
-            var connectionJSON = document.querySelector('#connection').value;
+            resetError();
+            try {
+                document.querySelector('#addedconnectionid').innerHTML = '';
+                var runtimeId = document.querySelector('#runtimeidadd').value;
+                var connectionJSON = document.querySelector('#connection').value;
+                console.log('addHandler: add connection ' + JSON.parse(connectionJSON) + ' to ' + runtimeId);
 
-            console.log('addHandler: add connection ' + JSON.parse(connectionJSON) + ' to ' + runtimeId);
+                var elem = findElementPerRuntimeId(runtimeId);
 
-            var elem = findElementPerRuntimeId(runtimeId);
-            elem.addDynamicConnection(JSON.parse(connectionJSON));
+                var connectionId = elem.addDynamicConnection(JSON.parse(connectionJSON));
+                document.querySelector('#addedconnectionid').innerHTML = connectionId
+            } catch (e) {
+                showError();
+                console.log(e);
+                document.querySelector('#errormessage').innerHTML = e.message;
+            }
         }
         function removeHandler() {
-            var runtimeId = document.querySelector('#runtimeidremove').value;
-            var connectionId = document.querySelector('#connectionid').value;
+            resetError();
+            try {
+                var runtimeId = document.querySelector('#runtimeidremove').value;
+                var connectionId = document.querySelector('#connectionid').value;
 
-            console.log('removeHandler: remove connection ' + connectionId + ' from ' + runtimeId);
-            var elem = findElementPerRuntimeId(runtimeId);
-            elem.removeDynamicConnection(connectionId);
+                console.log('removeHandler: remove connection ' + connectionId + ' from ' + runtimeId);
+                var elem = findElementPerRuntimeId(runtimeId);
+                elem.removeDynamicConnection(connectionId);
+            } catch (e) {
+                showError();
+                document.querySelector('#errormessage').innerHTML = e.message;
+            }
         }
         function exportHandler() {
-            var runtimeId = document.querySelector('#runtimeidexport').value;
-            var connectionJSON = document.querySelector('#connection');
+            resetError();
+            try {
+                var runtimeId = document.querySelector('#runtimeidexport').value;
+                var connectionJSON = document.querySelector('#connection');
+                console.log('exportHandler: export connections  from ' + runtimeId);
+                var elem = findElementPerRuntimeId(runtimeId);
+                var connectionsJson = elem.exportDynamicConnections();
+                document.querySelector('#exportedcontent').innerHTML =
+                    '<pre>' + JSON.stringify(JSON.parse(connectionsJson), null, 4);
+                +'</pre>';
 
-            console.log('exportHandler: export connections  from ' + runtimeId);
-            var elem = findElementPerRuntimeId(runtimeId);
-            var connectionsJson = elem.exportDynamicConnections();
-            document.querySelector('#connection').value = JSON.stringify(JSON.parse(connectionsJson), null, 4);
+            } catch (e) {
+                showError();
+                document.querySelector('#errormessage').innerHTML = e.message;
+            }
         }
         function importHandler() {
-            var runtimeId = document.querySelector('#runtimeidimport').value;
-            var connectionJSON = document.querySelector('#connection').value;
+            resetError();
+            try {
+                var runtimeId = document.querySelector('#runtimeidimport').value;
+                var connectionJSON = document.querySelector('#connection').value;
 
-            console.log('importHandler: import connections ' + connectionJSON + ' to ' + runtimeId);
-            var elem = findElementPerRuntimeId(runtimeId);
-            elem.importDynamicConnections(connectionJSON);
+                console.log('importHandler: import connections ' + connectionJSON + ' to ' + runtimeId);
+                var elem = findElementPerRuntimeId(runtimeId);
+                elem.importDynamicConnections(connectionJSON);
+            } catch (e) {
+                showError();
+                document.querySelector('#errormessage').innerHTML = e.message;
+            }
+        }
+        function getConnectionIdHandler() {
+            resetError();
+            try {
+                var runtimeId = document.querySelector('#runtimeidgetConnectionId').value;
+                var connectionJSON = document.querySelector('#connection').value;
+                var elem = findElementPerRuntimeId(runtimeId);
+
+                console.log('getConnectionIdHandler: get connectionId ' + connectionJSON);
+                var connectionId = elem.getConnectionId(JSON.parse(connectionJSON));
+                document.querySelector('#getconnectionid').innerHTML = connectionId;
+            } catch (e) {
+                showError();
+                document.querySelector('#errormessage').innerHTML = e.message;
+            }
         }
     </script>
 </div>
