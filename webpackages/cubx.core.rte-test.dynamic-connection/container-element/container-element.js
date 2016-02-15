@@ -233,7 +233,7 @@
             var exportList = JSON.parse(exportData);
             for (var index in exportList) {
                 var item = exportList[index];
-                this.removeDynamicConnection(item.connectionId);
+                this.removeDynamicConnection(item);
             }
         }
 

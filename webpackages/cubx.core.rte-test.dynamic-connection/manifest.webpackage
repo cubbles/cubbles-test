@@ -1,371 +1,381 @@
 {
-    "name": "dynamic-connection",
-    "groupId": "cubx.core.rte-test",
-    "version": "0.2.0-SNAPSHOT",
-    "modelVersion": "8.3.0",
-    "docType": "webpackage",
-    "author": {
-        "name": "Judit Ross",
-        "email": "judit.ross@incowia.com"
-    },
-    "license": "MIT",
-    "keywords": [],
-    "man": [],
-    "artifacts": {
-        "apps": [],
-        "elementaryComponents": [
-            {
-                "artifactId": "container-element",
-                "description": "This is an elementary-component based on Polymer.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo application ..."
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "description": "This is recommended for you use with webcomponents.",
-                        "resources": [
-                            "container-element.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main",
-                            "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only",
-                            "this/utils/html-import"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "message",
-                        "type": "string",
-                        "direction": [
-                            "output"
-                        ]
-                    },
-                    {
-                        "slotId": "buttons",
-                        "type": "boolean",
-                        "direction": [
-                            "input"
-                        ],
-                        "value": false
-                    },
-                    {
-                        "slotId": "connections",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    },
-                    {
-                        "slotId": "triggerImport",
-                        "type": "boolean",
-                        "direction": [
-                            "output"
-                        ]
-                    }
-                ]
-            },
-            {
-                "artifactId": "transportable-element",
-                "description": "This is an elementary-component based on Polymer.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo application ..."
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "description": "This is recommended for you use with webcomponents.",
-                        "resources": [
-                            "transportable-element.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main",
-                            "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only",
-                            "this/utils/html-import"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "message",
-                        "type": "string",
-                        "direction": [
-                            "input"
-
-                        ]
-                    }
-                ]
-            },
-            {
-                "artifactId": "connection-import",
-                "description": "This is an elementary-component based on Polymer.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "description": "This is recommended for you use with webcomponents.",
-                        "resources": [
-                            "connection-import.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main",
-                            "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "triggerImport",
-                        "type": "boolean",
-                        "direction": [
-                            "input"
-                        ]
-                    },
-                    {
-                        "slotId": "connections",
-                        "type": "string",
-                        "direction": [
-                            "input"
-                        ]
-                    }
-                ]
-            }
-        ],
-        "compoundComponents": [
-            {
-                "artifactId": "dynamic-connection-compound",
-                "description": "This is a cubixx-compound-component.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app"
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "css/dynamic-connection-compound.css"
-                        ],
-                        "dependencies": [
-                            "this/container-element/main",
-                            "this/transportable-element/main",
-                            "this/utils/html-import"
-                        ]
-                    }
-                ],
-                "slots": [],
-                "members": [
-                    {
-                        "memberId": "container",
-                        "componentId": "this/container-element"
-                    },
-                    {
-                        "memberId": "transportable",
-                        "componentId": "this/transportable-element"
-                    }
-                ],
-                "connections": [],
-                "inits": []
-            },
-            {
-                "artifactId": "dynamic-connection-export-import-compound",
-                "description": "Drag and drop example with export and import of the connections.xx",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "css/dynamic-connection-export-import-compound.css",
-                            "js/dynamic-connection-export-import-compound.js"
-                        ],
-                        "dependencies": [
-                            "this/container-element/main",
-                            "this/transportable-element/main",
-                            "this/utils/html-import"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "connections",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    },
-                    {
-                        "slotId": "triggerImport",
-                        "type": "boolean",
-                        "direction": [
-                            "output"
-                        ]
-                    }
-                ],
-                "members": [
-                    {
-                        "memberId": "container",
-                        "componentId": "this/container-element"
-                    },
-                    {
-                        "memberId": "transportable1",
-                        "componentId": "this/transportable-element"
-                    },
-                    {
-                        "memberId": "transportable2",
-                        "componentId": "this/transportable-element"
-                    },
-                    {
-                        "memberId": "transportable3",
-                        "componentId": "this/transportable-element"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "export",
-                        "source": {
-                            "memberIdRef": "container",
-                            "slot": "connections"
-                        },
-                        "destination": {
-                            "slot": "connections"
-                        }
-                    },
-                    {
-                        "connectionId": "triggerImport",
-                        "source": {
-                            "memberIdRef": "container",
-                            "slot": "triggerImport"
-                        },
-                        "destination": {
-                            "slot": "triggerImport"
-                        },
-                        "repeatedValues": true
-                    }
-                ],
-                "inits": [
-                    {
-                        "memberIdRef": "container",
-                        "slot": "buttons",
-                        "value": true
-                    }
-                ]
-            },
-            {
-                "artifactId": "frame-compound",
-                "description": "Frame of the example",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [],
-                        "dependencies": [
-                            "this/connection-import/main",
-                            "this/dynamic-connection-export-import-compound/main"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "outdoor-temperature",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    }
-                ],
-                "members": [
-                    {
-                        "memberId": "dragAndDrop",
-                        "componentId": "this/dynamic-connection-export-import-compound"
-                    },
-                    {
-                        "memberId": "outputExportImport",
-                        "componentId": "this/connection-import"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "export",
-                        "source": {
-                            "memberIdRef": "dragAndDrop",
-                            "slot": "connections"
-                        },
-                        "destination": {
-                            "memberIdRef": "outputExportImport",
-                            "slot": "connections"
-                        }
-                    },
-                    {
-                        "connectionId": "triggerImport",
-                        "source": {
-                            "memberIdRef": "dragAndDrop",
-                            "slot": "triggerImport"
-                        },
-                        "destination": {
-                            "memberIdRef": "outputExportImport",
-                            "slot": "triggerImport"
-                        },
-                        "repeatedValues": true
-                    }
-                ],
-                "inits": [
-                ]
-            }
-        ],
-        "utilities": [
-            {
-                "artifactId": "utils",
-                "description": "",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "js/util.js"
-                        ],
-                        "dependencies": []
-                    },
-                    {
-                        "endpointId": "html-import",
-                        "description": "This is recommended for you use with webcomponents.",
-                        "resources": [
-                            "html-import.html"
-                        ],
-                        "dependencies": []
-                    }
-                ]
-            }
+  "name": "dynamic-connection",
+  "groupId": "cubx.core.rte-test",
+  "version": "0.2.0-SNAPSHOT",
+  "modelVersion": "8.3.0",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "drag-and-drop-demo-app",
+        "description": "Drag and drop exampla for add, remove export and import dynamic connections",
+        "runnables": [
+          {
+            "name": "dynamic connection demo",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
         ]
-    }
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "container-element",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo application ..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "container-element.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main",
+              "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only",
+              "this/utils/html-import"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "output"
+            ]
+          },
+          {
+            "slotId": "buttons",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ],
+            "value": false
+          },
+          {
+            "slotId": "connections",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "triggerImport",
+            "type": "boolean",
+            "direction": [
+              "output"
+            ]
+          }
+        ]
+      },
+      {
+        "artifactId": "transportable-element",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo application ..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "transportable-element.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main",
+              "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only",
+              "this/utils/html-import"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
+      },
+      {
+        "artifactId": "connection-import",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "connection-import.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main",
+              "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "triggerImport",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "connections",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "dynamic-connection-compound",
+        "description": "This is a cubixx-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app"
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/dynamic-connection-compound.css"
+            ],
+            "dependencies": [
+              "this/container-element/main",
+              "this/transportable-element/main",
+              "this/utils/html-import"
+            ]
+          }
+        ],
+        "slots": [],
+        "members": [
+          {
+            "memberId": "container",
+            "componentId": "this/container-element"
+          },
+          {
+            "memberId": "transportable",
+            "componentId": "this/transportable-element"
+          }
+        ],
+        "connections": [],
+        "inits": []
+      },
+      {
+        "artifactId": "dynamic-connection-export-import-compound",
+        "description": "Drag and drop example with export and import of the connections.xx",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/dynamic-connection-export-import-compound.css",
+              "js/dynamic-connection-export-import-compound.js"
+            ],
+            "dependencies": [
+              "this/container-element/main",
+              "this/transportable-element/main",
+              "this/utils/html-import"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "connections",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "triggerImport",
+            "type": "boolean",
+            "direction": [
+              "output"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "container",
+            "componentId": "this/container-element"
+          },
+          {
+            "memberId": "transportable1",
+            "componentId": "this/transportable-element"
+          },
+          {
+            "memberId": "transportable2",
+            "componentId": "this/transportable-element"
+          },
+          {
+            "memberId": "transportable3",
+            "componentId": "this/transportable-element"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "export",
+            "source": {
+              "memberIdRef": "container",
+              "slot": "connections"
+            },
+            "destination": {
+              "slot": "connections"
+            }
+          },
+          {
+            "connectionId": "triggerImport",
+            "source": {
+              "memberIdRef": "container",
+              "slot": "triggerImport"
+            },
+            "destination": {
+              "slot": "triggerImport"
+            },
+            "repeatedValues": true
+          }
+        ],
+        "inits": [
+          {
+            "memberIdRef": "container",
+            "slot": "buttons",
+            "value": true
+          }
+        ]
+      },
+      {
+        "artifactId": "frame-compound",
+        "description": "Frame of the example",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [],
+            "dependencies": [
+              "this/connection-import/main",
+              "this/dynamic-connection-export-import-compound/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "outdoor-temperature",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "dragAndDrop",
+            "componentId": "this/dynamic-connection-export-import-compound"
+          },
+          {
+            "memberId": "outputExportImport",
+            "componentId": "this/connection-import"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "export",
+            "source": {
+              "memberIdRef": "dragAndDrop",
+              "slot": "connections"
+            },
+            "destination": {
+              "memberIdRef": "outputExportImport",
+              "slot": "connections"
+            }
+          },
+          {
+            "connectionId": "triggerImport",
+            "source": {
+              "memberIdRef": "dragAndDrop",
+              "slot": "triggerImport"
+            },
+            "destination": {
+              "memberIdRef": "outputExportImport",
+              "slot": "triggerImport"
+            },
+            "repeatedValues": true
+          }
+        ],
+        "inits": []
+      }
+    ],
+    "utilities": [
+      {
+        "artifactId": "utils",
+        "description": "",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "js/util.js"
+            ],
+            "dependencies": []
+          },
+          {
+            "endpointId": "html-import",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "html-import.html"
+            ],
+            "dependencies": []
+          }
+        ]
+      }
+    ]
+  }
 }

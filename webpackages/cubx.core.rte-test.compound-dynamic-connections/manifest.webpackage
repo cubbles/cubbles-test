@@ -13,6 +13,17 @@
     "man": [],
     "artifacts": {
         "apps": [
+            {
+                "artifactId": "handling-dynamic-connection",
+                "description": "add remove export and import dynamic connections",
+                "runnables": [
+                    {
+                        "name": "dynamic connection demo ",
+                        "path": "/index.html",
+                        "description": "Call this app as a simple demo."
+                    }
+                ]
+            }
         ],
         "elementaryComponents": [
             {

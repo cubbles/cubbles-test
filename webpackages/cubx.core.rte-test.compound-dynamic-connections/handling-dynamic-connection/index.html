@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>app</title>
+
+    <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+
+    <!--
+        Declare a CRCInit-Object used to initialize the CRC (Client-Runtime-Container):
+        * rootDependencies //a string array; string pattern: webpackageId/artifactId/endpointId
+        ** to refer to artifacts of this webpackage, use 'this' as webpackageId
+    -->
+    <script>
+        window.cubx = {
+            CRCInit: {
+                rootDependencies: [
+                    "this/outer-compound/main"
+                ]
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style/main.css">
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true" data-main="js/main.js"></script>
+
+</head>
+<body>
+<!--
+    The cubbles client-runtime-container is bound to the next element.
+    Place Cubbles-Component there as child element.
+    Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
+-->
+<div cubx-core-crc>
+    <outer-compound></outer-compound>
+</div>
+<br>
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <div class="form-horizontal">
+
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <button class="btn btn-primary" onclick="addHandler()">add connection to</button>
+                </div>
+                <div class="col-md-10">
+                    <label for="runtimeidadd" class="col-sm-1 control-label">runtimeId</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="runtimeidadd">
+                    </div>
+                    <label class="col-sm-1 control-label">connectionId:</label>
+                    <div class="col-sm-6">
+                        <p class="form-control-static connectionid" id="addedconnectionid"></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <button class="btn btn-primary" onclick="removeHandler()">remove connection from</button>
+                </div>
+                <div class="col-md-10">
+
+                    <label for="runtimeidremove" class="col-sm-1 control-label">runtimeId</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="runtimeidremove">
+                    </div>
+                    <label for="connectionid" class="col-sm-1 control-label">connectionId:</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="connectionid">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <button class="btn btn-primary" onclick="generateConnectionIdHandler()">generate connectionId</button>
+                </div>
+                <div class="col-md-10">
+                    <label for="runtimeidgetConnectionId" class="col-sm-1 control-label">runtimeId</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="runtimeidgetConnectionId">
+                    </div>
+                    <label class="col-sm-1 control-label">connectionId:</label>
+                    <div class="col-sm-6">
+                        <p class="form-control-static connectionid" id="getconnectionid"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <button class=" btn btn-primary" onclick="exportHandler()">export connections from</button>
+                </div>
+                <div class="col-md-10">
+
+                    <label for="runtimeidexport" class="col-sm-1 control-label">runtimeId</label>
+                    <div class="col-md-4">
+                        <input type="text" id="runtimeidexport" class="form-control">
+                    </div>
+
+
+                    <label class="col-sm-1 control-label">export:</label>
+                    <div class="col-md-6">
+                        <p class="form-control-static connectionid" id="exportedcontent"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <button class=" btn btn-primary" onclick="importHandler()">import connections to</button>
+                </div>
+                <div class="col-md-10">
+                    <label for="runtimeidimport" class="col-sm-1 control-label">runtimeId</label>
+                    <div class="col-md-11">
+                        <input type="text" class="form-control" id="runtimeidimport">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group hidden" id="error">
+                <label class="col-sm-2 control-label text-danger">Error:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static bg-danger" id="errormessage"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div  class="col-sm-2 control-label">
+                    <label for="connection" class="">connection(s)</label><br>
+                    <small class="text-muted">This field defined the function paramater for "add connection to", "remove connection from",
+                        "generate connectionId" and "import connections to".
+                        (This field will be for "remove connection from" only used, if the connectionId field is empty.)</small>
+                </div>
+                <div class="col-md-10">
+                    <textarea id="connection" class="form-control" rows="20">
+{
+	"source": {
+		"runtimeId": "",
+		"slot": "message"
+	},
+	"destination":{
+		"runtimeId": "",
+		"slot": "message"
+	}
+}</textarea>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

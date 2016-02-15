@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>app</title>
 
-    <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+    <script src="../../cubx.core.rte@1.4.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
 
     <!--
         Declare a CRCInit-Object used to initialize the CRC (Client-Runtime-Container):
@@ -16,12 +16,11 @@
         window.cubx = {
             CRCInit: {
                 rootDependencies: [
-                    "this/outer-compound/main"
+                    "this/frame-compound/main"
                 ]
             }
         }
     </script>
-    <link rel="stylesheet" href="style/main.css">
 
     <!--
         Refer to the crc-loader artifact from a Cubbles-Base.
@@ -30,20 +29,19 @@
         Want to add a 'main' -script to be executed after the dependencies have been loaded?
         If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
-    <script src="../../../cubx.core.rte@1.4.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+    <script src="../../cubx.core.rte@1.4.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
 
 </head>
 <body>
+
 <!--
     The cubbles client-runtime-container is bound to the next element.
     Place Cubbles-Component there as child element.
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
 <div cubx-core-crc>
-    <outer-compound></outer-compound>
+    <frame-compound></frame-compound>
 </div>
-<br>
-
 
 </body>
 </html>
