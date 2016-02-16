@@ -1,7 +1,7 @@
 {
   "name": "cif-init-test",
   "groupId": "com.incowia.cif-test",
-  "version": "1.2.0-SNAPSHOT",
+  "version": "1.2.0",
   "modelVersion": "8.3.0",
   "docType": "webpackage",
   "author": {
@@ -4222,7 +4222,17 @@
               "memberIdRef": "member2",
               "slot": "dd"
             }
-          }
+          },
+            {
+                "connectionId": "test",
+                "source": {
+                    "slot": "outer"
+                },
+                "destination": {
+                    "memberIdRef": "member1",
+                    "slot": "d"
+                }
+            }
         ],
         "inits": [
           {
@@ -5336,7 +5346,7 @@
               "component/cif-test-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.4.0/cubxpolymer/main"
             ]
           },
           {
@@ -5345,7 +5355,7 @@
               "component/cif-test-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.4.0/cubxpolymer/main"
             ]
           }
         ],
@@ -5398,7 +5408,7 @@
               "component/cif-test-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.4.0/cubxpolymer/main"
             ]
           },
           {
@@ -5407,7 +5417,7 @@
               "component/cif-test-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.4.0/cubxpolymer/main"
             ]
           }
         ],
@@ -5460,7 +5470,7 @@
               "component/cif-test-c.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.4.0/cubxpolymer/main"
             ]
           },
           {
@@ -5469,7 +5479,7 @@
               "component/cif-test-c.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.4.0/cubxpolymer/main"
             ]
           }
         ],
@@ -5494,7 +5504,7 @@
               "component/cif-test-obj-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.4.0/cubxpolymer/main"
             ]
           },
           {
@@ -5503,7 +5513,7 @@
               "component/cif-test-obj-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.4.0/cubxpolymer/main"
             ]
           }
         ],
@@ -5568,7 +5578,7 @@
               "component/cif-test-obj-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.4.0/cubxpolymer/main"
             ]
           },
           {
@@ -5577,7 +5587,7 @@
               "component/cif-test-obj-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.4.0/cubxpolymer/main"
             ]
           }
         ],
