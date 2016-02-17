@@ -15,7 +15,7 @@
     "apps": [
       {
         "artifactId": "drag-and-drop-demo-app",
-        "description": "Drag and drop exampla for add, remove export and import dynamic connections",
+        "description": "Drag and drop example for add, remove export and import dynamic connections",
         "runnables": [
           {
             "name": "dynamic connection demo",

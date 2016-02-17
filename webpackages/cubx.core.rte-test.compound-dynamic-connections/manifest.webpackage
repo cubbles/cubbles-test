@@ -1,7 +1,7 @@
 {
     "name": "compound-dynamic-connections",
     "groupId": "cubx.core.rte-test",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "modelVersion": "8.3.0",
     "docType": "webpackage",
     "author": {
@@ -21,6 +21,17 @@
                         "name": "dynamic connection demo ",
                         "path": "/index.html",
                         "description": "Call this app as a simple demo."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "js/main.js"
+                        ],
+                        "dependencies": [
+                            "this/outer-compound/main"
+                        ]
                     }
                 ]
             }
