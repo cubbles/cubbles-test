@@ -1,7 +1,14 @@
 # Releases
 
+## 1.13.0
+updated dependency: cubx-grunt-webpackage-scaffold to version v1.9.0 - use cubx.core.rte@1.4.0
+
+## 1.12.2
+* changed grunt task config (client jscs file)
+
 ## 1.12.1
 * repaired cubbles logo
+
 ## 1.12.0
 
 * updated dependency: cubx-grunt-webpackage-scaffold to version v1.8.0 - PLAT-380: "+webpackage-createElementary" and "+webpackage-createCompound" generate also demo-app for the component
