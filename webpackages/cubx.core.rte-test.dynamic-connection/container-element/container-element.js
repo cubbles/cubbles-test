@@ -116,6 +116,7 @@
             dynamicConnection.setSourceSlot('message');
             dynamicConnection.setDestinationRuntimeId(draggedElement.getAttribute('runtime-id'));
             dynamicConnection.setDestinationSlot('message');
+            dynamicConnection.setDirectExecution(true);
             var connectionId = this.addDynamicConnection(dynamicConnection);
             draggedElement.connectedWithId = connectionId;
         },
