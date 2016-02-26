@@ -21,6 +21,11 @@
                         "name": "dynamic connection demo ",
                         "path": "/index.html",
                         "description": "Call this app as a simple demo."
+                    },
+                    {
+                        "name": "example configs",
+                        "path": "/example-dynamicConnections.txt",
+                        "description": "example dynamic connection configs..."
                     }
                 ],
                 "endpoints": [
