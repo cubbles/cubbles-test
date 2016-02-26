@@ -1,7 +1,7 @@
 {
     "name": "compound-dynamic-connections",
     "groupId": "cubx.core.rte-test",
-    "version": "0.1.1",
+    "version": "0.2.0-SNAPSHOT",
     "modelVersion": "8.3.0",
     "docType": "webpackage",
     "author": {
@@ -55,7 +55,7 @@
                             "basic-elementary.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.4.0/cubxpolymer/main"
+                            "cubx.core.rte@1.5.0-SNAPSHOT/cubxpolymer/main"
                         ]
                     }
                 ],

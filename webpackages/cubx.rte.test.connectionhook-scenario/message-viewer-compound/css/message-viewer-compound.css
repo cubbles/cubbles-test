@@ -1,0 +1,8 @@
+message-viewer-compound {
+    display: block;
+    margin: 2em;
+    border: solid thin #3278ff;
+    background-color: #80aaff;
+    width: 26em;
+    padding: 0;
+}

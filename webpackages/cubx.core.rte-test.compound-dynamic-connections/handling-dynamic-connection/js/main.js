@@ -41,7 +41,8 @@ function addHandler() {
         document.querySelector('#addedconnectionid').innerHTML = '';
         var runtimeId = document.querySelector('#runtimeidadd').value;
         var connectionJSON = document.querySelector('#connection').value;
-        console.log('addHandler: add connection ' + JSON.parse(connectionJSON) + ' to ' + runtimeId);
+        console.log('addHandler: add connection ' + JSON.stringify(JSON.parse(connectionJSON),null,4) +
+            ' to ' + runtimeId);
 
         var elem = findElementPerRuntimeId(runtimeId);
 

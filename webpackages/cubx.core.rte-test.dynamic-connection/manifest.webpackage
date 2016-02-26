@@ -1,7 +1,7 @@
 {
   "name": "dynamic-connection",
   "groupId": "cubx.core.rte-test",
-  "version": "0.2.0",
+  "version": "0.3.0-SNAPSHOT",
   "modelVersion": "8.3.0",
   "docType": "webpackage",
   "author": {
@@ -44,7 +44,7 @@
               "container-element.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0/cubxpolymer/main",
+              "cubx.core.rte@1.5.0-SNAPSHOT/cubxpolymer/main",
               "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only",
               "this/utils/html-import"
             ]
@@ -101,7 +101,7 @@
               "transportable-element.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0/cubxpolymer/main",
+              "cubx.core.rte@1.5.0-SNAPSHOT/cubxpolymer/main",
               "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only",
               "this/utils/html-import"
             ]
@@ -135,7 +135,7 @@
               "connection-import.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.4.0/cubxpolymer/main",
+              "cubx.core.rte@1.5.0-SNAPSHOT/cubxpolymer/main",
               "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only"
             ]
           }
