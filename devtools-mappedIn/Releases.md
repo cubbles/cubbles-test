@@ -1,4 +1,18 @@
 # Releases
+## 2.0.1
+### Bugfix
+* corrected reference to cubx-webpackage-document-api
+* updated dependencies:
+    * cubx-grunt-webpackage-scaffold to version v2.0.1
+    
+## 2.0.0
+* PLAT-129/PLAT-396:
+	* use cubx-webpackage-upload version 3.1.x
+	* cubx-webpackage-upload automatically asks for commandline input of user and password-values.
+* PLAT-409: cubx-grunt-webpackage-scaffold use cubx.core@rte version 1.5.0
+* updated dependencies:
+    * cubx-grunt-webpackage-scaffold to version v2.0.0
+    * cubx-grunt-webpackage-upload to version ^1.7.0
 
 ## 1.13.0
 updated dependency: cubx-grunt-webpackage-scaffold to version v1.9.0 - use cubx.core.rte@1.4.0
