@@ -1,15 +1,15 @@
 {
-  "name": "copy-value-test-compound-obj-test",
-  "description": "",
-  "homepage": "",
-  "keywords": [],
-  "author": "",
-  "license": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components"
-  ],
+    "name": "copy-value-test-compound-obj-test",
+    "description": "",
+    "homepage": "",
+    "keywords": [ ],
+    "author": "",
+    "license": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
     "dependencies": {
 
     },

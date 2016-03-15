@@ -1,4 +1,4 @@
 'use strict';
-(function() {
-    //do nothing
+(function () {
+  // do nothing
 })();
