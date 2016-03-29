@@ -1,5 +1,11 @@
 # Releases
 
+## next release
+* PLAT-397: correkt of ".workspace" in more cases of 	incompleteness
+
+## 2.2.0
+* updated dependency: cubx-grunt-webpackage-scaffold to version v2.2.0
+
 ## 2.1.0
 * use eslint for code validation rather than jscs and jshint
 * updated dependency: cubx-grunt-webpackage-scaffold to version v2.1.0
