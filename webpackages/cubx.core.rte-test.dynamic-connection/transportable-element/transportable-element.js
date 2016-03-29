@@ -31,8 +31,15 @@
         throw new Error('Parent "transportable-element" not found.');
       }
       // console.log('transportable-element:dragstart:host', host);
+      var msie = window.navigator.userAgent.indexOf('MSIE ');       // Detect IE
+      var trident = window.navigator.userAgent.indexOf('Trident/'); // Detect IE 11
+      var edge = window.navigator.userAgent.indexOf('Edge'); // Detect Edge
       var runtimeId = host.getAttribute('runtime-id');
-      e.dataTransfer.setData('runtimeId', runtimeId);
+      if (msie > 0 || trident > 0 || edge > 0) {
+        e.dataTransfer.setData('Text', runtimeId);
+      } else {
+        e.dataTransfer.setData('runtimeId', runtimeId);
+      }
       e.dataTransfer.effectAllowed = 'move';
     },
     handleDragEnd: function (e) {
