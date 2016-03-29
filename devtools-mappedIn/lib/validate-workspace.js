@@ -4,14 +4,14 @@ var fs = require('fs');
 module.exports = function (grunt, workspacePath) {
   var workspaceConfigFile = workspacePath + '.workspace';
   grunt.verbose.writeln('validate: ' + workspaceConfigFile);
+  var workspaceConfigTemplate = {
+    activeWebpackage: '',
+    remoteStoreUrl: 'https://webblebase.net/sandbox'
+  };
   if (!grunt.file.isFile(workspaceConfigFile)) {
     grunt.verbose.writeln('Did NOT found ' + workspaceConfigFile);
     grunt.log.writeln('Creating file \'' + workspaceConfigFile + '\' ... ');
     (function () {
-      var workspaceConfigTemplate = {
-        activeWebpackage: '',
-        remoteStoreUrl: 'https://webblebase.net/sandbox'
-      };
       grunt.file.write(workspaceConfigFile, JSON.stringify(workspaceConfigTemplate, null, 2));
       grunt.log.writeln('Done.');
     })();
@@ -21,8 +21,26 @@ module.exports = function (grunt, workspacePath) {
   /*
    * read workspaceConfigFile -file and validate content
    */
-  var workspaceConfig = grunt.file.readJSON(workspaceConfigFile);
+  var workspaceConfig;
+  var configNeedSave = false;
+  try {
+    workspaceConfig = grunt.file.readJSON(workspaceConfigFile);
+  } catch (err) {
+    workspaceConfig = workspaceConfigTemplate;
+    configNeedSave = true;
+  }
   var activeWebpackageName;
+  if (!('activeWebpackage' in workspaceConfig)) {
+    workspaceConfig.activeWebpackage = '';
+    configNeedSave = true;
+  }
+  if (!('remoteStoreUrl' in workspaceConfig)) {
+    workspaceConfig.remoteStoreUrl = 'https://webblebase.net/sandbox';
+    configNeedSave = true;
+  }
+  if (configNeedSave) {
+    grunt.file.write(workspaceConfigFile, JSON.stringify(workspaceConfig, null, 2));
+  }
   if (('activeWebpackage' in workspaceConfig) && typeof workspaceConfig.activeWebpackage === 'string' &&
     workspaceConfig.activeWebpackage.length > 0) {
     activeWebpackageName = workspaceConfig.activeWebpackage;
