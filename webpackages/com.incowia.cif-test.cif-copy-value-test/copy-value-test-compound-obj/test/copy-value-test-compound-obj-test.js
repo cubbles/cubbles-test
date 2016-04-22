@@ -10,24 +10,14 @@ describe('copy-value', function () {
 
   describe('missing copyValue attribute indicate copyValue is true', function () {
     var newObj;
-    var retObj;
-    before(function (done) {
+
+    before(function () {
       newObj = {
         label: 'slot a',
         value: 9
       };
-      document.querySelector('copy-value-test-compound-obj').addEventListener('cifModelChange',
-        function (evt) {
-          if (evt.detail.slot === 'aa' && evt.target.tagName === 'COPY-VALUE-TEST-COMPOUND-OBJ' &&
-            evt.detail.payload.value === 9) {
-            retObj = evt.detail.payload;
-            done();
-          }
-        });
-
       document.querySelector('copy-value-test-compound-obj').setInputSlot('aa',
         { slot: 'aa', payload: newObj });
-
       newObj.value = 15;
     });
 
@@ -44,28 +34,15 @@ describe('copy-value', function () {
         document.querySelector('copy-value-test-obj-b').model.a.should.not.eql(
           document.querySelector('copy-value-test-obj-a').model.a);
       });
-    it('change of newObj not indicate a change of value of "copy-value-test-comound-obj" slot "aa"',
-      function () {
-        retObj.should.be.not.eql(newObj);
-      });
+
   });
   describe('copyValue is explizit true', function () {
     var newObj;
-    var retObj;
-    before(function (done) {
+    before(function () {
       newObj = {
         label: 'slot b',
         value: 9
       };
-      document.querySelector('copy-value-test-compound-obj').addEventListener('cifModelChange',
-        function (evt) {
-          if (evt.detail.slot === 'bb' && evt.target.tagName === 'COPY-VALUE-TEST-COMPOUND-OBJ' &&
-            evt.detail.payload.value === 9) {
-            retObj = evt.detail.payload;
-            done();
-          }
-        });
-
       document.querySelector('copy-value-test-compound-obj').setInputSlot('bb',
         { slot: 'bb', payload: newObj });
 
@@ -85,28 +62,14 @@ describe('copy-value', function () {
         document.querySelector('copy-value-test-obj-b').model.b.should.not.eql(
           document.querySelector('copy-value-test-obj-a').model.b);
       });
-    it('change of newObj not indicate a change of value of "copy-value-test-comound-obj" slot "bb"',
-      function () {
-        retObj.should.be.not.eql(newObj);
-      });
   });
   describe('copyValue is false', function () {
     var newObj;
-    var retObj;
-    before(function (done) {
+    before(function () {
       newObj = {
         label: 'slot c',
         value: 9
       };
-      document.querySelector('copy-value-test-compound-obj').addEventListener('cifModelChange',
-        function (evt) {
-          if (evt.detail.slot === 'cc' && evt.target.tagName === 'COPY-VALUE-TEST-COMPOUND-OBJ' &&
-            evt.detail.payload.value === 9) {
-            retObj = evt.detail.payload;
-            done();
-          }
-        });
-
       document.querySelector('copy-value-test-compound-obj').setInputSlot('cc',
         { slot: 'cc', payload: newObj });
 
@@ -125,10 +88,6 @@ describe('copy-value', function () {
         document.querySelector('copy-value-test-obj-a').model.c.value = 999;
         document.querySelector('copy-value-test-obj-b').model.c.should.eql(
           document.querySelector('copy-value-test-obj-a').model.c);
-      });
-    it('change of newObj not indicate a change of value of "copy-value-test-comound-obj" slot "cc"',
-      function () {
-        retObj.should.be.eql(newObj);
       });
   });
 });

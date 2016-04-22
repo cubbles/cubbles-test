@@ -7,7 +7,12 @@ body {
 .inner{
     width: 100px;
 }
-td {
+table.outer{
+    border: none;
+}
+table.inner {
     border: solid thin black;
 }
-
+.inner td {
+    border: solid thin black;
+}

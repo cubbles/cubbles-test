@@ -1,7 +1,7 @@
 {
   "name": "connectionhook-test",
   "groupId": "cubx.core.cif-test",
-  "version": "0.5.0",
+  "version": "0.6.0-SNAPSHOT",
   "modelVersion": "8.3.0",
   "docType": "webpackage",
   "author": {
@@ -28,7 +28,7 @@
               "connectionhook-elementary-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.6.0/cubxpolymer/main",
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main",
               "bootstrap-3.3.5@1.0.2/bootstrap/main"
             ]
           }
@@ -84,7 +84,7 @@
               "connectionhook-elementary-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.6.0/cubxpolymer/main",
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main",
               "bootstrap-3.3.5@1.0.2/bootstrap/main"
             ]
           }
