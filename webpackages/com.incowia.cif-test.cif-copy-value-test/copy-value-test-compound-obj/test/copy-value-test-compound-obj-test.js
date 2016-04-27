@@ -34,7 +34,6 @@ describe('copy-value', function () {
         document.querySelector('copy-value-test-obj-b').model.a.should.not.eql(
           document.querySelector('copy-value-test-obj-a').model.a);
       });
-
   });
   describe('copyValue is explizit true', function () {
     var newObj;

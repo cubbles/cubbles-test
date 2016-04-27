@@ -1455,6 +1455,250 @@
         ]
       },
       {
+        "artifactId": "cif-test-compound-7",
+        "description": "cif-test-a connected with cif-test-b",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "component/cif-test-compound.css"
+            ],
+            "dependencies": [
+              "this/cif-test-a/main",
+              "this/cif-test-b/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "aa",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "bb",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "cc",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "dd",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "componentId": "this/cif-test-a",
+            "memberId": "member-a"
+          },
+          {
+            "componentId": "this/cif-test-b",
+            "memberId": "member-b"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "con1",
+            "source": {
+              "memberIdRef": "member-a",
+              "slot": "a"
+            },
+            "destination": {
+              "memberIdRef": "member-b",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "con2",
+            "source": {
+              "memberIdRef": "member-a",
+              "slot": "b"
+            },
+            "destination": {
+              "memberIdRef": "member-b",
+              "slot": "b"
+            }
+          },
+          {
+            "connectionId": "con3",
+            "source": {
+              "memberIdRef": "member-a",
+              "slot": "c"
+            },
+            "destination": {
+              "memberIdRef": "member-b",
+              "slot": "c"
+            }
+          },
+          {
+            "connectionId": "con4",
+            "source": {
+              "memberIdRef": "member-a",
+              "slot": "d"
+            },
+            "destination": {
+              "memberIdRef": "member-b",
+              "slot": "d"
+            }
+          },
+          {
+            "connectionId": "con5",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "a"
+            },
+            "destination": {
+              "slot": "aa"
+            }
+          },
+          {
+            "connectionId": "con6",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "b"
+            },
+            "destination": {
+              "slot": "bb"
+            }
+          },
+          {
+            "connectionId": "con7",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "c"
+            },
+            "destination": {
+              "slot": "cc"
+            }
+          },
+          {
+            "connectionId": "con8",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "d"
+            },
+            "destination": {
+              "slot": "dd"
+            }
+          },
+          {
+            "connectionId": "con9",
+            "source": {
+              "slot": "aa"
+            },
+            "destination": {
+              "memberIdRef": "member-b",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "con10",
+            "source": {
+              "slot": "bb"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "b"
+            }
+          },
+          {
+            "connectionId": "con11",
+            "source": {
+              "slot": "cc"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "c"
+            }
+          },
+          {
+            "connectionId": "con12",
+            "source": {
+              "slot": "dd"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "d"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "aa",
+            "value": 111
+          },
+          {
+            "slot": "bb",
+            "value": 222
+          },
+          {
+            "slot": "cc",
+            "value": "--- c ---"
+          },
+          {
+            "slot": "dd",
+            "value": "--- d ---"
+          },
+          {
+            "memberIdRef": "member-a",
+            "slot": "a",
+            "value": 9
+          },
+          {
+            "memberIdRef": "member-a",
+            "slot": "b",
+            "value": 8
+          },
+          {
+            "memberIdRef": "member-a",
+            "slot": "c",
+            "value": "a-c"
+          },
+          {
+            "memberIdRef": "member-a",
+            "slot": "d",
+            "value": "a-d"
+          },
+          {
+            "memberIdRef": "member-b",
+            "slot": "a",
+            "value": 5
+          },
+          {
+            "memberIdRef": "member-b",
+            "slot": "b",
+            "value": 6
+          },
+          {
+            "memberIdRef": "member-b",
+            "slot": "c",
+            "value": "b-c"
+          },
+          {
+            "memberIdRef": "member-b",
+            "slot": "d",
+            "value": "b-d"
+          }
+        ]
+      },
+      {
         "artifactId": "cif-test-compound-obj",
         "endpoints": [
           {
@@ -4067,6 +4311,202 @@
             "memberIdRef": "member-compound",
             "slot": "bb",
             "value": 888
+          },
+          {
+            "memberIdRef": "member-compound",
+            "slot": "dd",
+            "value": "=:)"
+          },
+          {
+            "memberIdRef": "member-b",
+            "slot": "a",
+            "value": 101
+          },
+          {
+            "memberIdRef": "member-b",
+            "slot": "b",
+            "value": 202
+          },
+          {
+            "memberIdRef": "member-b",
+            "slot": "c",
+            "value": "xxx c xxx"
+          },
+          {
+            "memberIdRef": "member-b",
+            "slot": "d",
+            "value": "xxx d xxx"
+          }
+        ]
+      },
+      {
+        "artifactId": "cif-test-compound-outer-7",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "component/cif-test-compound-outer.css"
+            ],
+            "dependencies": [
+              "this/cif-test-a/main",
+              "this/cif-test-b/main",
+              "this/cif-test-compound/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "outer",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "componentId": "this/cif-test-a",
+            "memberId": "member-a"
+          },
+          {
+            "componentId": "this/cif-test-compound-7",
+            "memberId": "member-compound"
+          },
+          {
+            "componentId": "this/cif-test-b",
+            "memberId": "member-b"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "con1",
+            "source": {
+              "memberIdRef": "member-compound",
+              "slot": "aa"
+            },
+            "destination": {
+              "memberIdRef": "member-b",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "con2",
+            "source": {
+              "memberIdRef": "member-compound",
+              "slot": "bb"
+            },
+            "destination": {
+              "memberIdRef": "member-b",
+              "slot": "b"
+            }
+          },
+          {
+            "connectionId": "con3",
+            "source": {
+              "memberIdRef": "member-compound",
+              "slot": "cc"
+            },
+            "destination": {
+              "memberIdRef": "member-b",
+              "slot": "c"
+            }
+          },
+          {
+            "connectionId": "con4",
+            "source": {
+              "memberIdRef": "member-compound",
+              "slot": "dd"
+            },
+            "destination": {
+              "memberIdRef": "member-b",
+              "slot": "d"
+            }
+          },
+          {
+            "connectionId": "con5",
+            "source": {
+              "memberIdRef": "member-a",
+              "slot": "a"
+            },
+            "destination": {
+              "memberIdRef": "member-compound",
+              "slot": "aa"
+            }
+          },
+          {
+            "connectionId": "con6",
+            "source": {
+              "memberIdRef": "member-a",
+              "slot": "b"
+            },
+            "destination": {
+              "memberIdRef": "member-compound",
+              "slot": "bb"
+            }
+          },
+          {
+            "connectionId": "con7",
+            "source": {
+              "memberIdRef": "member-a",
+              "slot": "c"
+            },
+            "destination": {
+              "memberIdRef": "member-compound",
+              "slot": "cc"
+            }
+          },
+          {
+            "connectionId": "con8",
+            "source": {
+              "memberIdRef": "member-a",
+              "slot": "d"
+            },
+            "destination": {
+              "memberIdRef": "member-compound",
+              "slot": "dd"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "outer",
+            "value": "bbb"
+          },
+          {
+            "memberIdRef": "member-a",
+            "slot": "a",
+            "value": 100
+          },
+          {
+            "memberIdRef": "member-a",
+            "slot": "b",
+            "value": 200
+          },
+          {
+            "memberIdRef": "member-a",
+            "slot": "c",
+            "value": "### c ####"
+          },
+          {
+            "memberIdRef": "member-a",
+            "slot": "d",
+            "value": "### d ###"
+          },
+          {
+            "memberIdRef": "member-compound",
+            "slot": "aa",
+            "value": 999
+          },
+          {
+            "memberIdRef": "member-compound",
+            "slot": "bb",
+            "value": 888
+          },
+          {
+            "memberIdRef": "member-compound",
+            "slot": "cc",
+            "value": ";)"
           },
           {
             "memberIdRef": "member-compound",
