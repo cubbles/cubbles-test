@@ -60,7 +60,7 @@
               "basic-elementary.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.8.0/cubxpolymer/main"
             ]
           }
         ],

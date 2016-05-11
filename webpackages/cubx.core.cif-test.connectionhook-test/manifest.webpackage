@@ -28,7 +28,7 @@
               "connectionhook-elementary-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main",
+              "cubx.core.rte@1.8.0/cubxpolymer/main",
               "bootstrap-3.3.5@1.0.2/bootstrap/main"
             ]
           }
@@ -84,7 +84,7 @@
               "connectionhook-elementary-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main",
+              "cubx.core.rte@1.8.0/cubxpolymer/main",
               "bootstrap-3.3.5@1.0.2/bootstrap/main"
             ]
           }
