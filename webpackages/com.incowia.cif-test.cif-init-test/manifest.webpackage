@@ -10,13 +10,11 @@
   },
   "license": "MIT",
   "keywords": [
-      "cif-test",
-      "test"
+    "cif-test",
+    "test"
   ],
-  "man": [],
-  "runnables": [
-
-  ],
+  "man": [ ],
+  "runnables": [ ],
   "artifacts": {
     "apps": [
       {
@@ -24,14 +22,25 @@
         "description": "Test Applikation",
         "runnables": [
           {
-              "name": "test cases",
-              "path": "/index.html"
+            "name": "test cases",
+            "path": "/index.html"
           }
         ],
         "endpoints": [
           {
             "endpointId": "main",
-            "resources": []
+            "resources": [ ]
+          }
+        ]
+      },
+      {
+        "artifactId": "docs",
+        "description": " package documentation",
+        "runnables": [
+          {
+            "name": "cif-init-test documentation",
+            "path": "/index.html",
+            "description": "show the webpackage structure"
           }
         ]
       }
@@ -50,6 +59,13 @@
               "this/cif-test-a/main",
               "this/cif-test-b/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -296,6 +312,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "aa",
@@ -538,6 +561,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "aa",
@@ -773,6 +803,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "aa",
@@ -990,6 +1027,13 @@
               "this/cif-test-a/main",
               "this/cif-test-b/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -1212,6 +1256,13 @@
               "this/cif-test-a/main",
               "this/cif-test-b/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -1469,6 +1520,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "aa",
@@ -1710,6 +1768,13 @@
               "this/cif-test-obj-a/main",
               "this/cif-test-obj-b/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -1991,6 +2056,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "aa",
@@ -2259,6 +2331,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "aa",
@@ -2523,6 +2602,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "aa",
@@ -2751,6 +2837,13 @@
               "this/cif-test-obj-a/main",
               "this/cif-test-obj-b/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -3009,6 +3102,13 @@
               "this/cif-test-obj-a/main",
               "this/cif-test-obj-b/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -3302,9 +3402,48 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "outer",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "aa",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "bb",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "cc",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "dd",
             "type": "string",
             "direction": [
               "input",
@@ -3414,6 +3553,86 @@
               "memberIdRef": "member-compound",
               "slot": "dd"
             }
+          },
+          {
+            "connectionId": "con9",
+            "source": {
+              "slot": "aa"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "con10",
+            "source": {
+              "slot": "bb"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "b"
+            }
+          },
+          {
+            "connectionId": "con11",
+            "source": {
+              "slot": "cc"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "c"
+            }
+          },
+          {
+            "connectionId": "con12",
+            "source": {
+              "slot": "dd"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "d"
+            }
+          },
+          {
+            "connectionId": "con13",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "a"
+            },
+            "destination": {
+              "slot": "aa"
+            }
+          },
+          {
+            "connectionId": "con14",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "b"
+            },
+            "destination": {
+              "slot": "bb"
+            }
+          },
+          {
+            "connectionId": "con15",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "c"
+            },
+            "destination": {
+              "slot": "cc"
+            }
+          },
+          {
+            "connectionId": "con16",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "d"
+            },
+            "destination": {
+              "slot": "dd"
+            }
           }
         ],
         "inits": [
@@ -3498,9 +3717,48 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "outer",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "aa",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "bb",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "cc",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "dd",
             "type": "string",
             "direction": [
               "input",
@@ -3610,6 +3868,86 @@
               "memberIdRef": "member-compound",
               "slot": "dd"
             }
+          },
+          {
+            "connectionId": "con9",
+            "source": {
+              "slot": "aa"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "a"
+            }
+          },
+          {
+            "connectionId": "con10",
+            "source": {
+              "slot": "bb"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "b"
+            }
+          },
+          {
+            "connectionId": "con11",
+            "source": {
+              "slot": "cc"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "c"
+            }
+          },
+          {
+            "connectionId": "con12",
+            "source": {
+              "slot": "dd"
+            },
+            "destination": {
+              "memberIdRef": "member-a",
+              "slot": "d"
+            }
+          },
+          {
+            "connectionId": "con13",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "a"
+            },
+            "destination": {
+              "slot": "aa"
+            }
+          },
+          {
+            "connectionId": "con14",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "b"
+            },
+            "destination": {
+              "slot": "bb"
+            }
+          },
+          {
+            "connectionId": "con15",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "c"
+            },
+            "destination": {
+              "slot": "cc"
+            }
+          },
+          {
+            "connectionId": "con16",
+            "source": {
+              "memberIdRef": "member-b",
+              "slot": "d"
+            },
+            "destination": {
+              "slot": "dd"
+            }
           }
         ],
         "inits": [
@@ -3668,6 +4006,13 @@
               "this/cif-test-b/main",
               "this/cif-test-compound-3/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -3856,6 +4201,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "outer",
@@ -4006,6 +4358,13 @@
               "this/cif-test-b/main",
               "this/cif-test-compound-5/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -4165,6 +4524,13 @@
               "this/cif-test-b/main",
               "this/cif-test-compound-6/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -4352,6 +4718,13 @@
               "this/cif-test-b/main",
               "this/cif-test-compound/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -4548,6 +4921,13 @@
               "this/cif-test-obj-b/main",
               "this/cif-test-compound-obj/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -4785,6 +5165,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "outer",
@@ -4979,6 +5366,13 @@
               "this/cif-test-obj-b/main",
               "this/cif-test-compound-obj-3/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -5200,6 +5594,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "outer",
@@ -5362,6 +5763,13 @@
               "this/cif-test-obj-b/main",
               "this/cif-test-compound-obj-5/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -5557,6 +5965,13 @@
               "this/cif-test-obj-b/main",
               "this/cif-test-compound-obj-6/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -5789,6 +6204,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "a",
@@ -5849,6 +6271,13 @@
             "dependencies": [
               "cubx.core.rte@1.9.0-SNAPSHOT/cubxpolymer/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -5913,6 +6342,13 @@
             ]
           }
         ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
         "slots": [
           {
             "slotId": "out",
@@ -5945,6 +6381,13 @@
             "dependencies": [
               "cubx.core.rte@1.9.0-SNAPSHOT/cubxpolymer/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [
@@ -6019,6 +6462,13 @@
             "dependencies": [
               "cubx.core.rte@1.9.0-SNAPSHOT/cubxpolymer/main"
             ]
+          }
+        ],
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "slots": [

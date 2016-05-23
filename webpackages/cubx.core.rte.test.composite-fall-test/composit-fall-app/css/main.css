@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+}
+
+.column {
+    margin: 10px 5px ;
+    padding: 10px 5px;
+    border: solid thin lightgrey;
+    background-color: #f3f3f3;
+    flex-basis: auto;
+    flex: 1;
+}
+
+.rows {
+    flex-flow: column;
+}
+
+.columns {
+    flex-direction: row;
+}
