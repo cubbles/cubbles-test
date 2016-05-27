@@ -19,7 +19,7 @@
         "description": "",
         "runnables": [
           {
-            "name": "My Hello World App.",
+            "name": "Demo App to show composit mode",
             "path": "/index.html",
             "description": "Call this app as a simple demo."
           }
