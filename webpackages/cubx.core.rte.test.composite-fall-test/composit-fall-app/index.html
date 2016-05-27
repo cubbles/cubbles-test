@@ -3,91 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>app</title>
+    <title>Composite Examples for Connctions</title>
 
-    <script src="../../cubx.core.rte@1.9.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
-
-    <!--
-        Refer to the crc-loader artifact from a Cubbles-Base.
-        Take care: All other dependencies are expected to be available within the same Base!
-
-        Want to add a 'main' -script to be executed after the dependencies have been loaded?
-        If yes, add the following attribute: data-crc-main="js/my-script.js"
-    -->
-    <script src="../../cubx.core.rte@1.9.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
-    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-<h1>Composite Fall Demo</h1>
-<!--
-    The cubbles client-runtime-container is bound to the next element.
-    Place Cubbles-Component there as child element.
-    Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
--->
-<div cubx-core-crc class="container rows">
-
-    <div class="container columns">
-        <div class="column">
-            <h3>cif-test-compound-outer</h3>
-            <cif-test-compound-outer
-                    cubx-dependency="com.incowia.cif-test.cif-init-test@1.6.0-SNAPSHOT/cif-test-compound-outer/main"
-                    member-id="first">
-                <cubx-core-connections style="display: none;">
-                    <cubx-core-connection source="aa" connection-id="outerCon1"
-                                          destination="second:aa"></cubx-core-connection>
-                    <cubx-core-connection source="bb" connection-id="outerCon2"
-                                          destination="second:bb"></cubx-core-connection>
-                    <cubx-core-connection source="cc" connection-id="outerCon3"
-                                          destination="second:cc"></cubx-core-connection>
-                    <cubx-core-connection source="dd" connection-id="outerCon4"
-                                          destination="second:dd"></cubx-core-connection>
-                </cubx-core-connections>
-            </cif-test-compound-outer>
-        </div>
-        <div class="column">
-            <h3>cif-test-compound-outer-2</h3>
-            <cif-test-compound-outer-2
-                    cubx-dependency="com.incowia.cif-test.cif-init-test@1.6.0-SNAPSHOT/cif-test-compound-outer-2/main"
-                    member-id="second">
-                <cubx-core-connections style="display: none;">
-                    <cubx-core-connection source="aa" connection-id="outerCon5"
-                                          destination="third:aa"></cubx-core-connection>
-                    <cubx-core-connection source="bb" connection-id="outerCon6"
-                                          destination="third:bb"></cubx-core-connection>
-                    <cubx-core-connection source="cc" connection-id="outerCon7"
-                                          destination="third:cc"></cubx-core-connection>
-                    <cubx-core-connection source="dd" connection-id="outerCon8"
-                                          destination="third:dd"></cubx-core-connection>
-                </cubx-core-connections>
-            </cif-test-compound-outer-2>
-        </div>
-        <div class="column">
-            <h3>cif-test-compound-outer</h3>
-            <cif-test-compound-outer
-                    cubx-dependency="com.incowia.cif-test.cif-init-test@1.6.0-SNAPSHOT/cif-test-compound-outer/main"
-                    member-id="third"></cif-test-compound-outer>
-        </div>
-    </div>
-    <div class="container columns">
-        <div class="column">
-            <h3>cif-test-a</h3>
-            <cif-test-a
-                    cubx-dependency="com.incowia.cif-test.cif-init-test@1.6.0-SNAPSHOT/cif-test-a/main" member-id="first-a"></cif-test-a>
-        </div>
-        <div class="column">
-            <h3>cif-test-a</h3>
-            <cif-test-a
-                    cubx-dependency="com.incowia.cif-test.cif-init-test@1.6.0-SNAPSHOT/cif-test-a/main" id="second-a"></cif-test-a>
-        </div>
-        <div class="column">
-            <h3>cif-test-b</h3>
-            <cif-test-b
-                    cubx-dependency="com.incowia.cif-test.cif-init-test@1.6.0-SNAPSHOT/cif-test-b/main" runtime-id="bla"></cif-test-b>
-        </div>
-    </div>
-
-
-</div>
-
-</body>
-</html>
+<h1>Composite Fall Examples</h1>
+<ul>
+    <li>
+<a href="index_connections.html">Connection Examples</a></li>
+    <li>
+        <a href="index_inits.html">Init Examples</a>
+    </li>
+</ul>
