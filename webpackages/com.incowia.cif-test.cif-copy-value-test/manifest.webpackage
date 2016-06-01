@@ -1,7 +1,7 @@
 {
   "name": "cif-copy-value-test",
   "groupId": "com.incowia.cif-test",
-  "version": "1.6.0",
+  "version": "1.7.0-SNAPSHOT",
   "modelVersion": "8.3.0",
   "docType": "webpackage",
   "author": {
@@ -567,6 +567,14 @@
             "dependencies": [
               "this/copy-value-test-obj-a/html-import",
               "this/copy-value-test-obj-b/html-import"
+            ]
+          },
+          {
+            "endpointId": "test",
+            "resources": [
+              "./test/copy-value-test-compound-obj-test.js"
+            ],
+            "dependencies": [
             ]
           }
         ],
