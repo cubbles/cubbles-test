@@ -52,8 +52,9 @@
     "time-grunt": "~1.0.0"
   },
   "devDependencies": {
-    "http-proxy-middleware": "^0.9.0",
-    "web-component-tester": "^3.4.0"
+    "cubx-grunt-wct-scaffolder": "^0.1.0",
+    "http-proxy-middleware": "^0.15.2",
+    "web-component-tester": "^4.2.2"
   },
   "repository": {
     "type": "git",
@@ -65,5 +66,4 @@
       "url": "http://opensource.org/licenses/mit-license.html"
     }
   ]
-
 }

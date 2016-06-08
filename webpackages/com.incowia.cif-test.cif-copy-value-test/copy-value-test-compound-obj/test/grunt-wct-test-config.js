@@ -1,5 +1,5 @@
 'use strict';
-
+var path = require('path');
 module.exports = function (grunt) {
   return {
     tasks: {
@@ -7,7 +7,7 @@ module.exports = function (grunt) {
         'copy-value-test-compound-obj': {
           options: {
             verbose: true,
-            root: '<%= workspacePath %>/<%= activeWebpackage %>/copy-value-test-compound-obj',
+            root: '<%= workspacePath %>/com.incowia.cif-test.cif-copy-value-test/copy-value-test-compound-obj',
             remote: false,
             plugins: {
               local: {
@@ -27,16 +27,15 @@ module.exports = function (grunt) {
               var context = [ '**', '!/' + grunt.config.get('param.src') + '/**', '!/components/**' ];
 
               var remoteStoreUrl = grunt.config.get('workspaceConfig.remoteStoreUrl');
+              var store = path.basename(remoteStoreUrl);
               // configure proxy middleware options
               var options = {
-                target: {// target host
-                  port: 443,
-                  host: 'webblebase.net'
+                target: 'https://cubbles.world',
+                changeOrigin: true,
+                pathRewrite: {
+                  '^/': '/' + store + '/'
                 },
-                proxyTable: {
-                  'localhost:2000': remoteStoreUrl
-                },
-                logLevel: 'error'
+                logLevel: 'debug'
               };
 
               // create the proxy
