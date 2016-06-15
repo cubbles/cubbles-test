@@ -1,0 +1,111 @@
+{
+  "name": "dependency-mgr",
+  "groupId": "cubx.core.rte.test",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "8.3.1",
+  "docType": "webpackage",
+  "author": {
+    "name": "Philipp Wagner",
+    "email": "philipp.wagner@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "app",
+        "description": "This is a simple pre-generated app.",
+        "runnables": [
+          {
+            "name": "app",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
+      },
+      {
+        "artifactId": "docs",
+        "description": "Generated webpackage documentation.",
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/index.html",
+            "description": "Show the interface of this component."
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "test-elementary-a",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "test-elementary-a.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.10.0-SNAPSHOT/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": []
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "test-compound-a",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/test-compound-a.css",
+              "template.html"
+            ],
+            "dependencies": [
+              "this/test-elementary-a/main"
+            ]
+          }
+        ],
+        "slots": [],
+        "members": [
+          {
+            "memberId": "m1",
+            "componentId": "this/test-elementary-a"
+          }
+        ],
+        "connections": [],
+        "inits": []
+      }
+    ],
+    "utilities": []
+  }
+}

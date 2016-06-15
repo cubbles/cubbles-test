@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>DependencyMgr Demo Scenario</title>
+
+    <script src="../../cubx.core.rte@1.10.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+
+    <script>
+        window.cubx = {
+            CRCInit: {
+                rootDependencies: [
+                    {
+                        "endpoint": "this/test-compound-a/main",
+                        "manifestUrl": "http://example.com/manifest.webpackage",
+                        "manifest": {
+                            "blah": "blubb"
+                        }
+                    }
+                ]
+            }
+        }
+    </script>
+
+    <!-- include crc-loader webresource from base
+        1) Want to add a main script?
+        Add the following attribute: data-crc-main="js/main.js"
+    -->
+    <script src="../../cubx.core.rte@1.10.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body cubx-core-crc>
+<h1>DependencyMgr Demo Scenario</h1>
+<test-compound-a></test-compound-a>
+</body>
+</html>
