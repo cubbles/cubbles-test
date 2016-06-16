@@ -18,14 +18,9 @@
         "description": "This is a simple pre-generated app.",
         "runnables": [
           {
-            "name": "Custom manifestUrl demo",
-            "path": "/index-manifestUrl.html",
-            "description": "Demo showing the usage of custom manifestUrl in rootDependencies"
-          },
-          {
-            "name": "Custom manifest object demo",
-            "path": "/index-manifestObject.html",
-            "description": "Demo showing the usage of custom manifest object in rootDependencies"
+            "name": "app",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
           }
         ]
       },
