@@ -1,7 +1,7 @@
 {
     "name": "repeated-value-test",
     "groupId": "cubx.core.cif-test",
-    "version": "0.7.0",
+    "version": "0.8.0-SNAPSHOT",
     "modelVersion": "8.3.0",
     "docType": "webpackage",
     "author": {

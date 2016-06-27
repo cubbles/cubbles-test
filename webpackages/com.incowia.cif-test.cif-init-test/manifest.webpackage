@@ -1,7 +1,7 @@
 {
   "name": "cif-init-test",
   "groupId": "com.incowia.cif-test",
-  "version": "1.6.0",
+  "version": "1.7.0-SNAPSHOT",
   "modelVersion": "8.3.0",
   "docType": "webpackage",
   "author": {
