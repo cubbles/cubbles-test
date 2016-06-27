@@ -40,7 +40,7 @@
               "component/copy-value-test-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
+              "cubx.core.rte@1.10.0-SNAPSHOT/cubxpolymer/main"
             ]
           },
           {
@@ -49,7 +49,7 @@
               "component/copy-value-test-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
+              "cubx.core.rte@1.10.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -102,7 +102,7 @@
               "component/copy-value-test-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/html-import"
+              "cubx.core.rte@1.10.0-SNAPSHOT/cubxpolymer/html-import"
             ]
           },
           {
@@ -111,7 +111,7 @@
               "component/copy-value-test-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
+              "cubx.core.rte@1.10.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -164,7 +164,7 @@
               "component/copy-value-test-obj-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
+              "cubx.core.rte@1.10.0-SNAPSHOT/cubxpolymer/main"
             ]
           },
           {
@@ -173,7 +173,7 @@
               "component/copy-value-test-obj-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
+              "cubx.core.rte@1.10.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -238,7 +238,7 @@
               "component/copy-value-test-obj-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
+              "cubx.core.rte@1.10.0-SNAPSHOT/cubxpolymer/main"
             ]
           },
           {
@@ -247,7 +247,7 @@
               "component/copy-value-test-obj-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
+              "cubx.core.rte@1.10.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
