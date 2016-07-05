@@ -130,6 +130,18 @@
               "this/second-elementary/main",
               "this/canvas/html-import"
             ]
+          },
+          {
+            "endpointId": "without-template",
+            "description": "This endpoint has no html template.",
+            "resources": [
+              "css/compound-with-template.css"
+            ],
+            "dependencies": [
+              "this/one-elementary/main",
+              "this/second-elementary/main",
+              "this/canvas/html-import"
+            ]
           }
         ],
         "slots": [
