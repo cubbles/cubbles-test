@@ -568,14 +568,6 @@
               "this/copy-value-test-obj-a/html-import",
               "this/copy-value-test-obj-b/html-import"
             ]
-          },
-          {
-            "endpointId": "test",
-            "resources": [
-              "./test/copy-value-test-compound-obj-test.js"
-            ],
-            "dependencies": [
-            ]
           }
         ],
         "slots": [
