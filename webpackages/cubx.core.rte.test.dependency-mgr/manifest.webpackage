@@ -1,7 +1,7 @@
 {
   "name": "dependency-mgr",
   "groupId": "cubx.core.rte.test",
-  "version": "0.1.0-SNAPSHOT",
+  "version": "0.1.0",
   "modelVersion": "8.3.1",
   "docType": "webpackage",
   "author": {
@@ -65,7 +65,7 @@
               "test-elementary-a.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.10.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.10.0/cubxpolymer/main"
             ]
           }
         ],
