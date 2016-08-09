@@ -1,7 +1,7 @@
 {
   "name": "cif-copy-value-test",
   "groupId": "com.incowia.cif-test",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "modelVersion": "8.3.0",
   "docType": "webpackage",
   "author": {
@@ -102,7 +102,7 @@
               "component/copy-value-test-b.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.10.0/cubxpolymer/html-import"
+              "cubx.core.rte@1.10.0/cubxpolymer/main"
             ]
           },
           {
