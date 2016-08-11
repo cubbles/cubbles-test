@@ -1,7 +1,7 @@
 {
     "name": "registered-compounds",
     "groupId": "cubx.core-cif-test",
-    "version": "0.6.0",
+    "version": "1.0.0-SNAPSHOT",
     "modelVersion": "8.3.0",
     "docType": "webpackage",
     "author": {
@@ -34,7 +34,7 @@
                             "content-element.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.10.0/cubxpolymer/main"
+                            "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
                         ]
                     }
                 ],

@@ -55,7 +55,7 @@
               "one-elementary.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.10.0/cubxpolymer/main"
+              "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -89,7 +89,7 @@
               "second-elementary.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.10.0/cubxpolymer/main"
+              "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],

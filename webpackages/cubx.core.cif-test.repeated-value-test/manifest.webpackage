@@ -1,7 +1,7 @@
 {
     "name": "repeated-value-test",
     "groupId": "cubx.core.cif-test",
-    "version": "0.8.0",
+    "version": "1.0.0-SNAPSHOT",
     "modelVersion": "8.3.0",
     "docType": "webpackage",
     "author": {
@@ -40,7 +40,7 @@
                             "repeated-value-elementary-a.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.10.0/cubxpolymer/main"
+                            "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
                         ]
                     }
                 ],
@@ -96,7 +96,7 @@
                             "repeated-value-elementary-e.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.10.0/cubxpolymer/main"
+                            "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
                         ]
                     }
                 ],
@@ -120,7 +120,7 @@
                             "repeated-value-elementary-f.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.10.0/cubxpolymer/main"
+                            "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
                         ]
                     }
                 ],
