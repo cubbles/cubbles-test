@@ -20,7 +20,7 @@
     },
 
     cubxReady: function () {
-      this.$.runtimeid.innerHTML = this.getAttribute('runtime-id');
+      // this.$.runtimeid.innerHTML = this.getAttribute('runtime-id');
     },
     /**
      *  Observe the Cubbles-Component-Model: If value for slot 'a' has changed ...
