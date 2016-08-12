@@ -12,7 +12,6 @@ module.exports.tasks = {
         'lib/**/*.js'
       ]
     },
-
     client: {
       options: {
         configFile: '<%= param.src %>/.eslintrc'
@@ -38,10 +37,7 @@ module.exports.tasks = {
       csslintrc: '.csslintrc'
     },
     strict: { // attach exclude file with prefix '!', ex: ![path]/main.css
-      src: [ '<%= param.src %>/**/*.css',
-        '!<%= param.src %>/**/vendor/**',
-        '!<%= param.src %>/**/test-results/**',
-        '!<%= param.src %>/**/bower_components/**' ]
+      src: [ '<%= param.src %>/**/*.css', '!<%= param.src %>/**/vendor/**', '!<%= param.src %>/**/test-results/**' ]
     }
   }
 
