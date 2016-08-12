@@ -121,6 +121,11 @@
                         "name": "example",
                         "path": "/demo/index.html",
                         "description": "Example for connection hookFunctions, across sibling connections and internal connections"
+                    },
+                    {
+                      "name": "test",
+                      "path": "/test/index.html",
+                      "description": "wct test..."
                     }
                 ],
                 "endpoints": [
