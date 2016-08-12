@@ -1,7 +1,0 @@
-{
-  "devtools": {
-    "localFolder": "devtools-mappedIn",
-    "repository": "https://pmt.incowia.de/webble/r/client/cubbles-coder-devtools.git",
-    "branch": "master"
-  }
-}

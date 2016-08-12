@@ -1,5 +1,0 @@
-html, body {margin:5px;padding:0;height:99%;}
-div[cubx-core-crc]{
-    height:100%; /* IE6: setzt dies wie min-height um*/
-    min-height:100%;
-}
