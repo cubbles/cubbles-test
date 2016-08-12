@@ -51,7 +51,10 @@
     "standard": "^6.0.8",
     "time-grunt": "~1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "http-proxy-middleware": "^0.15.1",
+    "web-component-tester": "^4.2.2"
+  },
   "repository": {
     "type": "git",
     "url": "https://pmt.incowia.de/webble/r/client/cubbles-coder-devtools.git"
