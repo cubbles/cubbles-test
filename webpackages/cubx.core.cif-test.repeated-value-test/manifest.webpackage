@@ -2,7 +2,7 @@
     "name": "repeated-value-test",
     "groupId": "cubx.core.cif-test",
     "version": "1.0.0-SNAPSHOT",
-    "modelVersion": "8.3.0",
+    "modelVersion": "9.1.0",
     "docType": "webpackage",
     "author": {
         "name": "Judit Ross",
@@ -14,7 +14,6 @@
         "test"
     ],
     "man": [],
-
     "artifacts": {
         "apps": [
             {
@@ -32,18 +31,6 @@
             {
                 "artifactId": "repeated-value-elementary-a",
                 "description": "This is an elementary-component based on Polymer.",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "description": "This is recommended for you use with webcomponents.",
-                        "resources": [
-                            "repeated-value-elementary-a.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
-                        ]
-                    }
-                ],
                 "slots": [
                     {
                         "slotId": "a",
@@ -84,22 +71,21 @@
                             "value": "object value d"
                         }
                     }
+                ],
+                "resources": [
+                    "repeated-value-elementary-a.html"
+                ],
+                "dependencies": [
+                    {
+                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "artifactId": "cubxpolymer",
+                        "endpointId": "main"
+                    }
                 ]
             },
             {
                 "artifactId": "repeated-value-elementary-e",
                 "description": "This is an elementary-component based on Polymer.",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "repeated-value-elementary-e.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
-                        ]
-                    }
-                ],
                 "slots": [
                     {
                         "slotId": "clicked",
@@ -108,22 +94,21 @@
                             "output"
                         ]
                     }
+                ],
+                "resources": [
+                    "repeated-value-elementary-e.html"
+                ],
+                "dependencies": [
+                    {
+                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "artifactId": "cubxpolymer",
+                        "endpointId": "main"
+                    }
                 ]
             },
             {
                 "artifactId": "repeated-value-elementary-f",
                 "description": "This is an elementary-component based on Polymer.",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "repeated-value-elementary-f.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
-                        ]
-                    }
-                ],
                 "slots": [
                     {
                         "slotId": "clicked",
@@ -133,6 +118,16 @@
                         ],
                         "value": false
                     }
+                ],
+                "resources": [
+                    "repeated-value-elementary-f.html"
+                ],
+                "dependencies": [
+                    {
+                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "artifactId": "cubxpolymer",
+                        "endpointId": "main"
+                    }
                 ]
             }
         ],
@@ -140,17 +135,6 @@
             {
                 "artifactId": "repeated-value-false-compound-b",
                 "description": "This is a cubixx-compound-component.",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "css/repeated-value-false-compound-b.css"
-                        ],
-                        "dependencies": [
-                            "this/repeated-value-elementary-a/main"
-                        ]
-                    }
-                ],
                 "slots": [
                     {
                         "slotId": "aa",
@@ -195,7 +179,7 @@
                 "members": [
                     {
                         "memberId": "innerElementary",
-                        "componentId": "this/repeated-value-elementary-a"
+                        "artifactId": "repeated-value-elementary-a"
                     }
                 ],
                 "connections": [
@@ -280,22 +264,19 @@
                         }
                     }
                 ],
-                "inits": []
+                "inits": [],
+                "resources": [
+                    "css/repeated-value-false-compound-b.css"
+                ],
+                "dependencies": [
+                    {
+                        "artifactId": "repeated-value-elementary-a"
+                    }
+                ]
             },
             {
                 "artifactId": "repeated-value-false-compound-c",
                 "description": "This is a cubixx-compound-component.",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "css/repeated-value-false-compound-c.css"
-                        ],
-                        "dependencies": [
-                            "this/repeated-value-elementary-a/main"
-                        ]
-                    }
-                ],
                 "slots": [
                     {
                         "slotId": "aa",
@@ -333,11 +314,11 @@
                 "members": [
                     {
                         "memberId": "firstInnerElementary",
-                        "componentId": "this/repeated-value-elementary-a"
+                        "artifactId": "repeated-value-elementary-a"
                     },
                     {
                         "memberId": "secondInnerElementary",
-                        "componentId": "this/repeated-value-elementary-a"
+                        "artifactId": "repeated-value-elementary-a"
                     }
                 ],
                 "connections": [
@@ -510,34 +491,32 @@
                         }
                     }
                 ],
-                "inits": []
+                "inits": [],
+                "resources": [
+                    "css/repeated-value-false-compound-c.css"
+                ],
+                "dependencies": [
+                    {
+                        "artifactId": "repeated-value-elementary-a"
+                    }
+                ]
             },
             {
                 "artifactId": "repeated-value-false-compound-d",
                 "description": "This is a cubixx-compound-component.",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [],
-                        "dependencies": [
-                            "this/repeated-value-false-compound-b/main",
-                            "this/repeated-value-false-compound-c/main"
-                        ]
-                    }
-                ],
                 "slots": [],
                 "members": [
                     {
                         "memberId": "member1",
-                        "componentId": "this/repeated-value-false-compound-b"
+                        "artifactId": "repeated-value-false-compound-b"
                     },
                     {
                         "memberId": "member2",
-                        "componentId": "this/repeated-value-false-compound-c"
+                        "artifactId": "repeated-value-false-compound-c"
                     },
                     {
                         "memberId": "member3",
-                        "componentId": "this/repeated-value-false-compound-b"
+                        "artifactId": "repeated-value-false-compound-b"
                     }
                 ],
                 "connections": [
@@ -806,33 +785,29 @@
                         }
                     }
                 ],
-                "inits": []
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "repeated-value-false-compound-b"
+                    },
+                    {
+                        "artifactId": "repeated-value-false-compound-c"
+                    }
+                ]
             },
             {
                 "artifactId": "repeated-value-true-compound-g",
                 "description": "This is a cubixx-compound-component.",
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "css/repeated-value-true-compound-g.css"
-                        ],
-                        "dependencies": [
-                            "this/repeated-value-elementary-e/main",
-                            "this/repeated-value-elementary-f/main"
-                        ]
-                    }
-                ],
-                "slots": [
-                ],
+                "slots": [],
                 "members": [
                     {
                         "memberId": "clicksender",
-                        "componentId": "this/repeated-value-elementary-e"
+                        "artifactId": "repeated-value-elementary-e"
                     },
                     {
                         "memberId": "clickreciver",
-                        "componentId": "this/repeated-value-elementary-f"
+                        "artifactId": "repeated-value-elementary-f"
                     }
                 ],
                 "connections": [
@@ -849,7 +824,17 @@
                         "repeatedValues": true
                     }
                 ],
-                "inits": [
+                "inits": [],
+                "resources": [
+                    "css/repeated-value-true-compound-g.css"
+                ],
+                "dependencies": [
+                    {
+                        "artifactId": "repeated-value-elementary-e"
+                    },
+                    {
+                        "artifactId": "repeated-value-elementary-f"
+                    }
                 ]
             }
         ],

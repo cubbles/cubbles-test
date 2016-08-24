@@ -2,7 +2,7 @@
     "name": "registered-compounds",
     "groupId": "cubx.core-cif-test",
     "version": "1.0.0-SNAPSHOT",
-    "modelVersion": "8.3.0",
+    "modelVersion": "9.1.0",
     "docType": "webpackage",
     "author": {
         "name": "Judit Ross",
@@ -13,8 +13,7 @@
     "keywords": [],
     "man": [],
     "artifacts": {
-        "apps": [
-        ],
+        "apps": [],
         "elementaryComponents": [
             {
                 "artifactId": "content-element",
@@ -26,18 +25,6 @@
                         "description": "Demo app..."
                     }
                 ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "description": "This is recommended for you use with webcomponents.",
-                        "resources": [
-                            "content-element.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
-                        ]
-                    }
-                ],
                 "slots": [
                     {
                         "slotId": "message",
@@ -45,6 +32,16 @@
                         "direction": [
                             "input"
                         ]
+                    }
+                ],
+                "resources": [
+                    "content-element.html"
+                ],
+                "dependencies": [
+                    {
+                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "artifactId": "cubxpolymer",
+                        "endpointId": "main"
                     }
                 ]
             }
@@ -60,15 +57,6 @@
                         "description": "Demo app..."
                     }
                 ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [],
-                        "dependencies": [
-                            "this/content-element/main"
-                        ]
-                    }
-                ],
                 "slots": [
                     {
                         "slotId": "message",
@@ -81,7 +69,7 @@
                 "members": [
                     {
                         "memberId": "content",
-                        "componentId": "this/content-element"
+                        "artifactId": "content-element"
                     }
                 ],
                 "connections": [
@@ -96,7 +84,12 @@
                         }
                     }
                 ],
-                "inits": [
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "content-element"
+                    }
                 ]
             },
             {
@@ -107,15 +100,6 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [],
-                        "dependencies": [
-                            "this/inner-frame/main"
-                        ]
                     }
                 ],
                 "slots": [
@@ -130,11 +114,11 @@
                 "members": [
                     {
                         "memberId": "innerFrame1",
-                        "componentId": "this/inner-frame"
+                        "artifactId": "inner-frame"
                     },
                     {
                         "memberId": "innerFrame2",
-                        "componentId": "this/inner-frame"
+                        "artifactId": "inner-frame"
                     }
                 ],
                 "connections": [
@@ -159,7 +143,12 @@
                         }
                     }
                 ],
-                "inits": [
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "inner-frame"
+                    }
                 ]
             }
         ],

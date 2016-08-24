@@ -2,7 +2,7 @@
     "name": "connectionhook-scenario",
     "groupId": "cubx.rte.test",
     "version": "1.0.0-SNAPSHOT",
-    "modelVersion": "8.3.0",
+    "modelVersion": "9.1.0",
     "docType": "webpackage",
     "author": {
         "name": "Judit Ross",
@@ -24,19 +24,6 @@
                         "description": "Demo app..."
                     }
                 ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "description": "This is recommended for you use with webcomponents.",
-                        "resources": [
-                            "message-viewer.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main",
-                            "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only"
-                        ]
-                    }
-                ],
                 "slots": [
                     {
                         "slotId": "message",
@@ -45,6 +32,21 @@
                             "input",
                             "output"
                         ]
+                    }
+                ],
+                "resources": [
+                    "message-viewer.html"
+                ],
+                "dependencies": [
+                    {
+                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "artifactId": "cubxpolymer",
+                        "endpointId": "main"
+                    },
+                    {
+                        "webpackageId": "bootstrap-3.3.5@1.0.3",
+                        "artifactId": "bootstrap",
+                        "endpointId": "bootstrap-css-only"
                     }
                 ]
             }
@@ -60,17 +62,6 @@
                         "description": "Demo app..."
                     }
                 ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "css/message-viewer-compound.css"
-                        ],
-                        "dependencies": [
-                            "this/message-viewer/main"
-                        ]
-                    }
-                ],
                 "slots": [
                     {
                         "slotId": "message",
@@ -84,7 +75,7 @@
                 "members": [
                     {
                         "memberId": "inner",
-                        "componentId": "this/message-viewer"
+                        "artifactId": "message-viewer"
                     }
                 ],
                 "connections": [
@@ -111,7 +102,15 @@
                         "hookFunction": "function(value,next){ var newValue = value + ' (5)'; next(newValue);}"
                     }
                 ],
-                "inits": []
+                "inits": [],
+                "resources": [
+                    "css/message-viewer-compound.css"
+                ],
+                "dependencies": [
+                    {
+                        "artifactId": "message-viewer"
+                    }
+                ]
             },
             {
                 "artifactId": "example-compound",
@@ -123,40 +122,27 @@
                         "description": "Example for connection hookFunctions, across sibling connections and internal connections"
                     },
                     {
-                      "name": "test",
-                      "path": "/test/index.html",
-                      "description": "wct test..."
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "resources": [
-                            "css/example-compound.css",
-                            "js/style.js"
-                        ],
-                        "dependencies": [
-                            "this/message-viewer/main",
-                            "this/message-viewer-compound/main"
-                        ]
+                        "name": "test",
+                        "path": "/test/index.html",
+                        "description": "wct test..."
                     }
                 ],
                 "members": [
                     {
                         "memberId": "first",
-                        "componentId": "this/message-viewer"
+                        "artifactId": "message-viewer"
                     },
                     {
                         "memberId": "second",
-                        "componentId": "this/message-viewer-compound"
+                        "artifactId": "message-viewer-compound"
                     },
                     {
                         "memberId": "third",
-                        "componentId": "this/message-viewer-compound"
+                        "artifactId": "message-viewer-compound"
                     },
                     {
                         "memberId": "fourth",
-                        "componentId": "this/message-viewer"
+                        "artifactId": "message-viewer"
                     }
                 ],
                 "connections": [
@@ -197,7 +183,19 @@
                         "hookFunction": "function(value,next){ var newValue = value + ' (3)'; next(newValue);}"
                     }
                 ],
-                "inits": []
+                "inits": [],
+                "resources": [
+                    "css/example-compound.css",
+                    "js/style.js"
+                ],
+                "dependencies": [
+                    {
+                        "artifactId": "message-viewer"
+                    },
+                    {
+                        "artifactId": "message-viewer-compound"
+                    }
+                ]
             }
         ],
         "utilities": []

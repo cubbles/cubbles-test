@@ -1,320 +1,392 @@
 {
-  "name": "compound-template-test",
-  "groupId": "cubx.core.rte",
-  "version": "1.0.0-SNAPSHOT",
-  "modelVersion": "8.3.1",
-  "docType": "webpackage",
-  "author": {
-    "name": "Judit Ross",
-    "email": "judit.ross@incowia.com"
-  },
-  "license": "MIT",
-  "keywords": [],
-  "man": [],
-  "artifacts": {
-    "apps": [
-      {
-        "artifactId": "cif-template-test",
-        "description": "",
-        "runnables": [
-          {
-            "name": "My Hello World App.",
-            "path": "/index.html",
-            "description": "Call this app as a simple demo."
-          }
-        ]
-      },
-      {
-        "artifactId": "demo-template-app",
-        "description": "",
-        "runnables": [
-          {
-            "name": "My Hello World App.",
-            "path": "/index.html",
-            "description": "Call this app as a simple demo."
-          }
-        ]
-      }
-    ],
-    "elementaryComponents": [
-      {
-        "artifactId": "one-elementary",
-        "description": "This is an elementary-component based on Polymer.",
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "one-elementary.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
-            ]
-          }
-        ],
-        "slots": [
-          {
-            "slotId": "a",
-            "type": "number",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": 10
-          }
-        ]
-      },
-      {
-        "artifactId": "second-elementary",
-        "description": "This is an elementary-component based on Polymer.",
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "second-elementary.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main"
-            ]
-          }
-        ],
-        "slots": [
-          {
-            "slotId": "a",
-            "type": "number",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": 5
-          }
-        ]
-      }
-    ],
-    "compoundComponents": [
-      {
-        "artifactId": "compound-with-template",
-        "description": "This is a cubbles-compound-component.",
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/compound-with-template.css",
-              "compound-with-template.html"
-            ],
-            "dependencies": [
-              "bootstrap-3.3.5@1.0.3/bootstrap/bootstrap-css-only",
-              "this/one-elementary/main",
-              "this/second-elementary/main",
-              "this/canvas/html-import"
-            ]
-          },
-          {
-            "endpointId": "without-template",
-            "description": "This endpoint has no html template.",
-            "resources": [
-              "css/compound-with-template.css"
-            ],
-            "dependencies": [
-              "this/one-elementary/main",
-              "this/second-elementary/main",
-              "this/canvas/html-import"
-            ]
-          }
-        ],
-        "slots": [
-          {
-            "slotId": "a",
-            "type": "number",
-            "direction": [
-              "input",
-              "output"
-            ]
-          }
-        ],
-        "members": [
-          {
-            "memberId": "source",
-            "componentId": "this/one-elementary"
-          },
-          {
-            "memberId": "target",
-            "componentId": "this/second-elementary"
-          }
-        ],
-        "connections": [
-          {
-            "connectionId": "transfer",
-            "source": {
-              "memberIdRef": "source",
-              "slot": "a"
+    "name": "compound-template-test",
+    "groupId": "cubx.core.rte",
+    "version": "1.0.0-SNAPSHOT",
+    "modelVersion": "9.1.0",
+    "docType": "webpackage",
+    "author": {
+        "name": "Judit Ross",
+        "email": "judit.ross@incowia.com"
+    },
+    "license": "MIT",
+    "keywords": [],
+    "man": [],
+    "artifacts": {
+        "apps": [
+            {
+                "artifactId": "cif-template-test",
+                "description": "",
+                "runnables": [
+                    {
+                        "name": "My Hello World App.",
+                        "path": "/index.html",
+                        "description": "Call this app as a simple demo."
+                    }
+                ]
             },
-            "destination": {
-              "memberIdRef": "target",
-              "slot": "a"
+            {
+                "artifactId": "demo-template-app",
+                "description": "",
+                "runnables": [
+                    {
+                        "name": "My Hello World App.",
+                        "path": "/index.html",
+                        "description": "Call this app as a simple demo."
+                    }
+                ]
             }
-          },
-          {
-            "connectionId": "to-in",
-            "source": {
-              "slot": "a"
-            },
-            "destination": {
-              "memberIdRef": "source",
-              "slot": "a"
-            }
-          },
-          {
-            "connectionId": "to-out",
-            "source": {
-              "memberIdRef": "target",
-              "slot": "a"
-            },
-            "destination": {
-              "slot": "a"
-            }
-          }
         ],
-        "inits": [
-          {
-            "memberIdRef": "source",
-            "slot": "a",
-            "value": 15
-          },
-          {
-            "slot": "a",
-            "value": 20
-          }
+        "elementaryComponents": [
+            {
+                "artifactId": "one-elementary",
+                "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "a",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": 10
+                    }
+                ],
+                "resources": [
+                    "one-elementary.html"
+                ],
+                "dependencies": [
+                    {
+                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "artifactId": "cubxpolymer",
+                        "endpointId": "main"
+                    }
+                ]
+            },
+            {
+                "artifactId": "second-elementary",
+                "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "a",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": 5
+                    }
+                ],
+                "resources": [
+                    "second-elementary.html"
+                ],
+                "dependencies": [
+                    {
+                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "artifactId": "cubxpolymer",
+                        "endpointId": "main"
+                    }
+                ]
+            }
+        ],
+        "compoundComponents": [
+            {
+                "artifactId": "compound-with-template-main",
+                "description": "This is a cubbles-compound-component.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "a",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "source",
+                        "artifactId": "one-elementary"
+                    },
+                    {
+                        "memberId": "target",
+                        "artifactId": "second-elementary"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "transfer",
+                        "source": {
+                            "memberIdRef": "source",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "memberIdRef": "target",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "to-in",
+                        "source": {
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "memberIdRef": "source",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "to-out",
+                        "source": {
+                            "memberIdRef": "target",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "slot": "a"
+                        }
+                    }
+                ],
+                "inits": [
+                    {
+                        "memberIdRef": "source",
+                        "slot": "a",
+                        "value": 15
+                    },
+                    {
+                        "slot": "a",
+                        "value": 20
+                    }
+                ],
+                "resources": [
+                    "css/compound-with-template.css",
+                    "compound-with-template.html"
+                ],
+                "dependencies": [
+                    {
+                        "webpackageId": "bootstrap-3.3.5@1.0.3",
+                        "artifactId": "bootstrap",
+                        "endpointId": "bootstrap-css-only"
+                    },
+                    {
+                        "artifactId": "one-elementary"
+                    },
+                    {
+                        "artifactId": "second-elementary"
+                    },
+                    {
+                        "artifactId": "canvas-main"
+                    }
+                ]
+            },
+            {
+                "artifactId": "compound-with-template-without-template",
+                "description": "This is a cubbles-compound-component. This endpoint has no html template.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "a",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "source",
+                        "artifactId": "one-elementary"
+                    },
+                    {
+                        "memberId": "target",
+                        "artifactId": "second-elementary"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "transfer",
+                        "source": {
+                            "memberIdRef": "source",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "memberIdRef": "target",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "to-in",
+                        "source": {
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "memberIdRef": "source",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "to-out",
+                        "source": {
+                            "memberIdRef": "target",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "slot": "a"
+                        }
+                    }
+                ],
+                "inits": [
+                    {
+                        "memberIdRef": "source",
+                        "slot": "a",
+                        "value": 15
+                    },
+                    {
+                        "slot": "a",
+                        "value": 20
+                    }
+                ],
+                "resources": [
+                    "css/compound-with-template.css"
+                ],
+                "dependencies": [
+                    {
+                        "artifactId": "one-elementary"
+                    },
+                    {
+                        "artifactId": "second-elementary"
+                    },
+                    {
+                        "artifactId": "canvas-main"
+                    }
+                ]
+            },
+            {
+                "artifactId": "outer-compound-with-template",
+                "description": "This is a cubbles-compound-component.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "a",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "first",
+                        "artifactId": "compound-with-template-main"
+                    },
+                    {
+                        "memberId": "second",
+                        "artifactId": "compound-with-template-main"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "inner",
+                        "source": {
+                            "memberIdRef": "first",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "memberIdRef": "second",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "to-in",
+                        "source": {
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "memberIdRef": "first",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "to-out",
+                        "source": {
+                            "memberIdRef": "second",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "slot": "a"
+                        }
+                    }
+                ],
+                "inits": [
+                    {
+                        "slot": "a",
+                        "value": 0
+                    }
+                ],
+                "resources": [
+                    "css/outer-compound-with-template.css",
+                    "outer-compound-with-template.html"
+                ],
+                "dependencies": [
+                    {
+                        "artifactId": "compound-with-template-main"
+                    },
+                    {
+                        "artifactId": "canvas-main"
+                    }
+                ]
+            }
+        ],
+        "utilities": [
+            {
+                "artifactId": "canvas-main",
+                "description": "",
+                "resources": [
+                    "js/canvas.js"
+                ],
+                "dependencies": []
+            },
+            {
+                "artifactId": "canvas-html-import",
+                "description": " This is recommended for you use with webcomponents.",
+                "resources": [
+                    "html-import.html"
+                ],
+                "dependencies": []
+            }
         ]
-      },
-      {
-        "artifactId": "outer-compound-with-template",
-        "description": "This is a cubbles-compound-component.",
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/outer-compound-with-template.css",
-              "outer-compound-with-template.html"
-            ],
-            "dependencies": [
-              "this/compound-with-template/main",
-              "this/canvas/html-import"
-            ]
-          }
-        ],
-        "slots": [
-          {
-            "slotId": "a",
-            "type": "number",
-            "direction": [
-              "input",
-              "output"
-            ]
-          }
-        ],
-        "members": [
-          {
-            "memberId": "first",
-            "componentId": "this/compound-with-template"
-          },
-          {
-            "memberId": "second",
-            "componentId": "this/compound-with-template"
-          }
-        ],
-        "connections": [
-          {
-            "connectionId": "inner",
-            "source": {
-              "memberIdRef": "first",
-              "slot": "a"
-            },
-            "destination": {
-              "memberIdRef": "second",
-              "slot": "a"
-            }
-          },
-          {
-            "connectionId": "to-in",
-            "source": {
-              "slot": "a"
-            },
-            "destination": {
-              "memberIdRef": "first",
-              "slot": "a"
-            }
-          },
-          {
-            "connectionId": "to-out",
-            "source": {
-              "memberIdRef": "second",
-              "slot": "a"
-            },
-            "destination": {
-              "slot": "a"
-            }
-          }
-        ],
-        "inits": [
-          {
-            "slot": "a",
-            "value": 0
-          }
-        ]
-      }
-    ],
-    "utilities": [
-      {
-        "artifactId": "canvas",
-        "description": "",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "js/canvas.js"
-            ],
-            "dependencies": []
-          },
-          {
-            "endpointId": "html-import",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "html-import.html"
-            ],
-            "dependencies": []
-          }
-        ]
-      }
-    ]
-  }
+    }
 }

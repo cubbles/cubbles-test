@@ -1,859 +1,873 @@
 {
-  "name": "connectionhook-test",
-  "groupId": "cubx.core.cif-test",
-  "version": "1.0.0-SNAPSHOT",
-  "modelVersion": "8.3.0",
-  "docType": "webpackage",
-  "author": {
-    "name": "Judit Ross",
-    "email": "judit.ross@incowia.com"
-  },
-  "license": "MIT",
-  "keywords": [
-    "cif-test",
-    "test"
-  ],
-  "man": [],
-  "artifacts": {
-    "apps": [],
-    "elementaryComponents": [
-      {
-        "artifactId": "connectionhook-elementary-a",
-        "description": "Elementary component with number, string and object slot for input.",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "connectionhook-elementary-a.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main",
-              "bootstrap-3.3.5@1.0.2/bootstrap/main"
-            ]
-          }
-        ],
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "demo app for connectionhook-elementary-a"
-          }
-        ],
-        "slots": [
-          {
-            "slotId": "a",
-            "type": "number",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": 10
-          },
-          {
-            "slotId": "b",
-            "type": "string",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": "Hallo World!"
-          },
-          {
-            "slotId": "c",
-            "type": "object",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": {
-              "name": "Doe",
-              "firstname": "John"
-            }
-          }
-        ]
-      },
-      {
-        "artifactId": "connectionhook-elementary-b",
-        "description": "Elementary component with number, string and object slot for output.",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "connectionhook-elementary-b.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@2.0.0-SNAPSHOT/cubxpolymer/main",
-              "bootstrap-3.3.5@1.0.2/bootstrap/main"
-            ]
-          }
-        ],
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "demo app for connectionhook-elementary-b"
-          }
-        ],
-        "slots": [
-          {
-            "slotId": "a",
-            "type": "number",
-            "direction": [
-              "input"
-            ],
-            "value": 15
-          },
-          {
-            "slotId": "b",
-            "type": "string",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": "nothing"
-          },
-          {
-            "slotId": "c",
-            "type": "object",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": {
-              "name": "xxx",
-              "firstname": "yyy"
-            }
-          }
-        ]
-      }
+    "name": "connectionhook-test",
+    "groupId": "cubx.core.cif-test",
+    "version": "1.0.0-SNAPSHOT",
+    "modelVersion": "9.1.0",
+    "docType": "webpackage",
+    "author": {
+        "name": "Judit Ross",
+        "email": "judit.ross@incowia.com"
+    },
+    "license": "MIT",
+    "keywords": [
+        "cif-test",
+        "test"
     ],
-    "compoundComponents": [
-      {
-        "artifactId": "connectionhook-compound-c",
-        "description": "Compound Component with inline connection hooks between members.",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/connectionhook-compound-c.css"
-            ],
-            "dependencies": [
-              "this/connectionhook-elementary-a/main",
-              "this/connectionhook-elementary-b/main",
-              "bootstrap-3.3.5@1.0.2/bootstrap/main"
-            ]
-          }
-        ],
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "demo app for connectionhook-compound-c"
-          }
-        ],
-        "slots": [],
-        "members": [
-          {
-            "memberId": "member-a",
-            "componentId": "this/connectionhook-elementary-a"
-          },
-          {
-            "memberId": "member-b",
-            "componentId": "this/connectionhook-elementary-b"
-          }
-        ],
-        "connections": [
-          {
-            "connectionId": "member-a:a-member-b:a",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "a"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "a"
-            },
-            "hookFunction": "function(value,next) { value = Number(value)*10; next(value);}"
-          },
-          {
-            "connectionId": "member-a:b-member-b:b",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "b"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "b"
-            },
-            "hookFunction": "function(value, next) { value = 'Greeting: ' + value;  next(value);};"
-          },
-          {
-            "connectionId": "member-a:c-member-b:c",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "c"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "c"
-            },
-            "hookFunction": "function(value, next) { var newValue = {}; newValue.name = value.firstname ? value.firstname + ' ' : ''; newValue.name += value.name; next(newValue);};"
-          }
-        ],
-        "inits": []
-      },
-      {
-        "artifactId": "connectionhook-compound-d",
-        "description": "Compound component with globale connection hooks between members.",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [],
-            "dependencies": [
-              "this/connectionhook-elementary-a/main",
-              "this/connectionhook-elementary-b/main",
-              "this/transform-functions/main",
-              "bootstrap-3.3.5@1.0.2/bootstrap/main"
-            ]
-          }
-        ],
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "demo app for connectionhook-compound-d"
-          }
-        ],
-        "slots": [],
-        "members": [
-          {
-            "memberId": "member-a",
-            "componentId": "this/connectionhook-elementary-a"
-          },
-          {
-            "memberId": "member-b",
-            "componentId": "this/connectionhook-elementary-b"
-          }
-        ],
-        "connections": [
-          {
-            "connectionId": "member-a:a-member-b:a",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "a"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "a"
-            },
-            "hookFunction": "cubx.hookFunctions.multiply10"
-          },
-          {
-            "connectionId": "member-a:b-member-b:b",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "b"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "b"
-            },
-            "hookFunction": "cubx.hookFunctions.greeting"
-          },
-          {
-            "connectionId": "member-a:c-member-b:c",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "c"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "c"
-            },
-            "hookFunction": "cubx.hookFunctions.fullName"
-          }
-        ],
-        "inits": []
-      },
-      {
-        "artifactId": "connectionhook-compound-e",
-        "description": "Compound Component with connection hook on connections from member to self. (included as member connectionhook-element-a)",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [],
-            "dependencies": [
-              "this/connectionhook-elementary-a/main",
-              "this/transform-functions/main",
-              "bootstrap-3.3.5@1.0.2/bootstrap/main"
-            ]
-          }
-        ],
-          "runnables": [
-              {
-                  "name": "demo",
-                  "path": "/demo/index.html",
-                  "description": "demo app for connectionhook-compound-e"
-              }
-          ],
-        "slots": [
-          {
-            "slotId": "aa",
-            "type": "number",
-            "direction": [
-              "output"
-            ]
-          },
-          {
-            "slotId": "bb",
-            "type": "string",
-            "direction": [
-              "output"
-            ]
-          },
-          {
-            "slotId": "cc",
-            "type": "object",
-            "direction": [
-              "output"
-            ]
-          }
-        ],
-        "members": [
-          {
-            "memberId": "member-a",
-            "componentId": "this/connectionhook-elementary-a"
-          }
-        ],
-        "connections": [
-          {
-            "connectionId": "member-a:a-aa",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "a"
-            },
-            "destination": {
-              "slot": "aa"
-            },
-            "hookFunction": "cubx.hookFunctions.multiply10"
-          },
-          {
-            "connectionId": "member-a:b-bb",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "b"
-            },
-            "destination": {
-              "slot": "bb"
-            },
-            "hookFunction": "cubx.hookFunctions.greeting"
-          },
-          {
-            "connectionId": "member-a:c-cc",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "c"
-            },
-            "destination": {
-              "slot": "cc"
-            },
-            "hookFunction": "cubx.hookFunctions.fullName"
-          }
-        ],
-        "inits": []
-      },
-      {
-        "artifactId": "connectionhook-compound-f",
-        "description": "Compound Component with connection hook on connections from self to member (included as member connectionhook-element-b)",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [],
-            "dependencies": [
-              "this/connectionhook-elementary-b/main",
-              "this/transform-functions/main",
-              "bootstrap-3.3.5@1.0.2/bootstrap/main"
-            ]
-          }
-        ],"runnables": [
-          {
-              "name": "demo",
-              "path": "/demo/index.html",
-              "description": "demo app for connectionhook-compound-df"
-          }
-      ],
-        "slots": [
-          {
-            "slotId": "aa",
-            "type": "number",
-            "direction": [
-              "input"
-            ]
-          },
-          {
-            "slotId": "bb",
-            "type": "string",
-            "direction": [
-              "input"
-            ]
-          },
-          {
-            "slotId": "cc",
-            "type": "object",
-            "direction": [
-              "input"
-            ]
-          }
-        ],
-        "members": [
-          {
-            "memberId": "member-b",
-            "componentId": "this/connectionhook-elementary-b"
-          }
-        ],
-        "connections": [
-          {
-            "connectionId": "aa-member-b:a",
-            "source": {
-              "slot": "aa"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "a"
-            },
-            "hookFunction": "cubx.hookFunctions.multiply10"
-          },
-          {
-            "connectionId": "bb-member-b:b",
-            "source": {
-              "slot": "bb"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "b"
-            },
-            "hookFunction": "cubx.hookFunctions.greeting"
-          },
-          {
-            "connectionId": "cc-member-b:c",
-            "source": {
-              "slot": "cc"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "c"
-            },
-            "hookFunction": "cubx.hookFunctions.fullName"
-          }
-        ],
-        "inits": []
-      },
-      {
-        "artifactId": "connectionhook-compound-g",
-        "description": "Compound Component without connection hook (included as member connectionhook-element-a)",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [],
-            "dependencies": [
-              "this/connectionhook-elementary-a/main",
-              "this/transform-functions/main",
-              "bootstrap-3.3.5@1.0.2/bootstrap/main"
-            ]
-          }
-        ],"runnables": [
-          {
-              "name": "demo",
-              "path": "/demo/index.html",
-              "description": "demo app for connectionhook-compound-g"
-          }
-      ],
-        "slots": [
-          {
-            "slotId": "aa",
-            "type": "number",
-            "direction": [
-              "output"
-            ]
-          },
-          {
-            "slotId": "bb",
-            "type": "string",
-            "direction": [
-              "output"
-            ]
-          },
-          {
-            "slotId": "cc",
-            "type": "object",
-            "direction": [
-              "output"
-            ]
-          }
-        ],
-        "members": [
-          {
-            "memberId": "member-a",
-            "componentId": "this/connectionhook-elementary-a"
-          }
-        ],
-        "connections": [
-          {
-            "connectionId": "member-a:a-aa",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "a"
-            },
-            "destination": {
-              "slot": "aa"
-            }
-          },
-          {
-            "connectionId": "member-a:b-bb",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "b"
-            },
-            "destination": {
-              "slot": "bb"
-            }
-          },
-          {
-            "connectionId": "member-a:c-cc",
-            "source": {
-              "memberIdRef": "member-a",
-              "slot": "c"
-            },
-            "destination": {
-              "slot": "cc"
-            }
-          }
-        ],
-        "inits": []
-      },
-      {
-        "artifactId": "connectionhook-compound-h",
-        "description": "Compound Component without connection hook (included as member connectionhook-element-b)",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [],
-            "dependencies": [
-              "this/connectionhook-elementary-b/main",
-              "this/transform-functions/main",
-              "bootstrap-3.3.5@1.0.2/bootstrap/main"
-            ]
-          }
-        ],"runnables": [
-          {
-              "name": "demo",
-              "path": "/demo/index.html",
-              "description": "demo app for connectionhook-compound-h"
-          }
-      ],
-        "slots": [
-          {
-            "slotId": "aa",
-            "type": "number",
-            "direction": [
-              "input"
-            ]
-          },
-          {
-            "slotId": "bb",
-            "type": "string",
-            "direction": [
-              "input"
-            ]
-          },
-          {
-            "slotId": "cc",
-            "type": "object",
-            "direction": [
-              "input"
-            ]
-          }
-        ],
-        "members": [
-          {
-            "memberId": "member-b",
-            "componentId": "this/connectionhook-elementary-b"
-          }
-        ],
-        "connections": [
-          {
-            "connectionId": "aa-member-b:a",
-            "source": {
-              "slot": "aa"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "a"
-            }
-          },
-          {
-            "connectionId": "bb-member-b:b",
-            "source": {
-              "slot": "bb"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "b"
-            }
-          },
-          {
-            "connectionId": "cc-member-b:c",
-            "source": {
-              "slot": "cc"
-            },
-            "destination": {
-              "memberIdRef": "member-b",
-              "slot": "c"
-            }
-          }
-        ],
-        "inits": []
-      },
-      {
-        "artifactId": "connectionhook-compound-i",
-        "description": "Connected connectionhook-compound-e (component with hook function) with connectionhook-compound-h (component without connenction hook) without connection hook.",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [],
-            "dependencies": [
-              "this/connectionhook-compound-e/main",
-              "this/connectionhook-compound-h/main"
-            ]
-          }
-        ],"runnables": [
-          {
-              "name": "demo",
-              "path": "/demo/index.html",
-              "description": "demo app for connectionhook-compound-i"
-          }
-      ],
-        "slots": [],
-        "members": [
-          {
-            "memberId": "member-e",
-            "componentId": "this/connectionhook-compound-e"
-          },
-          {
-            "memberId": "member-h",
-            "componentId": "this/connectionhook-compound-h"
-          }
-        ],
-        "connections": [
-          {
-            "connectionId": "member-e:aa-member-h:aa",
-            "source": {
-              "memberIdRef": "member-e",
-              "slot": "aa"
-            },
-            "destination": {
-              "memberIdRef": "member-h",
-              "slot": "aa"
-            }
-          },
-          {
-            "connectionId": "member-e:bb-member-h:bb",
-            "source": {
-              "memberIdRef": "member-e",
-              "slot": "bb"
-            },
-            "destination": {
-              "memberIdRef": "member-h",
-              "slot": "bb"
-            }
-          },
-          {
-            "connectionId": "member-e:cc-member-h:cc",
-            "source": {
-              "memberIdRef": "member-e",
-              "slot": "cc"
-            },
-            "destination": {
-              "memberIdRef": "member-h",
-              "slot": "cc"
-            }
-          }
-        ],
-        "inits": []
-      },
-      {
-        "artifactId": "connectionhook-compound-j",
-        "description": "Connected connectionhook-compound-f (component without hook function) with connectionhook-compound-g (component with connenction hook) without connection hook.",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [],
-            "dependencies": [
-                "this/connectionhook-compound-g/main",
-                "this/connectionhook-compound-f/main"
-            ]
-          }
-        ],"runnables": [
-          {
-              "name": "demo",
-              "path": "/demo/index.html",
-              "description": "demo app for connectionhook-compound-j"
-          }
-      ],
-        "slots": [
-
-        ],
-        "members": [
-          {
-            "memberId": "member-g",
-            "componentId": "this/connectionhook-compound-g"
-          },
+    "man": [],
+    "artifacts": {
+        "apps": [],
+        "elementaryComponents": [
             {
-                "memberId": "member-f",
-                "componentId": "this/connectionhook-compound-f"
-            }
-        ],
-        "connections": [
-            {
-                "connectionId": "member-g:aa-member-f:aa",
-                "source": {
-                    "memberIdRef": "member-g",
-                    "slot": "aa"
-                },
-                "destination": {
-                    "memberIdRef": "member-f",
-                    "slot": "aa"
-                }
+                "artifactId": "connectionhook-elementary-a",
+                "description": "Elementary component with number, string and object slot for input.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-elementary-a"
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "a",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": 10
+                    },
+                    {
+                        "slotId": "b",
+                        "type": "string",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": "Hallo World!"
+                    },
+                    {
+                        "slotId": "c",
+                        "type": "object",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": {
+                            "name": "Doe",
+                            "firstname": "John"
+                        }
+                    }
+                ],
+                "resources": [
+                    "connectionhook-elementary-a.html"
+                ],
+                "dependencies": [
+                    {
+                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "artifactId": "cubxpolymer",
+                        "endpointId": "main"
+                    },
+                    {
+                        "webpackageId": "bootstrap-3.3.5@1.0.2",
+                        "artifactId": "bootstrap",
+                        "endpointId": "main"
+                    }
+                ]
             },
             {
-                "connectionId": "member-g:bb-member-f:bb",
-                "source": {
-                    "memberIdRef": "member-g",
-                    "slot": "bb"
-                },
-                "destination": {
-                    "memberIdRef": "member-f",
-                    "slot": "bb"
-                }
-            },
-            {
-                "connectionId": "member-g:cc-member-f:cc",
-                "source": {
-                    "memberIdRef": "member-g",
-                    "slot": "cc"
-                },
-                "destination": {
-                    "memberIdRef": "member-f",
-                    "slot": "cc"
-                }
+                "artifactId": "connectionhook-elementary-b",
+                "description": "Elementary component with number, string and object slot for output.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-elementary-b"
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "a",
+                        "type": "number",
+                        "direction": [
+                            "input"
+                        ],
+                        "value": 15
+                    },
+                    {
+                        "slotId": "b",
+                        "type": "string",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": "nothing"
+                    },
+                    {
+                        "slotId": "c",
+                        "type": "object",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": {
+                            "name": "xxx",
+                            "firstname": "yyy"
+                        }
+                    }
+                ],
+                "resources": [
+                    "connectionhook-elementary-b.html"
+                ],
+                "dependencies": [
+                    {
+                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "artifactId": "cubxpolymer",
+                        "endpointId": "main"
+                    },
+                    {
+                        "webpackageId": "bootstrap-3.3.5@1.0.2",
+                        "artifactId": "bootstrap",
+                        "endpointId": "main"
+                    }
+                ]
             }
         ],
-        "inits": [
-
+        "compoundComponents": [
+            {
+                "artifactId": "connectionhook-compound-c",
+                "description": "Compound Component with inline connection hooks between members.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-compound-c"
+                    }
+                ],
+                "slots": [],
+                "members": [
+                    {
+                        "memberId": "member-a",
+                        "artifactId": "connectionhook-elementary-a"
+                    },
+                    {
+                        "memberId": "member-b",
+                        "artifactId": "connectionhook-elementary-b"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "member-a:a-member-b:a",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "a"
+                        },
+                        "hookFunction": "function(value,next) { value = Number(value)*10; next(value);}"
+                    },
+                    {
+                        "connectionId": "member-a:b-member-b:b",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "b"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "b"
+                        },
+                        "hookFunction": "function(value, next) { value = 'Greeting: ' + value;  next(value);};"
+                    },
+                    {
+                        "connectionId": "member-a:c-member-b:c",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "c"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "c"
+                        },
+                        "hookFunction": "function(value, next) { var newValue = {}; newValue.name = value.firstname ? value.firstname + ' ' : ''; newValue.name += value.name; next(newValue);};"
+                    }
+                ],
+                "inits": [],
+                "resources": [
+                    "css/connectionhook-compound-c.css"
+                ],
+                "dependencies": [
+                    {
+                        "artifactId": "connectionhook-elementary-a"
+                    },
+                    {
+                        "artifactId": "connectionhook-elementary-b"
+                    },
+                    {
+                        "webpackageId": "bootstrap-3.3.5@1.0.2",
+                        "artifactId": "bootstrap",
+                        "endpointId": "main"
+                    }
+                ]
+            },
+            {
+                "artifactId": "connectionhook-compound-d",
+                "description": "Compound component with globale connection hooks between members.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-compound-d"
+                    }
+                ],
+                "slots": [],
+                "members": [
+                    {
+                        "memberId": "member-a",
+                        "artifactId": "connectionhook-elementary-a"
+                    },
+                    {
+                        "memberId": "member-b",
+                        "artifactId": "connectionhook-elementary-b"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "member-a:a-member-b:a",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "a"
+                        },
+                        "hookFunction": "cubx.hookFunctions.multiply10"
+                    },
+                    {
+                        "connectionId": "member-a:b-member-b:b",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "b"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "b"
+                        },
+                        "hookFunction": "cubx.hookFunctions.greeting"
+                    },
+                    {
+                        "connectionId": "member-a:c-member-b:c",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "c"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "c"
+                        },
+                        "hookFunction": "cubx.hookFunctions.fullName"
+                    }
+                ],
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "connectionhook-elementary-a"
+                    },
+                    {
+                        "artifactId": "connectionhook-elementary-b"
+                    },
+                    {
+                        "artifactId": "transform-functions-main"
+                    },
+                    {
+                        "webpackageId": "bootstrap-3.3.5@1.0.2",
+                        "artifactId": "bootstrap",
+                        "endpointId": "main"
+                    }
+                ]
+            },
+            {
+                "artifactId": "connectionhook-compound-e",
+                "description": "Compound Component with connection hook on connections from member to self. (included as member connectionhook-element-a)",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-compound-e"
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "aa",
+                        "type": "number",
+                        "direction": [
+                            "output"
+                        ]
+                    },
+                    {
+                        "slotId": "bb",
+                        "type": "string",
+                        "direction": [
+                            "output"
+                        ]
+                    },
+                    {
+                        "slotId": "cc",
+                        "type": "object",
+                        "direction": [
+                            "output"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "member-a",
+                        "artifactId": "connectionhook-elementary-a"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "member-a:a-aa",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "slot": "aa"
+                        },
+                        "hookFunction": "cubx.hookFunctions.multiply10"
+                    },
+                    {
+                        "connectionId": "member-a:b-bb",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "b"
+                        },
+                        "destination": {
+                            "slot": "bb"
+                        },
+                        "hookFunction": "cubx.hookFunctions.greeting"
+                    },
+                    {
+                        "connectionId": "member-a:c-cc",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "c"
+                        },
+                        "destination": {
+                            "slot": "cc"
+                        },
+                        "hookFunction": "cubx.hookFunctions.fullName"
+                    }
+                ],
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "connectionhook-elementary-a"
+                    },
+                    {
+                        "artifactId": "transform-functions-main"
+                    },
+                    {
+                        "webpackageId": "bootstrap-3.3.5@1.0.2",
+                        "artifactId": "bootstrap",
+                        "endpointId": "main"
+                    }
+                ]
+            },
+            {
+                "artifactId": "connectionhook-compound-f",
+                "description": "Compound Component with connection hook on connections from self to member (included as member connectionhook-element-b)",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-compound-df"
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "aa",
+                        "type": "number",
+                        "direction": [
+                            "input"
+                        ]
+                    },
+                    {
+                        "slotId": "bb",
+                        "type": "string",
+                        "direction": [
+                            "input"
+                        ]
+                    },
+                    {
+                        "slotId": "cc",
+                        "type": "object",
+                        "direction": [
+                            "input"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "member-b",
+                        "artifactId": "connectionhook-elementary-b"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "aa-member-b:a",
+                        "source": {
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "a"
+                        },
+                        "hookFunction": "cubx.hookFunctions.multiply10"
+                    },
+                    {
+                        "connectionId": "bb-member-b:b",
+                        "source": {
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "b"
+                        },
+                        "hookFunction": "cubx.hookFunctions.greeting"
+                    },
+                    {
+                        "connectionId": "cc-member-b:c",
+                        "source": {
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "c"
+                        },
+                        "hookFunction": "cubx.hookFunctions.fullName"
+                    }
+                ],
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "connectionhook-elementary-b"
+                    },
+                    {
+                        "artifactId": "transform-functions-main"
+                    },
+                    {
+                        "webpackageId": "bootstrap-3.3.5@1.0.2",
+                        "artifactId": "bootstrap",
+                        "endpointId": "main"
+                    }
+                ]
+            },
+            {
+                "artifactId": "connectionhook-compound-g",
+                "description": "Compound Component without connection hook (included as member connectionhook-element-a)",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-compound-g"
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "aa",
+                        "type": "number",
+                        "direction": [
+                            "output"
+                        ]
+                    },
+                    {
+                        "slotId": "bb",
+                        "type": "string",
+                        "direction": [
+                            "output"
+                        ]
+                    },
+                    {
+                        "slotId": "cc",
+                        "type": "object",
+                        "direction": [
+                            "output"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "member-a",
+                        "artifactId": "connectionhook-elementary-a"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "member-a:a-aa",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "a"
+                        },
+                        "destination": {
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "member-a:b-bb",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "b"
+                        },
+                        "destination": {
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "member-a:c-cc",
+                        "source": {
+                            "memberIdRef": "member-a",
+                            "slot": "c"
+                        },
+                        "destination": {
+                            "slot": "cc"
+                        }
+                    }
+                ],
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "connectionhook-elementary-a"
+                    },
+                    {
+                        "artifactId": "transform-functions-main"
+                    },
+                    {
+                        "webpackageId": "bootstrap-3.3.5@1.0.2",
+                        "artifactId": "bootstrap",
+                        "endpointId": "main"
+                    }
+                ]
+            },
+            {
+                "artifactId": "connectionhook-compound-h",
+                "description": "Compound Component without connection hook (included as member connectionhook-element-b)",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-compound-h"
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "aa",
+                        "type": "number",
+                        "direction": [
+                            "input"
+                        ]
+                    },
+                    {
+                        "slotId": "bb",
+                        "type": "string",
+                        "direction": [
+                            "input"
+                        ]
+                    },
+                    {
+                        "slotId": "cc",
+                        "type": "object",
+                        "direction": [
+                            "input"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "member-b",
+                        "artifactId": "connectionhook-elementary-b"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "aa-member-b:a",
+                        "source": {
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "a"
+                        }
+                    },
+                    {
+                        "connectionId": "bb-member-b:b",
+                        "source": {
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "b"
+                        }
+                    },
+                    {
+                        "connectionId": "cc-member-b:c",
+                        "source": {
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-b",
+                            "slot": "c"
+                        }
+                    }
+                ],
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "connectionhook-elementary-b"
+                    },
+                    {
+                        "artifactId": "transform-functions-main"
+                    },
+                    {
+                        "webpackageId": "bootstrap-3.3.5@1.0.2",
+                        "artifactId": "bootstrap",
+                        "endpointId": "main"
+                    }
+                ]
+            },
+            {
+                "artifactId": "connectionhook-compound-i",
+                "description": "Connected connectionhook-compound-e (component with hook function) with connectionhook-compound-h (component without connenction hook) without connection hook.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-compound-i"
+                    }
+                ],
+                "slots": [],
+                "members": [
+                    {
+                        "memberId": "member-e",
+                        "artifactId": "connectionhook-compound-e"
+                    },
+                    {
+                        "memberId": "member-h",
+                        "artifactId": "connectionhook-compound-h"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "member-e:aa-member-h:aa",
+                        "source": {
+                            "memberIdRef": "member-e",
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-h",
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "member-e:bb-member-h:bb",
+                        "source": {
+                            "memberIdRef": "member-e",
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-h",
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "member-e:cc-member-h:cc",
+                        "source": {
+                            "memberIdRef": "member-e",
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-h",
+                            "slot": "cc"
+                        }
+                    }
+                ],
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "connectionhook-compound-e"
+                    },
+                    {
+                        "artifactId": "connectionhook-compound-h"
+                    }
+                ]
+            },
+            {
+                "artifactId": "connectionhook-compound-j",
+                "description": "Connected connectionhook-compound-f (component without hook function) with connectionhook-compound-g (component with connenction hook) without connection hook.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-compound-j"
+                    }
+                ],
+                "slots": [],
+                "members": [
+                    {
+                        "memberId": "member-g",
+                        "artifactId": "connectionhook-compound-g"
+                    },
+                    {
+                        "memberId": "member-f",
+                        "artifactId": "connectionhook-compound-f"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "member-g:aa-member-f:aa",
+                        "source": {
+                            "memberIdRef": "member-g",
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-f",
+                            "slot": "aa"
+                        }
+                    },
+                    {
+                        "connectionId": "member-g:bb-member-f:bb",
+                        "source": {
+                            "memberIdRef": "member-g",
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-f",
+                            "slot": "bb"
+                        }
+                    },
+                    {
+                        "connectionId": "member-g:cc-member-f:cc",
+                        "source": {
+                            "memberIdRef": "member-g",
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-f",
+                            "slot": "cc"
+                        }
+                    }
+                ],
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "connectionhook-compound-g"
+                    },
+                    {
+                        "artifactId": "connectionhook-compound-f"
+                    }
+                ]
+            },
+            {
+                "artifactId": "connectionhook-compound-k",
+                "description": "Connected connectionhook-compound-g (component without hook function) with connectionhook-compound-h (component with connenction hook",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "demo app for connectionhook-compound-k"
+                    }
+                ],
+                "slots": [],
+                "members": [
+                    {
+                        "memberId": "member-g",
+                        "artifactId": "connectionhook-compound-g"
+                    },
+                    {
+                        "memberId": "member-h",
+                        "artifactId": "connectionhook-compound-h"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "member-g:aa-member-h:aa",
+                        "source": {
+                            "memberIdRef": "member-g",
+                            "slot": "aa"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-h",
+                            "slot": "aa"
+                        },
+                        "hookFunction": "cubx.hookFunctions.multiply10"
+                    },
+                    {
+                        "connectionId": "member-g:bb-member-h:bb",
+                        "source": {
+                            "memberIdRef": "member-g",
+                            "slot": "bb"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-h",
+                            "slot": "bb"
+                        },
+                        "hookFunction": "cubx.hookFunctions.greeting"
+                    },
+                    {
+                        "connectionId": "member-g:cc-member-h:cc",
+                        "source": {
+                            "memberIdRef": "member-g",
+                            "slot": "cc"
+                        },
+                        "destination": {
+                            "memberIdRef": "member-h",
+                            "slot": "cc"
+                        },
+                        "hookFunction": "cubx.hookFunctions.fullName"
+                    }
+                ],
+                "inits": [],
+                "resources": [],
+                "dependencies": [
+                    {
+                        "artifactId": "connectionhook-compound-g"
+                    },
+                    {
+                        "artifactId": "connectionhook-compound-h"
+                    },
+                    {
+                        "artifactId": "transform-functions-main"
+                    }
+                ]
+            }
+        ],
+        "utilities": [
+            {
+                "artifactId": "transform-functions-main",
+                "description": "connection hook functions",
+                "resources": [
+                    "js/functions.js"
+                ],
+                "dependencies": []
+            },
+            {
+                "artifactId": "transform-functions-html-import",
+                "description": "connection hook functions This is recommended for you use with webcomponents.",
+                "resources": [
+                    "html-import.html"
+                ],
+                "dependencies": []
+            }
         ]
-      },
-      {
-        "artifactId": "connectionhook-compound-k",
-        "description": "Connected connectionhook-compound-g (component without hook function) with connectionhook-compound-h (component with connenction hook",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [],
-            "dependencies": [
-
-                "this/connectionhook-compound-g/main",
-                "this/connectionhook-compound-h/main",
-                "this/transform-functions/main"
-
-            ]
-          }
-        ],"runnables": [
-          {
-              "name": "demo",
-              "path": "/demo/index.html",
-              "description": "demo app for connectionhook-compound-k"
-          }
-      ],
-        "slots": [
-
-        ],
-        "members": [
-          {
-            "memberId": "member-g",
-            "componentId": "this/connectionhook-compound-g"
-          },
-            {
-                "memberId": "member-h",
-                "componentId": "this/connectionhook-compound-h"
-            }
-        ],
-        "connections": [
-            {
-                "connectionId": "member-g:aa-member-h:aa",
-                "source": {
-                    "memberIdRef": "member-g",
-                    "slot": "aa"
-                },
-                "destination": {
-                    "memberIdRef": "member-h",
-                    "slot": "aa"
-                },
-                "hookFunction": "cubx.hookFunctions.multiply10"
-            },
-            {
-                "connectionId": "member-g:bb-member-h:bb",
-                "source": {
-                    "memberIdRef": "member-g",
-                    "slot": "bb"
-                },
-                "destination": {
-                    "memberIdRef": "member-h",
-                    "slot": "bb"
-                },
-                "hookFunction": "cubx.hookFunctions.greeting"
-            },
-            {
-                "connectionId": "member-g:cc-member-h:cc",
-                "source": {
-                    "memberIdRef": "member-g",
-                    "slot": "cc"
-                },
-                "destination": {
-                    "memberIdRef": "member-h",
-                    "slot": "cc"
-                },
-                "hookFunction": "cubx.hookFunctions.fullName"
-            }
-        ],
-        "inits": [
-
-        ]
-      }
-    ],
-    "utilities": [
-      {
-        "artifactId": "transform-functions",
-        "description": "connection hook functions",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "js/functions.js"
-            ],
-            "dependencies": []
-          },
-          {
-            "endpointId": "html-import",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "html-import.html"
-            ],
-            "dependencies": []
-          }
-        ]
-      }
-    ]
-  }
+    }
 }
