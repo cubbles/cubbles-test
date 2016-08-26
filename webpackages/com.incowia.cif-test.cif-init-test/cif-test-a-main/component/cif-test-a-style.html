@@ -1,0 +1,51 @@
+<dom-module id="cif-test-a-style">
+    <template>
+
+        <style>
+            :host {
+                --base-border-color: peru;
+                --base-background-color: papayawhip;
+                --base-text-color: green;
+                --base-form-padding: 0.3em;
+                --text-input-width: 12em;
+                --number-input-width: 5em;
+                display: block;
+                padding: var(--base-form-padding);
+                border: thin solid var(base-border-color);
+
+                width: 15em;
+                background-color: var(--base-background-color);
+            }
+
+            input[type=number] {
+                width: var(--number-input-width);
+            }
+
+            input[type=text] {
+                width: var(--text-input-width);
+
+            }
+
+            label {
+                margin-right: 0.3em;
+                font-weight: bold;
+                /*color: #550000;*/
+                /*color: var(--base-text-color)*/
+                color: var(--base-text-color);
+            }
+
+            label::after {
+                content: ":";
+            }
+
+            article {
+                height: 2em;
+                color: var(--base-text-color)
+            }
+
+            header {
+                margin: 0.8em 0 0.8em 0;
+            }
+        </style>
+    </template>
+</dom-module>

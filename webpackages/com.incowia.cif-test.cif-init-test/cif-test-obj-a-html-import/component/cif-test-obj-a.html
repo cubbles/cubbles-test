@@ -1,0 +1,40 @@
+<!-- -->
+<link rel="import" href="cif-test-obj-a-style.html">
+<dom-module id="cif-test-obj-a" >
+
+    <template>
+        <style include="cif-test-obj-a-style"></style>
+        <style include="cif-test-obj-a-style"></style>
+        <header>Komponente A (Objekt-Slots)</header>
+        <section>
+            <article>
+
+                <label for="slota">{{model.a.label}}</label>
+                <input type="number" id="slota" on-change="changeAHandler">
+
+            </article>
+            <article>
+
+                <label for="slotb">{{model.b.label}}</label>
+                <input type="number" id="slotb"  on-change="changeBHandler">
+
+            </article>
+            <article>
+
+                <label for="slotc">{{model.c.label}}</label>
+                <input type="text" id="slotc" on-change="changeCHandler">
+
+            </article>
+            <article>
+
+                <label for="slotd">{{model.d.label}}</label>
+                <input type="text" id="slotd" on-change="changeDHandler">
+
+            </article>
+        </section>
+        <!-- input your components html here -->
+    </template>
+
+    <script src="cif-test-obj-a.js"></script>
+
+</dom-module>
