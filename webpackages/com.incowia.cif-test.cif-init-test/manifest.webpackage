@@ -6229,8 +6229,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     }
                 ]
             },
@@ -6288,8 +6287,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     }
                 ]
             },
@@ -6347,8 +6345,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     }
                 ]
             },
@@ -6406,8 +6403,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     }
                 ]
             },
@@ -6437,8 +6433,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     }
                 ]
             },
@@ -6468,8 +6463,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     }
                 ]
             },
@@ -6539,8 +6533,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     }
                 ]
             },
@@ -6610,8 +6603,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     }
                 ]
             },
@@ -6681,8 +6673,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     }
                 ]
             },
@@ -6752,8 +6743,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     }
                 ]
             }

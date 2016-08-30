@@ -65,8 +65,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     },
                     {
                         "webpackageId": "bootstrap-3.3.5@1.0.2",
@@ -122,8 +121,7 @@
                 "dependencies": [
                     {
                         "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpointId": "main"
+                        "artifactId": "cubxpolymer"
                     },
                     {
                         "webpackageId": "bootstrap-3.3.5@1.0.2",

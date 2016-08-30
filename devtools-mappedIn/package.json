@@ -14,7 +14,7 @@
     "cubx-grunt-webpackage-chooser": "^1.0.0",
     "cubx-grunt-webpackage-scaffold": "^2.4.0",
     "cubx-grunt-webpackage-upload": "^1.7.0",
-    "cubx-grunt-webpackage-version-converter": "^1.0.0",
+    "cubx-grunt-webpackage-version-converter": "^1.1.1",
     "cubx-webpackage-document-api": "^3.0.0",
     "eslint": "^2.4.0",
     "eslint-config-standard": "^5.1.0",
