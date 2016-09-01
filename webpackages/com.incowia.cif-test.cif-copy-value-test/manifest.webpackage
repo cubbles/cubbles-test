@@ -31,7 +31,7 @@
         ],
         "elementaryComponents": [
             {
-                "artifactId": "copy-value-test-a-main",
+                "artifactId": "copy-value-test-a",
                 "description": "",
                 "slots": [
                     {
@@ -82,58 +82,7 @@
                 ]
             },
             {
-                "artifactId": "copy-value-test-a-html-import",
-                "description": "",
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": 10
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "20"
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "c-value"
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "d-value"
-                    }
-                ],
-                "resources": [
-                    "component/copy-value-test-a.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    }
-                ]
-            },
-            {
-                "artifactId": "copy-value-test-b-main",
+                "artifactId": "copy-value-test-b",
                 "description": "",
                 "slots": [
                     {
@@ -184,58 +133,7 @@
                 ]
             },
             {
-                "artifactId": "copy-value-test-b-html-import",
-                "description": "",
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": 10
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "20"
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "c-value"
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "d-value"
-                    }
-                ],
-                "resources": [
-                    "component/copy-value-test-b.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    }
-                ]
-            },
-            {
-                "artifactId": "copy-value-test-obj-a-main",
+                "artifactId": "copy-value-test-obj-a",
                 "description": "",
                 "slots": [
                     {
@@ -298,133 +196,7 @@
                 ]
             },
             {
-                "artifactId": "copy-value-test-obj-a-html-import",
-                "description": "",
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot a",
-                            "value": 10
-                        }
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot b",
-                            "value": 20
-                        }
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot c",
-                            "value": "c-value"
-                        }
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot d",
-                            "value": "d-value"
-                        }
-                    }
-                ],
-                "resources": [
-                    "component/copy-value-test-obj-a.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    }
-                ]
-            },
-            {
-                "artifactId": "copy-value-test-obj-b-main",
-                "description": "",
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot a",
-                            "value": 10
-                        }
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot b",
-                            "value": 20
-                        }
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot c",
-                            "value": "c-value"
-                        }
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot d",
-                            "value": "d-value"
-                        }
-                    }
-                ],
-                "resources": [
-                    "component/copy-value-test-obj-b.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    }
-                ]
-            },
-            {
-                "artifactId": "copy-value-test-obj-b-html-import",
+                "artifactId": "copy-value-test-obj-b",
                 "description": "",
                 "slots": [
                     {
@@ -528,11 +300,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "copy-value-test-a-main"
+                        "artifactId": "copy-value-test-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "copy-value-test-b-main"
+                        "artifactId": "copy-value-test-b"
                     }
                 ],
                 "connections": [
@@ -724,10 +496,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "copy-value-test-a-main"
+                        "artifactId": "copy-value-test-a"
                     },
                     {
-                        "artifactId": "copy-value-test-b-main"
+                        "artifactId": "copy-value-test-b"
                     }
                 ]
             },
@@ -778,11 +550,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "copy-value-test-obj-a-main"
+                        "artifactId": "copy-value-test-obj-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "copy-value-test-obj-b-main"
+                        "artifactId": "copy-value-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -1016,10 +788,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "copy-value-test-obj-a-main"
+                        "artifactId": "copy-value-test-obj-a"
                     },
                     {
-                        "artifactId": "copy-value-test-obj-b-main"
+                        "artifactId": "copy-value-test-obj-b"
                     }
                 ]
             },
@@ -1039,7 +811,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "copy-value-test-a-main"
+                        "artifactId": "copy-value-test-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -1047,7 +819,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "copy-value-test-b-main"
+                        "artifactId": "copy-value-test-b"
                     }
                 ],
                 "connections": [
@@ -1212,10 +984,10 @@
                         "artifactId": "copy-value-test-compound"
                     },
                     {
-                        "artifactId": "copy-value-test-a-main"
+                        "artifactId": "copy-value-test-a"
                     },
                     {
-                        "artifactId": "copy-value-test-b-main"
+                        "artifactId": "copy-value-test-b"
                     }
                 ]
             },
@@ -1235,7 +1007,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "copy-value-test-obj-a-main"
+                        "artifactId": "copy-value-test-obj-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -1243,7 +1015,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "copy-value-test-obj-b-main"
+                        "artifactId": "copy-value-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -1447,10 +1219,10 @@
                         "artifactId": "copy-value-test-compound-obj"
                     },
                     {
-                        "artifactId": "copy-value-test-obj-a-main"
+                        "artifactId": "copy-value-test-obj-a"
                     },
                     {
-                        "artifactId": "copy-value-test-obj-b-main"
+                        "artifactId": "copy-value-test-obj-b"
                     }
                 ]
             }

@@ -1,7 +1,7 @@
 {
   "uploadConfigs": {
       "dev": {
-          "url": "http://boot2docker.me/core-test",
+          "url": "http://webcomponents-lite/webcomponents-lite.js/core-test",
           "proxy": "",
           "debug": false
       },

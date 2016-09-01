@@ -42,6 +42,8 @@ describe('copy-value', function () {
         label: 'slot b',
         value: 9
       };
+      var element = document.querySelector('copy-value-test-compound-obj');
+      console.log('element.setInputSlot', element.setInputSlot);
       document.querySelector('copy-value-test-compound-obj').setInputSlot('bb',
         { slot: 'bb', payload: newObj });
 

@@ -87,11 +87,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -283,10 +283,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ]
             },
@@ -337,11 +337,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -531,10 +531,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ]
             },
@@ -585,11 +585,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -772,10 +772,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ]
             },
@@ -826,11 +826,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -997,10 +997,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ]
             },
@@ -1051,11 +1051,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -1226,10 +1226,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ]
             },
@@ -1279,11 +1279,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -1486,10 +1486,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ]
             },
@@ -1540,11 +1540,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -1736,10 +1736,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ]
             },
@@ -1789,11 +1789,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -2021,10 +2021,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ]
             },
@@ -2074,11 +2074,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -2295,10 +2295,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ]
             },
@@ -2348,11 +2348,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -2565,10 +2565,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ]
             },
@@ -2618,11 +2618,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -2801,10 +2801,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ]
             },
@@ -2854,11 +2854,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -3065,10 +3065,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ]
             },
@@ -3118,11 +3118,11 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -3361,10 +3361,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ]
             },
@@ -3422,7 +3422,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -3430,7 +3430,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -3674,10 +3674,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     },
                     {
                         "artifactId": "cif-test-compound"
@@ -3738,7 +3738,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -3746,7 +3746,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -3966,10 +3966,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     },
                     {
                         "artifactId": "cif-test-compound-2"
@@ -3998,7 +3998,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -4006,7 +4006,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -4160,10 +4160,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     },
                     {
                         "artifactId": "cif-test-compound-3"
@@ -4192,7 +4192,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -4200,7 +4200,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -4320,10 +4320,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     },
                     {
                         "artifactId": "cif-test-compound-4"
@@ -4352,7 +4352,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -4360,7 +4360,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -4487,10 +4487,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     },
                     {
                         "artifactId": "cif-test-compound-5"
@@ -4519,7 +4519,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -4527,7 +4527,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     }
                 ],
                 "connections": [
@@ -4682,217 +4682,13 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-a-main"
+                        "artifactId": "cif-test-a"
                     },
                     {
-                        "artifactId": "cif-test-b-main"
+                        "artifactId": "cif-test-b"
                     },
                     {
                         "artifactId": "cif-test-compound-6"
-                    }
-                ]
-            },
-            {
-                "artifactId": "cif-test-compound-outer-7",
-                "runnables": [
-                    {
-                        "name": "docs",
-                        "path": "/docs/index.html",
-                        "description": "Dataflow of the component"
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "outer",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    }
-                ],
-                "members": [
-                    {
-                        "memberId": "member-a",
-                        "artifactId": "cif-test-a-main"
-                    },
-                    {
-                        "memberId": "member-compound",
-                        "artifactId": "cif-test-compound-7"
-                    },
-                    {
-                        "memberId": "member-b",
-                        "artifactId": "cif-test-b-main"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "con1",
-                        "source": {
-                            "memberIdRef": "member-compound",
-                            "slot": "aa"
-                        },
-                        "destination": {
-                            "memberIdRef": "member-b",
-                            "slot": "a"
-                        }
-                    },
-                    {
-                        "connectionId": "con2",
-                        "source": {
-                            "memberIdRef": "member-compound",
-                            "slot": "bb"
-                        },
-                        "destination": {
-                            "memberIdRef": "member-b",
-                            "slot": "b"
-                        }
-                    },
-                    {
-                        "connectionId": "con3",
-                        "source": {
-                            "memberIdRef": "member-compound",
-                            "slot": "cc"
-                        },
-                        "destination": {
-                            "memberIdRef": "member-b",
-                            "slot": "c"
-                        }
-                    },
-                    {
-                        "connectionId": "con4",
-                        "source": {
-                            "memberIdRef": "member-compound",
-                            "slot": "dd"
-                        },
-                        "destination": {
-                            "memberIdRef": "member-b",
-                            "slot": "d"
-                        }
-                    },
-                    {
-                        "connectionId": "con5",
-                        "source": {
-                            "memberIdRef": "member-a",
-                            "slot": "a"
-                        },
-                        "destination": {
-                            "memberIdRef": "member-compound",
-                            "slot": "aa"
-                        }
-                    },
-                    {
-                        "connectionId": "con6",
-                        "source": {
-                            "memberIdRef": "member-a",
-                            "slot": "b"
-                        },
-                        "destination": {
-                            "memberIdRef": "member-compound",
-                            "slot": "bb"
-                        }
-                    },
-                    {
-                        "connectionId": "con7",
-                        "source": {
-                            "memberIdRef": "member-a",
-                            "slot": "c"
-                        },
-                        "destination": {
-                            "memberIdRef": "member-compound",
-                            "slot": "cc"
-                        }
-                    },
-                    {
-                        "connectionId": "con8",
-                        "source": {
-                            "memberIdRef": "member-a",
-                            "slot": "d"
-                        },
-                        "destination": {
-                            "memberIdRef": "member-compound",
-                            "slot": "dd"
-                        }
-                    }
-                ],
-                "inits": [
-                    {
-                        "slot": "outer",
-                        "value": "bbb"
-                    },
-                    {
-                        "memberIdRef": "member-a",
-                        "slot": "a",
-                        "value": 100
-                    },
-                    {
-                        "memberIdRef": "member-a",
-                        "slot": "b",
-                        "value": 200
-                    },
-                    {
-                        "memberIdRef": "member-a",
-                        "slot": "c",
-                        "value": "### c ####"
-                    },
-                    {
-                        "memberIdRef": "member-a",
-                        "slot": "d",
-                        "value": "### d ###"
-                    },
-                    {
-                        "memberIdRef": "member-compound",
-                        "slot": "aa",
-                        "value": 999
-                    },
-                    {
-                        "memberIdRef": "member-compound",
-                        "slot": "bb",
-                        "value": 888
-                    },
-                    {
-                        "memberIdRef": "member-compound",
-                        "slot": "cc",
-                        "value": ";)"
-                    },
-                    {
-                        "memberIdRef": "member-compound",
-                        "slot": "dd",
-                        "value": "=:)"
-                    },
-                    {
-                        "memberIdRef": "member-b",
-                        "slot": "a",
-                        "value": 101
-                    },
-                    {
-                        "memberIdRef": "member-b",
-                        "slot": "b",
-                        "value": 202
-                    },
-                    {
-                        "memberIdRef": "member-b",
-                        "slot": "c",
-                        "value": "xxx c xxx"
-                    },
-                    {
-                        "memberIdRef": "member-b",
-                        "slot": "d",
-                        "value": "xxx d xxx"
-                    }
-                ],
-                "resources": [
-                    "component/cif-test-compound-outer.css"
-                ],
-                "dependencies": [
-                    {
-                        "artifactId": "cif-test-a-main"
-                    },
-                    {
-                        "artifactId": "cif-test-b-main"
-                    },
-                    {
-                        "artifactId": "cif-test-compound"
                     }
                 ]
             },
@@ -4918,7 +4714,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -4926,7 +4722,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -5129,10 +4925,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     },
                     {
                         "artifactId": "cif-test-compound-obj"
@@ -5161,7 +4957,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -5169,7 +4965,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -5333,10 +5129,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     },
                     {
                         "artifactId": "cif-test-compound-obj-2"
@@ -5365,7 +5161,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -5373,7 +5169,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -5560,10 +5356,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     },
                     {
                         "artifactId": "cif-test-compound-obj-3"
@@ -5592,7 +5388,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -5600,7 +5396,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -5732,10 +5528,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     },
                     {
                         "artifactId": "cif-test-compound-obj-4"
@@ -5764,7 +5560,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -5772,7 +5568,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -5935,10 +5731,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     },
                     {
                         "artifactId": "cif-test-compound-obj-5"
@@ -5967,7 +5763,7 @@
                 "members": [
                     {
                         "memberId": "member-a",
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
                         "memberId": "member-compound",
@@ -5975,7 +5771,7 @@
                     },
                     {
                         "memberId": "member-b",
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     }
                 ],
                 "connections": [
@@ -6163,10 +5959,10 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "cif-test-obj-a-main"
+                        "artifactId": "cif-test-obj-a"
                     },
                     {
-                        "artifactId": "cif-test-obj-b-main"
+                        "artifactId": "cif-test-obj-b"
                     },
                     {
                         "artifactId": "cif-test-compound-obj-6"
@@ -6176,7 +5972,7 @@
         ],
         "elementaryComponents": [
             {
-                "artifactId": "cif-test-a-main",
+                "artifactId": "cif-test-a",
                 "description": "Elementary component with 4 input fields for 4 slots",
                 "runnables": [
                     {
@@ -6234,65 +6030,7 @@
                 ]
             },
             {
-                "artifactId": "cif-test-a-html-import",
-                "description": "Elementary component with 4 input fields for 4 slots",
-                "runnables": [
-                    {
-                        "name": "docs",
-                        "path": "/docs/index.html",
-                        "description": "Dataflow of the component"
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": 10
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "20"
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "c-value"
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "d-value"
-                    }
-                ],
-                "resources": [
-                    "component/cif-test-a.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    }
-                ]
-            },
-            {
-                "artifactId": "cif-test-b-main",
+                "artifactId": "cif-test-b",
                 "description": "Elementary component with 4 slots to show the slot values",
                 "runnables": [
                     {
@@ -6350,65 +6088,7 @@
                 ]
             },
             {
-                "artifactId": "cif-test-b-html-import",
-                "description": "Elementary component with 4 slots to show the slot values",
-                "runnables": [
-                    {
-                        "name": "docs",
-                        "path": "/docs/index.html",
-                        "description": "Dataflow of the component"
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": 10
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "number",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": 20
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "c-value"
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": "d-value"
-                    }
-                ],
-                "resources": [
-                    "component/cif-test-b.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    }
-                ]
-            },
-            {
-                "artifactId": "cif-test-c-main",
+                "artifactId": "cif-test-c",
                 "description": "Elementary component with 1 outputslot",
                 "runnables": [
                     {
@@ -6438,37 +6118,7 @@
                 ]
             },
             {
-                "artifactId": "cif-test-c-html-import",
-                "description": "Elementary component with 1 outputslot",
-                "runnables": [
-                    {
-                        "name": "docs",
-                        "path": "/docs/index.html",
-                        "description": "Dataflow of the component"
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "out",
-                        "type": "string",
-                        "direction": [
-                            "output"
-                        ],
-                        "value": ""
-                    }
-                ],
-                "resources": [
-                    "component/cif-test-c.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    }
-                ]
-            },
-            {
-                "artifactId": "cif-test-obj-a-main",
+                "artifactId": "cif-test-obj-a",
                 "description": "Elementary component with 4 input fields for 4 slots",
                 "runnables": [
                     {
@@ -6538,147 +6188,7 @@
                 ]
             },
             {
-                "artifactId": "cif-test-obj-a-html-import",
-                "description": "Elementary component with 4 input fields for 4 slots",
-                "runnables": [
-                    {
-                        "name": "docs",
-                        "path": "/docs/index.html",
-                        "description": "Dataflow of the component"
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot a",
-                            "value": 10
-                        }
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot b",
-                            "value": 20
-                        }
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot c",
-                            "value": "c-value"
-                        }
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot d",
-                            "value": "d-value"
-                        }
-                    }
-                ],
-                "resources": [
-                    "component/cif-test-obj-a.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    }
-                ]
-            },
-            {
-                "artifactId": "cif-test-obj-b-main",
-                "description": "Elementary component 4 slots",
-                "runnables": [
-                    {
-                        "name": "docs",
-                        "path": "/docs/index.html",
-                        "description": "Dataflow of the component"
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "a",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot a",
-                            "value": 10
-                        }
-                    },
-                    {
-                        "slotId": "b",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot b",
-                            "value": 20
-                        }
-                    },
-                    {
-                        "slotId": "c",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot c",
-                            "value": "c-value"
-                        }
-                    },
-                    {
-                        "slotId": "d",
-                        "type": "object",
-                        "direction": [
-                            "input",
-                            "output"
-                        ],
-                        "value": {
-                            "label": "slot d",
-                            "value": "d-value"
-                        }
-                    }
-                ],
-                "resources": [
-                    "component/cif-test-obj-b.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    }
-                ]
-            },
-            {
-                "artifactId": "cif-test-obj-b-html-import",
+                "artifactId": "cif-test-obj-b",
                 "description": "Elementary component 4 slots",
                 "runnables": [
                     {

@@ -11,12 +11,14 @@
         window.cubx = {
             "CRCInit": {
                 "rootDependencies": [
-                    "this/copy-value-test-compound-obj/main"
+                    {
+ 						artifactId: 'copy-value-test-compound-obj'
+					}
                 ]
             }
         }
     </script>
-    <script src="../../../web-component-tester-4.2.2@0.1.0/web-component-tester/browser.js"></script>
+    <script src="../../../web-component-tester-4.2.2@0.2.0/web-component-tester/browser.js"></script>
     <script src="mocha-config.js"></script>
 
     <script src="../../../cubx.core.rte@2.0.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
