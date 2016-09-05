@@ -7,15 +7,20 @@
     <title>repeated-value-elementary-f</title>
     <script>
         window.cubx = {
-            "CRCInit": {
-                "rootDependencies": [
-                    "this/repeated-value-elementary-f/main",
-                    "bootstrap-3.3.5@1.0.2/bootstrap/bootstrap-theme-main"
+            CRCInit: {
+                rootDependencies: [
+                    {
+                        artifactId: 'repeated-value-elementary-f'
+                    },
+                    {
+                        webpackageId: 'bootstrap-3.3.5@1.1.0',
+                        artifactId: 'bootstrap-bootstrap-theme'
+                    }
                 ]
             }
         }
     </script>
-    <script src="../../../cubx.core.rte@2.0.0-SNAPSHOT/webcomponents-lite/webcomponents-lite.js" ></script>
+    <script src="../../../cubx.core.rte@2.0.0/webcomponents-lite/webcomponents-lite.js" ></script>
 
     <link rel="stylesheet" href="style/main.css">
     <link rel="import" href="../style/main-style.html">
@@ -26,7 +31,7 @@
         Add the following attribute: data-crc-main="js/main.js"
     -->
 
-    <script src="../../../cubx.core.rte@2.0.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true" ></script>
+    <script src="../../../cubx.core.rte@2.0.0/crc-loader/js/main.js" data-CRCInit.loadCIF="true" ></script>
 
 
 </head>

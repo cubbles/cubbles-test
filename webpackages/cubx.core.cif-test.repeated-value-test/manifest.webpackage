@@ -1,7 +1,7 @@
 {
     "name": "repeated-value-test",
     "groupId": "cubx.core.cif-test",
-    "version": "1.0.0-SNAPSHOT",
+    "version": "1.0.0",
     "modelVersion": "9.1.0",
     "docType": "webpackage",
     "author": {
@@ -25,12 +25,30 @@
                         "description": "demo app for repeatedValue=false"
                     }
                 ]
+            },
+            {
+                "artifactId": "docs",
+                "description": "package documentation",
+                "runnables": [
+                    {
+                        "name": "cubx.core.cif-test.repeated-value-test generated documentation",
+                        "path": "/index.html",
+                        "description": "show the webpackage structure"
+                    }
+                ]
             }
         ],
         "elementaryComponents": [
             {
                 "artifactId": "repeated-value-elementary-a",
                 "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
+                    }
+                ],
                 "slots": [
                     {
                         "slotId": "a",
@@ -77,7 +95,7 @@
                 ],
                 "dependencies": [
                     {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "webpackageId": "cubx.core.rte@2.0.0",
                         "artifactId": "cubxpolymer"
                     }
                 ]
@@ -85,6 +103,13 @@
             {
                 "artifactId": "repeated-value-elementary-e",
                 "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
+                    }
+                ],
                 "slots": [
                     {
                         "slotId": "clicked",
@@ -99,7 +124,7 @@
                 ],
                 "dependencies": [
                     {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "webpackageId": "cubx.core.rte@2.0.0",
                         "artifactId": "cubxpolymer"
                     }
                 ]
@@ -107,6 +132,13 @@
             {
                 "artifactId": "repeated-value-elementary-f",
                 "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
+                    }
+                ],
                 "slots": [
                     {
                         "slotId": "clicked",
@@ -122,7 +154,7 @@
                 ],
                 "dependencies": [
                     {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "webpackageId": "cubx.core.rte@2.0.0",
                         "artifactId": "cubxpolymer"
                     }
                 ]
@@ -132,6 +164,13 @@
             {
                 "artifactId": "repeated-value-false-compound-b",
                 "description": "This is a cubixx-compound-component.",
+                "runnables": [
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
+                    }
+                ],
                 "slots": [
                     {
                         "slotId": "aa",
@@ -274,6 +313,13 @@
             {
                 "artifactId": "repeated-value-false-compound-c",
                 "description": "This is a cubixx-compound-component.",
+                "runnables": [
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
+                    }
+                ],
                 "slots": [
                     {
                         "slotId": "aa",
@@ -501,6 +547,13 @@
             {
                 "artifactId": "repeated-value-false-compound-d",
                 "description": "This is a cubixx-compound-component.",
+                "runnables": [
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
+                    }
+                ],
                 "slots": [],
                 "members": [
                     {
@@ -796,6 +849,13 @@
             {
                 "artifactId": "repeated-value-true-compound-g",
                 "description": "This is a cubixx-compound-component.",
+                "runnables": [
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
+                    }
+                ],
                 "slots": [],
                 "members": [
                     {
