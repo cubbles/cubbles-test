@@ -1,7 +1,7 @@
 {
   "name": "connectionhook-test",
   "groupId": "cubx.core.cif-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "modelVersion": "9.1.0",
   "docType": "webpackage",
   "author": {
