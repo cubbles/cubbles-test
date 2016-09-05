@@ -4,24 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <title>unit tests for connectionhook-elementary-b</title>
-    <script src="../../../cubx.core.rte@2.0.0-SNAPSHOT/webcomponents-lite/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@2.0.0/webcomponents-lite/webcomponents-lite.js"></script>
     <script>
         window.cubx = {
             "CRCInit": {
                 "rootDependencies": [
-                    "this/connectionhook-elementary-b/main"
+                    {
+ 						artifactId: 'connectionhook-elementary-b'
+					}
                 ]
             }
         }
     </script>
-    <script src="../../../web-component-tester-4.2.2@0.1.0/web-component-tester/browser.js"></script>
+    <script src="../../../web-component-tester-4.2.2@0.2.0/web-component-tester/browser.js"></script>
     <script src="mocha-config.js"></script>
 
-    <script src="../../../cubx.core.rte@2.0.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+    <script src="../../../cubx.core.rte@2.0.0/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
 
-    <script>
-        console.log('XXXXXXXXXXXXXXXXXXXXXXXX Loaded');
-    </script>
 </head>
 <body>
 <hr>
