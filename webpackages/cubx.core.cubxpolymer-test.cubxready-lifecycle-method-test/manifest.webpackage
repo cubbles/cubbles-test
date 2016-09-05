@@ -1,7 +1,7 @@
 {
     "name": "cubxready-lifecycle-method-test",
     "groupId": "cubx.core.cubxpolymer-test",
-    "version": "1.0.0-SNAPSHOT",
+    "version": "1.0.0",
     "modelVersion": "9.1.0",
     "docType": "webpackage",
     "author": {
@@ -15,7 +15,19 @@
     ],
     "man": [],
     "artifacts": {
-        "apps": [],
+        "apps": [
+            {
+                "artifactId": "docs",
+                "description": "package documentation",
+                "runnables": [
+                    {
+                        "name": "cubx.core.cubxpolymer-test.cubxready-lifecycle-method-test generated documentation",
+                        "path": "/index.html",
+                        "description": "show the webpackage structure"
+                    }
+                ]
+            }
+        ],
         "elementaryComponents": [
             {
                 "artifactId": "elementary-cubxready-method",
@@ -25,6 +37,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app for using of the cubxfReady lifecycle method."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -43,7 +60,7 @@
                 ],
                 "dependencies": [
                     {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "webpackageId": "cubx.core.rte@2.0.0",
                         "artifactId": "cubxpolymer"
                     }
                 ]
