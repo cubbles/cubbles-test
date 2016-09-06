@@ -1,7 +1,7 @@
 {
     "name": "compound-template-test",
     "groupId": "cubx.core.rte",
-    "version": "1.0.0-SNAPSHOT",
+    "version": "1.0.0",
     "modelVersion": "9.1.0",
     "docType": "webpackage",
     "author": {
@@ -14,7 +14,7 @@
     "artifacts": {
         "apps": [
             {
-                "artifactId": "cif-template-test",
+                "artifactId": "demo-template-app",
                 "description": "",
                 "runnables": [
                     {
@@ -25,13 +25,13 @@
                 ]
             },
             {
-                "artifactId": "demo-template-app",
-                "description": "",
+                "artifactId": "docs",
+                "description": "package documentation",
                 "runnables": [
                     {
-                        "name": "My Hello World App.",
+                        "name": "cubx.core.rte.test.composite-fall-test generated documentation",
                         "path": "/index.html",
-                        "description": "Call this app as a simple demo."
+                        "description": "show the webpackage structure"
                     }
                 ]
             }
@@ -45,6 +45,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -63,7 +68,7 @@
                 ],
                 "dependencies": [
                     {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "webpackageId": "cubx.core.rte@2.0.0",
                         "artifactId": "cubxpolymer"
                     }
                 ]
@@ -76,6 +81,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -94,7 +104,7 @@
                 ],
                 "dependencies": [
                     {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "webpackageId": "cubx.core.rte@2.0.0",
                         "artifactId": "cubxpolymer"
                     }
                 ]
@@ -102,13 +112,18 @@
         ],
         "compoundComponents": [
             {
-                "artifactId": "compound-with-template-main",
+                "artifactId": "compound-with-template",
                 "description": "This is a cubbles-compound-component.",
                 "runnables": [
                     {
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -192,18 +207,23 @@
                         "artifactId": "second-elementary"
                     },
                     {
-                        "artifactId": "canvas-main"
+                        "artifactId": "canvas"
                     }
                 ]
             },
             {
-                "artifactId": "compound-with-template-without-template",
+                "artifactId": "compound-without-template",
                 "description": "This is a cubbles-compound-component. This endpoint has no html template.",
                 "runnables": [
                     {
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -271,7 +291,7 @@
                     }
                 ],
                 "resources": [
-                    "css/compound-with-template.css"
+                    "css/compound-without-template.css"
                 ],
                 "dependencies": [
                     {
@@ -281,7 +301,7 @@
                         "artifactId": "second-elementary"
                     },
                     {
-                        "artifactId": "canvas-main"
+                        "artifactId": "canvas"
                     }
                 ]
             },
@@ -293,6 +313,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -308,11 +333,11 @@
                 "members": [
                     {
                         "memberId": "first",
-                        "artifactId": "compound-with-template-main"
+                        "artifactId": "compound-with-template"
                     },
                     {
                         "memberId": "second",
-                        "artifactId": "compound-with-template-main"
+                        "artifactId": "compound-with-template"
                     }
                 ],
                 "connections": [
@@ -360,25 +385,17 @@
                 ],
                 "dependencies": [
                     {
-                        "artifactId": "compound-with-template-main"
+                        "artifactId": "compound-with-template"
                     },
                     {
-                        "artifactId": "canvas-main"
+                        "artifactId": "canvas"
                     }
                 ]
             }
         ],
         "utilities": [
             {
-                "artifactId": "canvas-main",
-                "description": "",
-                "resources": [
-                    "js/canvas.js"
-                ],
-                "dependencies": []
-            },
-            {
-                "artifactId": "canvas-html-import",
+                "artifactId": "canvas",
                 "description": " This is recommended for you use with webcomponents.",
                 "resources": [
                     "html-import.html"
