@@ -36,6 +36,17 @@
                         "artifactId": "outer-compound"
                     }
                 ]
+            },
+            {
+                "artifactId": "docs",
+                "description": "package documentation",
+                "runnables": [
+                    {
+                        "name": "cubx.core.rte-test.compound-dynamic-connections generated documentation",
+                        "path": "/index.html",
+                        "description": "show the webpackage structure"
+                    }
+                ]
             }
         ],
         "elementaryComponents": [
@@ -47,6 +58,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -64,7 +80,7 @@
                 ],
                 "dependencies": [
                     {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
+                        "webpackageId": "cubx.core.rte@2.0.0",
                         "artifactId": "cubxpolymer"
                     }
                 ]
@@ -79,6 +95,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -130,6 +151,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
