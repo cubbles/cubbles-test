@@ -1,12 +1,12 @@
 {
   "uploadConfigs": {
     "dev": {
-      "url": "http://webcomponents-lite/webcomponents-lite.js/core-test",
+      "url": "http://cubbles-base-local/core-test",
       "proxy": "",
       "debug": false
     },
     "release": {
-      "url": "https://www.cubbles.world/core-test",
+      "url": "https://cubbles.world/core-test",
       "proxy": "",
       "debug": false
     }

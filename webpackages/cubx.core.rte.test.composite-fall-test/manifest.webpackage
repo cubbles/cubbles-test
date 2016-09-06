@@ -23,7 +23,18 @@
                         "description": "Call this app as a simple demo."
                     }
                 ]
-            }
+            },
+          {
+            "artifactId": "docs",
+            "description": "package documentation",
+            "runnables": [
+              {
+                "name": "cubx.core.rte.test.composite-fall-test generated documentation",
+                "path": "/index.html",
+                "description": "show the webpackage structure"
+              }
+            ]
+          }
         ],
         "elementaryComponents": [],
         "compoundComponents": [],

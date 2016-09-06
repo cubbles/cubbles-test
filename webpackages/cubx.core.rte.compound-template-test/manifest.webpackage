@@ -1,7 +1,7 @@
 {
     "name": "compound-template-test",
     "groupId": "cubx.core.rte",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "modelVersion": "9.1.0",
     "docType": "webpackage",
     "author": {
@@ -29,7 +29,7 @@
                 "description": "package documentation",
                 "runnables": [
                     {
-                        "name": "cubx.core.rte.test.composite-fall-test generated documentation",
+                        "name": "cubx.core.rte.compound-template-test generated documentation",
                         "path": "/index.html",
                         "description": "show the webpackage structure"
                     }
