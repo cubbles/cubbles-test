@@ -1,11 +1,11 @@
 Examples:
     {
         "source": {
-            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/outer-compound:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/inner-compound.inner1:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/basic-elementary.member1",
+            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@1.0.1/outer-compound.outer:cubx.core.rte-test.compound-dynamic-connections@1.0.1/inner-compound.inner1:cubx.core.rte-test.compound-dynamic-connections@1.0.1/basic-elementary.member1",
             "slot": "message"
         },
         "destination": {
-            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/outer-compound:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/inner-compound.inner1:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/basic-elementary.member2",
+            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@1.0.1/outer-compound.outer:cubx.core.rte-test.compound-dynamic-connections@1.0.1/inner-compound.inner1:cubx.core.rte-test.compound-dynamic-connections@1.0.1/basic-elementary.member2",
             "slot": "message"
         },
         "hookFunction": "function(value,next){ next(value + ' hook1');}",
@@ -14,11 +14,11 @@ Examples:
 -----------
     {
         "source": {
-            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/outer-compound:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/inner-compound.inner1:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/basic-elementary.member2",
+            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@1.0.1/outer-compound.outer:cubx.core.rte-test.compound-dynamic-connections@1.0.1/inner-compound.inner1:cubx.core.rte-test.compound-dynamic-connections@1.0.1/basic-elementary.member2",
             "slot": "message"
         },
         "destination": {
-            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/outer-compound:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/inner-compound.inner1",
+            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@1.0.1/outer-compound.outer:cubx.core.rte-test.compound-dynamic-connections@1.0.1/inner-compound.inner1",
             "slot": "message"
         },
         "hookFunction": "function(value,next){ next(value + ' hook2');}",
@@ -27,11 +27,11 @@ Examples:
 -----------
     {
         "source": {
-            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/outer-compound:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/inner-compound.inner1",
+            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@1.0.1/outer-compound.outer:cubx.core.rte-test.compound-dynamic-connections@1.0.1/inner-compound.inner1",
             "slot": "message"
         },
         "destination": {
-            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/outer-compound:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/inner-compound.inner2",
+            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@1.0.1/outer-compound.outer:cubx.core.rte-test.compound-dynamic-connections@1.0.1/inner-compound.inner2",
             "slot": "message"
         },
         "hookFunction": "function(value,next){ next(value + ' hook3');}",
@@ -40,11 +40,11 @@ Examples:
 -----------
     {
         "source": {
-            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/outer-compound:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/inner-compound.inner2",
+            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@1.0.1/outer-compound.outer:cubx.core.rte-test.compound-dynamic-connections@1.0.1/inner-compound.inner2",
             "slot": "message"
         },
         "destination": {
-            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/outer-compound:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/inner-compound.inner2:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/basic-elementary.member2",
+            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@1.0.1/outer-compound.outer:cubx.core.rte-test.compound-dynamic-connections@1.0.1/inner-compound.inner2:cubx.core.rte-test.compound-dynamic-connections@1.0.1/basic-elementary.member2",
             "slot": "message"
         },
         "hookFunction": "function(value,next){ next(value + ' hook4');}",
@@ -53,11 +53,11 @@ Examples:
 -----------
     {
         "source": {
-            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/outer-compound:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/inner-compound.inner2:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/basic-elementary.member2",
+            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@1.0.1/outer-compound.outer:cubx.core.rte-test.compound-dynamic-connections@1.0.1/inner-compound.inner2:cubx.core.rte-test.compound-dynamic-connections@1.0.1/basic-elementary.member2",
             "slot": "message"
         },
         "destination": {
-            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/outer-compound:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/inner-compound.inner2:cubx.core.rte-test.compound-dynamic-connections@0.3.0-SNAPSHOT/basic-elementary.member1",
+            "runtimeId": "cubx.core.rte-test.compound-dynamic-connections@1.0.1/outer-compound.outer:cubx.core.rte-test.compound-dynamic-connections@1.0.1/inner-compound.inner2:cubx.core.rte-test.compound-dynamic-connections@1.0.1/basic-elementary.member1",
             "slot": "message"
         },
         "hookFunction": "function(value,next){ next(value + ' hook5');}",
