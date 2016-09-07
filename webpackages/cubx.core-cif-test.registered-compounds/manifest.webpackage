@@ -1,156 +1,183 @@
 {
-    "name": "registered-compounds",
-    "groupId": "cubx.core-cif-test",
-    "version": "1.0.0-SNAPSHOT",
-    "modelVersion": "9.1.0",
-    "docType": "webpackage",
-    "author": {
-        "name": "Judit Ross",
-        "email": "judit.ross@incowia.com"
-    },
-    "description": "A little test to use a one defined compound-element more than one times.",
-    "license": "MIT",
-    "keywords": [],
-    "man": [],
-    "artifacts": {
-        "apps": [],
-        "elementaryComponents": [
-            {
-                "artifactId": "content-element",
-                "description": "This is an elementary-component based on Polymer.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "message",
-                        "type": "string",
-                        "direction": [
-                            "input"
-                        ]
-                    }
-                ],
-                "resources": [
-                    "content-element.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    }
-                ]
-            }
+  "name": "registered-compounds",
+  "groupId": "cubx.core-cif-test",
+  "version": "1.0.0",
+  "modelVersion": "9.1.0",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "description": "A little test to use a one defined compound-element more than one times.",
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "docs",
+        "description": "package documentation",
+        "runnables": [
+          {
+            "name": "cubx.core-cif-test.registered-compounds generated documentation",
+            "path": "/index.html",
+            "description": "show the webpackage structure"
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "content-element",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
         ],
-        "compoundComponents": [
-            {
-                "artifactId": "inner-frame",
-                "description": "This is a cubbles-compound-component.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "message",
-                        "type": "string",
-                        "direction": [
-                            "input"
-                        ]
-                    }
-                ],
-                "members": [
-                    {
-                        "memberId": "content",
-                        "artifactId": "content-element"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "message",
-                        "source": {
-                            "slot": "message"
-                        },
-                        "destination": {
-                            "memberIdRef": "content",
-                            "slot": "message"
-                        }
-                    }
-                ],
-                "inits": [],
-                "resources": [],
-                "dependencies": [
-                    {
-                        "artifactId": "content-element"
-                    }
-                ]
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "resources": [
+          "content-element.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.1",
+            "artifactId": "cubxpolymer"
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "inner-frame",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "content",
+            "artifactId": "content-element"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "message",
+            "source": {
+              "slot": "message"
             },
-            {
-                "artifactId": "outer-frame",
-                "description": "This is a cubbles-compound-component.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "message",
-                        "type": "string",
-                        "direction": [
-                            "input"
-                        ]
-                    }
-                ],
-                "members": [
-                    {
-                        "memberId": "innerFrame1",
-                        "artifactId": "inner-frame"
-                    },
-                    {
-                        "memberId": "innerFrame2",
-                        "artifactId": "inner-frame"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "message1",
-                        "source": {
-                            "slot": "message"
-                        },
-                        "destination": {
-                            "memberIdRef": "innerFrame1",
-                            "slot": "message"
-                        }
-                    },
-                    {
-                        "connectionId": "message2",
-                        "source": {
-                            "slot": "message"
-                        },
-                        "destination": {
-                            "memberIdRef": "innerFrame2",
-                            "slot": "message"
-                        }
-                    }
-                ],
-                "inits": [],
-                "resources": [],
-                "dependencies": [
-                    {
-                        "artifactId": "inner-frame"
-                    }
-                ]
+            "destination": {
+              "memberIdRef": "content",
+              "slot": "message"
             }
+          }
         ],
-        "utilities": []
-    }
+        "inits": [],
+        "resources": [],
+        "dependencies": [
+          {
+            "artifactId": "content-element"
+          }
+        ]
+      },
+      {
+        "artifactId": "outer-frame",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "innerFrame1",
+            "artifactId": "inner-frame"
+          },
+          {
+            "memberId": "innerFrame2",
+            "artifactId": "inner-frame"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "message1",
+            "source": {
+              "slot": "message"
+            },
+            "destination": {
+              "memberIdRef": "innerFrame1",
+              "slot": "message"
+            }
+          },
+          {
+            "connectionId": "message2",
+            "source": {
+              "slot": "message"
+            },
+            "destination": {
+              "memberIdRef": "innerFrame2",
+              "slot": "message"
+            }
+          }
+        ],
+        "inits": [],
+        "resources": [],
+        "dependencies": [
+          {
+            "artifactId": "inner-frame"
+          }
+        ]
+      }
+    ],
+    "utilities": []
+  }
 }
