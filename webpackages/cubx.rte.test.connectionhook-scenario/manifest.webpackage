@@ -1,202 +1,229 @@
 {
-    "name": "connectionhook-scenario",
-    "groupId": "cubx.rte.test",
-    "version": "1.0.0-SNAPSHOT",
-    "modelVersion": "9.1.0",
-    "docType": "webpackage",
-    "author": {
-        "name": "Judit Ross",
-        "email": "judit.ross@incowia.com"
-    },
-    "license": "MIT",
-    "keywords": [],
-    "man": [],
-    "artifacts": {
-        "apps": [],
-        "elementaryComponents": [
-            {
-                "artifactId": "message-viewer",
-                "description": "This is an elementary-component based on Polymer.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "message",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    }
-                ],
-                "resources": [
-                    "message-viewer.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.0.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    },
-                    {
-                        "webpackageId": "bootstrap-3.3.5@1.0.3",
-                        "artifactId": "bootstrap",
-                        "endpointId": "bootstrap-css-only"
-                    }
-                ]
-            }
+  "name": "connectionhook-scenario",
+  "groupId": "cubx.rte.test",
+  "version": "1.0.0",
+  "modelVersion": "9.1.0",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "docs",
+        "description": "package documentation",
+        "runnables": [
+          {
+            "name": "cubx.rte.test.connectionhook-scenario generated documentation",
+            "path": "/index.html",
+            "description": "show the webpackage structure"
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "message-viewer",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
         ],
-        "compoundComponents": [
-            {
-                "artifactId": "message-viewer-compound",
-                "description": "This is a cubbles-compound-component.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "message",
-                        "type": "string",
-                        "direction": [
-                            "input",
-                            "output"
-                        ]
-                    }
-                ],
-                "members": [
-                    {
-                        "memberId": "inner",
-                        "artifactId": "message-viewer"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "internal-ingoing",
-                        "source": {
-                            "slot": "message"
-                        },
-                        "destination": {
-                            "memberIdRef": "inner",
-                            "slot": "message"
-                        },
-                        "hookFunction": "function(value,next){ var newValue = value + ' (4)'; next(newValue);}"
-                    },
-                    {
-                        "connectionId": "internal-outgoing",
-                        "source": {
-                            "memberIdRef": "inner",
-                            "slot": "message"
-                        },
-                        "destination": {
-                            "slot": "message"
-                        },
-                        "hookFunction": "function(value,next){ var newValue = value + ' (5)'; next(newValue);}"
-                    }
-                ],
-                "inits": [],
-                "resources": [
-                    "css/message-viewer-compound.css"
-                ],
-                "dependencies": [
-                    {
-                        "artifactId": "message-viewer"
-                    }
-                ]
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          }
+        ],
+        "resources": [
+          "message-viewer.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.1",
+            "artifactId": "cubxpolymer"
+          },
+          {
+            "webpackageId": "bootstrap-3.3.5@1.0.3",
+            "artifactId": "bootstrap",
+            "endpointId": "bootstrap-css-only"
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "message-viewer-compound",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "inner",
+            "artifactId": "message-viewer"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "internal-ingoing",
+            "source": {
+              "slot": "message"
             },
-            {
-                "artifactId": "example-compound",
-                "description": "This is a cubbles-compound-component.",
-                "runnables": [
-                    {
-                        "name": "example",
-                        "path": "/demo/index.html",
-                        "description": "Example for connection hookFunctions, across sibling connections and internal connections"
-                    },
-                    {
-                        "name": "test",
-                        "path": "/test/index.html",
-                        "description": "wct test..."
-                    }
-                ],
-                "members": [
-                    {
-                        "memberId": "first",
-                        "artifactId": "message-viewer"
-                    },
-                    {
-                        "memberId": "second",
-                        "artifactId": "message-viewer-compound"
-                    },
-                    {
-                        "memberId": "third",
-                        "artifactId": "message-viewer-compound"
-                    },
-                    {
-                        "memberId": "fourth",
-                        "artifactId": "message-viewer"
-                    }
-                ],
-                "connections": [
-                    {
-                        "connectionId": "firstToSecond",
-                        "source": {
-                            "memberIdRef": "first",
-                            "slot": "message"
-                        },
-                        "destination": {
-                            "memberIdRef": "second",
-                            "slot": "message"
-                        },
-                        "hookFunction": "function(value,next){ var newValue = value + ' (1)'; next(newValue);}"
-                    },
-                    {
-                        "connectionId": "secondToThird",
-                        "source": {
-                            "memberIdRef": "second",
-                            "slot": "message"
-                        },
-                        "destination": {
-                            "memberIdRef": "third",
-                            "slot": "message"
-                        },
-                        "hookFunction": "function(value,next){ var newValue = value + ' (2)'; next(newValue);}"
-                    },
-                    {
-                        "connectionId": "thirdToForth",
-                        "source": {
-                            "memberIdRef": "third",
-                            "slot": "message"
-                        },
-                        "destination": {
-                            "memberIdRef": "fourth",
-                            "slot": "message"
-                        },
-                        "hookFunction": "function(value,next){ var newValue = value + ' (3)'; next(newValue);}"
-                    }
-                ],
-                "inits": [],
-                "resources": [
-                    "css/example-compound.css",
-                    "js/style.js"
-                ],
-                "dependencies": [
-                    {
-                        "artifactId": "message-viewer"
-                    },
-                    {
-                        "artifactId": "message-viewer-compound"
-                    }
-                ]
-            }
+            "destination": {
+              "memberIdRef": "inner",
+              "slot": "message"
+            },
+            "hookFunction": "function(value,next){ var newValue = value + ' (4)'; next(newValue);}"
+          },
+          {
+            "connectionId": "internal-outgoing",
+            "source": {
+              "memberIdRef": "inner",
+              "slot": "message"
+            },
+            "destination": {
+              "slot": "message"
+            },
+            "hookFunction": "function(value,next){ var newValue = value + ' (5)'; next(newValue);}"
+          }
         ],
-        "utilities": []
-    }
+        "inits": [],
+        "resources": [
+          "css/message-viewer-compound.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "message-viewer"
+          }
+        ]
+      },
+      {
+        "artifactId": "example-compound",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "example",
+            "path": "/demo/index.html",
+            "description": "Example for connection hookFunctions, across sibling connections and internal connections"
+          },
+          {
+            "name": "test",
+            "path": "/test/index.html",
+            "description": "wct test..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
+        "members": [
+          {
+            "memberId": "first",
+            "artifactId": "message-viewer"
+          },
+          {
+            "memberId": "second",
+            "artifactId": "message-viewer-compound"
+          },
+          {
+            "memberId": "third",
+            "artifactId": "message-viewer-compound"
+          },
+          {
+            "memberId": "fourth",
+            "artifactId": "message-viewer"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "firstToSecond",
+            "source": {
+              "memberIdRef": "first",
+              "slot": "message"
+            },
+            "destination": {
+              "memberIdRef": "second",
+              "slot": "message"
+            },
+            "hookFunction": "function(value,next){ var newValue = value + ' (1)'; next(newValue);}"
+          },
+          {
+            "connectionId": "secondToThird",
+            "source": {
+              "memberIdRef": "second",
+              "slot": "message"
+            },
+            "destination": {
+              "memberIdRef": "third",
+              "slot": "message"
+            },
+            "hookFunction": "function(value,next){ var newValue = value + ' (2)'; next(newValue);}"
+          },
+          {
+            "connectionId": "thirdToForth",
+            "source": {
+              "memberIdRef": "third",
+              "slot": "message"
+            },
+            "destination": {
+              "memberIdRef": "fourth",
+              "slot": "message"
+            },
+            "hookFunction": "function(value,next){ var newValue = value + ' (3)'; next(newValue);}"
+          }
+        ],
+        "inits": [],
+        "resources": [
+          "css/example-compound.css",
+          "js/style.js"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "message-viewer"
+          },
+          {
+            "artifactId": "message-viewer-compound"
+          }
+        ]
+      }
+    ],
+    "utilities": []
+  }
 }
