@@ -1,7 +1,7 @@
 {
     "name": "dynamic-connection",
     "groupId": "cubx.core.rte-test",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "modelVersion": "9.1.0",
     "docType": "webpackage",
     "author": {

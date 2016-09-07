@@ -11,6 +11,9 @@
       var elem = transpElements[ index ];
       elem.classList.add('col-md-6');
     }
-    document.querySelector('connection-import').classList.add('row');
+    var importElem = document.querySelector('connection-import')
+    if (importElem) {
+      importElem.classList.add('row');
+    }
   });
 }());
