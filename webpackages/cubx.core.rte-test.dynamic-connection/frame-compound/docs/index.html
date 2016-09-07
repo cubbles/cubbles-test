@@ -3,27 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>app</title>
+    <title>&lt;frame-compound&gt; generated documentation</title>
 
     <script src="../../../cubx.core.rte@2.0.1/webcomponents-lite/webcomponents-lite.js"></script>
 
-    <!--
-        Declare a CRCInit-Object used to initialize the CRC (Client-Runtime-Container):
-        * rootDependencies //a string array; string pattern: webpackageId/artifactId/endpointId
-        ** to refer to artifacts of this webpackage, use 'this' as webpackageId
-    -->
     <script>
         window.cubx = {
             CRCInit: {
                 rootDependencies: [
                     {
-                        artifactId: 'frame-compound'
+                        webpackageId: 'jquery-2.1.4@1.2.0',
+                        artifactId: 'jquery'
                     }
                 ]
             }
         }
     </script>
-
 
     <!--
         Refer to the crc-loader artifact from a Cubbles-Base.
@@ -32,7 +27,8 @@
         Want to add a 'main' -script to be executed after the dependencies have been loaded?
         If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
-    <script src="../../../cubx.core.rte@2.0.1/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+    <script src="../../../cubx.core.rte@2.0.1/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
 </head>
 <body>
 <!--
@@ -40,14 +36,25 @@
     Place Cubbles-Component there as child element.
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
-<div cubx-core-crc>
-     <frame-compound custom-attr="test"></frame-compound>
+<div class="container">
+    <div class="row">
+        <h1>&lt;frame-compound&gt; generated documentation</h1>
+    </div>
+    <div cubx-core-crc class="row">
+        <cubx-component-docs-viewer cubx-webpackage-id="com.incowia.cubx-webpackage-viewer@1.3.0">
+        </cubx-component-docs-viewer>
+    </div>
 </div>
+
 <script>
-    var compOrig = document.querySelector('frame-compound');
-    document.addEventListener('cifReady',function(event){
-        console.log('elements equals:', document.querySelector('frame-compound') === compOrig) ;
-    })
+    var compoundDocsViewer = document.getElementsByTagName('cubx-component-docs-viewer')[0];
+    var manifestUrl = "../../manifest.webpackage";
+    document.addEventListener('cifReady', function() {
+        $.getJSON(manifestUrl, function (response) {
+            compoundDocsViewer.setManifest(response);
+            compoundDocsViewer.setComponentArtifactId('frame-compound');
+        });
+    });
 </script>
 </body>
 </html>

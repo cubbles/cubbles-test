@@ -1,7 +1,7 @@
 {
     "name": "dynamic-connection",
     "groupId": "cubx.core.rte-test",
-    "version": "1.0.0-SNAPSHOT",
+    "version": "1.0.0",
     "modelVersion": "9.1.0",
     "docType": "webpackage",
     "author": {
@@ -23,6 +23,17 @@
                         "description": "Call this app as a simple demo."
                     }
                 ]
+            },
+            {
+                "artifactId": "docs",
+                "description": "package documentation",
+                "runnables": [
+                    {
+                        "name": "cubx.core.rte-test.dynamic-connection generated documentation",
+                        "path": "/index.html",
+                        "description": "show the webpackage structure"
+                    }
+                ]
             }
         ],
         "elementaryComponents": [
@@ -34,6 +45,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo application ..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -73,7 +89,7 @@
                 ],
                 "dependencies": [
                     {
-                        "webpackageId": "cubx.core.rte@2.0.0",
+                        "webpackageId": "cubx.core.rte@2.0.1",
                         "artifactId": "cubxpolymer"
                     },
                     {
@@ -82,7 +98,7 @@
                         "endpointId": "bootstrap-css-only"
                     },
                     {
-                        "artifactId": "utils-main"
+                        "artifactId": "utils"
                     }
                 ]
             },
@@ -94,6 +110,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo application ..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -110,7 +131,7 @@
                 ],
                 "dependencies": [
                     {
-                        "webpackageId": "cubx.core.rte@2.0.0",
+                        "webpackageId": "cubx.core.rte@2.0.1",
                         "artifactId": "cubxpolymer"
                     },
                     {
@@ -119,7 +140,7 @@
                         "endpointId": "bootstrap-css-only"
                     },
                     {
-                        "artifactId": "utils-main"
+                        "artifactId": "utils"
                     }
                 ]
             },
@@ -131,6 +152,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -154,7 +180,7 @@
                 ],
                 "dependencies": [
                     {
-                        "webpackageId": "cubx.core.rte@2.0.0",
+                        "webpackageId": "cubx.core.rte@2.0.1",
                         "artifactId": "cubxpolymer"
                     },
                     {
@@ -174,6 +200,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app"
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [],
@@ -200,7 +231,7 @@
                         "artifactId": "transportable-element"
                     },
                     {
-                        "artifactId": "utils-main"
+                        "artifactId": "utils"
                     }
                 ]
             },
@@ -212,6 +243,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -291,7 +327,7 @@
                         "artifactId": "transportable-element"
                     },
                     {
-                        "artifactId": "utils-main"
+                        "artifactId": "utils"
                     }
                 ]
             },
@@ -303,6 +339,11 @@
                         "name": "demo",
                         "path": "/demo/index.html",
                         "description": "Demo app..."
+                    },
+                    {
+                        "name": "docs",
+                        "path": "/docs/index.html",
+                        "description": "Dataflow of the component"
                     }
                 ],
                 "slots": [
@@ -364,16 +405,8 @@
         ],
         "utilities": [
             {
-                "artifactId": "utils-main",
-                "description": "",
-                "resources": [
-                    "js/util.js"
-                ],
-                "dependencies": []
-            },
-            {
-                "artifactId": "utils-html-import",
-                "description": " This is recommended for you use with webcomponents.",
+                "artifactId": "utils",
+                "description": "Dom Utils",
                 "resources": [
                     "html-import.html"
                 ],
