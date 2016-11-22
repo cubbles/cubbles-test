@@ -1,122 +1,122 @@
 {
-    "name": "dependency-mgr",
-    "groupId": "cubx.core.rte.test",
-    "version": "1.0.0-SNAPSHOT",
-    "modelVersion": "9.1.0",
-    "docType": "webpackage",
-    "author": {
-        "name": "Philipp Wagner",
-        "email": "philipp.wagner@incowia.com"
-    },
-    "license": "MIT",
-    "keywords": [],
-    "man": [],
-    "artifacts": {
-        "apps": [
-            {
-                "artifactId": "app",
-                "description": "This is a simple pre-generated app.",
-                "runnables": [
-                    {
-                        "name": "Custom manifestUrl demo",
-                        "path": "/index-manifestUrl.html",
-                        "description": "Demo showing the usage of custom manifestUrl in rootDependencies"
-                    },
-                    {
-                        "name": "Custom manifest object demo",
-                        "path": "/index-manifestObject.html",
-                        "description": "Demo showing the usage of custom manifest object in rootDependencies"
-                    }
-                ]
-            },
-            {
-                "artifactId": "docs",
-                "description": "Generated webpackage documentation.",
-                "runnables": [
-                    {
-                        "name": "docs",
-                        "path": "/index.html",
-                        "description": "Show the interface of this component."
-                    }
-                ]
-            }
+  "name": "dependency-mgr",
+  "groupId": "cubx.core.rte.test",
+  "version": "1.0.0-SNAPSHOT",
+  "modelVersion": "9.1.0",
+  "docType": "webpackage",
+  "author": {
+    "name": "Philipp Wagner",
+    "email": "philipp.wagner@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "app",
+        "description": "This is a simple pre-generated app.",
+        "runnables": [
+          {
+            "name": "Custom manifestUrl demo",
+            "path": "/index-manifestUrl.html",
+            "description": "Demo showing the usage of custom manifestUrl in rootDependencies"
+          },
+          {
+            "name": "Custom manifest object demo",
+            "path": "/index-manifestObject.html",
+            "description": "Demo showing the usage of custom manifest object in rootDependencies"
+          }
+        ]
+      },
+      {
+        "artifactId": "docs",
+        "description": "Generated webpackage documentation.",
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/index.html",
+            "description": "Show the interface of this component."
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "test-elementary-a",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
         ],
-        "elementaryComponents": [
-            {
-                "artifactId": "test-elementary-a",
-                "description": "This is an elementary-component based on Polymer.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    },
-                    {
-                        "name": "docs",
-                        "path": "/docs/index.html",
-                        "description": "Show the interface of this component."
-                    }
-                ],
-                "slots": [],
-                "resources": [
-                    "test-elementary-a.html"
-                ],
-                "dependencies": [
-                    {
-                        "webpackageId": "cubx.core.rte@2.1.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer"
-                    },
-                    {
-                        "webpackageId": "com.incowia.lib.chart-library@0.1.0-SNAPSHOT",
-                        "artifactId": "bar-chart",
-                        "endpointId": "main"
-                    }
-                ]
-            }
+        "slots": [],
+        "resources": [
+          "test-elementary-a.html"
         ],
-        "compoundComponents": [
-            {
-                "artifactId": "test-compound-a",
-                "description": "This is a cubbles-compound-component.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    },
-                    {
-                        "name": "docs",
-                        "path": "/docs/index.html",
-                        "description": "Show the interface and dataflow of this component."
-                    }
-                ],
-                "slots": [],
-                "members": [
-                    {
-                        "memberId": "m1",
-                        "artifactId": "test-elementary-a"
-                    }
-                ],
-                "connections": [],
-                "inits": [],
-                "resources": [
-                    "css/test-compound-a.css",
-                    "template.html"
-                ],
-                "dependencies": [
-                    {
-                        "artifactId": "test-elementary-a"
-                    }
-                ],
-                "dependencyExcludes": [
-                    {
-                        "webpackageId": "cubx.core.rte@1.8.0-SNAPSHOT",
-                        "artifactId": "cubxpolymer",
-                        "endpoint": "main"
-                    }
-                ]
-            }
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.1.0",
+            "artifactId": "cubxpolymer"
+          },
+          {
+            "webpackageId": "com.incowia.lib.chart-library@0.1.0-SNAPSHOT",
+            "artifactId": "bar-chart",
+            "endpointId": "main"
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "test-compound-a",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
         ],
-        "utilities": []
-    }
+        "slots": [],
+        "members": [
+          {
+            "memberId": "m1",
+            "artifactId": "test-elementary-a"
+          }
+        ],
+        "connections": [],
+        "inits": [],
+        "resources": [
+          "css/test-compound-a.css",
+          "template.html"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "test-elementary-a"
+          }
+        ],
+        "dependencyExcludes": [
+          {
+            "webpackageId": "cubx.core.rte@1.8.0-SNAPSHOT",
+            "artifactId": "cubxpolymer",
+            "endpointId": "main"
+          }
+        ]
+      }
+    ],
+    "utilities": []
+  }
 }
