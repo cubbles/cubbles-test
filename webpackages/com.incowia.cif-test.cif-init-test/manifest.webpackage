@@ -1,7 +1,7 @@
 {
   "name": "cif-init-test",
   "groupId": "com.incowia.cif-test",
-  "version": "2.1.0-SNAPSHOT",
+  "version": "2.1.0",
   "modelVersion": "9.1.0",
   "docType": "webpackage",
   "author": {
@@ -6024,7 +6024,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.0.1",
+            "webpackageId": "cubx.core.rte@2.1.0",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -6082,7 +6082,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.0.1",
+            "webpackageId": "cubx.core.rte@2.1.0",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -6112,7 +6112,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.0.1",
+            "webpackageId": "cubx.core.rte@2.1.0",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -6182,7 +6182,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.0.1",
+            "webpackageId": "cubx.core.rte@2.1.0",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -6252,7 +6252,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.0.1",
+            "webpackageId": "cubx.core.rte@2.1.0",
             "artifactId": "cubxpolymer"
           }
         ]
