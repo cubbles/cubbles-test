@@ -65,6 +65,11 @@
                     {
                         "webpackageId": "cubx.core.rte@2.1.0-SNAPSHOT",
                         "artifactId": "cubxpolymer"
+                    },
+                    {
+                        "webpackageId": "com.incowia.lib.chart-library@0.1.0-SNAPSHOT",
+                        "artifactId": "bar-chart",
+                        "endpointId": "main"
                     }
                 ]
             }
@@ -101,6 +106,13 @@
                 "dependencies": [
                     {
                         "artifactId": "test-elementary-a"
+                    }
+                ],
+                "dependencyExcludes": [
+                    {
+                        "webpackageId": "cubx.core.rte@1.8.0-SNAPSHOT",
+                        "artifactId": "cubxpolymer",
+                        "endpoint": "main"
                     }
                 ]
             }

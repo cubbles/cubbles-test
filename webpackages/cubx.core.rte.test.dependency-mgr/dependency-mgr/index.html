@@ -7,7 +7,7 @@
 
     <script src="../../cubx.core.rte@2.1.0-SNAPSHOT/webcomponents-lite/webcomponents-lite.js"></script>
 
-    <!-- defne your inline custom manifest here. This will be used in rootDependencies configuratio below -->
+    <!-- defne your inline custom manifest here. This will be used in rootDependencies configuration below -->
     <script>
         window.myCustomManifest = {
             "name": "dependency-mgr",
@@ -132,9 +132,9 @@
             CRCInit: {
                 rootDependencies: [
                     {
-                        artifactId: 'test-compound-a'//,
-//                        endpointId: 'main'//,
-//                        manifest: window.myCustomManifest
+                        artifactId: 'test-compound-a',
+                        endpointId: 'main',
+                        manifest: window.myCustomManifest
                     }
                 ]
             }
@@ -150,6 +150,6 @@
 </head>
 <body cubx-core-crc>
 <h1>DependencyMgr Demo Scenario</h1>
-<test-compound-a></test-compound-a>
+<test-compound-a cubx-webpackage-id="this"></test-compound-a>
 </body>
 </html>
