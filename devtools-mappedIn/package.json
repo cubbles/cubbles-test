@@ -1,7 +1,7 @@
 {
   "name": "cubbles-coder-devtools",
   "description": "This contains a suite of grunt-based tools to develop and release cubbles-webpackages.",
-  "version": "2.8.0",
+  "version": "2.8.1",
   "private": true,
   "engines": {
     "node": ">= 0.10.0",
@@ -14,7 +14,7 @@
     "cubx-grunt-webpackage-chooser": "^1.0.0",
     "cubx-grunt-webpackage-scaffold": "^2.4.0",
     "cubx-grunt-webpackage-upload": "^1.7.0",
-    "cubx-grunt-webpackage-version-converter": "^1.1.1",
+    "cubx-grunt-webpackage-version-converter": "^1.1.2",
     "cubx-webpackage-document-api": "^3.0.0",
     "eslint": "^2.4.0",
     "eslint-config-standard": "^5.1.0",
@@ -53,8 +53,8 @@
     "time-grunt": "~1.0.0"
   },
   "devDependencies": {
-    "http-proxy-middleware": "^0.15.1",
-    "web-component-tester": "^4.2.2"
+    "http-proxy-middleware": "0.15.1",
+    "web-component-tester": "4.2.2"
   },
   "repository": {
     "type": "git",
