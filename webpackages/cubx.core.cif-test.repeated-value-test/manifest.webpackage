@@ -1,7 +1,7 @@
 {
   "name": "repeated-value-test",
   "groupId": "cubx.core.cif-test",
-  "version": "1.1.0-SNAPSHOT",
+  "version": "1.1.0",
   "modelVersion": "9.1.0",
   "docType": "webpackage",
   "author": {
@@ -95,7 +95,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.0.1",
+            "webpackageId": "cubx.core.rte@2.1.0",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -124,7 +124,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.0.1",
+            "webpackageId": "cubx.core.rte@2.1.0",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -154,7 +154,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.0.1",
+            "webpackageId": "cubx.core.rte@2.1.0",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -848,7 +848,7 @@
       },
       {
         "artifactId": "repeated-value-true-compound-g",
-        "description": "This is a cubixx-compound-component.",
+        "description": "Component with circular connections.",
         "runnables": [
           {
             "name": "docs",
