@@ -1,0 +1,72 @@
+{
+  "name": "cubxready-lifecycle-method-test",
+  "groupId": "cubx.core.rte.cubxpolymer-test",
+  "version": "1.3.0-SNAPSHOT",
+  "modelVersion": "9.1.0",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "test",
+    "cubxpolymer-test"
+  ],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "docs",
+        "description": "package documentation",
+        "runnables": [
+          {
+            "name": "ccubx.core.rte.cubxpolymer-test.cubxready-lifecycle-method-test generated documentation",
+            "path": "/index.html",
+            "description": "show the webpackage structure"
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "elementary-cubxready-method",
+        "description": "Elementary component for demonstrate the cubxReady lifecycle method.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app for using of the cubxfReady lifecycle method."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "a",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": 10
+          }
+        ],
+        "resources": [
+          "elementary-cubxready-method.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.1.0",
+            "artifactId": "cubxpolymer"
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [],
+    "utilities": []
+  }
+}
