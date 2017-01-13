@@ -1,0 +1,10 @@
+color-container-compound {
+    display: block;
+    width: 300px;
+}
+.colorContainerOuter {
+    border: black solid thin;
+    padding: 10px;
+}
+
+

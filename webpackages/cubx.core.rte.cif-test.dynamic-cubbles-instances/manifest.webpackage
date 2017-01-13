@@ -1,0 +1,190 @@
+{
+  "name": "dynamic-cubbles-instances",
+  "groupId": "cubx.core.rte.cif-test",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "9.1.1",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "docs",
+        "description": "Generated webpackage documentation.",
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/index.html",
+            "description": "Show the interface of this component."
+          }
+        ]
+      },
+      {
+        "artifactId": "dynamic-instances-demo",
+        "description": "",
+        "runnables": [
+          {
+            "name": "My Hello World App.",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "color-picker",
+        "description": "An color picker insance.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "color-picker.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.1.0",
+            "artifactId": "cubxpolymer"
+          },
+          {
+            "artifactId": "jscolor"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "color",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": "000000"
+          }
+        ]
+      },
+      {
+        "artifactId": "color-container",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "color-container.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.1.0",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "color",
+            "type": "number",
+            "direction": [
+              "input"
+            ],
+            "value": "#FF0000"
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "color-container-compound",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/color-container-compound.css",
+          "color-container-template.html"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "color-container"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "color",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "inner-container",
+            "artifactId": "color-container"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "color-transfer",
+            "source": {
+              "slot": "color"
+            },
+            "destination": {
+              "memberIdRef": "inner-container",
+              "slot": "color"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "color",
+            "value": "#0000FF"
+          }
+        ]
+      }
+    ],
+    "utilities": [
+      {
+        "artifactId": "jscolor",
+        "description": "",
+        "resources": [
+          {
+            "prod": "html-import.min.html",
+            "dev": "html-import.html"
+          }
+        ],
+        "dependencies": []
+      }
+    ]
+  }
+}

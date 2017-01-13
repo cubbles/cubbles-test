@@ -1,0 +1,26 @@
+// eslint-disable-next-line no-unused-vars
+function addColorPicker () {
+  var container = document.querySelector('.container');
+  var elem = document.createElement('color-picker');
+  elem.setAttribute('member-id', 'one');
+  container.appendChild(elem);
+}
+// eslint-disable-next-line no-unused-vars
+function addColorContainer () {
+  var container = document.querySelector('.container');
+  var elem = document.createElement('color-container-compound');
+  elem.setAttribute('member-id', 'two');
+  container.appendChild(elem);
+}
+// eslint-disable-next-line no-unused-vars
+function addConnection () {
+  var elem = document.querySelector('color-picker');
+  var connections = document.createElement('cubx-core-connections');
+  connections.style.display = 'none';
+  var connection = document.createElement('cubx-core-connection');
+  connection.setAttribute('connection-id', 'color-connection');
+  connection.setAttribute('source', 'color');
+  connection.setAttribute('destination', 'two:color');
+  connections.appendChild(connection);
+  elem.appendChild(connections);
+}

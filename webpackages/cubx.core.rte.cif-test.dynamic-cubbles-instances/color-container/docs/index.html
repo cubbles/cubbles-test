@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;color-container&gt; generated documentation</title>
+
+    <script src="../../../cubx.core.rte@2.1.0/webcomponents-lite/webcomponents-lite.js"></script>
+
+    <script>
+        window.cubx = {
+            CRCInit: {
+                rootDependencies: [
+                    {
+                        webpackageId: 'jquery-2.1.4@1.2.0',
+                        artifactId: 'jquery'
+                    }
+                ]
+            }
+        }
+    </script>
+
+    <script src="../../../cubx.core.rte@2.1.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1>&lt;color-container&gt; generated documentation</h1>
+    </div>
+    <div cubx-core-crc class="row">
+        <cubx-component-docs-viewer cubx-webpackage-id="com.incowia.cubx-webpackage-viewer@1.3.2">
+        </cubx-component-docs-viewer>
+    </div>
+</div>
+
+<script>
+    var componentDocsViewer = document.getElementsByTagName('cubx-component-docs-viewer')[0];
+    var manifestUrl = "../../manifest.webpackage";
+    document.addEventListener('cifReady', function() {
+        $.getJSON(manifestUrl, function (response) {
+            componentDocsViewer.setManifest(response);
+            componentDocsViewer.setComponentArtifactId('color-container');
+        });
+    });
+</script>
+</body>
+</html>

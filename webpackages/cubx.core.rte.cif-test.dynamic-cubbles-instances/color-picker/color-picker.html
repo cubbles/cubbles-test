@@ -1,0 +1,22 @@
+<link rel="import" href="color-picker-style.html">
+<dom-module id="color-picker">
+
+    <template>
+        <style include="main-style"></style>
+        <style include="color-picker-style"></style>
+
+
+        <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
+            Pick text color
+        </button>
+
+        <label><input id="chosen-value"  value="000000" on-change="inputFieldColorValueChanged">HEX value</label>
+        <script>
+            function setTextColor(picker) {
+                document.querySelector('#chosen-value').style.color = '#' + picker.toString()
+            }
+        </script>
+    </template>
+
+    <script src="color-picker.js"></script>
+</dom-module>
