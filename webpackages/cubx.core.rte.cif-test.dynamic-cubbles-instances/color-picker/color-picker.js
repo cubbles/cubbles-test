@@ -1,3 +1,4 @@
+/* globals jscolor*/
 (function () {
   'use strict';
   /**
@@ -30,6 +31,7 @@
      * Manipulate an element’s local DOM when the element is attached to the document.
      */
     attached: function () {
+      jscolor.installByClassName('jscolor');
     },
 
     /**
@@ -44,7 +46,11 @@
      */
     inputFieldColorValueChanged: function (event) {
       // update the cubbles-model
-      this.setColor(event.target.value);
+      var color = event.target.value;
+      if (!color.startsWith('#')) {
+        color = '#' + color;
+      }
+      this.setColor(color);
     },
 
     /**

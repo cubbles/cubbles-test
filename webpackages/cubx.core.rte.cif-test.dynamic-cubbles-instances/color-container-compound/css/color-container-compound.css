@@ -3,7 +3,7 @@ color-container-compound {
     width: 300px;
 }
 .colorContainerOuter {
-    border: black solid thin;
+    border: black double thin;
     padding: 10px;
 }
 

@@ -3,18 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>&lt;color-picker&gt; generated documentation</title>
+    <title>&lt;color-container-compound&gt; generated documentation</title>
 
     <script src="../../../cubx.core.rte@2.2.0-SNAPSHOT/webcomponents-lite/webcomponents-lite.js"></script>
 
     <script>
         window.cubx = {
             CRCInit: {
-                rootDependencies: [
-                    {
-                        webpackageId: 'jquery-2.1.4@1.2.0',
-                        artifactId: 'jquery'
-                    }
+                rootDependencies: [{
+                           webpackageId: 'jquery-2.1.4@1.2.0',
+                           artifactId: 'jquery'
+                        }
                 ]
             }
         }
@@ -26,7 +25,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <h1>&lt;color-picker&gt; generated documentation</h1>
+        <h1>&lt;color-container-compound&gt; generated documentation</h1>
     </div>
     <div cubx-core-crc class="row">
         <cubx-component-docs-viewer cubx-webpackage-id="com.incowia.cubx-webpackage-viewer@1.3.2">
@@ -40,9 +39,9 @@
     document.addEventListener('cifReady', function() {
         $.getJSON(manifestUrl, function (response) {
             componentDocsViewer.setManifest(response);
-            componentDocsViewer.setComponentArtifactId('color-picker');
+            componentDocsViewer.setComponentArtifactId('color-container-compound');
         });
-    });
+   });
 </script>
 </body>
 </html>

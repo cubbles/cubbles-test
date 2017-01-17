@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>app</title>
+    <title>dynamic-instances demo app</title>
     <script>
         window.cubx = {
             CRCInit: {
@@ -29,13 +29,90 @@
     -->
     <script src="../../cubx.core.rte@2.2.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
     <script src="demo.js"></script>
+    <style>
+        .table-row {
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            flex-grow: 0;
+            -webkit-flex-grow: 0;
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .table-item {
+            flex-grow: 1;
+            -webkit-flex-grow: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .button {
+            -webkit-flex-grow: 1;
+        }
+
+        .description {
+            -webkit-flex-grow: 2;
+        }
+
+        .table-item {
+            width: 180px;
+        }
+
+
+    </style>
 </head>
 <body>
-<button onclick="addColorPicker()">Add &lt;color-picker&gt; (elementary)</button>
-<button onclick="addColorContainer()">Add &lt;color-container-compound&gt;</button>
-<button onclick="addConnection()">Add connection from &lt;color-picker&gt; to &lt;color-container-compound&gt;</button>
+<h1>dynamic instances demo application.</h1>
+<div style="margin-top: 10px">
+
+    <div class="table-row">
+        <div class="table-item button">
+            <button onclick="addColorPicker()" disabled>Add &lt;color-picker&gt;</button>
+        </div>
+        <div class="table-item description">Append the elementary component <code>&lt;color-picker&gt;</code> to the container.
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-item button">
+            <button onclick="addColorContainer()" disabled>Add &lt;color-container-compound&gt;</button>
+        </div>
+        <div class="table-item description">Append the compound component <code>&lt;color-container-compound&gt;</code> to the
+            container.
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-item button">
+            <button onclick="addConnection()" disabled>Add connection</button>
+        </div>
+        <div class="table-item description">Append a connection from &lt;color-picker&gt; to &lt;color-container-compound&gt;</div>
+    </div>
+    <div class="table-row">
+        <div class="table-item button">
+        <button onclick="addScene()" disabled>Add both cubbles with connection</button>
+        </div>
+        <div class="table-item description">Append elements &lt;color-picker&gt; and &lt;color-container-compound&gt; with a connection between.</div>
+    </div>
+</div>
+<hr>
 <div class="container"></div>
 <!--<color-picker cubx-webpackage-id="this"></color-picker>-->
+<script>
+    document.addEventListener('cifReady', function () {
+        var buttons = document.querySelectorAll('button');
+        for (var i = 0; i < buttons.length; i++) {
+            var button = buttons[ i ];
+            button.disabled = false;
+        }
+    });
+</script>
 
 </body>
 </html>
