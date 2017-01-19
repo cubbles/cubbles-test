@@ -6,6 +6,13 @@ function addColorPicker () {
   container.appendChild(elem);
 }
 // eslint-disable-next-line no-unused-vars
+function addLifecycleTest () {
+  var container = document.querySelector('.container');
+  var elem = document.createElement('lifecycle-test');
+  elem.setAttribute('member-id', 'three');
+  container.appendChild(elem);
+}
+// eslint-disable-next-line no-unused-vars
 function addColorContainer () {
   var container = document.querySelector('.container');
   var elem = document.createElement('color-container-compound');
