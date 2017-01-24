@@ -60,7 +60,9 @@
         .button {
             -webkit-flex-grow: 1;
         }
-
+        .button>label {
+            margin: 0 5px;
+        }
         .description {
             -webkit-flex-grow: 2;
         }
@@ -80,14 +82,14 @@
         <div class="table-item button">
             <button onclick="addColorPicker()" disabled>Add &lt;color-picker&gt;</button>
         </div>
-        <div class="table-item description">Append the elementary component <code>&lt;color-picker&gt;</code> to the container.
+        <div class="table-item description">Append the elementary component <code>&lt;color-picker member-id="one" &gt;&lt;/color-picker&gt;</code> to the container.
         </div>
     </div>
     <div class="table-row">
         <div class="table-item button">
             <button onclick="addColorContainer()" disabled>Add &lt;color-container-compound&gt;</button>
         </div>
-        <div class="table-item description">Append the compound component <code>&lt;color-container-compound&gt;</code> to the
+        <div class="table-item description">Append the compound component <code>&lt;color-container-compound member-id="two"&gt;&lt;/color-container-compound&gt;</code> to the
             container.
         </div>
     </div>
@@ -95,7 +97,7 @@
         <div class="table-item button">
             <button onclick="addLifecycleTest()" disabled>Add &lt;lifecycle-test&gt;</button>
         </div>
-        <div class="table-item description">Append the compound component <code>&lt;lifecycle-test&gt;</code> to the
+        <div class="table-item description">Append the compound component <code>&lt;lifecycle-test member-id="three"&gt;&lt;/lifecycle-test&gt;</code> to the
             container.
         </div>
     </div>
@@ -103,13 +105,28 @@
         <div class="table-item button">
             <button onclick="addConnection()" disabled>Add connection</button>
         </div>
-        <div class="table-item description">Append a connection from &lt;color-picker&gt; to &lt;color-container-compound&gt;</div>
+        <div class="table-item description">Append a connection from &lt;color-picker&gt; to &lt;color-container-compound&gt; TODO</div>
     </div>
     <div class="table-row">
         <div class="table-item button">
         <button onclick="addScene()" disabled>Add both cubbles with connection</button>
         </div>
-        <div class="table-item description">Append elements &lt;color-picker&gt; and &lt;color-container-compound&gt; with a connection between.</div>
+        <div class="table-item description">Append the following 2 elements<br>
+            &lt;color-picker member-id="one" &gt;<br>
+            &nbsp;&nbsp;&lt;cubx-core-connections&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;cubx-core-connection source="color" destination="two:color" connection-id="color-connection"&gt;&lt;/cubx-core-connection&gt;<br>
+            &nbsp;&nbsp;&lt;/cubx-core-connections&gt;<br>
+            &lt;/color-picker&gt;<br>
+            and<br>
+            &lt;color-container-compound member-id="two"&gt;&lt;/color-container-compound&gt; </div>
+    </div>
+    <div class="table-row">
+        <div class="table-item button">
+            <button onclick="removeCubble()">Remove cubble</button><label for="removeMemberId">memberId:</label><input id="removeMemberId" value="two">
+        </div>
+        <div class="table-item description">
+            Remove the cubble with the member-id in the input field.
+        </div>
     </div>
 </div>
 <hr>
@@ -124,6 +141,28 @@
         }
     });
 </script>
-
+<hr>
+<h2>Scenarien</h2>
+<h3>1. Add an elementary component dynamically</h3>
+<ol>
+    <li>Click the "Add &lt;color-picker&gt;" button.</li>
+</ol>
+<h3>2. Add an compound component dynamically</h3>
+<ol>
+    <li>Click the "Add &lt;color-container-compound&gt;" button.</li>
+</ol>
+<h3>3. Component with a connection between them</h3>
+Add &lt;color-picker&gt; (source) and &lt;color-container-compound&gt; (destination)
+<ol>
+    <li>Click the "Add both cubbles with connection" button.</li>
+</ol>
+Choose a color for testing the connection.
+<h3>4. delete and restore a destination cubble</h3>
+<ol>
+    <li>Click the "Add both cubbles with connection" button.</li>
+    <li>Click the "Remove cubble" button. (input field for memberId contains "two")</li>
+    <li>Click the "Add &lt;color-container-compound&gt;"</li>
+</ol>
+Choose a color for testing the connection. It must be already work.
 </body>
 </html>

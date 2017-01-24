@@ -50,3 +50,11 @@ function addScene () {
   elem2.appendChild(connections);
   container.insertBefore(elem2, elem);
 }
+
+// eslint-disable-next-line no-unused-vars
+function removeCubble () {
+  var inputElem = document.getElementById('removeMemberId');
+  var memberId = inputElem.value;
+  var cubble = document.querySelector('[member-id=' + memberId + ']');
+  cubble.parentNode.removeChild(cubble);
+}
