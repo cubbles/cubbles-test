@@ -32,6 +32,25 @@ function addConnection () {
   elem.appendChild(connections);
 }
 // eslint-disable-next-line no-unused-vars
+function removeConnections () {
+  var elem = document.querySelector('color-picker');
+  var connections;
+  for (var i = 0; i < elem.children.length; i++) {
+    if (elem.children[ i ].tagName === 'CUBX-CORE-CONNECTIONS') {
+      connections = elem.children[ i ];
+      break;
+    }
+  }
+  elem.removeChild(connections);
+}
+// eslint-disable-next-line no-unused-vars
+function removeConnection () {
+  var connectionId = document.querySelector('#connectionId').value;
+  var connection = document.querySelector('[connection-id=' + connectionId + ']');
+  var connections = connection.parentNode;
+  connections.removeChild(connection);
+}
+// eslint-disable-next-line no-unused-vars
 function addScene () {
   var container = document.querySelector('.container');
   var elem = document.createElement('color-container-compound');

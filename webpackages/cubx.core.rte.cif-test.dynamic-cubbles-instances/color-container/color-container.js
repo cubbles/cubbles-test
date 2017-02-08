@@ -1,4 +1,3 @@
-/* globals ColorLuminance */
 (function () {
   'use strict';
   /**
