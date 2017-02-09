@@ -3,7 +3,11 @@ ul {
 }
 
 li {
-    float: left;
     margin: 5px;
+    float:left;
 }
 
+li:first-child {
+    padding-right: 10px;
+    margin-right: 15px;
+}

@@ -9,8 +9,8 @@
     "email": "judit.ross@incowia.com"
   },
   "license": "MIT",
-  "keywords": [],
-  "man": [],
+  "keywords": [ ],
+  "man": [ ],
   "artifacts": {
     "apps": [
       {
@@ -131,7 +131,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.1.0",
+            "webpackageId": "cubx.core.rte@2.2.0-SNAPSHOT",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -167,7 +167,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.1.0",
+            "webpackageId": "cubx.core.rte@2.2.0-SNAPSHOT",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -201,7 +201,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.1.0",
+            "webpackageId": "cubx.core.rte@2.2.0-SNAPSHOT",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -213,6 +213,64 @@
               "input"
             ],
             "value": "Thüringen"
+          }
+        ]
+      },
+      {
+        "artifactId": "bundesland-statistik",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "bundesland-statistik.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.2.0-SNAPSHOT",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "statisticData",
+            "type": "object",
+            "direction": [
+              "input"
+            ],
+            "value": {
+
+              "Deutsche": {
+                "männlich": 1095085,
+                "weiblich": 1152788,
+                "Insgesamt": 2247873
+              },
+              "Ausländer": {
+                "männlich": 21931,
+                "weiblich": 17236,
+                "Insgesamt": 39167
+              },
+              "Insgesamt": {
+                "männlich": 1117016,
+                "weiblich": 1170024,
+                "Insgesamt": 2287040
+              }
+            }
+          },
+          {
+           "slotId": "bundeslandName",
+           "type": "string",
+           "direction": ["input"],
+           "value": "Sachsen-Anhalt"
           }
         ]
       }
@@ -288,7 +346,7 @@
             "dev": "html-import.html"
           }
         ],
-        "dependencies": []
+        "dependencies": [ ]
       }
     ]
   }
