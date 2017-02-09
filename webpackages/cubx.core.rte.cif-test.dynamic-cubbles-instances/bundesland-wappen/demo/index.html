@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;bundesland-wappen&gt; demo</title>
+
+    <script src="../../../cubx.core.rte@2.1.0/webcomponents-lite/webcomponents-lite.js"></script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../../cubx.core.rte@2.1.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<ul>
+<li>
+<select id="blselect" onchange="selectBl(this.selectedIndex)" disabled>
+    <options>Baden-Württemberg</options>
+    <option>Bayern</option>
+    <option>Berlin</option>
+    <option>Brandenburg</option>
+    <option>Bremen</option>
+    <option>Hamburg</option>
+    <option>Hessen</option>
+    <option>Mecklenburg-Vorpommern</option>
+    <option>Niedersachsen</option>
+    <option>Nordrhein-Westfalen</option>
+    <option>Rheinland-Pfalz</option>
+    <option>Saarland</option>
+    <option>Sachsen</option>
+    <option>Sachsen-Anhalt</option>
+    <option>Schleswig-Holstein</option>
+    <option>Thüringen</option>
+</select>
+</li>
+<li>
+<!--  Place cubbles components there. -->
+<bundesland-wappen cubx-webpackage-id="this"></bundesland-wappen>
+</li>
+</ul>
+<script>
+    document.addEventListener('cifReady', function(){
+      document.querySelector('#blselect').removeAttribute('disabled');
+    });
+    function selectBl(index){
+      var select = document.querySelector('#blselect');
+        document.querySelector('bundesland-wappen').setBl(select.options[index].value);
+    }
+</script>
+</body>
+</html>

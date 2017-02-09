@@ -146,6 +146,75 @@
             "value": 10
           }
         ]
+      },
+      {
+        "artifactId": "dummy-data",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "dummy-data.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.1.0",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "data",
+            "type": "object",
+            "direction": [
+              "output"
+            ]
+          }
+        ]
+      },
+      {
+        "artifactId": "bundesland-wappen",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "bundesland-wappen.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.1.0",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "bl",
+            "type": "string",
+            "direction": [
+              "input"
+            ],
+            "value": "Thüringen"
+          }
+        ]
       }
     ],
     "compoundComponents": [
