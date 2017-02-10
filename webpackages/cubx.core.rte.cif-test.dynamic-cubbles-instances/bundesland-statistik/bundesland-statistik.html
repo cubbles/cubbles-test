@@ -5,7 +5,7 @@
         <style include="main-style"></style>
         <style include="bundesland-statistik-style"></style>
         <div class="Rtable Rtable--4cols">
-            <div class="Rtable-cell"><h3>[[model.bundeslandName]]</h3></div>
+            <div class="Rtable-cell">&nbsp;</div>
             <div class="Rtable-cell"><h4>{{getGenderKey(model.*,0)}}</h4></div>
             <div class="Rtable-cell"><h4>{{getGenderKey(model.*,1)}}</h4></div>
             <div class="Rtable-cell"><h4>{{getGenderKey(model.*,2)}}</h4></div>
@@ -26,6 +26,7 @@
             <div class="Rtable-cell">{{getCell(model.*,2,2)}}</div>
 
         </div>
+        <div class="foot">[[model.bundeslandName]]</div>
     </template>
 
     <script src="bundesland-statistik.js"></script>

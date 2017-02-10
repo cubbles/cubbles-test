@@ -274,6 +274,40 @@
             "value": "Sachsen-Anhalt"
           }
         ]
+      },
+      {
+        "artifactId": "bundeslaender-statistiks",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "bundeslaender-statistiks.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.2.0-SNAPSHOT",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "statisticData",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
       }
     ],
     "compoundComponents": [
@@ -365,14 +399,18 @@
         ],
         "slots": [
           {
-           "slotId": "bundeslandName",
-           "type": "string",
-           "direction": ["input"]
+            "slotId": "bundeslandName",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
           },
           {
-           "slotId": "bundeslandData",
-           "type": "object",
-           "direction": ["input"]
+            "slotId": "bundeslandData",
+            "type": "object",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -381,42 +419,41 @@
             "artifactId": "bundesland-wappen"
           },
           {
-           "artifactId": "bundesland-statistik",
-           "memberId": "content"
+            "artifactId": "bundesland-statistik",
+            "memberId": "content"
           }
         ],
         "connections": [
           {
-            "connectionId" : "data",
+            "connectionId": "data",
             "source": {
-              "slot" : "bundeslandData"
+              "slot": "bundeslandData"
             },
             "destination": {
-              "memberIdRef" : "content",
-              "slot" : "statisticData"
+              "memberIdRef": "content",
+              "slot": "statisticData"
             }
           },
           {
-            "connectionId" : "bl",
+            "connectionId": "bl",
             "source": {
-              "slot" : "bundeslandName"
+              "slot": "bundeslandName"
             },
             "destination": {
-              "memberIdRef" : "content",
-              "slot" : "bundeslandName"
+              "memberIdRef": "content",
+              "slot": "bundeslandName"
             }
           },
           {
-            "connectionId" : "title",
+            "connectionId": "title",
             "source": {
-              "slot" : "bundeslandName"
+              "slot": "bundeslandName"
             },
             "destination": {
-              "memberIdRef" : "title",
-              "slot" : "bl"
+              "memberIdRef": "title",
+              "slot": "bl"
             }
           }
-
         ],
         "inits": [
           {

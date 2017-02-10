@@ -1,0 +1,28 @@
+<dom-module id="bundeslaender-statistiks-style">
+    <template>
+        <!--
+        Get help: https://www.polymer-project.org/1.0/docs/devguide/styling.html#xscope-styling-details
+        -->
+        <style>
+            :host {
+                display: block;
+            }
+            .content {
+                display: flex;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-direction: row;
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                justify-content: space-around;
+            }
+            .item {
+                flex-grow: 1;
+                border: thin solid red;
+            }
+        </style>
+    </template>
+</dom-module>
