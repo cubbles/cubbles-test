@@ -9,8 +9,8 @@
     "email": "judit.ross@incowia.com"
   },
   "license": "MIT",
-  "keywords": [ ],
-  "man": [ ],
+  "keywords": [],
+  "man": [],
   "artifacts": {
     "apps": [
       {
@@ -248,7 +248,6 @@
               "input"
             ],
             "value": {
-
               "Deutsche": {
                 "männlich": 1095085,
                 "weiblich": 1152788,
@@ -267,10 +266,12 @@
             }
           },
           {
-           "slotId": "bundeslandName",
-           "type": "string",
-           "direction": ["input"],
-           "value": "Sachsen-Anhalt"
+            "slotId": "bundeslandName",
+            "type": "string",
+            "direction": [
+              "input"
+            ],
+            "value": "Sachsen-Anhalt"
           }
         ]
       }
@@ -334,6 +335,115 @@
             "value": "#0000FF"
           }
         ]
+      },
+      {
+        "artifactId": "bundesland-info",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/bundesland-info.css",
+          "bundesland-info-template.html"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "bundesland-wappen"
+          },
+          {
+            "artifactId": "bundesland-statistik"
+          }
+        ],
+        "slots": [
+          {
+           "slotId": "bundeslandName",
+           "type": "string",
+           "direction": ["input"]
+          },
+          {
+           "slotId": "bundeslandData",
+           "type": "object",
+           "direction": ["input"]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "title",
+            "artifactId": "bundesland-wappen"
+          },
+          {
+           "artifactId": "bundesland-statistik",
+           "memberId": "content"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId" : "data",
+            "source": {
+              "slot" : "bundeslandData"
+            },
+            "destination": {
+              "memberIdRef" : "content",
+              "slot" : "statisticData"
+            }
+          },
+          {
+            "connectionId" : "bl",
+            "source": {
+              "slot" : "bundeslandName"
+            },
+            "destination": {
+              "memberIdRef" : "content",
+              "slot" : "bundeslandName"
+            }
+          },
+          {
+            "connectionId" : "title",
+            "source": {
+              "slot" : "bundeslandName"
+            },
+            "destination": {
+              "memberIdRef" : "title",
+              "slot" : "bl"
+            }
+          }
+
+        ],
+        "inits": [
+          {
+            "slot": "bundeslandName",
+            "value": "Thüringen"
+          },
+          {
+            "slot": "bundeslandData",
+            "value": {
+              "Deutsche": {
+                "männlich": 1058769,
+                "weiblich": 1097084,
+                "Insgesamt": 2155853
+              },
+              "Ausländer": {
+                "männlich": 17305,
+                "weiblich": 15431,
+                "Insgesamt": 32736
+              },
+              "Insgesamt": {
+                "männlich": 1076074,
+                "weiblich": 1112515,
+                "Insgesamt": 2188589
+              }
+            }
+          }
+        ]
       }
     ],
     "utilities": [
@@ -346,7 +456,7 @@
             "dev": "html-import.html"
           }
         ],
-        "dependencies": [ ]
+        "dependencies": []
       }
     ]
   }
