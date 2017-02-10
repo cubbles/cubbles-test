@@ -46,7 +46,6 @@
           baseUrl = href.substr(0, index);
         }
       }
-      console.log(baseUrl);
       fetch(baseUrl + '/dummy-data/data.json').then(function (response) {
         // Convert to JSON
         return response.json();
