@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>app</title>
+    <script>
+        window.cubx = {
+            CRCInit: {
+                rootDependencies: [
+                    {
+                        "artifactId": "bundesland-info"
+                    }
+                ]
+            }
+        }
+    </script>
+    <script src="../../cubx.core.rte@2.2.0-SNAPSHOT/webcomponents-lite/webcomponents-lite.js"></script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../cubx.core.rte@2.2.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<dummy-data cubx-webpackage-id="this" member-id="dataprovider">
+    <cubx-core-connections style="display: none">
+        <cubx-core-connection connection-id="dummyData" source="data" destination="view:statisticData"></cubx-core-connection>
+    </cubx-core-connections>
+</dummy-data>
+<bundeslaender-statistiks cubx-webpackage-id="this" member-id="view"></bundeslaender-statistiks>
+
+</body>
+</html>

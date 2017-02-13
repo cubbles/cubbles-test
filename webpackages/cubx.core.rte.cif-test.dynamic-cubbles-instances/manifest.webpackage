@@ -34,6 +34,17 @@
             "description": "Call this app as a simple demo."
           }
         ]
+      },
+      {
+        "artifactId": "nested-compound-demo",
+        "description": "",
+        "runnables": [
+          {
+            "name": "My Hello World App.",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
       }
     ],
     "elementaryComponents": [
