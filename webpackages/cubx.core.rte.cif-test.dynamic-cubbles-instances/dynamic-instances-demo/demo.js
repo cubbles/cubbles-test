@@ -50,6 +50,7 @@ function removeConnection () {
   var connections = connection.parentNode;
   connections.removeChild(connection);
 }
+
 // eslint-disable-next-line no-unused-vars
 function addScene () {
   var container = document.querySelector('.container');
@@ -66,6 +67,13 @@ function addScene () {
   connection.setAttribute('source', 'color');
   connection.setAttribute('destination', 'two:color');
   connections.appendChild(connection);
+  var inits = document.createElement('cubx-core-init');
+  inits.style.display = 'none';
+  var init = document.createElement('cubx-core-slot-init');
+  init.setAttribute('slot', 'color');
+  init.innerHTML = '"#FF4081"';
+  inits.appendChild(init);
+  elem2.appendChild(inits);
   elem2.appendChild(connections);
   container.insertBefore(elem2, elem);
 }

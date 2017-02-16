@@ -140,10 +140,13 @@
     <hr>
     <div class="table-row">
         <div class="table-item button">
-        <button onclick="addScene()" disabled>Add both cubbles with connection</button>
+            <button onclick="addScene()" disabled>Add both cubbles with connection and init</button>
         </div>
         <div class="table-item description">Append the following 2 elements<br>
             &lt;color-picker member-id="one" &gt;<br>
+              &lt;cubx-core-init&gt;<br>
+              &nbsp;&nbsp;&lt;cubx-core-slot-init slot="color"&gt;"#FF4081"&lt;/cubx-core-slot-init&gt;<br>
+              &lt;/cubx-core-init&gt;<br>
             &nbsp;&nbsp;&lt;cubx-core-connections&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;cubx-core-connection source="color" destination="two:color" connection-id="color-connection"&gt;&lt;/cubx-core-connection&gt;<br>
             &nbsp;&nbsp;&lt;/cubx-core-connections&gt;<br>
