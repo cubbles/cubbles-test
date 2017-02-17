@@ -29,7 +29,7 @@
         "description": "",
         "runnables": [
           {
-            "name": "My Hello World App.",
+            "name": "dynamic-instances demo",
             "path": "/index.html",
             "description": "Call this app as a simple demo."
           }
@@ -40,7 +40,7 @@
         "description": "",
         "runnables": [
           {
-            "name": "My Hello World App.",
+            "name": "nested-compound demo",
             "path": "/index.html",
             "description": "Call this app as a simple demo."
           }

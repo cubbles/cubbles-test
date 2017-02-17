@@ -2,7 +2,7 @@
   "name": "repeated-value-test",
   "groupId": "cubx.core.rte.cif-test",
   "version": "1.2.0-SNAPSHOT",
-  "modelVersion": "9.1.0",
+  "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
     "name": "Judit Ross",
@@ -95,7 +95,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.1.0",
+            "webpackageId": "cubx.core.rte@2.2.0-SNAPSHOT",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -124,7 +124,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.1.0",
+            "webpackageId": "cubx.core.rte@2.2.0-SNAPSHOT",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -154,7 +154,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.1.0",
+            "webpackageId": "cubx.core.rte@2.2.0-SNAPSHOT",
             "artifactId": "cubxpolymer"
           }
         ]
