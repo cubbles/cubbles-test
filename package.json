@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "chalk": "~1.1.0",
-    "cubx-grunt-http-server": "^0.x.x",
+    "cubx-grunt-http-server": "^0.3.0",
     "cubx-grunt-wct-scaffolder": "^1.0.0",
     "cubx-grunt-webpackage-chooser": "^1.0.0",
     "cubx-grunt-webpackage-scaffold": "^2.4.0",
