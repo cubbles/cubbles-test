@@ -1,7 +1,7 @@
 {
   "name": "connectionhook-test",
   "groupId": "cubx.core.rte.cif-test",
-  "version": "1.2.0-SNAPSHOT",
+  "version": "1.2.0",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -81,7 +81,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.2.0",
             "artifactId": "cubxpolymer"
           },
           {
@@ -142,7 +142,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.2.0",
             "artifactId": "cubxpolymer"
           },
           {

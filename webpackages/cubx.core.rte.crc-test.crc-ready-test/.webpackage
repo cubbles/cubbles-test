@@ -1,7 +1,7 @@
 {
   "uploadConfigs": {
     "dev": {
-      "url": "https://cubbles-base-local/core-test",
+      "url": "http://cubbles-base-local/core-test",
       "proxy": ""
     },
     "dryRun": {
