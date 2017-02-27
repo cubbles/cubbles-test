@@ -4,7 +4,6 @@ var path = require('path');
 var _ = require('lodash');
 
 module.exports = function (grunt) {
-
   /**
    *  Load grunt tasks
    */
@@ -101,13 +100,11 @@ module.exports = function (grunt) {
   grunt.initConfig(configs);
 
   function updateProxyConfig (workSpaceConfig) {
-    if (workSpaceConfig && workSpaceConfig.proxy) {
-      if (workSpaceConfig.remoteUrl && workSpaceConfig.remoteUrl.startsWith('https:')) {
-        process.env.https_proxy = workSpaceConfig.proxy;
-      }
-      if (workSpaceConfig.remoteUrl && workSpaceConfig.remoteUrl.startsWith('http:')) {
-        process.env.http_proxy = workSpaceConfig.proxy;
-      }
+    if (workSpaceConfig && workSpaceConfig.https_proxy) {
+      process.env.https_proxy = workSpaceConfig.https_proxy;
+    }
+    if (workSpaceConfig && workSpaceConfig.http_proxy) {
+      process.env.https_proxy = workSpaceConfig.http_proxy;
     }
   }
 };

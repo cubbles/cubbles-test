@@ -39,10 +39,10 @@ module.exports = function (grunt) {
           proxy: '<%= workspaceConfig.remoteStoreUrl %>',
 
           // open browser after start
-          openBrowser: true,
+          openBrowser: true
 
           // set networkProxyUrl if you need to connect to given proxy server using a proxy
-          networkProxyUrl: '<%= workspaceConfig.proxy %>'
+          // networkProxyUrl: '[proto]://[host]:[port]' e.g. 'http://proxy:1234'
         }
       }
     }
