@@ -104,7 +104,7 @@ module.exports = function (grunt) {
       process.env.https_proxy = workSpaceConfig.https_proxy;
     }
     if (workSpaceConfig && workSpaceConfig.http_proxy) {
-      process.env.https_proxy = workSpaceConfig.http_proxy;
+      process.env.http_proxy = workSpaceConfig.http_proxy;
     }
   }
 };
