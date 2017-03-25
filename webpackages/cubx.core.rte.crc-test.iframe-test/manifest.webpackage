@@ -1,0 +1,43 @@
+{
+  "name": "iframe-test",
+  "groupId": "cubx.core.rte.crc-test",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "9.1.1",
+  "docType": "webpackage",
+  "author": {
+    "name": "Edwin Gamboa",
+    "email": "edwingamboa355@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [ ],
+  "man": [ ],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "demo",
+        "description": "This is a simple pre-generated app.",
+        "runnables": [
+          {
+            "name": "Iframe Demo",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
+      },
+      {
+        "artifactId": "docs",
+        "description": "Generated webpackage documentation.",
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/index.html",
+            "description": "Show the interface of this component."
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [ ],
+    "compoundComponents": [ ],
+    "utilities": [ ]
+  }
+}
