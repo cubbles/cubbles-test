@@ -5,10 +5,9 @@
         -->
         <style>
             :host {
-                --base-form-padding: 0.3em;
                 display: block;
-                padding: var(--base-form-padding);
-                width: 15em;
+                padding: 10px;
+
             }
 
             label {
@@ -19,6 +18,28 @@
 
             input[type=text] {
                 width: 12em;
+            }
+
+            .container {
+                padding: 5px;
+                display: flex;
+                flex-wrap: wrap;
+                border: solid thin gray;
+                width: 100%;
+                background-color: #fcfcfc;
+            }
+
+            .form-container {
+                padding: 5px;
+                display: flex;
+            }
+
+            .form-container div {
+                margin-right: 5px;
+            }
+
+            .hidden {
+                visibility: hidden;
             }
 
         </style>

@@ -3,8 +3,19 @@
 
     <template>
         <style include="nested-elementary-style"></style>
-        <button on-click="handleClick">add </button>
+        <div class="form-container">
+            <div>
+                <label for="message">message</label>
+                <input id="message" type="text" value="">
+            </div>
+            <div>
+                <button on-click="handleClick" disabled>add message</button>
+            </div>
+        </div>
+        <div class="hidden">
+        <h2>message container</h2>
         <div class="container"></div>
+        </div>
     </template>
 
     <script src="nested-elementary.js"></script>

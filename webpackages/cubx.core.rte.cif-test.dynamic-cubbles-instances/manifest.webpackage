@@ -366,6 +366,40 @@
             "value": 10
           }
         ]
+      },
+      {
+        "artifactId": "message-box",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "message-box.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.2.3",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "text",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
       }
     ],
     "compoundComponents": [

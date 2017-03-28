@@ -36,7 +36,8 @@
         ]
       }
     ],
-    "elementaryComponents": [],
+    "elementaryComponents": [
+    ],
     "compoundComponents": [],
     "utilities": []
   }
