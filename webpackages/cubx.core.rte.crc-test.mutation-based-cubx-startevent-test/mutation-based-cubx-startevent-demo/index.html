@@ -31,7 +31,7 @@
 <p>
     Now you can <strong>click on</strong> the button below to cause the mutation to see it working:
 </p>
-<button id="appendComp">Append 'cubx-textarea'</button>
+<button id="appendComp">Append 'test-textarea'</button>
 <hr>
 <div class="loader"></div>
 <div id="observable"></div>
@@ -61,10 +61,10 @@
             init.appendChild(createSlotInit('value', '"Value of textarea"'));
             init.appendChild(createSlotInit('cols', '40'));
             init.appendChild(createSlotInit('rows', '8'));
-            var cubxTextarea = document.createElement('cubx-textarea');
-            cubxTextarea.setAttribute('cubx-webpackage-id', 'com.incowia.basic-html-components@0.1.3');
-            cubxTextarea.appendChild(init);
-            return cubxTextarea;
+            var testTextarea = document.createElement('test-textarea');
+            testTextarea.setAttribute('cubx-webpackage-id', 'this');
+            testTextarea.appendChild(init);
+            return testTextarea;
         }
 
         function createSlotInit(slotName, slotValue) {

@@ -9,8 +9,8 @@
     "email": "edwingamboa355@gmail.com"
   },
   "license": "MIT",
-  "keywords": [ ],
-  "man": [ ],
+  "keywords": [],
+  "man": [],
   "artifacts": {
     "apps": [
       {
@@ -36,8 +36,17 @@
         ]
       }
     ],
-    "elementaryComponents": [ ],
-    "compoundComponents": [ ],
-    "utilities": [ ]
+    "elementaryComponents": [],
+    "compoundComponents": [],
+    "utilities": [
+      {
+        "artifactId": "test-util",
+        "description": "",
+        "resources": [
+          "html-import.html"
+        ],
+        "dependencies": []
+      }
+    ]
   }
 }

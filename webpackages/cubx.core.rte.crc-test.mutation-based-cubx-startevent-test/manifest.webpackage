@@ -36,7 +36,71 @@
         ]
       }
     ],
-    "elementaryComponents": [],
+    "elementaryComponents": [
+      {
+        "artifactId": "test-textarea",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "test-textarea.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.2.2",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "cols",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "rows",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
+      }
+    ],
     "compoundComponents": [],
     "utilities": []
   }
