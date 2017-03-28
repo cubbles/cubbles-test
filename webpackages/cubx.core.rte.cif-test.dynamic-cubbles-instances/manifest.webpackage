@@ -355,17 +355,7 @@
             "artifactId": "cubxpolymer"
           }
         ],
-        "slots": [
-          {
-            "slotId": "a",
-            "type": "number",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": 10
-          }
-        ]
+        "slots": []
       },
       {
         "artifactId": "message-box",
@@ -394,7 +384,7 @@
         "slots": [
           {
             "slotId": "message",
-            "type": "text",
+            "type": "string",
             "direction": [
               "input"
             ]
