@@ -16,7 +16,7 @@ function addLifecycleTest () {
 function addColorContainer () {
   var container = document.querySelector('.container');
   var elem = document.createElement('color-container-compound');
-  elem.setAttribute('member-id', 'two');
+  elem.id = 'two';
   container.appendChild(elem);
 }
 // eslint-disable-next-line no-unused-vars

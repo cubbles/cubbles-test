@@ -1,7 +1,7 @@
 {
   "name": "dynamic-cubbles-instances",
   "groupId": "cubx.core.rte.cif-test",
-  "version": "0.2.0-SNAPSHOT",
+  "version": "0.2.0",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -45,6 +45,17 @@
             "description": "Call this app as a simple demo."
           }
         ]
+      },
+      {
+        "artifactId": "nested-elementary-demo",
+        "description": "",
+        "runnables": [
+          {
+            "name": "My Hello World App.",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
       }
     ],
     "elementaryComponents": [
@@ -68,7 +79,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.3.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.2.3",
             "artifactId": "cubxpolymer"
           },
           {
@@ -107,7 +118,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.3.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.2.3",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -142,7 +153,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.3.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.2.3",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -178,7 +189,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.3.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.2.3",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -212,7 +223,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.3.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.2.3",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -247,7 +258,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.3.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.2.3",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -306,7 +317,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.3.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.2.3",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -317,6 +328,42 @@
             "direction": [
               "input"
             ]
+          }
+        ]
+      },
+      {
+        "artifactId": "nested-elementary",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "nested-elementary.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.2.3",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "a",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": 10
           }
         ]
       }
