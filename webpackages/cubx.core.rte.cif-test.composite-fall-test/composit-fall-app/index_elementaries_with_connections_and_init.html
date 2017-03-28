@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Composite Examples for connections of elementaries</title>
+
+    <script src="../../cubx.core.rte@2.2.3/webcomponents-lite/webcomponents-lite.js"></script>
+    <script>
+        window.cubx = {
+            CRCInit: {
+                rootDependencies: []
+            }
+        }
+    </script>
+    <script src="../../cubx.core.rte@2.2.3/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container rows">
+    <div class="container columns">
+        <div class="column">
+            <my-elementary-1 cubx-webpackage-id="this" id="first">
+                <cubx-core-connections style="display: none">
+                    <cubx-core-connection source="message" destination="second:message"
+                                          connection-id="test"></cubx-core-connection>
+                </cubx-core-connections>
+                <cubx-core-init style="display: none">
+                    <cubx-core-slot-init slot="message">"Initial message"</cubx-core-slot-init>
+                </cubx-core-init>
+            </my-elementary-1>
+        </div>
+        <div class="column">
+            <my-elementary-2 cubx-webpackage-id="this" id="second"></my-elementary-2>
+        </div>
+    </div>
+</div>
+</body>

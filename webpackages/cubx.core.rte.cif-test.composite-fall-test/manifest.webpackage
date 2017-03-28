@@ -1,7 +1,7 @@
 {
   "name": "composite-fall-test",
   "groupId": "cubx.core.rte.cif-test",
-  "version": "1.3.0-SNAPSHOT",
+  "version": "1.3.0",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -36,7 +36,93 @@
         ]
       }
     ],
-    "elementaryComponents": [],
+    "elementaryComponents": [
+      {
+        "artifactId": "my-elementary-2",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "my-elementary-2.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.2.3",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "attached",
+            "type": "object",
+            "direction": [
+              "input"
+            ],
+            "value": false
+          }
+        ]
+      },
+      {
+        "artifactId": "my-elementary-1",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "my-elementary-1.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.2.3",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "attached",
+            "type": "object",
+            "direction": [
+              "input"
+            ],
+            "value": false
+          }
+        ]
+      }
+    ],
     "compoundComponents": [],
     "utilities": []
   }
