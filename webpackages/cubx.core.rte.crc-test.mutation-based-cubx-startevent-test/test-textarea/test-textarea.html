@@ -5,9 +5,8 @@
         <style include="test-textarea-style"></style>
         <label for$="id">{{model.label}}</label>
         <textarea id$="{{model.id}}"
-                  value$="{{model.value}}"
                   cols$="{{model.cols}}"
-                  rows$="{{model.rows}}"></textarea>
+                  rows$="{{model.rows}}">{{model.value}}</textarea>
     </template>
 
     <script src="test-textarea.js"></script>
