@@ -1,7 +1,7 @@
 {
   "uploadConfigs": {
     "local": {
-      "url": "http://cubbles-base-local/sandbox",
+      "url": "http://cubbles-base-local/core",
       "proxy": "",
       "debug": false
     },
