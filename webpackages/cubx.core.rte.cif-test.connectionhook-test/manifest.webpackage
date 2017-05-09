@@ -81,7 +81,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.3.0-SNAPSHOT",
             "artifactId": "cubxpolymer"
           },
           {
@@ -142,7 +142,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.3.0-SNAPSHOT",
             "artifactId": "cubxpolymer"
           },
           {
