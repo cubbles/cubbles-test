@@ -21,7 +21,7 @@
             }
         }
     </script>
-    <script src="../../cubx.core.rte@2.3.0/webcomponents-lite/webcomponents-lite.js"></script>
+    <script src="../../cubx.core.rte@2.3.1/webcomponents-lite/webcomponents-lite.js"></script>
 
     <!--
         Refer to the crc-loader artifact from a Cubbles-Base.
@@ -30,7 +30,7 @@
         Want to add a 'main' -script to be executed after the dependencies have been loaded?
         If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
-    <script src="../../cubx.core.rte@2.3.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+    <script src="../../cubx.core.rte@2.3.1/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
     <script src="demo.js"></script>
     <style>
         .table-row {
@@ -153,6 +153,25 @@
             &lt;/color-picker&gt;<br>
             and<br>
             &lt;color-container-compound member-id="two"&gt;&lt;/color-container-compound&gt; </div>
+    </div>
+    <hr>
+    <div class="table-row">
+        <div class="table-item button">
+            <button onclick="addSceneUsingInnerHTML()" disabled>Add both cubbles with connection and init using innerHTML</button>
+        </div>
+        <div class="table-item description">Append the following Componentens where the parent &lt;div&gt; is created using document.createElement() API <br>and the content of this parent &lt;div&gt; is
+            added using it's innerHTML property.<br>
+            &lt;div&gt;<br>
+              &lt;color-picker member-id="one" &gt;<br>
+              &lt;cubx-core-init&gt;<br>
+            &nbsp;&nbsp;  &lt;cubx-core-slot-init slot="color"&gt;"#FF4081"&lt;/cubx-core-slot-init&gt;<br>
+              &lt;/cubx-core-init&gt;<br>
+            &nbsp;&nbsp;  &lt;cubx-core-connections&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;  &lt;cubx-core-connection source="color" destination="two:color" connection-id="color-connection"&gt;&lt;/cubx-core-connection&gt;<br>
+            &nbsp;&nbsp;  &lt;/cubx-core-connections&gt;<br>
+              &lt;/color-picker&gt;<br>
+              &lt;color-container-compound member-id="two"&gt;&lt;/color-container-compound&gt;<br>
+            &lt;/div&gt;</div>
     </div>
     <hr>
     <div class="table-row">

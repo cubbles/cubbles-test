@@ -79,6 +79,22 @@ function addScene () {
 }
 
 // eslint-disable-next-line no-unused-vars
+function addSceneUsingInnerHTML() {
+  var container = document.querySelector('.container');
+  var parent = document.createElement('div');
+  parent.innerHTML = '<color-picker member-id="one">' +
+      '<cubx-core-init>' +
+        '<cubx-core-slot-init slot="color">"#FF4081"</cubx-core-slot-init>' +
+      '</cubx-core-init>' +
+      '<cubx-core-connections>' +
+        '<cubx-core-connection source="color" destination="two:color" connection-id="color-connection"></cubx-core-connection>' +
+      '</cubx-core-connections>' +
+    '</color-picker>' +
+    '<color-container-compound member-id="two"></color-container-compound>';
+  container.appendChild(parent);
+}
+
+// eslint-disable-next-line no-unused-vars
 function removeCubble () {
   var inputElem = document.getElementById('removeMemberId');
   var memberId = inputElem.value;
