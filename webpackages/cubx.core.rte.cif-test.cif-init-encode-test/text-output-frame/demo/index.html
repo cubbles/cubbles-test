@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;text-output-frame&gt; demo</title>
+
+    <script src="../../../cubx.core.rte@2.3.2/webcomponents-lite/webcomponents-lite.js"></script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../../cubx.core.rte@2.3.2/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<!--  Place cubbles components there. -->
+<text-output-frame cubx-webpackage-id="this">
+    <cubx-core-init style="display: none">
+        <cubx-core-slot-init slot="text">"&lt;a href='http://cubbles.github.io/' target='_blank' &gt;cubbles.github.io''&lt;/a&gt;"</cubx-core-slot-init>
+    </cubx-core-init>
+</text-output-frame>
+<hr>
+<text-output-frame cubx-webpackage-id="this"></text-output-frame>
+
+</body>
+</html>

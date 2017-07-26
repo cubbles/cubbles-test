@@ -1,0 +1,126 @@
+{
+  "name": "cif-init-encode-test",
+  "groupId": "cubx.core.rte.cif-test",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "9.1.1",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "docs",
+        "description": "Generated webpackage documentation.",
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/index.html",
+            "description": "Show the interface of this component."
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "text-output",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "text-output.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.3.2",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "text",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "text-output-frame",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/text-output-frame.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "text-output"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "text",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "textOutput",
+            "artifactId": "text-output"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "me-to-text-output",
+            "source": {
+              "slot": "text"
+            },
+            "destination": {
+              "memberIdRef": "textOutput",
+              "slot": "text"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "memberIdRef": "textOutput",
+            "slot": "text",
+            "value": "&lt;a href=\\&quot;http://cubbles.github.io/\\&quot; target=\\&quot;_blank\\&quot; &gt;cubbles.github.io&lt;/a&gt;"
+          }
+        ]
+      }
+    ],
+    "utilities": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "uploadConfigs": {
+    "dev": {
+      "url": "http://cubbles-loca-base/core-test",
+      "proxy": ""
+    },
+    "dryRun": {
+      "url": "https://cubbles.world/core-test",
+      "proxy": "",
+      "dryRun": true
+    },
+    "release": {
+      "url": "https://cubbles.world/core-test",
+      "proxy": ""
+    }
+  }
+}
