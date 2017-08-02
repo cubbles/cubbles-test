@@ -1,7 +1,7 @@
 {
   "name": "dynamic-connection",
   "groupId": "cubx.core.rte.cif-test",
-  "version": "1.6.0",
+  "version": "1.7.0-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {

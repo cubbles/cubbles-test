@@ -1,7 +1,7 @@
 {
   "name": "cif-copy-value-test",
   "groupId": "cubx.core.rte.cif-test",
-  "version": "2.6.0",
+  "version": "2.7.0-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
