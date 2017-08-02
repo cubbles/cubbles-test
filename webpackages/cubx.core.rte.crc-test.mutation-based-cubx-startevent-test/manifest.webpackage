@@ -1,7 +1,7 @@
 {
   "name": "mutation-based-cubx-startevent-test",
   "groupId": "cubx.core.rte.crc-test",
-  "version": "0.2.0-SNAPSHOT",
+  "version": "0.2.0",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -57,7 +57,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.3.1",
+            "webpackageId": "cubx.core.rte@2.4.0",
             "artifactId": "cubxpolymer"
           }
         ],
