@@ -1,0 +1,95 @@
+{
+  "name": "component-test",
+  "groupId": "cubx.core.rte.cubxcomponent",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "9.1.1",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "docs",
+        "description": "Generated webpackage documentation.",
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/index.html",
+            "description": "Show the interface of this component."
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "elementary-without-template",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "elementary-without-template.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "numberInputOutput",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": 10
+          },
+          {
+            "slotId": "stringInput",
+            "type": "string",
+            "direction": [
+              "input"
+            ],
+            "value": "Hallo Cubbles!"
+          },
+          {
+           "slotId": "objectOutput",
+           "type": "object",
+           "direction": ["output"]
+          },
+          {
+           "slotId": "objectInputOutput",
+           "type": "object",
+           "value": {
+             "foo": "bar"
+           }
+          },
+          {
+           "slotId": "message",
+           "type": "string",
+           "direction": ["output"]
+          }
+
+        ]
+      }
+    ],
+    "compoundComponents": [],
+    "utilities": []
+  }
+}
