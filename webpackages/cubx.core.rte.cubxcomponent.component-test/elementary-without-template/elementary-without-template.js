@@ -59,7 +59,6 @@
     },
 
     modelObjectOutputChanged: function (value) {
-
       this.addMessage(this.is + '.modelObjectOutputChanged ' + ' called with ' + JSON.stringify(value));
     },
 
@@ -68,9 +67,9 @@
     },
 
     addMessage: function (message) {
-      this.setMessage(this.getMessage() ? this.getMessage() + '<br>' + message: message);
+      this.setMessage(this.getMessage() ? this.getMessage() + '<br>' + message : message);
     },
-    addToOutputObject: function( value ) {
+    addToOutputObject: function (value) {
       var obj = this.getObjectOutput();
       if (!obj) {
         obj = {
