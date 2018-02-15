@@ -38,14 +38,14 @@
 
     disconnected: function () {
       console.log(this.is + ' disconnected');
-      this.addMessage(this.is + ' disconnected');
+      // this.addMessage(this.is + ' disconnected'); this could be worked, because the element is disconnected from dom
     },
     /**
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
-    cubxReady: function () {
-      console.log(this.is + ' cubxReady');
-      this.addMessage(this.is + ' cubxReady');
+    contextReady: function () {
+      console.log(this.is + ' contextReady');
+      this.addMessage(this.is + ' contextReady');
     },
 
     modelNumberInputOutputChanged: function (value) {
@@ -63,7 +63,7 @@
     },
 
     modelObjectInputOutputChanged: function (value) {
-      this.addMessage(this.is + '.modelObjectOutputChanged ' + ' called with ' + JSON.stringify(value));
+      this.addMessage(this.is + '.modelObjectInputOutputChanged ' + ' called with ' + JSON.stringify(value));
     },
 
     addMessage: function (message) {
