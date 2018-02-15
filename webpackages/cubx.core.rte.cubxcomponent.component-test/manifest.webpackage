@@ -69,23 +69,76 @@
             "value": "Hallo Cubbles!"
           },
           {
-           "slotId": "objectOutput",
-           "type": "object",
-           "direction": ["output"]
+            "slotId": "objectOutput",
+            "type": "object",
+            "direction": [
+              "output"
+            ]
           },
           {
-           "slotId": "objectInputOutput",
-           "type": "object",
-           "value": {
-             "foo": "bar"
-           }
+            "slotId": "objectInputOutput",
+            "type": "object",
+            "value": {
+              "foo": "bar"
+            }
+          },
+          {
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "output"
+            ]
+          }
+        ]
+      },
+      {
+        "artifactId": "elementary-with-template",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "template-elementary-with-template.html",
+          "elementary-with-template.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": "Hallo World!"
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ],
+            "value": "value"
           },
           {
            "slotId": "message",
            "type": "string",
            "direction": ["output"]
           }
-
         ]
       }
     ],
