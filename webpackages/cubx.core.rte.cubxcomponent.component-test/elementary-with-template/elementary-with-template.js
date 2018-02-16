@@ -21,9 +21,9 @@
      */
     ready: function () {
       this.addMessage('#ready called');
-      var label = document.querySelector('[for = input]');
+      var label = this.querySelector('[for = input]');
       label.innerHTML = this.getLabel();
-      var element = document.querySelector('#input');
+      var element = this.querySelector('#input');
       element.value = this.getValue() ? this.getValue() : '';
       element.addEventListener('change', this.inputChangeHandler.bind(this));
     },
