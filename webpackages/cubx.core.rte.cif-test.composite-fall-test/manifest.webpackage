@@ -53,12 +53,13 @@
           }
         ],
         "resources": [
+          "my-elementary-2-style.css",
           "my-elementary-2.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
@@ -70,7 +71,7 @@
             ]
           },
           {
-            "slotId": "attached",
+            "slotId": "connected",
             "type": "object",
             "direction": [
               "input"
@@ -95,12 +96,13 @@
           }
         ],
         "resources": [
+          "my-elementary-1-style.css",
           "my-elementary-1.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
@@ -113,7 +115,7 @@
             ]
           },
           {
-            "slotId": "attached",
+            "slotId": "connected",
             "type": "object",
             "direction": [
               "input"

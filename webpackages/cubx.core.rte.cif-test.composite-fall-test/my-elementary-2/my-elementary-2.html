@@ -1,17 +1,13 @@
-<link rel="import" href="my-elementary-2-style.html">
-<dom-module id="my-elementary-2">
+<template id="my-elementary-2">
+    <style include="my-elementary-2-style"></style>
+    <section>
+        <article>
+            <span class="label">message:</span> <span  id="message"></span>
+        </article>
+    </section>
+    <section>
+        <article id="values"></article>
+    </section>
+</template>
 
-    <template>
-        <style include="my-elementary-2-style"></style>
-        <section>
-            <article>
-                <span class="label">message:</span> {{model.message}}
-            </article>
-        </section>
-        <section>
-            <article id="values"></article>
-        </section>
-    </template>
-
-    <script src="my-elementary-2.js"></script>
-</dom-module>
+<script src="my-elementary-2.js"></script>
