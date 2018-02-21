@@ -1,0 +1,21 @@
+ basic-elementary {
+        --basic-elementary-form-padding: 0.3em;
+        --basic-elementary-width: 30em;
+        --basic-elementary-border: solid thin #0c75d2;
+        --basic-elementary-background-color: white;
+        display: block;
+        padding: var(--basic-elementary-form-padding);
+        width: var(--basic-elementary-width);
+        border: var(--basic-elementary-border);
+        background-color: var(--basic-elementary-background-color);
+    }
+
+    label {
+        margin-right: 0.3em;
+        font-weight: bold;
+        color: #2f6fad;
+    }
+
+    input[type=text] {
+        width: 20em;
+    }

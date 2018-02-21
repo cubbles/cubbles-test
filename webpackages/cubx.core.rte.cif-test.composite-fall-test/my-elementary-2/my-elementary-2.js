@@ -24,7 +24,7 @@
     /**
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
-    cubxReady: function () {
+    contextReady: function () {
     },
 
     /**
