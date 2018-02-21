@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>&lt;text-output&gt; demo</title>
-
-    <script src="../../../cubx.core.rte@2.4.0/webcomponents-lite/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/custom-elements-es5-adapter.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
 
     <!--
         Refer to the crc-loader artifact from a Cubbles-Base.
@@ -14,7 +14,7 @@
         Want to add a 'main' -script to be executed after the dependencies have been loaded?
         If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
-    <script src="../../../cubx.core.rte@2.4.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
 
 </head>
 <body>
@@ -26,19 +26,19 @@
 </text-output>
 <hr>
 
-<text-output cubx-webpackage-id="this">
+<text-output>
     <cubx-core-init style="display: none">
         <cubx-core-slot-init slot="text">"&lt;b&gt;\\&quot;Spass\\&quot; &amp; 'Ernst' &lt;/b&gt; Beispiel"</cubx-core-slot-init>
     </cubx-core-init>
 </text-output>
 
-<text-output cubx-webpackage-id="this">
+<text-output>
     <cubx-core-init style="display: none">
-        <cubx-core-slot-init slot="text">{ "foo": "&lt;b&gt;\\&quot;Spass\\&quot; &amp; Ernst &lt;/b&gt; Beispiel"}</cubx-core-slot-init>
+        <cubx-core-slot-init slot="text">{ "foo": "&lt;b&gt;\\&quot;Spass\\&quot; &amp; 'Ernst' &lt;/b&gt; Beispiel"}</cubx-core-slot-init>
     </cubx-core-init>
 </text-output>
 
-<text-output cubx-webpackage-id="this">
+<text-output>
     <cubx-core-init style="display: none">
         <cubx-core-slot-init slot="text">"&lt;a href=\\&quot;http://cubbles.github.io/\\&quot; target=\\&quot;_blank\\&quot; &gt;cubbles.github.io&lt;/a&gt;"</cubx-core-slot-init>
     </cubx-core-init>
