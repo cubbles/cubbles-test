@@ -279,7 +279,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound.css"
+          "cif-test-compound.css"
         ],
         "dependencies": [
           {
@@ -527,7 +527,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-2.css"
+          "cif-test-compound-2.css"
         ],
         "dependencies": [
           {
@@ -768,7 +768,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-3.css"
+          "cif-test-compound-3.css"
         ],
         "dependencies": [
           {
@@ -993,7 +993,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-4.css"
+          "cif-test-compound-4.css"
         ],
         "dependencies": [
           {
@@ -1222,7 +1222,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-5.css"
+          "cif-test-compound-5.css"
         ],
         "dependencies": [
           {
@@ -1482,7 +1482,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-6.css"
+          "cif-test-compound-6.css"
         ],
         "dependencies": [
           {
@@ -1732,7 +1732,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound.css"
+          "cif-test-compound.css"
         ],
         "dependencies": [
           {
@@ -2017,7 +2017,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj.css"
+          "cif-test-compound-obj.css"
         ],
         "dependencies": [
           {
@@ -2291,7 +2291,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-2.css"
+          "cif-test-compound-obj-2.css"
         ],
         "dependencies": [
           {
@@ -2561,7 +2561,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-3.css"
+          "cif-test-compound-obj-3.css"
         ],
         "dependencies": [
           {
@@ -2797,7 +2797,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-4.css"
+          "cif-test-compound-obj-4.css"
         ],
         "dependencies": [
           {
@@ -3061,7 +3061,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-5.css"
+          "cif-test-compound-obj-5.css"
         ],
         "dependencies": [
           {
@@ -3357,7 +3357,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-6.css"
+          "cif-test-compound-obj-6.css"
         ],
         "dependencies": [
           {
@@ -3670,7 +3670,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-outer.css"
+          "cif-test-compound-outer.css"
         ],
         "dependencies": [
           {
@@ -3962,7 +3962,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-outer-2.css"
+          "cif-test-compound-outer-2.css"
         ],
         "dependencies": [
           {
@@ -4156,7 +4156,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-outer-3.css"
+          "cif-test-compound-outer-3.css"
         ],
         "dependencies": [
           {
@@ -4316,7 +4316,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-outer-4.css"
+          "cif-test-compound-outer-4.css"
         ],
         "dependencies": [
           {
@@ -4483,7 +4483,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-outer-5.css"
+          "cif-test-compound-outer-5.css"
         ],
         "dependencies": [
           {
@@ -4678,7 +4678,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-outer-6.css"
+          "cif-test-compound-outer-6.css"
         ],
         "dependencies": [
           {
@@ -4921,7 +4921,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-outer.css"
+          "cif-test-compound-obj-outer.css"
         ],
         "dependencies": [
           {
@@ -5125,7 +5125,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-outer-2.css"
+          "cif-test-compound-obj-outer-2.css"
         ],
         "dependencies": [
           {
@@ -5352,7 +5352,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-outer-3.css"
+          "cif-test-compound-obj-outer-3.css"
         ],
         "dependencies": [
           {
@@ -5524,7 +5524,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-outer-4.css"
+          "cif-test-compound-obj-outer-4.css"
         ],
         "dependencies": [
           {
@@ -5727,7 +5727,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-outer-5.css"
+          "cif-test-compound-obj-outer-5.css"
         ],
         "dependencies": [
           {
@@ -5955,7 +5955,7 @@
           }
         ],
         "resources": [
-          "component/cif-test-compound-obj-outer-6.css"
+          "cif-test-compound-obj-outer-6.css"
         ],
         "dependencies": [
           {
@@ -6020,12 +6020,13 @@
           }
         ],
         "resources": [
-          "component/cif-test-a.html"
+          "cif-test-a-style.css",
+          "cif-test-a.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -6078,12 +6079,13 @@
           }
         ],
         "resources": [
-          "component/cif-test-b.html"
+          "cif-test-b-style.css",
+          "cif-test-b.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -6108,12 +6110,13 @@
           }
         ],
         "resources": [
-          "component/cif-test-c.html"
+          "cif-test-c-style.css",
+          "cif-test-c.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -6178,12 +6181,13 @@
           }
         ],
         "resources": [
-          "component/cif-test-obj-a.html"
+          "cif-test-obj-a-style.css",
+          "cif-test-obj-a.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -6248,12 +6252,13 @@
           }
         ],
         "resources": [
-          "component/cif-test-obj-b.html"
+          "cif-test-obj-b-style.css",
+          "cif-test-obj-b.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       }
