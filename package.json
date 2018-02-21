@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "http-proxy-middleware": "0.15.1",
-    "web-component-tester": "4.2.2",
+    "web-component-tester": "5.0.1",
     "eslint": "^4.17.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-chai-friendly": "^0.4.1",
