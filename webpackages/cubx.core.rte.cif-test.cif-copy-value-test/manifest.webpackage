@@ -90,12 +90,13 @@
           }
         ],
         "resources": [
-          "component/copy-value-test-a.html"
+          "copy-value-test-a-style.css",
+          "copy-value-test-a.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -148,12 +149,13 @@
           }
         ],
         "resources": [
-          "component/copy-value-test-b.html"
+          "copy-value-test-b-style.css",
+          "copy-value-test-b.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -218,12 +220,13 @@
           }
         ],
         "resources": [
-          "component/copy-value-test-obj-a.html"
+          "copy-value-test-obj-a-style.css",
+          "copy-value-test-obj-a.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -288,12 +291,13 @@
           }
         ],
         "resources": [
-          "component/copy-value-test-obj-b.html"
+          "copy-value-test-obj-b-style.css",
+          "copy-value-test-obj-b.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       }
@@ -538,7 +542,7 @@
           }
         ],
         "resources": [
-          "./component/copy-value-test-compound.css"
+          "copy-value-test-compound.css"
         ],
         "dependencies": [
           {
@@ -835,7 +839,7 @@
           }
         ],
         "resources": [
-          "./component/copy-value-test-compound-obj.css"
+          "copy-value-test-compound-obj.css"
         ],
         "dependencies": [
           {

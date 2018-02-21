@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>copy-value-test-b</title>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/custom-elements-es5-adapter.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/webcomponents-lite.js" ></script>
+
+    <link rel="stylesheet" href="../../demo/style/main-style.css">
+    <link rel="stylesheet" href="style/main.css">
+
+    <!-- include crc-loader webresource from base
+        1) Want to add a main script?
+        Add the following attribute: data-crc-main="js/main.js"
+    -->
+
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true" ></script>
+
+
+</head>
+<body>
+<h2>Demo page for the elementarey component <code>copy-value-test-b</code></h2>
+
+<hr>
+<!-- The cubixx client-runtime-container is bound to the next div -->
+<div cubx-core-crc>
+    <!-- Change this to your element name ... -->
+    <copy-value-test-b cubx-webpackage-id="this"></copy-value-test-b>
+</div>
+
+
+</body>
+</html>
