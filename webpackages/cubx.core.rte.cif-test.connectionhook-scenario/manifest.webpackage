@@ -52,22 +52,13 @@
           }
         ],
         "resources": [
+          "message-viewer.css",
           "message-viewer.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
-          },
-          {
-            "webpackageId": "bootstrap-3.3.5@1.0.3",
-            "artifactId": "bootstrap",
-            "endpointId": "bootstrap-css-only"
-          },
-          {
-            "webpackageId": "jquery-1.11.1@1.0.0",
-            "artifactId": "jquery",
-            "endpointId": "main"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       }
@@ -217,7 +208,7 @@
         "inits": [],
         "resources": [
           "css/example-compound.css",
-          "js/style.js"
+          "example-compound-template.html"
         ],
         "dependencies": [
           {

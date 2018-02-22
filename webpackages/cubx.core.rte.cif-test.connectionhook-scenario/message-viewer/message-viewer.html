@@ -1,24 +1,18 @@
-<link rel="import" href="message-viewer-style.html">
-<dom-module id="message-viewer">
+<template id="message-viewer">
+    <section>
+        <article>
+            <div class="container">
 
-    <template>
-        <style include="main-style"></style>
-        <style include="message-viewer-style"></style>
-        <section>
-            <article>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-1">
-                        <label  for="message">Message:</label>
-                        </div>
-                        <div class="col-md-11">
-                            <input id="message" value="{{model.message::input}}"></input>
-                        </div>
+                    <div class="item-1">
+                    <label  for="message">Message:</label>
+                    </div>
+                    <div class="item-2">
+                        <input id="message" value=""></input>
                     </div>
                 </div>
-            </article>
-        </section>
-    </template>
+            </div>
+        </article>
+    </section>
+</template>
 
-    <script src="message-viewer.js"></script>
-</dom-module>
+<script src="message-viewer.js"></script>
