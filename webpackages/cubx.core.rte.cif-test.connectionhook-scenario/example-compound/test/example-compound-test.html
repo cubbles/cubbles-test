@@ -4,29 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>unit tests for example-compound</title>
-    <script src="../../../cubx.core.rte@2.4.0/webcomponents-lite/webcomponents-lite.js"></script>
-    <script>
-        window.cubx = {
-            "CRCInit": {
-                "rootDependencies": [
-                    {
-                        "artifactId": "example-compound"
-                    }
-                ]
-            }
-        }
-    </script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/custom-elements-es5-adapter.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+
     <script src="../../../web-component-tester-4.2.2@0.1.0/web-component-tester/browser.js"></script>
     <script src="mocha-config.js"></script>
 
-    <script src="../../../cubx.core.rte@2.4.0/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
 
 </head>
 <body>
 <hr>
 <!-- The cubixx client-runtime-container is bound to the next div -->
 <div cubx-core-crc>
-    <example-compound></example-compound>
+    <example-compound cubx-webpackage-id="this"></example-compound>
 </div>
 
 <script src="example-compound-test.js"></script>
