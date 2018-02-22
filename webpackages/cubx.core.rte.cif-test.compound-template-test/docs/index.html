@@ -5,40 +5,23 @@
     <meta charset="UTF-8">
     <title>cubx.core.rte.cif-test.compound-template-test Documentation</title>
 
-    <script src="../../cubx.core.rte@2.4.0/webcomponents-lite/webcomponents-lite.js"></script>
-
-    <!--
-        Refer to the crc-loader artifact from a Cubbles-Base.
-        Take care: All other dependencies are expected to be available within the same Base!
-
-        Want to add a 'main' -script to be executed after the dependencies have been loaded?
-        If yes, add the following attribute: data-crc-main="js/my-script.js"
-    -->
-    <script src="../../cubx.core.rte@2.4.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+    <script src="../../cubx.core.rte@2.2.3/webcomponents-lite/webcomponents-lite.js"></script>
+    <script src="../../cubx.core.rte@2.2.3/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
 
 </head>
 <body>
-<!--
-    The cubbles client-runtime-container is bound to the next element.
-    Place Cubbles-Component there as child element.
-    Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
--->
 <div class="container">
     <div class="row">
         <h1>cubx.core.rte.cif-test.compound-template-test generated documentation</h1>
     </div>
     <div cubx-core-crc class="row">
-        <cubx-webpackage-viewer  cubx-webpackage-id="com.incowia.cubx-webpackage-viewer@1.5.0">
+        <cubx-webpackage-viewer  cubx-webpackage-id="com.incowia.cubx-webpackage-viewer@1.6.0">
+            <cubx-core-init style="display:none">
+                <cubx-core-slot-init slot="manifestUrl">"../manifest.webpackage"</cubx-core-slot-init>
+            </cubx-core-init>
         </cubx-webpackage-viewer>
     </div>
 </div>
 
-<script>
-    var webpackageViewer = document.getElementsByTagName('cubx-webpackage-viewer')[0];
-    var manifestUrl = "../manifest.webpackage";
-    document.addEventListener('cifReady', function() {
-        webpackageViewer.setManifestUrl(manifestUrl);
-    });
-</script>
 </body>
 </html>

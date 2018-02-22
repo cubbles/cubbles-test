@@ -1,0 +1,15 @@
+one-elementary {
+    display: block;
+    border: solid thin #0a68b4;
+    padding: 1em;
+}
+
+label {
+    margin-right: 0.3em;
+    font-weight: bold;
+    color: #2f6fad;
+}
+
+input[type=number] {
+    width: 4em;
+}

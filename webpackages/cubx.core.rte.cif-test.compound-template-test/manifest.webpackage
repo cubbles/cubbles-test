@@ -64,12 +64,13 @@
           }
         ],
         "resources": [
+          "one-elementary.css",
           "one-elementary.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -100,12 +101,13 @@
           }
         ],
         "resources": [
+          "second-elementary.css",
           "second-elementary.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       }
@@ -398,6 +400,7 @@
         "artifactId": "canvas",
         "description": " This is recommended for you use with webcomponents.",
         "resources": [
+          "css/canvas.css",
           "html-import.html"
         ],
         "dependencies": []
