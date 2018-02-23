@@ -1,36 +1,31 @@
-<link rel="import" href="connectionhook-elementary-b-style.html">
-<dom-module id="connectionhook-elementary-b">
-
-    <template>
-        <style include="main-style"></style>
-        <style include="connectionhook-elementary-b-style"></style>
-        <p>connectionhook-elementary-b</p>
-        <div class="form-horizontal">
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Slot a</label>
-                <p id="slota" class="col-sm-10 form-control-static">{{model.a}}</p>
-            </div>
-            <div class="form-group">
-                <label for="slotb" class="col-sm-2 control-label">Slot b</label>
-                <p id="slotb" class="col-sm-10 form-control-static">{{model.b}}</p>
-            </div>
-            <hr class="separator"/>
-            <div class="form-group">
-                <label for="slotc" class="col-sm-2 control-label ">Slot c</label>
-                <p id="slotc" class="col-sm-10 form-control-static ">object with one attribute: name</p>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-1"><p></p></div>
-                <div class="col-sm-11">
-                    <div class="form-group">
-                        <label for="slotcname" class="col-sm-2 control-label">name</label>
-                        <p id="slotcname" class="col-sm-10 form-control-static">{{model.c.name}}</p>
-                    </div>
+<template id="connectionhook-elementary-b">
+    <style include="main-style"></style>
+    <style include="connectionhook-elementary-b-style"></style>
+    <h3>connectionhook-elementary-b</h3>
+    <div>
+        <div class="container">
+            <label for="slota">Slot a</label>
+            <div id="slota" class="item">{{model.a}}</div>
+        </div>
+        <div class="container">
+            <label for="slotb">Slot b</label>
+            <div id="slotb" class="item">{{model.b}}</div>
+        </div>
+        <hr class="separator"/>
+        <div class="container">
+            <label for="slotc" >Slot c</label>
+            <div id="slotc" class="item">object with one attribute: name</div>
+        </div>
+        <div>
+            <div>
+                <div class="container">
+                    <label for="slotcName">name</label>
+                    <div id="slotcName" class="item"></div>
                 </div>
             </div>
-
         </div>
-    </template>
 
-    <script src="connectionhook-elementary-b.js"></script>
-</dom-module>
+    </div>
+</template>
+
+<script src="connectionhook-elementary-b.js"></script>

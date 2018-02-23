@@ -1,4 +1,14 @@
 connectionhook-compound-c {
-    display: block;
+    padding: 1em;
+    background-color: #eef2f6;
+    border: solid thin #bfbfbf;
+}
 
+connectionhook-compound-c > * {
+    width: 35em;
+}
+
+
+.container {
+    display: flex;
 }

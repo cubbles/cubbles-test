@@ -1,0 +1,13 @@
+connectionhook-compound-g {
+    background-color: #eef2f6;
+    border: solid thin #bfbfbf;
+    padding: 1em;
+}
+
+connectionhook-compound-g > * {
+    width: 35em;
+}
+
+.container {
+    display: flex;
+}

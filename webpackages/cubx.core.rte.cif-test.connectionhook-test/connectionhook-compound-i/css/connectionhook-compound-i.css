@@ -1,0 +1,14 @@
+connectionhook-compound-i {
+    background-color: azure;
+    border: solid thin aquamarine;
+    padding: 1em;
+}
+
+connectionhook-compound-i > * {
+    width: 35em;
+}
+
+
+.container {
+    display: flex;
+}
