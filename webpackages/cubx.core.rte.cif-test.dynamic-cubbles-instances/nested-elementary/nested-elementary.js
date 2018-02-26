@@ -2,44 +2,33 @@
   'use strict';
   /**
    */
-  CubxPolymer({
+  CubxComponent({
     is: 'nested-elementary',
-
-    /**
-     * Manipulate an element’s local DOM when the element is created.
-     */
-    created: function () {
-    },
 
     /**
      * Manipulate an element’s local DOM when the element is created and initialized.
      */
     ready: function () {
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the element is attached to the document.
-     */
-    attached: function () {
+      this.querySelector('#addMessage').addEventListener('click', this.handleClick.bind(this));
     },
 
     /**
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
-    cubxReady: function () {
-      this.$$('.container').classList.remove('hidden');
-      this.$$('button').removeAttribute('disabled');
+    contextReady: function () {
+      this.querySelector('.container').classList.remove('hidden');
+      this.querySelector('button').removeAttribute('disabled');
     },
 
     handleClick: function () {
       var elem = this.createMessage();
-      Polymer.dom(this.$$('.container')).appendChild(elem);
-      var message = this.$.message.value;
+      this.querySelector('.container').appendChild(elem);
+      var message = this.querySelector('#message').value;
       elem.setMessage(message);
-      if (this.$$('.hidden')) {
-        this.$$('.hidden').classList.remove('hidden');
+      if (this.querySelector('.hidden')) {
+        this.querySelector('.hidden').classList.remove('hidden');
       }
-      this.$.message.value = '';
+      this.querySelector('#message').value = '';
     },
 
     createMessage: function (name, data) {

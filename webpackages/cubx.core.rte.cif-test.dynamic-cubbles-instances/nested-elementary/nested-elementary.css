@@ -1,0 +1,38 @@
+nested-elementary {
+    display: block;
+    padding: 10px;
+
+}
+
+nested-elementary label {
+    margin-right: 0.3em;
+    font-weight: bold;
+    color: #2f6fad;
+}
+
+nested-elementary input[type=text] {
+    width: 12em;
+}
+
+nested-elementary .container {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid thin gray;
+    width: 100%;
+    background-color: #fcfcfc;
+}
+
+nested-elementary .form-container {
+    padding: 5px;
+    display: flex;
+}
+
+.form-container div {
+    margin-right: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+

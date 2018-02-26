@@ -1,38 +1,66 @@
+/* globals Node */
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   *
-   */
-  CubxPolymer({
+  CubxComponent({
     is: 'bundesland-statistik',
 
-    /**
-     * Manipulate an element’s local DOM when the element is created.
-     */
-    created: function () {
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the element is created and initialized.
-     */
     ready: function () {
+      this.createTemplateList(this);
+      this.evalTemplates(this.templateElements);
+    },
+    evalTemplates: function (templateList) {
+      templateList.forEach(function (temp) {
+        var tempFunc = new Function('', 'return ' + temp.code).bind(this); // eslint-disable-line no-new-func
+        if (!temp.attr) {
+          temp.node.data = tempFunc(this);
+        } else {
+          temp.attr.value = tempFunc(this);
+        }
+      }.bind(this));
+    },
+    createTemplateList: function (el) {
+      this.templateElements = [];
+      this.addToTemplateElements(el, this.templateElements);
     },
 
-    /**
-     * Manipulate an element’s local DOM when the element is attached to the document.
-     */
-    attached: function () {
+    addToTemplateElements: function (el, list) {
+      if (el.childNodes.length > 0) {
+        var node = el.firstChild;
+        do {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            this.addToTemplateElements(node, list);
+            this.addAttributesToTemplateElements(node, list);
+          } else if (node.nodeType === Node.TEXT_NODE) {
+            var regex = /(.*){{(.+)}}(.*)/;
+            var matches = node.data.match(regex);
+
+            if (matches) {
+              list.push({
+                node: node,
+                code: '\'' + matches[1] + '\' + ' + matches[2] + '+ \'' + matches[3] + '\''
+              });
+            }
+          }
+          node = node.nextSibling;
+        } while (node);
+      }
     },
 
-    /**
-     * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
-     */
-    cubxReady: function () {
+    addAttributesToTemplateElements: function (el, list) {
+      for (var i = 0; i < el.attributes.length; i++) {
+        var regex = /^{{(.+)}}$/;
+        if (el.attributes[i].value) {
+          var matches = el.attributes[i].value.match(regex);
+          if (matches) {
+            list.push({
+              node: el,
+              attr: el.attributes[i],
+              code: matches[1]
+            });
+          }
+        }
+      }
     },
-
     getNationalityKey: function (model, index) {
       var data = this.getStatisticData();
       if (data) {

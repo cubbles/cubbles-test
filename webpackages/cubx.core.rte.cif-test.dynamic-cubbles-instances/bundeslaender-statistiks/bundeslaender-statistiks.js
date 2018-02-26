@@ -1,54 +1,22 @@
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   *
-   */
-  CubxPolymer({
+  CubxComponent({
     is: 'bundeslaender-statistiks',
+    isReady: false,
 
-    properties: {
-      isReady: {
-        type: 'Boolean',
-        value: false
-      },
-      filteredElements: {
-        type: 'Array',
-        value: function () {
-          return {};
-        }
-      }
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the element is created.
-     */
     created: function () {
+      this.isReady = false;
+      this.filteredElements = {}
     },
-
-    /**
-     * Manipulate an element’s local DOM when the element is created and initialized.
-     */
     ready: function () {
+      this.querySelector('#filter').addEventListener('input', this.handleFilter.bind(this));
     },
-
-    /**
-     * Manipulate an element’s local DOM when the element is attached to the document.
-     */
-    attached: function () {
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
-     */
-    cubxReady: function () {
-      this.set('isReady', true);
+    contextReady: function () {
+      this.isReady = true;
       this.showElements();
     },
     modelStatisticDataChanged: function (value) {
-      this.set('filteredElements', value);
+      this.filteredElements =  value;
       this.resetFilter();
       if (this.isReady) {
         this.showElements();
@@ -61,8 +29,7 @@
       Object.keys(allData).forEach(function (key) {
         var data = allData[key];
         var elem = this.createElement(key, data);
-        this.$$('.content').appendChild(elem);
-        Polymer.dom.flush();
+        this.querySelector('.content').appendChild(elem);
       }.bind(this));
     },
     createElement: function (name, data) {
@@ -82,15 +49,15 @@
       return elem;
     },
     clearElements: function () {
-      while (this.$$('.content').children.length > 0) {
-        var el = this.$$('.content').children[0];
+      while (this.querySelector('.content').children.length > 0) {
+        var el = this.querySelector('.content').children[0];
         el.parentNode.removeChild(el);
       }
     },
     handleFilter: function (evt) {
       var data = this.getStatisticData();
       if (evt.target.value === '') {
-        this.set('filteredElements', data);
+        this.filteredElements = data;
       }
       var filteredData = {};
       Object.keys(data).forEach(function(key){
@@ -98,12 +65,12 @@
           filteredData[key] = data[key];
         }
       });
-      this.set('filteredElements', filteredData);
+      this.filteredElements = filteredData;
       this.showElements();
     },
 
     resetFilter: function () {
-      this.$.filter.value = '';
+      this.querySelector('#filter').value = '';
     }
   });
 }());

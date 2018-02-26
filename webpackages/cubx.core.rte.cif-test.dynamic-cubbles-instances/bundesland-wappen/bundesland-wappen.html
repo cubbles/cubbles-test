@@ -1,10 +1,5 @@
-<link rel="import" href="bundesland-wappen-style.html">
-<dom-module id="bundesland-wappen">
-
-    <template>
-        <style include="bundesland-wappen-style"></style>
-        <div class="bl"><b>{{model.bl}}</b></div><div class$="{{blClass}}"></div>
+    <template id="bundesland-wappen">
+        <div class="bl" id="bl"><b>{{model.bl}}</b></div><div id="wappen"></div>
     </template>
 
     <script src="bundesland-wappen.js"></script>
-</dom-module>

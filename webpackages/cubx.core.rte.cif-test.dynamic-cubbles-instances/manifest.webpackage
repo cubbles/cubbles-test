@@ -61,7 +61,7 @@
     "elementaryComponents": [
       {
         "artifactId": "color-picker",
-        "description": "An color picker insance.",
+        "description": "An color picker instance.",
         "runnables": [
           {
             "name": "demo",
@@ -75,12 +75,13 @@
           }
         ],
         "resources": [
+          "color-picker.css",
           "color-picker.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           },
           {
             "artifactId": "jscolor"
@@ -114,12 +115,13 @@
           }
         ],
         "resources": [
+          "color-container.css",
           "color-container.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
@@ -153,8 +155,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
@@ -189,8 +191,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
@@ -219,12 +221,13 @@
           }
         ],
         "resources": [
+          "bundesland-wappen.css",
           "bundesland-wappen.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
@@ -254,12 +257,13 @@
           }
         ],
         "resources": [
+          "bundesland-statistik.css",
           "bundesland-statistik.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
@@ -313,12 +317,13 @@
           }
         ],
         "resources": [
+          "bundeslaender-statistiks.css",
           "bundeslaender-statistiks.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
@@ -347,12 +352,13 @@
           }
         ],
         "resources": [
+          "nested-elementary.css",
           "nested-elementary.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": []
@@ -373,12 +379,13 @@
           }
         ],
         "resources": [
+          "message-box.css",
           "message-box.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [

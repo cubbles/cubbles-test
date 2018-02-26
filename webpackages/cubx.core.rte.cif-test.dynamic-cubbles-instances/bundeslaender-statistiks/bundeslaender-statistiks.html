@@ -1,14 +1,10 @@
-<link rel="import" href="bundeslaender-statistiks-style.html">
-<dom-module id="bundeslaender-statistiks">
+<template id="bundeslaender-statistiks">
+    <style include="bundeslaender-statistiks-style"></style>
+    <label for="filter">Filter:</label>
+    <input id="filter">
+    <div class="content">
 
-    <template>
-        <style include="bundeslaender-statistiks-style"></style>
-        <label for="filter">Filter:</label>
-        <input id="filter" on-input="handleFilter">
-        <div class="content">
+    </div>
+</template>
 
-        </div>
-    </template>
-
-    <script src="bundeslaender-statistiks.js"></script>
-</dom-module>
+<script src="bundeslaender-statistiks.js"></script>

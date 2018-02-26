@@ -1,0 +1,11 @@
+color-container {
+    --base-form-padding: 0.3em;
+    display: block;
+    padding: var(--base-form-padding);
+    width: auto;
+}
+
+div#colorContainer {
+    width: auto;
+
+}

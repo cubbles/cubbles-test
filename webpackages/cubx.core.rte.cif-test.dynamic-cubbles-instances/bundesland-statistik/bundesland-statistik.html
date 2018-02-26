@@ -1,32 +1,27 @@
-<link rel="import" href="bundesland-statistik-style.html">
-<dom-module id="bundesland-statistik">
+<template id="bundesland-statistik">
+    <div class="Rtable Rtable--4cols">
+        <div class="Rtable-cell" data-bl="{{this.model.bundeslandName}}">&nbsp;</div>
+        <div class="Rtable-cell"><h4>{{this.getGenderKey(this.model.statisticData,0)}}</h4></div>
+        <div class="Rtable-cell"><h4>{{this.getGenderKey(this.model.statisticData,1)}}</h4></div>
+        <div class="Rtable-cell"><h4>{{this.getGenderKey(this.model.statisticData,2)}}</h4></div>
 
-    <template>
-        <style include="bundesland-statistik-style"></style>
-        <div class="Rtable Rtable--4cols">
-            <div class="Rtable-cell">&nbsp;</div>
-            <div class="Rtable-cell"><h4>{{getGenderKey(model.*,0)}}</h4></div>
-            <div class="Rtable-cell"><h4>{{getGenderKey(model.*,1)}}</h4></div>
-            <div class="Rtable-cell"><h4>{{getGenderKey(model.*,2)}}</h4></div>
+        <div class="Rtable-cell"><h4>{{this.getNationalityKey(this.model.statisticData,0)}}</h4></div>
+        <div class="Rtable-cell">{{this.getCell(this.model.statisticData,0,0)}}</div>
+        <div class="Rtable-cell">{{this.getCell(this.model.statisticData,0,1)}}</div>
+        <div class="Rtable-cell">{{this.getCell(this.model.statisticData,0,2)}}</strong></div>
 
-            <div class="Rtable-cell"><h4>{{getNationalityKey(model.*,0)}}</h4></div>
-            <div class="Rtable-cell">{{getCell(model.*,0,0)}}</div>
-            <div class="Rtable-cell">{{getCell(model.*,0,1)}}</div>
-            <div class="Rtable-cell">{{getCell(model.*,0,2)}}</strong></div>
+        <div class="Rtable-cell"><h4>{{this.getNationalityKey(this.model.statisticData,1)}}</h4></div>
+        <div class="Rtable-cell">{{this.getCell(this.model.statisticData,1,0)}}</div>
+        <div class="Rtable-cell">{{this.getCell(this.model.statisticData,1,1)}}</div>
+        <div class="Rtable-cell">{{this.getCell(this.model.statisticData,1,2)}}</div>
 
-            <div class="Rtable-cell"><h4>{{getNationalityKey(model.*,1)}}</h4></div>
-            <div class="Rtable-cell">{{getCell(model.*,1,0)}}</div>
-            <div class="Rtable-cell">{{getCell(model.*,1,1)}}</div>
-            <div class="Rtable-cell">{{getCell(model.*,1,2)}}</div>
+        <div class="Rtable-cell"><h4>{{this.getNationalityKey(this.model.statisticData,2)}}</h4></div>
+        <div class="Rtable-cell">{{this.getCell(this.model.statisticData,2,0)}}</div>
+        <div class="Rtable-cell">{{this.getCell(this.model.statisticData,2,1)}}</div>
+        <div class="Rtable-cell">{{this.getCell(this.model.statisticData,2,2)}}</div>
 
-            <div class="Rtable-cell"><h4>{{getNationalityKey(model.*,2)}}</h4></div>
-            <div class="Rtable-cell">{{getCell(model.*,2,0)}}</div>
-            <div class="Rtable-cell">{{getCell(model.*,2,1)}}</div>
-            <div class="Rtable-cell">{{getCell(model.*,2,2)}}</div>
+    </div>
+    <div class="foot">{{this.model.bundeslandName}}</div>
+</template>
 
-        </div>
-        <div class="foot">[[model.bundeslandName]]</div>
-    </template>
-
-    <script src="bundesland-statistik.js"></script>
-</dom-module>
+<script src="bundesland-statistik.js"></script>

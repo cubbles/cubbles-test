@@ -1,22 +1,18 @@
-<link rel="import" href="nested-elementary-style.html">
-<dom-module id="nested-elementary">
-
-    <template>
-        <style include="nested-elementary-style"></style>
-        <div class="form-container">
-            <div>
-                <label for="message">message</label>
-                <input id="message" type="text" value="">
-            </div>
-            <div>
-                <button on-click="handleClick" disabled>add message</button>
-            </div>
+<template id="nested-elementary">
+    <style include="nested-elementary-style"></style>
+    <div class="form-container">
+        <div>
+            <label for="message">message</label>
+            <input id="message" type="text" value="">
         </div>
-        <div class="hidden">
-        <h2>message container</h2>
-        <div class="container"></div>
+        <div>
+            <button id="addMessage" disabled>add message</button>
         </div>
-    </template>
+    </div>
+    <div class="hidden">
+    <h2>message container</h2>
+    <div class="container"></div>
+    </div>
+</template>
 
-    <script src="nested-elementary.js"></script>
-</dom-module>
+<script src="nested-elementary.js"></script>
