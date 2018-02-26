@@ -1,21 +1,15 @@
-<link rel="import" href="connection-import-style.html">
-<dom-module id="connection-import">
-
-    <template>
-        <!--<style include="main-style"></style>-->
-        <style include="connection-import-style"></style>
-        <div class="container">
+<template id="connection-import">
+    <div class="container">
         <h1>dynamic connection import</h1>
-            <div class="panel">
-                <form role="form" class="form">
-                    <div class="form-group">
-                        <label for="output">export/import:</label>
-                        <textarea class="form-control" id="output" rows="15"></textarea>
-                    </div>
-                </form>
-            </div>
+        <div class="panel">
+            <form role="form" class="form">
+                <div class="form-group">
+                    <label for="output">export/import:</label>
+                    <textarea class="form-control" id="output" rows="15"></textarea>
+                </div>
+            </form>
         </div>
-    </template>
+    </div>
+</template>
 
-    <script src="connection-import.js"></script>
-</dom-module>
+<script src="connection-import.js"></script>

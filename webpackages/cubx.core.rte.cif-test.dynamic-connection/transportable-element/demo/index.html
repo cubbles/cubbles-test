@@ -5,31 +5,14 @@
     <meta charset="UTF-8">
     <title>app</title>
 
-    <script src="../../../cubx.core.rte@2.4.0/webcomponents-lite/webcomponents-lite.js"></script>
-
-    <script>
-        window.cubx = {
-            CRCInit: {
-                rootDependencies: [
-                    {
-                        artifactId: 'transportable-element'
-                    }
-                ]
-            }
-        }
-    </script>
-
-    <!-- include crc-loader webresource from base
-        1) Want to add a main script?
-        Add the following attribute: data-crc-main="js/main.js"
-    -->
-
-    <script src="../../../cubx.core.rte@2.4.0/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/custom-elements-es5-adapter.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/webcomponents-lite.js" ></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
 
 </head>
 <body>
 <div class=""cubx-core-crc>
-    <transportable-element></transportable-element>
+    <transportable-element cubx-webpackage-id="this"></transportable-element>
 </div>
 
 

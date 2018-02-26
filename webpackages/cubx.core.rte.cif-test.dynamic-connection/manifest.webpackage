@@ -85,17 +85,17 @@
           }
         ],
         "resources": [
+          "container-element.css",
           "container-element.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           },
           {
-            "webpackageId": "bootstrap-3.3.5@1.0.3",
-            "artifactId": "bootstrap",
-            "endpointId": "bootstrap-css-only"
+            "webpackageId": "bootstrap-3.3.5@1.1.1",
+            "artifactId": "bootstrap-bootstrap-css-only"
           },
           {
             "artifactId": "utils"
@@ -127,17 +127,17 @@
           }
         ],
         "resources": [
+          "transportable-element.css",
           "transportable-element.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           },
           {
-            "webpackageId": "bootstrap-3.3.5@1.0.3",
-            "artifactId": "bootstrap",
-            "endpointId": "bootstrap-css-only"
+            "webpackageId": "bootstrap-3.3.5@1.1.1",
+            "artifactId": "bootstrap-bootstrap-css-only"
           },
           {
             "artifactId": "utils"
@@ -176,17 +176,17 @@
           }
         ],
         "resources": [
+          "connection-import.css",
           "connection-import.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           },
           {
-            "webpackageId": "bootstrap-3.3.5@1.0.3",
-            "artifactId": "bootstrap",
-            "endpointId": "bootstrap-css-only"
+            "webpackageId": "bootstrap-3.3.5@1.1.1",
+            "artifactId": "bootstrap-bootstrap-css-only"
           }
         ]
       }
@@ -221,7 +221,8 @@
         "connections": [],
         "inits": [],
         "resources": [
-          "css/dynamic-connection-compound.css"
+          "css/dynamic-connection-compound.css",
+          "dynamic-connection-compound-template.html"
         ],
         "dependencies": [
           {

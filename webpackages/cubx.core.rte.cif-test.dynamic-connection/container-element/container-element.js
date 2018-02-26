@@ -1,55 +1,67 @@
 /* globals findAncestorElement,elementFindByAttributeValue  */
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   *
-   * Access the Cubixx-Component-Model:
-   * > Access slot values:
-   * slot 'a': this.getA(); | this.setA(value)
-   */
-  CubxPolymer({
+  CubxComponent({
     is: 'container-element',
 
-    /**
-     * Manipulate an element’s local DOM when the element is constructed.
-     */
     ready: function () {
-      this.$.dropzone.addEventListener('dragenter', this.handleDragEnter);
-      this.$.dropzone.addEventListener('dragover', this.handleDragOver);
-      this.$.dropzone.addEventListener('dragleave', this.handleDragLeave);
-      this.$.dropzone.addEventListener('dragend', this.handleDragEnd);
-      this.$.dropzone.addEventListener('drop', this.handleDrop);
+      this.querySelector('#dropzone').addEventListener('dragenter', this.handleDragEnter);
+      this.querySelector('#dropzone').addEventListener('dragover', this.handleDragOver);
+      this.querySelector('#dropzone').addEventListener('dragleave', this.handleDragLeave);
+      this.querySelector('#dropzone').addEventListener('dragend', this.handleDragEnd);
+      this.querySelector('#dropzone').addEventListener('drop', this.handleDrop);
+      this.querySelector('#export').addEventListener('click', this.exportHandler.bind(this));
+      this.querySelector('#delete').addEventListener('click', this.deleteHandler.bind(this));
+      this.querySelector('#import').addEventListener('click', this.importHandler.bind(this));
+      var messageEl = this.querySelector('#message');
+      if (this.getMessage()) {
+        messageEl.value = this.getMessage();
+      }
+      messageEl.addEventListener('input', this.inputMessageHandler.bind(this));
+      messageEl.addEventListener('input', this.handleEnter.bind(this));
     },
-    cubxReady: function () {
+    contextReady: function () {
       console.log('container-element: cubxReady');
       if (this.parentNode && this.parentNode.isCompoundComponent) {
         this.makeToDropzoneToParentCompound(this.parentNode, this);
+      } else {
+        var parent = this.findParentCompound(this);
+        if (parent && parent !== this) {
+          this.makeToDropzoneToParentCompound(parent, this);
+        }
       }
       this.handleButtonVisibility(this.getButtons());
     },
-    /**
-     *  Observe the Cubixx-Component-Model: If value for slot 'a' has changed ...
-     */
+
+    findParentCompound: function (el) {
+      if (!el.parentNode || el.parentNode.tagName === 'BODY' || el.parentNode.hasAttribute('cubx-core-crc')) {
+        return el;
+      }
+      if (el.parentNode.isCompoundComponent) {
+        return el.parentNode;
+      } else {
+        return this.findParentCompound(el.parentNode);
+      }
+    },
     modelMessageChanged: function (newValue) {
       // do nothing
     },
     modelButtonsChanged: function (newValue) {
       this.handleButtonVisibility(newValue);
     },
+    inputMessageHandler: function (evt) {
+      this.setMessage(evt.target.value);
+    },
     handleButtonVisibility: function (visible) {
       console.log('handleButtonVisibility', visible);
-      if (visible && this.$.buttons.classList.contains('hidden')) {
-        this.$.buttons.classList.remove('hidden');
-      } else if (!visible && !this.$.buttons.classList.contains('hidden')) {
-        this.$.buttons.classList.add('hidden');
+      if (visible && this.querySelector('#buttons').classList.contains('hidden')) {
+        this.querySelector('#buttons').classList.remove('hidden');
+      } else if (!visible && !this.querySelector('#buttons').classList.contains('hidden')) {
+        this.querySelector('#buttons').classList.add('hidden');
       }
     },
     handleDragEnter: function (e) {
       // console.log('dragenter', e.target);
-
       var me = e.target;
 
       if (me.id === 'dropzone') {
@@ -64,7 +76,7 @@
       if (e.preventDefault) {
         e.preventDefault(); // Necessary. Allows us to drop.
       }
-      e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+      e.dataTransfer.dropEffect = 'move'; // See the section on the DataTransfer object.
       return false;
     },
     handleDragLeave: function (e) {
@@ -72,7 +84,7 @@
       var me = e.target;
       if (me.id === 'dropzone') {
         if (this.classList.contains('over')) {
-          this.classList.remove('over');  // this / e.target is previous target element.
+          this.classList.remove('over'); // this / e.target is previous target element.
         }
         this.classList.add('not_over');
       }
@@ -80,13 +92,13 @@
     handleDragEnd: function (e) {
       // console.log('dragend');
       if (this.classList.contains('over')) {
-        this.classList.remove('over');  // this / e.target is previous target element.
+        this.classList.remove('over'); // this / e.target is previous target element.
       }
       this.classList.add('not_over');
     },
     handleDrop: function (e) {
       var me = e.target;
-      var msie = window.navigator.userAgent.indexOf('MSIE ');       // Detect IE
+      var msie = window.navigator.userAgent.indexOf('MSIE '); // Detect IE
       var trident = window.navigator.userAgent.indexOf('Trident/'); // Detect IE 11
       var edge = window.navigator.userAgent.indexOf('Edge'); // Detect Edge
       if (e.stopPropagation) {
@@ -150,7 +162,7 @@
         if (e.preventDefault) {
           e.preventDefault(); // Necessary. Allows us to drop.
         }
-        e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+        e.dataTransfer.dropEffect = 'move'; // See the section on the DataTransfer object.
         return false;
       };
       parentElem.handleDragLeave = function (e) {
@@ -159,7 +171,7 @@
           if (parentElem.classList.contains('layer_over')) {
             parentElem.classList.remove('layer_over');
           }
-          parentElem.classList.add('layer_not_over');  // this / e.target is previous target element.
+          parentElem.classList.add('layer_not_over'); // this / e.target is previous target element.
         }
       };
       parentElem.handleDragEnd = function (e) {
@@ -168,13 +180,13 @@
         if (parentElem.classList.contains('layer_over')) {
           parentElem.classList.remove('layer_over');
         }
-        parentElem.classList.add('layer_not_over');  // this / e.target is previous target element.
+        parentElem.classList.add('layer_not_over'); // this / e.target is previous target element.
       };
       parentElem.handleDrop = function (e) {
         // console.log('############drop in compound');
         if (e.stopPropagation) {
           e.stopPropagation(); // stops the browser from redirecting.
-          var msie = window.navigator.userAgent.indexOf('MSIE ');       // Detect IE
+          var msie = window.navigator.userAgent.indexOf('MSIE '); // Detect IE
           var trident = window.navigator.userAgent.indexOf('Trident/'); // Detect IE 11
           var edge = window.navigator.userAgent.indexOf('Edge'); // Detect Edge
           var runtimeId;

@@ -6,8 +6,8 @@
     background-color:#f2f2f2;
 
 }
-dynamic-connection-compound{
-    display:block;
+dynamic-connection-compound {
+    display: block;
     border: solid thin #bfbfbf;
     height:auto !important; /* normale Browser */
     height:100%; /* IE6: setzt dies wie min-height um*/

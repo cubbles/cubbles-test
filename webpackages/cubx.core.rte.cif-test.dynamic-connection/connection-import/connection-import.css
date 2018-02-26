@@ -1,0 +1,7 @@
+connection-import {
+    --connection-import-form-padding: 0.3em;
+
+    display: block;
+    padding: var(--connection-import-form-padding);
+
+}

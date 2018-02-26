@@ -1,18 +1,10 @@
-<link rel="import" href="transportable-element-style.html">
-<dom-module id="transportable-element">
-
-    <template>
-        <!--<style include="main-style"></style>-->
-        <style include="transportable-element-style"></style>
-        <div class="container" draggable="true" >
-            <div class="panel">
-                <div class="panel-heading bg-primary">transportable-element</div>
-                <div class="panel-body bg-info">{{model.message}}</div>
-            </div>
+<template id="transportable-element">
+    <div class="container" draggable="true" >
+        <div class="panel">
+            <div class="panel-heading bg-primary">transportable-element</div>
+            <div class="message panel-body bg-info"></div>
         </div>
+    </div>
+</template>
 
-
-    </template>
-
-    <script src="transportable-element.js"></script>
-</dom-module>
+<script src="transportable-element.js"></script>

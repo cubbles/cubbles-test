@@ -1,0 +1,19 @@
+transportable-element {
+    --transportable-element-form-padding: 0.3em;
+    --transportable-element-width: 20em;
+
+    display: block;
+    padding: var(--transportable-element-form-padding);
+
+}
+transportable-element .container {
+    width: var(--transportable-element-width);
+}
+
+transportable-element .panel-body {
+    height: 5em;
+}
+
+[draggable]{
+    cursor:move;
+}
