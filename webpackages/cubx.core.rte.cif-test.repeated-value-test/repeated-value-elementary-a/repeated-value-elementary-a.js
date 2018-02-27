@@ -1,56 +1,37 @@
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   *
-   * Access the Cubixx-Component-Model:
-   * > Access slot values:
-   * slot 'a': this.getA(); | this.setA(value)
-   */
-  CubxPolymer({
+  CubxComponent({
     is: 'repeated-value-elementary-a',
 
-    /**
-     * Manipulate an element’s local DOM when the element is constructed.
-     */
     ready: function () {
       // set value-attribute of element with id='slota' to the initial value of slot 'a'
-      this.$.slota.value = this.getA();
-      this.$.slotb.value = this.getB();
+      this.querySelector('#slota').value = this.getA();
+      this.querySelector('#slotb').value = this.getB();
       if (this.getC()) {
-        this.$.slotc.checked = true;
+        this.querySelector('#slotc').checked = true;
       } else {
-        this.$.slotc.checked = false;
+        this.querySelector('#slotc').checked = false;
       }
-      this.$.slotd.value = this.getD().value;
+      this.querySelector('#slotd').value = this.getD().value;
+      this.querySelector('[for = slotd]').innerHTML = this.getD().label;
+      this.querySelector('#slota').addEventListener('change', this.inputFieldSlotAChanged.bind(this));
+      this.querySelector('#slotb').addEventListener('change', this.inputFieldSlotBChanged.bind(this));
+      this.querySelector('#slotc').addEventListener('change', this.inputFieldSlotCChanged.bind(this));
+      this.querySelector('#slotd').addEventListener('change', this.inputFieldSlotDChanged.bind(this));
     },
 
-    /**
-     * A handler to be called by a dom-element
-     * @param {Event} event
-     */
     inputFieldSlotAChanged: function (event) {
-      // update the cubixx-model
+      // update the cubbles-model
       this.setA(event.target.value);
     },
 
-    /**
-     * A handler to be called by a dom-element
-     * @param {Event} event
-     */
     inputFieldSlotBChanged: function (event) {
-      // update the cubixx-model
+      // update the cubbles-model
       this.setB(event.target.value);
     },
 
-    /**
-     * A handler to be called by a dom-element
-     * @param {Event} event
-     */
     inputFieldSlotCChanged: function (event) {
-      // update the cubixx-model
+      // update the cubbles-model
       var value = event.target.checked ? event.target.checked : false;
       this.setC(value);
     },
@@ -62,38 +43,30 @@
       };
       this.setD(d);
     },
-    /**
-     *  Observe the Cubixx-Component-Model: If value for slot 'a' has changed ...
-     */
+
     modelAChanged: function (newValue) {
       // update the view
-      this.$.slota.value = newValue;
+      this.querySelector('#slota').value = newValue;
     },
-    /**
-     *  Observe the Cubixx-Component-Model: If value for slot 'a' has changed ...
-     */
+
     modelBChanged: function (newValue) {
       // update the view
-      this.$.slotb.value = newValue;
+      this.querySelector('#slotb').value = newValue;
     },
-    /**
-     *  Observe the Cubixx-Component-Model: If value for slot 'a' has changed ...
-     */
+
     modelCChanged: function (newValue) {
       console.log('###### modelCChanged this', this);
       // update the view
       if (newValue) {
-        this.$.slotc.checked = true;
+        this.querySelector('#slotc').checked = true;
       } else {
-        this.$.slotc.checked = false;
+        this.querySelector('#slotc').checked = false;
       }
     },
-    /**
-     *  Observe the Cubixx-Component-Model: If value for slot 'a' has changed ...
-     */
     modelDChanged: function (newValue) {
       // update the view
-      this.$.slotd.value = newValue.value;
+      this.querySelector('#slotd').value = newValue.value;
+      this.querySelector('[for = slotd]').innerHTML = newValue.label;
     }
   });
 }());

@@ -5,25 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>repeated-value-true-compound-g</title>
-    <script>
-        window.cubx = {
-            CRCInit: {
-                rootDependencies: [
-                    {
-                        artifactId: 'repeated-value-true-compound-g'
-                    },
-                    {
-                        webpackageId: 'bootstrap-3.3.5@1.1.0',
-                        artifactId: 'bootstrap-bootstrap-theme'
-                    }
-                ]
-            }
-        }
-    </script>
-    <script src="../../../cubx.core.rte@2.4.0/webcomponents-lite/webcomponents-lite.js" ></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/custom-elements-es5-adapter.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/webcomponents-lite.js" ></script>
 
     <link rel="stylesheet" href="style/main.css">
-    <link rel="import" href="../style/main-style.html">
+    <link rel="stylesheet" href="../../demo/style/main-style.css">
     <script>
         console.time('crcReady');
         console.time('cifReady');
@@ -40,19 +26,17 @@
         Add the following attribute: data-crc-main="js/main.js"
     -->
 
-    <script src="../../../cubx.core.rte@2.4.0/crc-loader/js/main.js" data-CRCInit.loadCIF="true" data-crc-main="./js/main.js"></script>
-
-
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
 
 </head>
 <body>
-<h2>Testpage for the Cubixx-Component <code>repeated-value-true-compound-g</code></h2>
+<h2>Testpage for the Cubbles-Component <code>repeated-value-true-compound-g</code></h2>
 
 <hr>
-<!-- The cubixx client-runtime-container is bound to the next div -->
-<div cubx-core-crc class="container">
+<!-- The cubbles client-runtime-container is bound to the next div -->
+<div cubx-core-crc>
     <!-- Change this to your element name ... -->
-    <repeated-value-true-compound-g  class="row"></repeated-value-true-compound-g>
+    <repeated-value-true-compound-g cubx-webpackage-id="this"></repeated-value-true-compound-g>
 </div>
 
 <script>

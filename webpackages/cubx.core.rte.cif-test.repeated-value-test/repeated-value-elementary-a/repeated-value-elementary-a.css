@@ -1,0 +1,20 @@
+repeated-value-elementary {
+    --base-form-padding: 0.3em;
+    display: block;
+    padding: var(--base-form-padding);
+    width: 15em;
+    border: solid thin #0f3253;
+    height: auto !important; /* normale Browser */
+    height: 100%; /* IE6: setzt dies wie min-height um*/
+    min-height: 100%;
+}
+
+repeated-value-elementary label {
+    margin-right: 0.3em;
+    font-weight: bold;
+    color: #2f6fad;
+}
+
+repeated-value-elementary input[type=text] {
+    width: 12em;
+}

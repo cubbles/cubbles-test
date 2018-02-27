@@ -91,12 +91,13 @@
           }
         ],
         "resources": [
+          "repeated-value-elementary-a.css",
           "repeated-value-elementary-a.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -120,14 +121,14 @@
           }
         ],
         "resources": [
+          "repeated-value-elementary-e.css",
           "repeated-value-elementary-e.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
-          }
-        ]
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
+          }        ]
       },
       {
         "artifactId": "repeated-value-elementary-f",
@@ -150,12 +151,13 @@
           }
         ],
         "resources": [
+          "repeated-value-elementary-f.css",
           "repeated-value-elementary-f.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       }
@@ -163,7 +165,7 @@
     "compoundComponents": [
       {
         "artifactId": "repeated-value-false-compound-b",
-        "description": "This is a cubixx-compound-component.",
+        "description": "This is a cubbles-compound-component.",
         "runnables": [
           {
             "name": "docs",
@@ -308,11 +310,12 @@
           {
             "artifactId": "repeated-value-elementary-a"
           }
+
         ]
       },
       {
         "artifactId": "repeated-value-false-compound-c",
-        "description": "This is a cubixx-compound-component.",
+        "description": "This is a cubbles-compound-component.",
         "runnables": [
           {
             "name": "docs",
@@ -536,17 +539,22 @@
         ],
         "inits": [],
         "resources": [
-          "css/repeated-value-false-compound-c.css"
+          "css/repeated-value-false-compound-c.css",
+          "repeated-value-false-compound-c-template.html"
         ],
         "dependencies": [
           {
             "artifactId": "repeated-value-elementary-a"
+          },
+          {
+            "webpackageId": "bootstrap-3.3.5@1.1.4",
+            "artifactId": "bootstrap"
           }
         ]
       },
       {
         "artifactId": "repeated-value-false-compound-d",
-        "description": "This is a cubixx-compound-component.",
+        "description": "This is a cubbles-compound-component.",
         "runnables": [
           {
             "name": "docs",
@@ -836,7 +844,9 @@
           }
         ],
         "inits": [],
-        "resources": [],
+        "resources": [
+          "repeated-value-false-compound-d-template.html"
+        ],
         "dependencies": [
           {
             "artifactId": "repeated-value-false-compound-b"
@@ -883,7 +893,8 @@
         ],
         "inits": [],
         "resources": [
-          "css/repeated-value-true-compound-g.css"
+          "css/repeated-value-true-compound-g.css",
+          "repeated-value-true-compound-g-template.html"
         ],
         "dependencies": [
           {
@@ -891,6 +902,10 @@
           },
           {
             "artifactId": "repeated-value-elementary-f"
+          },
+          {
+            "webpackageId": "bootstrap-3.3.5@1.1.4",
+            "artifactId": "bootstrap"
           }
         ]
       }
