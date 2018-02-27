@@ -1,6 +1,6 @@
 {
-  "name": "cubxready-lifecycle-method-test",
-  "groupId": "cubx.core.rte.cubxpolymer-test",
+  "name": "contextready-lifecycle-method-test",
+  "groupId": "cubx.core.rte.cubxcomponent-test",
   "version": "1.7.0-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
@@ -21,7 +21,7 @@
         "description": "package documentation",
         "runnables": [
           {
-            "name": "ccubx.core.rte.cubxpolymer-test.cubxready-lifecycle-method-test generated documentation",
+            "name": "ccubx.core.rte.cubxcomponent-test.contextready-lifecycle-method-test generated documentation",
             "path": "/index.html",
             "description": "show the webpackage structure"
           }
@@ -30,13 +30,13 @@
     ],
     "elementaryComponents": [
       {
-        "artifactId": "elementary-cubxready-method",
-        "description": "Elementary component for demonstrate the cubxReady lifecycle method.",
+        "artifactId": "elementary-contextready-method",
+        "description": "Elementary component for demonstrate the contextReady lifecycle method.",
         "runnables": [
           {
             "name": "demo",
             "path": "/demo/index.html",
-            "description": "Demo app for using of the cubxfReady lifecycle method."
+            "description": "Demo app for using of the contextReady lifecycle method."
           },
           {
             "name": "docs",
@@ -56,12 +56,12 @@
           }
         ],
         "resources": [
-          "elementary-cubxready-method.html"
+          "elementary-contextready-method.html"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       }
