@@ -1,0 +1,12 @@
+test-textarea {
+    --base-form-padding: 0.3em;
+    display: block;
+    padding: var(--base-form-padding);
+    width: 15em;
+}
+
+test-textarea label {
+    margin-right: 0.3em;
+    font-weight: bold;
+    color: #2f6fad;
+}
