@@ -13,14 +13,14 @@
      * Manipulate an element’s local DOM when the element is created.
      */
     created: function () {
-      this.addMessage('#created called');
+      this.addMessage(this.is + ' #created called');
     },
 
     /**
      * Manipulate an element’s local DOM when the element is created and initialized.
      */
     ready: function () {
-      this.addMessage('#ready called');
+      this.addMessage(this.is + ' #ready called');
       var label = this.querySelector('[for = input]');
       label.innerHTML = this.getLabel();
       var element = this.querySelector('#input');
@@ -35,18 +35,24 @@
      * Manipulate an element’s local DOM when the element is attached to the document.
      */
     connected: function () {
-      this.addMessage('#connected called');
+      this.addMessage(this.is + '#connected called');
     },
 
     /**
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
     contextReady: function () {
-      this.addMessage('#contextReady called');
+      this.addMessage(this.is + '#contextReady called');
     },
 
     modelValueChanged: function (value) {
-      this.addMessage('#modelValueChanged called with "' + value + '"');
+      this.querySelector('#input').value = value;
+      this.addMessage(this.is + '#modelValueChanged called with "' + value + '"');
+    },
+
+    modelLabelChanged: function (value) {
+      this.querySelector('[for = input]').textContent = value;
+      this.addMessage(this.is + '#modelLabelChanged called with "' + value + '"');
     },
 
     addMessage: function (message) {

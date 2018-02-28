@@ -33,7 +33,7 @@
     if (evt.detail.slot === 'message') {
       console.log('slot "message": ' + evt.detail.payload);
       var div = document.createElement('div');
-      messages.innerHTML = evt.detail.payload;
+      messages.insertAdjacentHTML('beforeend', evt.detail.payload);
     }
   });
 </script>

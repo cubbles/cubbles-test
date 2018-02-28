@@ -23,6 +23,17 @@
             "description": "Show the interface of this component."
           }
         ]
+      },
+      {
+        "artifactId": "getter-setter-demo",
+        "description": "",
+        "runnables": [
+          {
+            "name": "My Hello World App.",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
       }
     ],
     "elementaryComponents": [
@@ -135,9 +146,11 @@
             "value": "value"
           },
           {
-           "slotId": "message",
-           "type": "string",
-           "direction": ["output"]
+            "slotId": "message",
+            "type": "string",
+            "direction": [
+              "output"
+            ]
           }
         ]
       },
@@ -186,7 +199,9 @@
           {
             "slotId": "message",
             "type": "string",
-            "direction": ["output"]
+            "direction": [
+              "output"
+            ]
           }
         ]
       }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;elementary-with-template&gt; demo</title>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/custom-elements-es5-adapter.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+
+<!--  Place cubbles components there. -->
+<h3>&lt;elementary-with-inline-template&gt;</h3>
+<elementary-with-inline-template cubx-webpackage-id="this"></elementary-with-inline-template>
+<button id="b1" disabled>set value variable</button> <button id="b2" disabled>set _value variable</button>
+<hr>
+<h3>&lt;elementary-with-template&gt;</h3>
+<elementary-with-template cubx-webpackage-id="this"></elementary-with-template>
+<button id="b3" disabled>set value variable</button> <button id="b4" disabled>set _value variable</button>
+<hr>
+<h3>&lt;elementary-without-template&gt;</h3>
+<elementary-without-template cubx-webpackage-id="this"></elementary-without-template>
+<button id="b5" disabled>set value variable</button> <button id="b6" disabled>set _value variable</button>
+<hr>
+<br>
+<h3>Messages</h3>
+<div id="messages"></div>
+<script>
+  var elem1 = document.querySelector('elementary-with-inline-template');
+  var elem2 = document.querySelector('elementary-with-template');
+  var elem3 = document.querySelector('elementary-without-template');
+  var b1 = document.querySelector('#b1');
+  var b2 = document.querySelector('#b2');
+  var b3 = document.querySelector('#b3');
+  var b4 = document.querySelector('#b4');
+  var b5 = document.querySelector('#b5');
+  var b6 = document.querySelector('#b6')
+  var messages = document.querySelector('#messages');
+
+  b1.addEventListener('click', function (evt) {
+    elem1.model.value = 'elementary-with-inline-template first button clicked';
+  });
+  b2.addEventListener('click', function (evt) {
+    elem1.model._value = 'elementary-with-inline-template second button clicked';
+  });
+  b3.addEventListener('click', function (evt) {
+    elem2.model.value = 'elementary-with-template first button clicked';
+  });
+  b4.addEventListener('click', function (evt) {
+    elem2.model._value = 'elementary-with-template second button clicked';
+  });
+  b5.addEventListener('click', function (evt) {
+    elem3.model.stringInput = 'elementary-without-template first button clicked';
+  });
+  b6.addEventListener('click', function (evt) {
+    elem3.model._stringInput = 'elementary-without-template second button clicked';
+  });
+  document.body.addEventListener('cifModelChange', function(evt) {
+    if (evt.detail.slot === 'message') {
+      console.log('slot "message": ' + evt.detail.payload);
+      var div = document.createElement('div');
+      div.innerHTML = evt.detail.payload
+      messages.appendChild(div);
+    }
+
+  });
+  document.addEventListener('cifReady', function(evt) {
+    b1.disabled = false;
+    b2.disabled = false;
+    b3.disabled = false;
+    b4.disabled = false;
+    b5.disabled = false;
+    b6.disabled = false;
+  });
+</script>
+
+</body>
+</html>

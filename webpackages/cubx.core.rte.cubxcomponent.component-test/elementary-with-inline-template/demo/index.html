@@ -6,14 +6,6 @@
     <title>&lt;elementary-with-template&gt; demo</title>
     <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/custom-elements-es5-adapter.js"></script>
     <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
-
-    <!--
-        Refer to the crc-loader artifact from a Cubbles-Base.
-        Take care: All other dependencies are expected to be available within the same Base!
-
-        Want to add a 'main' -script to be executed after the dependencies have been loaded?
-        If yes, add the following attribute: data-crc-main="js/my-script.js"
-    -->
     <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
 
 </head>
@@ -33,7 +25,7 @@
     if (evt.detail.slot === 'message') {
       console.log('slot "message": ' + evt.detail.payload);
       var div = document.createElement('div');
-      messages.innerHTML = evt.detail.payload;
+      messages.insertAdjacentHTML('beforeend', evt.detail.payload);
     }
   });
 </script>

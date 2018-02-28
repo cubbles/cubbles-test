@@ -44,7 +44,7 @@
   elem.addEventListener('cifModelChange', function(evt) {
     if (evt.detail.slot === 'message') {
       var div = document.createElement('div');
-      messages.innerHTML = evt.detail.payload;
+      messages.insertAdjacentHTML('beforeend', evt.detail.payload);
     }
   });
   function setNumberInputOutput () {
