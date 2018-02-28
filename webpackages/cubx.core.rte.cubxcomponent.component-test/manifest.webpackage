@@ -241,7 +241,7 @@
           },
           {
            "slotId": "style",
-           "type": "style",
+           "type": "object",
            "direction": ["input"]
           }
         ]
