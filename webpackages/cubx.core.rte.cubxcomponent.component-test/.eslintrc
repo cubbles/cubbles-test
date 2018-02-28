@@ -14,8 +14,6 @@
   "globals": {
     "require": true,
     "module": true,
-    "Polymer": true,
-    "CubxPolymer": true,
     "CubxComponent": true,
     "describe": true,
     "it": true,

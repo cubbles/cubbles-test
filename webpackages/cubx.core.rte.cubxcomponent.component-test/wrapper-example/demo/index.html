@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;wrapper-example&gt; demo</title>
+
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/custom-elements-es5-adapter.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+    <link href="demo.css" rel="stylesheet">
+</head>
+<body>
+<h3>Add message</h3>
+<textarea id="messageInput" rows="5" cols="80">
+{
+    "header": "Great new message",
+    "content": "Present this brand new message!",
+    "classDef": "azure"
+}
+</textarea><br>
+<button id="addMessage" disabled>add message</button>
+
+<hr>
+<h3>Add style</h3>
+<textarea id="styleInput" rows="5" cols="80">
+{
+    "color": "white",
+    "background-color": "black"
+}
+</textarea><br>
+<button id="addStyle" disabled>add style</button>
+<div class="error"></div>
+<wrapper-example cubx-webpackage-id="this"></wrapper-example>
+<script>
+    var addMessageBtn = document.querySelector('#addMessage');
+    var addStyleBtn = document.querySelector('#addStyle');
+    var messageTexarea = document.querySelector('#messageInput');
+    var styleTexarea = document.querySelector('#styleInput');
+    var errorDiv = document.querySelector('.error');
+    var cubble = document.querySelector('wrapper-example');
+    document.addEventListener('cifReady', function () {
+      addMessageBtn.disabled = false;
+      addStyleBtn.disabled = false;
+    });
+
+    addMessageBtn.addEventListener('click', function (evt) {
+      errorDiv.textContent = '';
+      try {
+        var messageObj = JSON.parse(messageTexarea.value);
+        cubble.setMessage(messageObj);
+      } catch (err) {
+        errorDiv.textContent = err;
+      }
+    });
+    addStyleBtn.addEventListener('click', function (evt) {
+      errorDiv.textContent = '';
+      try {
+        var styleObj = JSON.parse(styleTexarea.value);
+        cubble.setStyle(styleObj);
+      } catch (err) {
+        errorDiv.textContent = err;
+      }
+    });
+</script>
+</body>
+</html>

@@ -204,6 +204,47 @@
             ]
           }
         ]
+      },
+      {
+        "artifactId": "wrapper-example",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "wrapper-example.css",
+          "wrapper-example.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "message",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+           "slotId": "style",
+           "type": "style",
+           "direction": ["input"]
+          }
+        ]
       }
     ],
     "compoundComponents": [],
