@@ -240,9 +240,48 @@
             ]
           },
           {
-           "slotId": "style",
-           "type": "object",
-           "direction": ["input"]
+            "slotId": "style",
+            "type": "object",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
+      },
+      {
+        "artifactId": "elementary-with-listener-config",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "elementary-with-listener-config.css",
+          "elementary-with-listener-config.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "a",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": 10
           }
         ]
       }

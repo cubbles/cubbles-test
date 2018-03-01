@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;elementary-with-listener-config&gt; demo</title>
+
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/custom-elements-es5-adapter.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@3.0.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<!--  Place cubbles components there. -->
+<elementary-with-listener-config cubx-webpackage-id="this"></elementary-with-listener-config>
+
+<h3>slot a output</h3>
+<div id="output">
+
+</div>
+<script>
+    document.querySelector('elementary-with-listener-config').addEventListener('cifModelChange',function (evt) {
+      if (evt.detail.slot === 'a') {
+        document.querySelector('#output').textContent = evt.detail.payload;
+      }
+    });
+</script>
+</body>
+</html>

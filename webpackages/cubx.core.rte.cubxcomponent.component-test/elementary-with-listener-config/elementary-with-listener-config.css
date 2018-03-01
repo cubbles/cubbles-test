@@ -1,0 +1,16 @@
+elementary-with-listener-config {
+    --base-form-padding: 0.3em;
+    display: block;
+    padding: var(--base-form-padding);
+    width: 15em;
+}
+
+elementary-with-listener-config label {
+    margin-right: 0.3em;
+    font-weight: bold;
+    color: #2f6fad;
+}
+
+elementary-with-listener-config input[type=text] {
+    width: 12em;
+}
