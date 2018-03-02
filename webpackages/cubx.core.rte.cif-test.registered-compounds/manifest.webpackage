@@ -2,7 +2,7 @@
   "name": "registered-compounds",
   "groupId": "cubx.core.rte.cif-test",
   "version": "3.0.0-SNAPSHOT",
-  "modelVersion": "9.1.1",
+  "modelVersion": "10.0.0",
   "docType": "webpackage",
   "author": {
     "name": "Judit Ross",
