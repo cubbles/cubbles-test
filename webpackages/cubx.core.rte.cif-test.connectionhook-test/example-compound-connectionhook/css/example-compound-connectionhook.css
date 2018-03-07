@@ -1,0 +1,8 @@
+example-compound-connectionhook .container {
+    display: flex;
+}
+
+example-compound-connectionhook div {
+    flex-grow: 1;
+    flex-basis: 33%;
+}

@@ -81,7 +81,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
+            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
             "artifactId": "cubxpolymer"
           },
           {
@@ -142,7 +142,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
+            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
             "artifactId": "cubxpolymer"
           },
           {
@@ -914,12 +914,141 @@
             "artifactId": "transform-functions"
           }
         ]
+      },
+      {
+        "artifactId": "example-compound-connectionhook",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/example-compound-connectionhook.css",
+          "example-compound-connectionhook-template.html"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "connectionhook-elementary-a"
+          },
+          {
+            "artifactId": "connectionhook-elementary-b"
+          },
+          {
+            "artifactId": "connection-hooks"
+          }
+        ],
+        "slots": [],
+        "members": [
+          {
+            "memberId": "input",
+            "artifactId": "connectionhook-elementary-a"
+          },
+          {
+            "memberId": "output1",
+            "artifactId": "connectionhook-elementary-b"
+          },
+          {
+            "memberId": "output2",
+            "artifactId": "connectionhook-elementary-b"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "a-to-output1:a",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "a"
+            },
+            "destination": {
+              "memberIdRef": "output1",
+              "slot": "a"
+            },
+            "hookFunction": "examples.test-connection-hook"
+          },
+          {
+            "connectionId": "a-to-output2:a",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "a"
+            },
+            "destination": {
+              "memberIdRef": "output2",
+              "slot": "a"
+            },
+            "hookFunction": "function (value, next) { var newValue = 'value: ' + JSON.stringify(value) + ', source slots: ' + JSON.stringify(this.source.slots()) + ' , destination slots: ' + JSON.stringify(this.destination.slots()); next(newValue);}"
+          },
+          {
+            "connectionId": "b-to-output1:b",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "b"
+            },
+            "destination": {
+              "memberIdRef": "output1",
+              "slot": "b"
+            },
+            "hookFunction": "examples.test-connection-hook"
+          },
+          {
+            "connectionId": "b-to-output2:b",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "b"
+            },
+            "destination": {
+              "memberIdRef": "output2",
+              "slot": "b"
+            },
+            "hookFunction": "function (value, next) { var newValue = 'value: ' + JSON.stringify(value) + ', source slots: ' + JSON.stringify(this.source.slots()) + ' , destination slots: ' + JSON.stringify(this.destination.slots()); next(newValue);}"
+          },
+          {
+            "connectionId": "c-to-output1:c",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "c"
+            },
+            "destination": {
+              "memberIdRef": "output1",
+              "slot": "c"
+            },
+            "hookFunction": "examples.test-connection-hook-object"
+          },
+          {
+            "connectionId": "c-to-output2:c",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "c"
+            },
+            "destination": {
+              "memberIdRef": "output2",
+              "slot": "c"
+            },
+            "hookFunction": "function (value, next) { value.sourceSlots = this.source.slots(); value.destinationSlots = this.destination.slots(); next(value);}"
+          }
+        ],
+        "inits": []
       }
     ],
     "utilities": [
       {
         "artifactId": "transform-functions",
         "description": "connection hook functions This is recommended for you use with webcomponents.",
+        "resources": [
+          "html-import.html"
+        ],
+        "dependencies": []
+      },
+      {
+        "artifactId": "connection-hooks",
+        "description": "",
         "resources": [
           "html-import.html"
         ],
