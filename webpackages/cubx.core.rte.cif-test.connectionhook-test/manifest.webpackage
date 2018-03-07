@@ -77,6 +77,7 @@
           }
         ],
         "resources": [
+          "connectionhook-elementary-a.css",
           "connectionhook-elementary-a.html"
         ],
         "dependencies": [
@@ -133,6 +134,7 @@
           }
         ],
         "resources": [
+          "connectionhook-elementary-b.css",
           "connectionhook-elementary-b.html"
         ],
         "dependencies": [
@@ -210,7 +212,8 @@
         ],
         "inits": [],
         "resources": [
-          "css/connectionhook-compound-c.css"
+          "css/connectionhook-compound-c.css",
+          "connectionhook-compound-c-template.html"
         ],
         "dependencies": [
           {
@@ -218,11 +221,6 @@
           },
           {
             "artifactId": "connectionhook-elementary-b"
-          },
-          {
-            "webpackageId": "bootstrap-3.3.5@1.0.2",
-            "artifactId": "bootstrap",
-            "endpointId": "main"
           }
         ]
       },
@@ -291,7 +289,10 @@
           }
         ],
         "inits": [],
-        "resources": [],
+        "resources": [
+          "connectionhook-compound-d-template.html",
+          "css/connectionhook-compound-d.css"
+        ],
         "dependencies": [
           {
             "artifactId": "connectionhook-elementary-a"
@@ -301,11 +302,6 @@
           },
           {
             "artifactId": "transform-functions"
-          },
-          {
-            "webpackageId": "bootstrap-3.3.5@1.0.2",
-            "artifactId": "bootstrap",
-            "endpointId": "main"
           }
         ]
       },
@@ -389,18 +385,16 @@
           }
         ],
         "inits": [],
-        "resources": [],
+        "resources": [
+          "connectionhook-compound-e-template.html",
+          "css/connectionhook-compound-e.css"
+        ],
         "dependencies": [
           {
             "artifactId": "connectionhook-elementary-a"
           },
           {
             "artifactId": "transform-functions"
-          },
-          {
-            "webpackageId": "bootstrap-3.3.5@1.0.2",
-            "artifactId": "bootstrap",
-            "endpointId": "main"
           }
         ]
       },
@@ -484,18 +478,16 @@
           }
         ],
         "inits": [],
-        "resources": [],
+        "resources": [
+          "connectionhook-compound-f-template.html",
+          "css/connectionhook-compound-f.css"
+        ],
         "dependencies": [
           {
             "artifactId": "connectionhook-elementary-b"
           },
           {
             "artifactId": "transform-functions"
-          },
-          {
-            "webpackageId": "bootstrap-3.3.5@1.0.2",
-            "artifactId": "bootstrap",
-            "endpointId": "main"
           }
         ]
       },
@@ -576,18 +568,16 @@
           }
         ],
         "inits": [],
-        "resources": [],
+        "resources": [
+          "connectionhook-compound-g-template.html",
+          "css/connectionhook-compound-g.css"
+        ],
         "dependencies": [
           {
             "artifactId": "connectionhook-elementary-a"
           },
           {
             "artifactId": "transform-functions"
-          },
-          {
-            "webpackageId": "bootstrap-3.3.5@1.0.2",
-            "artifactId": "bootstrap",
-            "endpointId": "main"
           }
         ]
       },
@@ -668,18 +658,16 @@
           }
         ],
         "inits": [],
-        "resources": [],
+        "resources": [
+          "connectionhook-compound-h-template.html",
+          "css/connectionhook-compound-h.css"
+        ],
         "dependencies": [
           {
             "artifactId": "connectionhook-elementary-b"
           },
           {
             "artifactId": "transform-functions"
-          },
-          {
-            "webpackageId": "bootstrap-3.3.5@1.0.2",
-            "artifactId": "bootstrap",
-            "endpointId": "main"
           }
         ]
       },
@@ -745,7 +733,10 @@
           }
         ],
         "inits": [],
-        "resources": [],
+        "resources": [
+          "connectionhook-compound-i-template.html",
+          "css/connectionhook-compound-i.css"
+        ],
         "dependencies": [
           {
             "artifactId": "connectionhook-compound-e"
@@ -757,7 +748,7 @@
       },
       {
         "artifactId": "connectionhook-compound-j",
-        "description": "Connected connectionhook-compound-f (component without hook function) with connectionhook-compound-g (component with connenction hook) without connection hook.",
+        "description": "Connected connectionhook-compound-g (component without hook function) with connectionhook-compound-f (component with connenction hook) without connection hook.",
         "runnables": [
           {
             "name": "demo",
@@ -817,7 +808,10 @@
           }
         ],
         "inits": [],
-        "resources": [],
+        "resources": [
+          "connectionhook-compound-j-template.html",
+          "css/connectionhook-compound-j.css"
+        ],
         "dependencies": [
           {
             "artifactId": "connectionhook-compound-g"
