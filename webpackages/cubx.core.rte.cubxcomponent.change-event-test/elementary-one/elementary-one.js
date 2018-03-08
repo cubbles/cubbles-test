@@ -1,14 +1,8 @@
 (function () {
   'use strict';
 
-  CubxPolymer({
+  CubxComponent({
     is: 'elementary-one',
-
-    /**
-     * Manipulate an element’s local DOM when the element is created.
-     */
-    created: function () {
-    },
 
     /**
      * Manipulate an element’s local DOM when the element is created and initialized.

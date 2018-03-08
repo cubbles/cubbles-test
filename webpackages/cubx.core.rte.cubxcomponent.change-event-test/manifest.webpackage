@@ -2,7 +2,7 @@
   "name": "change-event-test",
   "groupId": "cubx.core.rte.cubxpolymer",
   "version": "0.1.0-SNAPSHOT",
-  "modelVersion": "9.1.1",
+  "modelVersion": "10.0.0",
   "docType": "webpackage",
   "author": {
     "name": "Judit Ross",
@@ -58,8 +58,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
