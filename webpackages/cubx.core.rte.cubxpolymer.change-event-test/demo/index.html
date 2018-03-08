@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>app</title>
+
+    <script src="../../cubx.core.rte@2.5.0-SNAPSHOT/webcomponents-lite/webcomponents-lite.js"></script>
+    <script src="../../cubx.core.rte@2.5.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+    <style>
+        .container {
+            display: flex;
+        }
+        .container>div {
+            margin: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div>
+        <compound-one id="first" cubx-webpackage-id="this">
+            <cubx-core-connections style="display:none">
+                <cubx-core-connection
+                  connection-id="first-to-second"
+                  source="message"
+                  destination="second:message"></cubx-core-connection>
+            </cubx-core-connections>
+        </compound-one>
+    </div>
+    <div>
+        <compound-one id="second"></compound-one>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div>
+        <h3>Event log (cifModelChange):</h3>
+        <div id="messages1"></div>
+    </div>
+    <div>
+        <h3>Event log (slotMessagelChanged):</h3>
+        <div id="messages2"></div>
+    </div>
+</div>
+<script>
+  var elem1 = document.querySelector('#first');
+  var elem2 = document.querySelector('#second');
+  var messages1 = document.querySelector('#messages1');
+  var messages2 = document.querySelector('#messages2');
+  function addMessage(element, msg) {
+    var div = document.createElement('div');
+    div.textContent = msg;
+    element.appendChild(div);
+  }
+  function getTarget(elem) {
+    var res;
+    res = elem.tagName.toLowerCase();
+    if (elem.id) {
+      res += '#' + elem.id;
+    }
+
+    if (elem.parentNode && elem.parentNode.isCompoundComponent) {
+      res += ' (' + elem.parentNode.tagName.toLowerCase();
+      if (elem.parentNode.id){
+        res += '#' + elem.parentNode.id;
+      }
+      res += ')';
+    }
+
+    return res;
+  }
+  elem1.addEventListener('cifModelChange', function(evt) {
+    var msg = 'Catched "cifModelChange" event. target:' + getTarget(evt.target) + ' slot: ' + evt.detail.slot + ' payload: ' + evt.detail.payload;
+    addMessage(messages1, msg);
+  });
+  elem1.addEventListener('slotMessageChanged', function (evt) {
+    var msg = 'Catched "slotMessageChanged" event. ' + getTarget(evt.target) + ' content: ' + evt.detail;
+    addMessage(messages2, msg);
+  });
+  elem2.addEventListener('cifModelChange', function(evt) {
+    var msg = 'Catched "cifModelChange" event. target:' + getTarget(evt.target) + ' slot: ' + evt.detail.slot + ' payload: ' + evt.detail.payload;
+    addMessage(messages1, msg);
+  });
+  elem2.addEventListener('slotMessageChanged', function (evt) {
+    var msg = 'Catched "slotMessageChanged" event. ' + getTarget(evt.target) + ' content: ' + evt.detail;
+    addMessage(messages2, msg);
+  });
+
+
+</script>
+</body>
+</html>

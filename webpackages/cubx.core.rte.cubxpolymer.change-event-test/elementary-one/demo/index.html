@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;elementary-one&gt; demo</title>
+
+    <script src="../../../cubx.core.rte@2.5.0-SNAPSHOT/webcomponents-lite/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@2.5.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<elementary-one cubx-webpackage-id="this"></elementary-one>
+<hr>
+<h3>Event log:</h3>
+<div id="messages"></div>
+<script>
+    var elem = document.querySelector('elementary-one');
+    var messages = document.querySelector('#messages');
+    function addMessage(element, msg) {
+      var div = document.createElement('div');
+      div.textContent = msg;
+      element.appendChild(div);
+    }
+    elem.addEventListener('cifModelChange', function(evt) {
+      var msg = 'Catched "cifModelChange" event. slot: ' + evt.detail.slot + ' payload: ' + evt.detail.payload;
+      addMessage(messages, msg);
+    });
+    elem.addEventListener('slotMessageChanged', function (evt) {
+      var msg = 'Catched "slotMessageChanged" event. content: ' + evt.detail;
+      addMessage(messages, msg);
+    })
+</script>
+</body>
+</html>
