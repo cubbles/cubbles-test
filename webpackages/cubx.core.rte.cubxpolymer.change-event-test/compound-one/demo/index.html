@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;compound-one&gt; demo</title>
+
+    <script src="../../../cubx.core.rte@2.5.0-SNAPSHOT/webcomponents-lite/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@2.5.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<compound-one cubx-webpackage-id="this"></compound-one>
+<hr>
+<h3>Event log:</h3>
+<div id="messages"></div>
+<script>
+  var elem = document.querySelector('compound-one');
+  var messages = document.querySelector('#messages');
+  function addMessage(element, msg) {
+    var div = document.createElement('div');
+    div.textContent = msg;
+    element.appendChild(div);
+  }
+  elem.addEventListener('cifModelChange', function(evt) {
+    var msg = 'Catched "cifModelChange" event. target:' + evt.target.tagName.toLowerCase() + ' slot: ' + evt.detail.slot + ' payload: ' + evt.detail.payload;
+    addMessage(messages, msg);
+  });
+  elem.addEventListener('slotMessageChanged', function (evt) {
+    var msg = 'Catched "slotMessageChanged" event. ' + evt.target.tagName.toLowerCase() + ' content: ' + evt.detail;
+    addMessage(messages, msg);
+  });
+  elem.addEventListener('slotMessage2Changed', function (evt) {
+    var msg = 'Catched "slotMessage2Changed" event. ' + evt.target.tagName.toLowerCase() + ' content: ' + evt.detail;
+    addMessage(messages, msg);
+  });
+
+</script>
+</body>
+</html>

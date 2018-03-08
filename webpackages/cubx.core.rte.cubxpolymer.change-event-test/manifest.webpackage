@@ -1,0 +1,154 @@
+{
+  "name": "change-event-test",
+  "groupId": "cubx.core.rte.cubxpolymer",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "9.1.1",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "docs",
+        "description": "Generated webpackage documentation.",
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/index.html",
+            "description": "Show the interface of this component."
+          }
+        ]
+      },
+      {
+        "artifactId": "demo",
+        "description": "",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [
+      {
+        "artifactId": "elementary-one",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "elementary-one.css",
+          "elementary-one.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+           "slotId": "message",
+           "type": "string",
+           "direction": ["input","output"]
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "compound-one",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/compound-one.css",
+          "compound-one-template.html"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "elementary-one"
+          }
+        ],
+        "slots": [
+          {
+           "slotId": "message",
+           "type": "string",
+           "direction": ["input","output"]
+          },
+          {
+            "slotId": "message2",
+            "type": "string",
+            "direction": ["output"]
+          }
+        ],
+        "members": [
+          {
+           "artifactId": "elementary-one",
+           "memberId": "first"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "compound-to-elementary",
+            "source": {
+              "slot": "message"
+            },
+            "destination": {
+              "memberIdRef": "first",
+              "slot": "message"
+            }
+          },
+          {
+            "connectionId" : "elementary-to-compound-message",
+            "source": {
+              "memberIdRef": "first",
+              "slot" : "message"
+            },
+            "destination": {
+              "slot" : "message"
+            }
+          },
+          {
+            "connectionId" : "elementary-to-compound-message2",
+            "source": {
+              "memberIdRef": "first",
+              "slot" : "message"
+            },
+            "destination": {
+              "slot" : "message2"
+            }
+          }
+        ],
+        "inits": []
+      }
+    ],
+    "utilities": []
+  }
+}
