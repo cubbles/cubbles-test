@@ -1,7 +1,7 @@
 {
   "name": "change-event-test",
   "groupId": "cubx.core.rte.cubxpolymer",
-  "version": "0.1.0-SNAPSHOT",
+  "version": "3.0.0-SNAPSHOT",
   "modelVersion": "10.0.0",
   "docType": "webpackage",
   "author": {
