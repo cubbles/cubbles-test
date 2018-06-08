@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ACR Scenario</title>
+
+    <script src="../../cubx.core.rte@2.5.0-SNAPSHOT/webcomponents-lite/webcomponents-lite.js"></script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../cubx.core.rte@2.5.0-SNAPSHOT/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<h1>Automatic Conflict Resolution (ACR)Test</h1>
+<h2>Resolve version conflict</h2>
+<p>
+  <b>Scenario:</b> &lt;compund-a&gt; and &lt;compund-b&gt; both are using &lt;artifact-a&gt; from same webpackge but with different versions.
+  In the DOM tree &lt;compund-b&gt; is the first item and &lt;compund-a&gt; the second item.
+  Thus ACR using shortest path lookup will resolve this version conflict choosing &lt;artifact-a@1.1&gt; over &lt;artifact-a@1.0&gt;.
+</p>
+<div class="row">
+  <div class="cell">
+    <compound-b cubx-webpackage-id="this"></compound-b>
+  </div>
+  <div class="cell">
+    <compound-a cubx-webpackage-id="this"></compound-a>    
+  </div>
+</div>
+<p><b>Expected resolution:</b></p>
+<div class="row">
+  <div class="cell">
+      <h2 style="text-align: center;">&lt;artifact-c@1.0&gt;</h2>
+  </div>
+  <div class="cell">
+      <h2 style="text-align: center;">&lt;artifact-a@1.1&gt;</h2>
+  </div>
+  <div class="cell">
+      <h2 style="text-align: center;">&lt;artifact-a@1.1&gt;</h2>
+  </div>
+  <div class="cell">
+      <h2 style="text-align: center;">&lt;artifact-b@1.0&gt;</h2>
+  </div>
+</div>
+</body>
+<style>
+  .row {
+    display: flex;
+  }
+  .cell {
+    flex: 1;
+    border: 1px solid black;
+    margin: 2px;
+  }
+</style>
+</html>

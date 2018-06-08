@@ -1,0 +1,22 @@
+/* Place your css here. */
+
+compound-b {
+  background-color: rgb(199, 191, 191);
+  border: 2px solid black;
+  display: block;
+}
+
+compound-b .heading {
+  padding: 5px;
+  text-align: center;
+}
+
+compound-b .cell {
+  flex: 1; 
+  border: 1px solid black;
+  margin: 2px;
+}
+
+compound-b .row {
+  display: flex;
+}

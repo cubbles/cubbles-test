@@ -1,0 +1,81 @@
+{
+  "name": ".acr-test@1.0",
+  "groupId": "_mock.crc-test",
+  "version": "1.0",
+  "modelVersion": "9.1.2",
+  "docType": "webpackage",
+  "author": {
+    "name": "Philipp Wagner",
+    "email": "wagner@getrequest.de"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [],
+    "elementaryComponents": [
+      {
+        "artifactId": "artifact-a",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [],
+        "resources": [
+          "artifact-a.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": []
+      },
+      {
+        "artifactId": "artifact-b",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [],
+        "resources": [
+          "artifact-b.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": []
+      },
+      {
+        "artifactId": "artifact-c",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [],
+        "resources": [
+          "artifact-c.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": []
+      },
+      {
+        "artifactId": "artifact-d",
+        "description": "This is an elementary-component based on Polymer.",
+        "runnables": [],
+        "resources": [
+          "artifact-d.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": []
+      }
+    ],
+    "compoundComponents": [],
+    "utilities": []
+  }
+}
