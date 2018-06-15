@@ -26,10 +26,21 @@
       },
       {
         "artifactId": "acr-test",
-        "description": "Several test scenarios for ACR (automatic conflict resolution)",
+        "description": "Test scenario for ACR (automatic conflict resolution)",
         "runnables": [
           {
             "name": "acr-test",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
+      },
+      {
+        "artifactId": "acr-test2",
+        "description": "Rest scenari for ACR (automatic conflict resolution)",
+        "runnables": [
+          {
+            "name": "acr-test2",
             "path": "/index.html",
             "description": "Call this app as a simple demo."
           }
@@ -119,6 +130,48 @@
           {
             "memberId": "m2",
             "artifactId": "artifact-a"
+          }
+        ],
+        "connections": [],
+        "inits": []
+      },
+      {
+        "artifactId": "compound-c",
+        "description": "This is a cubbles-compound-component.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/compound-c.css",
+          "compound-c-template.html"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "compound-b"
+          },
+          {
+            "webpackageId": "_mock.crc-test.acr-test@1.0",
+            "artifactId": "artifact-d"
+          }
+        ],
+        "slots": [],
+        "members": [
+          {
+            "memberId": "m1",
+            "artifactId": "compound-b"
+          },
+          {
+            "memberId": "m2",
+            "artifactId": "artifact-d"
           }
         ],
         "connections": [],

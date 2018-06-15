@@ -21,31 +21,41 @@
 <h1>Automatic Conflict Resolution (ACR)Test</h1>
 <h2>Resolve version conflict</h2>
 <p>
-  <b>Scenario:</b> &lt;compund-a&gt; and &lt;compund-b&gt; both are using &lt;artifact-a&gt; from same webpackge but with different versions.
-  In the DOM tree &lt;compund-b&gt; is the first item and &lt;compund-a&gt; the second item so in dependency tree &lt;compound-b&gt; comes before &lt;compund-a&gt;
-  (level order traversal). Thus ACR using shortest path lookup will resolve this version conflict choosing &lt;artifact-a@1.1&gt; over &lt;artifact-a@1.0&gt;.
+  <b>Scenario:</b> Assume the following (raw) dependency tree is given. ACR will detect and resolve version conflict highlighted in below scetch.
 </p>
+<div class="row" style="margin-bottom: 20px;">
+    <img src="acr-test.svg" style="width: 100%;">
+</div>
+<hr>
+<p><b>Rendered components:</b></p>
 <div class="row">
   <div class="cell">
-    <compound-b cubx-webpackage-id="this"></compound-b>
+    <compound-a cubx-webpackage-id="this"></compound-a>    
   </div>
   <div class="cell">
-    <compound-a cubx-webpackage-id="this"></compound-a>    
+    <compound-c cubx-webpackage-id="this"></compound-c>
   </div>
 </div>
 <p><b>Expected resolution:</b></p>
 <div class="row">
   <div class="cell">
-      <h2 style="text-align: center;">&lt;artifact-c@1.0&gt;</h2>
-  </div>
-  <div class="cell">
-      <h2 style="text-align: center;">&lt;artifact-a@1.1&gt;</h2>
-  </div>
-  <div class="cell">
-      <h2 style="text-align: center;">&lt;artifact-a@1.1&gt;</h2>
+      <h2 style="text-align: center;">&lt;artifact-a@1.0&gt;</h2>
   </div>
   <div class="cell">
       <h2 style="text-align: center;">&lt;artifact-b@1.0&gt;</h2>
+  </div>
+  <div class="cell">
+    <div class="row">
+      <div class="cell">
+        <h2 style="text-align: center;">&lt;artifact-c@1.0&gt;</h2>
+      </div>
+      <div class="cell">
+        <h2 style="text-align: center;">&lt;artifact-a@1.0&gt;</h2>
+      </div>
+    </div>  
+  </div>
+  <div class="cell">
+      <h2 style="text-align: center;">&lt;artifact-d@1.0&gt;</h2>
   </div>
 </div>
 </body>
