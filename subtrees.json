@@ -1,6 +1,6 @@
 {
-  "devtools" : {
-    "localFolder": "generators/project/templates/devtools",
+  "devtools_2x": {
+    "localFolder": "devtools-mappedIn_x",
     "repository": "https://github.com/cubbles/cubbles-coder-devtools.git",
     "branch": "devtools-2.19.0"
   }
