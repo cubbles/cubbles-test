@@ -10,12 +10,12 @@ cif-test-compound {
 
 cif-test-compound cif-test-a {
     float: left;
-    display: inline-block;
+    display: inline-block !important;
     margin: 0.5em;
 
 }
 
 cif-test-compound cif-test-b {
-    display: inline-block;
+    display: inline-block !important;
     margin: 0.5em;
 }

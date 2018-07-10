@@ -10,12 +10,12 @@ copy-value-test-compound {
 
 copy-value-test-compound copy-value-test-a {
     float: left;
-    display: inline-block;
+    display: inline-block !important;
     margin: 0.5em;
 
 }
 
 copy-value-test-compound copy-value-test-b {
-    display: inline-block;
+    display: inline-block !important;;
     margin: 0.5em;
 }

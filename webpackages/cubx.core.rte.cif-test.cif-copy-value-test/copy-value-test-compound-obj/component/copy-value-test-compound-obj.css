@@ -9,12 +9,12 @@ copy-value-test-compound-obj {
 
 copy-value-test-compound-obj copy-value-test-obj-a {
     float: left;
-    display: inline-block;
+    display: inline-block !important;;
     margin: 0.5em;
 
 }
 
 copy-value-test-compound-obj copy-value-test-obj-b {
-    display: inline-block;
+    display: inline-block !important;;
     margin: 0.5em;
 }

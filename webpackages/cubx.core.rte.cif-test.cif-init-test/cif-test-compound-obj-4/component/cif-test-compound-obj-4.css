@@ -9,12 +9,12 @@
 
 cif-test-compound-obj-4 cif-test-obj-a {
     float: left;
-    display:inline-block;
+    display:inline-block !important;
     margin : 0.5em;
 
 }
 
 cif-test-compound-obj-4 cif-test-obj-b {
-    display:inline-block;
+    display:inline-block !important;
     margin : 0.5em;
 }

@@ -9,13 +9,13 @@
 
 cif-test-compound-4 cif-test-a {
     float: left;
-    display:inline-block;
+    display:inline-block !important;
     margin : 0.5em;
 
 }
 
 cif-test-compound-4 cif-test-b {
-    display:inline-block;
+    display:inline-block !important;
     margin : 0.5em;
 }
 
