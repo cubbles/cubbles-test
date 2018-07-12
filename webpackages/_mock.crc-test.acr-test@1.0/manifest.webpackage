@@ -23,7 +23,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.5.0",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -38,7 +38,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.5.0",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -53,7 +53,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.5.0",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -68,7 +68,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.5.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@2.5.0",
             "artifactId": "cubxpolymer"
           }
         ],
