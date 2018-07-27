@@ -1,7 +1,7 @@
 {
-  "name": ".acr-test@1.1",
+  "name": ".acr-test@1.0",
   "groupId": "_mock.crc-test",
-  "version": "1.1",
+  "version": "1.0",
   "modelVersion": "9.1.2",
   "docType": "webpackage",
   "author": {
@@ -12,19 +12,7 @@
   "keywords": [],
   "man": [],
   "artifacts": {
-    "apps": [
-      {
-        "artifactId": "docs",
-        "description": "Generated webpackage documentation.",
-        "runnables": [
-          {
-            "name": "docs",
-            "path": "/index.html",
-            "description": "Show the interface of this component."
-          }
-        ]
-      }
-    ],
+    "apps": [],
     "elementaryComponents": [
       {
         "artifactId": "artifact-a",
@@ -35,7 +23,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.5.0",
+            "webpackageId": "cubx.core.rte@2.5.1",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -50,7 +38,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.5.0",
+            "webpackageId": "cubx.core.rte@2.5.1",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -65,7 +53,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.5.0",
+            "webpackageId": "cubx.core.rte@2.5.1",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -80,7 +68,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.5.0",
+            "webpackageId": "cubx.core.rte@2.5.1",
             "artifactId": "cubxpolymer"
           }
         ],
