@@ -1,7 +1,7 @@
 {
   "name": "acr-test",
   "groupId": "cubx.core.rte.crc-test",
-  "version": "0.1.0-SNAPSHOT",
+  "version": "0.1.0",
   "modelVersion": "9.1.2",
   "docType": "webpackage",
   "author": {
@@ -70,11 +70,11 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "_mock.crc-test.acr-test@1.0",
+            "webpackageId": "mock.crc-test.acr-test@1.0",
             "artifactId": "artifact-a"
           },
           {
-            "webpackageId": "_mock.crc-test.acr-test@1.0",
+            "webpackageId": "mock.crc-test.acr-test@1.0",
             "artifactId": "artifact-b"
           }
         ],
@@ -113,11 +113,11 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "_mock.crc-test.acr-test@1.0",
+            "webpackageId": "mock.crc-test.acr-test@1.0",
             "artifactId": "artifact-c"
           },
           {
-            "webpackageId": "_mock.crc-test.acr-test@1.1",
+            "webpackageId": "mock.crc-test.acr-test@1.1",
             "artifactId": "artifact-a"
           }
         ],
@@ -159,7 +159,7 @@
             "artifactId": "compound-b"
           },
           {
-            "webpackageId": "_mock.crc-test.acr-test@1.0",
+            "webpackageId": "mock.crc-test.acr-test@1.0",
             "artifactId": "artifact-d"
           }
         ],
