@@ -1,7 +1,7 @@
 {
   "name": "cif-init-test",
   "groupId": "cubx.core.rte.cif-test",
-  "version": "3.0.0-SNAPSHOT",
+  "version": "3.0.0",
   "modelVersion": "10.0.0",
   "docType": "webpackage",
   "author": {
@@ -6025,7 +6025,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@3.0.0",
             "artifactId": "cubxcomponent"
           }
         ]
@@ -6084,7 +6084,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@3.0.0",
             "artifactId": "cubxcomponent"
           }
         ]
@@ -6115,7 +6115,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@3.0.0",
             "artifactId": "cubxcomponent"
           }
         ]
@@ -6186,7 +6186,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@3.0.0",
             "artifactId": "cubxcomponent"
           }
         ]
@@ -6257,7 +6257,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "webpackageId": "cubx.core.rte@3.0.0",
             "artifactId": "cubxcomponent"
           }
         ]
